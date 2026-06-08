@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"></import>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.MessageSearchAdapter" />
+
+        <variable
+            name="contactSearchAdapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.ContactSearchAdapter" />
+
+        <variable
+            name="recentSearchAdapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.RecentSearchAdapter" />
+
+        <variable
+            name="recentvisiblrornot"
+            type="Boolean" />
+
+        <variable
+            name="norecentfound"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        android:isScrollContainer="false"
+        tools:context=".SearchActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/tool_bar_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:transitionName="search_container"
+            app:cardBackgroundColor="?attr/colorSurface"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/colorSurface"
+            app:strokeWidth="0dp"
+            app:cardCornerRadius="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/messagebutton2"
+                    android:layout_width="@dimen/mf_appbar_action_size1"
+                    android:layout_height="@dimen/mf_appbar_action_size1"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+
+                    android:background="@drawable/ripple_custom_circle"
+                    android:contentDescription="@string/cd_back"
+                    android:padding="@dimen/_4sdp"
+                    android:clipToPadding="false"
+                    android:src="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorOnSurfaceVariant">
+
+                </ImageView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/search_message_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/serch_cleasr"
+                    app:layout_constraintHeight_percent="0.6"
+                    app:layout_constraintStart_toEndOf="@+id/messagebutton2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/search_bar_full"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/search"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"
+
+                        android:textColor="?attr/colorOnSurface"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/serch_cleasr"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/ripple_custom_circle"
+                    android:contentDescription="@string/cd_clear_search"
+                    android:src="@drawable/close_icon"
+                    android:visibility="gone"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorOnSurfaceVariant"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/search_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:visibility="visible"
+            app:singleLine="true"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tool_bar_main">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/message_chip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/Message" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/contact_chip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="@string/Contact" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/RecentMessage"
+            fullappfontstyleregular="@{0}"
+            setTextSizeFullApp="@{textsizechagefor10}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/Recent_Search"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textStyle="bold"
+            android:visibility="@{recentvisiblrornot ? View.VISIBLE : View.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_tabs"
+            tools:visibility="visible">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/RecentMessageCLEAR"
+            fullappfontstyleregular="@{0}"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/CLEAR_SEARCH_HISTORY"
+            android:textColor="?attr/colorPrimary"
+            android:visibility="@{recentvisiblrornot ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/RecentMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RecentMessage"
+            tools:visibility="gone">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecentMessage_result"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:adapter="@{recentSearchAdapter}"
+            android:orientation="vertical"
+            android:visibility="@{recentvisiblrornot ? View.VISIBLE : View.GONE}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RecentMessage"
+            app:layout_constraintWidth_percent="0.95"
+            tools:listitem="@layout/recent_search_item"
+            tools:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:id="@+id/full_screen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_tabs"
+            tools:visibility="visible">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/message_contenar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtMessage"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_marginBottom="@dimen/_10ssp"
+                    android:includeFontPadding="false"
+
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/search_result"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtMessagetotal"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/View_More"
+                    android:textColor="?attr/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtMessage">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_result"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adapter="@{adapter}"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtMessage"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/diveder_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="?attr/colorOutlineVariant"
+                app:layout_constraintBottom_toTopOf="@+id/txtConversation"
+                app:layout_constraintTop_toBottomOf="@+id/search_result">
+
+            </View>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Contact_contenar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtConversationtotal"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/View_More"
+                    android:textColor="?attr/colorPrimary"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtConversation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtConversation"
+                    tools:visibility="visible">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtConversation"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_marginBottom="@dimen/_10ssp"
+                    android:includeFontPadding="false"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/search_result_con"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_result_con"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:adapter="@{contactSearchAdapter}"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtConversation"
+                    tools:visibility="visible">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+
+         <com.google.android.material.textview.MaterialTextView
+            fullappfontstyleregular="@{0}"
+            setTextSizeFullApp="@{textsizechagefor18}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/no_search_result_found"
+            android:textColor="?attr/colorOnSurfaceVariant"
+             app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="@{norecentfound ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

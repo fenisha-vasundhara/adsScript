@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listdata"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+
+        <variable
+            name="textsizechage"
+            type="Integer" />
+
+
+        <variable
+            name="notreplychack"
+            type="Boolean" />
+
+        <variable
+            name="isTodayMassagechack"
+            type="Boolean" />
+
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conversation_frame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/icon_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.65"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/user_profile_image"
+                        ColorChangeImgeTint="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/icon_round_shap"
+                        android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/numberfisttxt"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        android:textStyle="bold"
+                        android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="@+id/user_profile_image"
+                        app:layout_constraintEnd_toEndOf="@+id/user_profile_image"
+                        app:layout_constraintStart_toStartOf="@+id/user_profile_image"
+                        app:layout_constraintTop_toTopOf="@+id/user_profile_image"
+                        tools:text="J">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageView
+                        android:id="@+id/contacticon"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/contacticon_1"
+                        android:visibility="@{isLetterorNot ? notreplychack ? View.VISIBLE : View.GONE : View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+               fullappfontstylesemibold="@{0}"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:maxEms="10"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="?attr/colorOnSurface"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    app:layout_constraintBottom_toTopOf="@+id/lastmessageshow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icon_contact"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.39"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="numberghbhjbijhbirerewrewrewerewrewrjhier">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lastmessageshow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    app:layout_constraintBottom_toTopOf="@+id/lastmessageshowdate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/icon_contact"
+                    app:layout_constraintTop_toBottomOf="@+id/number"
+                    tools:text="last message yhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyu">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lastmessageshowdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    setMessageTimeandDate="@{listdata.time}"
+                    android:fontFamily="@font/poppins_light"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    setTextSizeFullApp="@{textsizechagefor8}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/lastmessageshow"
+                    app:layout_constraintStart_toStartOf="@+id/lastmessageshow"
+                    app:layout_constraintTop_toBottomOf="@+id/lastmessageshow"
+                    tools:text="last message yhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyu">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/item_divider"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@drawable/line_new"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainlayout"
+                app:layout_constraintWidth_percent="0.75">
+
+            </View>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

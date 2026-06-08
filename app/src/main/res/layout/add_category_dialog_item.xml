@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemclick"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#00000000"
+                app:strokeWidth="0dp"
+                app:strokeColor="@android:color/transparent"  app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_height="match_parent">
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                   fullappfontstylesemibold="@{0}"
+                        android:text="@string/Add_Category"
+                        setchatthemecolorTintTxtcontactserch="@{0}"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/imageView18"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:icon="@drawable/ic_close_24"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@null"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView"
+                        app:layout_constraintWidth_percent="0.08" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/filledTextField"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:boxBackgroundMode="filled"
+                        app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                        app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.22"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        app:layout_constraintVertical_bias="0.100000024"
+                        app:layout_constraintWidth_percent="0.88">
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/drivingmodetxtnew"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLength="20"
+                         fullappfontstyleregular="@{0}"
+                            android:hint="@string/Category_Name"
+                            android:maxLines="1"
+                            android:padding="@dimen/_8sdp"
+                            android:singleLine="true"
+                            android:textColor="#929397"
+                            android:textSize="@dimen/_13sdp">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                     <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                     fullappfontstyleregular="@{0}"
+                        android:text="@string/cancel"
+                        android:id="@+id/negativebuttonclick"
+                        android:layout_marginEnd="@dimen/_35sdp"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12sdp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        app:layout_constraintBottom_toBottomOf="@+id/positivebuttonclick"
+                        app:layout_constraintEnd_toStartOf="@+id/positivebuttonclick"
+                        app:layout_constraintTop_toTopOf="@+id/positivebuttonclick">
+
+                     </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/positivebuttonclick"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_19sdp"
+                        fullappfontstyleregular="@{0}"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="@string/Done"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_12sdp"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

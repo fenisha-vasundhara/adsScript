@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:TagsEditText="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+
+        <variable
+            name="isdarktheme"
+            type="Boolean" />
+
+        <variable
+            name="contactadapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.SelectContactAdapter" />
+
+
+        <variable
+            name="customornot"
+            type="Boolean" />
+
+        <variable
+            name="nocontactfoundchack"
+            type="Boolean" />
+
+        <variable
+            name="isblacktheme"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SelectContactActivity">
+
+
+        <ProgressBar
+            android:id="@+id/progressbarcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/appcolor"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView">
+
+        </ProgressBar>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/vAnd15StatusBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/search_bar_con"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/serch_bg"
+                android:paddingHorizontal="@dimen/_5sdp"
+                TagsEditText:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.90">
+
+                <ScrollView
+                    android:id="@+id/selected_contacts_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/SearchContact"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/selected_contacts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_margin"
+                            android:layout_marginTop="@dimen/activity_margin"
+                            android:layout_marginEnd="@dimen/activity_margin"
+                            android:layout_marginBottom="@dimen/activity_margin"
+                            android:orientation="vertical" />
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/chips_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1">
+
+                </ImageView>
+
+
+                <EditText
+                    android:id="@+id/SearchContact"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@null"
+                    android:hint="@string/searchcon"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="#87A0B7"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toStartOf="@+id/serch_cleasr"
+                    app:layout_constraintStart_toEndOf="@+id/selected_contacts_sc"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+                </EditText>
+
+                <com.messenger.phone.number.text.sms.service.apps.ChipsInput
+                    android:id="@+id/chips_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:hint="@string/searchcon"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toStartOf="@+id/serch_cleasr"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2"
+                    app:maxRows="3" />
+
+                <ImageView
+                    android:id="@+id/serch_cleasr"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:src="@drawable/ic_serch_close_new"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/SearchContact"
+                    app:layout_constraintEnd_toStartOf="@+id/keybordopen"
+                    app:layout_constraintTop_toTopOf="@+id/SearchContact"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/keybordopen"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:src="@drawable/open_keybord_number"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/serch_cleasr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/serch_cleasr">
+
+                </ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/thread_add_contacts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/serch_bg"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.90"
+                tools:visibility="gone">
+
+                <EditText
+                    android:id="@+id/add_contact_or_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_toStartOf="@+id/confirm_inserted_number"
+                    android:background="@android:color/transparent"
+                    android:completionThreshold="2"
+                    android:gravity="center_vertical"
+                    android:hint="@string/add_contact_or_number"
+                    android:textSize="@dimen/big_text_size" />
+
+                <ImageView
+                    android:id="@+id/confirm_inserted_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/add_contact_or_number"
+                    android:layout_alignBottom="@+id/add_contact_or_number"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/confirm_selection"
+                    android:paddingStart="@dimen/medium_margin"
+                    android:paddingEnd="@dimen/medium_margin"
+                    android:src="@drawable/ic_check_vector"
+                    android:visibility="gone"
+                    app:tint="@color/black2"
+                    tools:visibility="visible" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/no_contacts_placeholder"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:text="@string/no_access_to_contacts"
+            android:textStyle="italic"
+            android:visibility="gone"
+            TagsEditText:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/no_contacts_placeholder_2"
+            tools:visibility="visible" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/no_contacts_placeholder_2"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_contacts_placeholder"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ripple_all_corners"
+            android:gravity="center"
+            android:padding="@dimen/activity_margin"
+            android:text="@string/request_the_required_permissions"
+            android:visibility="gone"
+            TagsEditText:layout_constraintBottom_toTopOf="@+id/no_contacts_placeholder"
+            TagsEditText:layout_constraintHorizontal_bias="0.5"
+            TagsEditText:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainlayout"
+            tools:visibility="visible" />
+
+        <com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:adapter="@{contactadapter}"
+            android:clipToPadding="false"
+            android:layoutAnimation="@anim/layout_animation"
+            android:orientation="vertical"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="none"
+            app:layoutManager=".recyclerviewCustom.MyLinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/contacts_letter_fastscroller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constAdViewBottom"
+            tools:visibility="visible">
+
+        </com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/create_group"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/tabselectiononbg"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemclick">
+
+            <ImageView
+                android:id="@+id/create_group_vector"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/create_group_vector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/Create_Group"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Create_Group"
+                fullappfontstyleregular="@{0}"
+                setTextSizeFullApp="@{textsizechagefor10}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/Create_Group"
+                android:textColor="@color/black2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/create_group_vector"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constAdViewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            TagsEditText:layout_constraintTop_toBottomOf="@+id/create_group"
+            app:layout_constraintVertical_bias="1">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/bannerShimmerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/shimmerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </FrameLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameAdBottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:paddingVertical="0.7dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.reddit.indicatorfastscroll.FastScrollerView
+
+            android:id="@+id/contacts_letter_fastscroller"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/serch_bg"
+            android:paddingTop="@dimen/_5sdp"
+            TagsEditText:fastScrollerTextPadding="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:textAppearance="@style/FastScrollerTextAppearance1"
+            android:textColor="#959595"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView"
+            tools:visibility="visible" />
+
+
+        <com.reddit.indicatorfastscroll.FastScrollerThumbView
+            android:id="@+id/contacts_letter_fastscroller_thumb"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+            app:layout_constraintTop_toTopOf="@+id/contacts_letter_fastscroller"
+            tools:visibility="visible" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemclick"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:visibility="@{customornot == true ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainlayout"
+            tools:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    TagsEditText:layout_constraintGuide_percent="0.766">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/number"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    setchatthemecolorTintTxtFullappForLocksetup="@{0}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toTopOf="@+id/lastmessageshow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.08"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="number">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lastmessageshow"
+                    fullappfontstyleregular="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    setchatthemecolorTintTxtFullappForLocksetup="@{0}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:singleLine="true"
+                    TagsEditText:layout_constraintEnd_toStartOf="@+id/imageView20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/number"
+                    app:layout_constraintTop_toBottomOf="@+id/number"
+                    tools:text="last message">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_33sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:background="@drawable/make_new_message"
+                    app:layout_constraintBottom_toBottomOf="@+id/lastmessageshow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.9"
+                    app:layout_constraintTop_toTopOf="@+id/lastmessageshow">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_selected"
+                    fullappfontstyleregular="@{0}"
+            android:textSize="@dimen/_13sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/New_Chat"
+                    android:textColor="@color/black2"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView20"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView20"
+                    app:layout_constraintStart_toStartOf="@+id/imageView20"
+                    app:layout_constraintTop_toTopOf="@+id/imageView20">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nomessagefound"
+            setTextSizeFullApp="@{textsizechagefor18}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Contact_Found"
+            android:textColor="@color/newmessagesecound"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/confirm_manage_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_check_vector"
+            android:visibility="gone"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/white"
+            tools:visibility="gone">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

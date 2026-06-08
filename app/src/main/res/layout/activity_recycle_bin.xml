@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.MainMassageAdapter" />
+
+        <variable
+            name="isselection"
+            type="Boolean" />
+
+        <variable
+            name="nomessagefoundchack"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+
+
+        tools:context=".RecycleBinActivity">
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/main_menu_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/tool_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="?attr/colorSurface"
+                android:elevation="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/defaulttoolshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{isselection ? View.GONE : View.VISIBLE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible"
+        android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginStart="0dp"
+                        app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        app:iconTint="?attr/colorOnSurface"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView3"
+                        fullappfontstylesemibold="@{0}"
+                        setchatthemecolorTintTxt="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/recycle_bin"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                        app:layout_constraintEnd_toStartOf="@+id/more_btn"
+                        app:layout_constraintStart_toEndOf="@+id/back_btn"
+                        app:layout_constraintTop_toTopOf="@+id/back_btn"
+                        tools:visibility="visible">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/more_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                        android:contentDescription="@string/Delete"
+                        app:icon="@drawable/home_material_ic_delete_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/more_btn_2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/more_btn_2"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                        android:contentDescription="@string/cd_home_more_options"
+                        app:icon="@drawable/home_material_ic_more_vert_rounded_dark"
+                        android:visibility="gone"      app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/selected_more_btn_2"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:contentDescription="@string/cd_home_more_options"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                        app:icon="@drawable/home_material_ic_more_vert_rounded_dark"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        tools:layout_editor_absoluteX="409dp"
+                        tools:layout_editor_absoluteY="9dp">
+
+                    </com.google.android.material.button.MaterialButton>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/selectioncontenar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:visibility="@{isselection ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/selected_more_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                        android:contentDescription="@string/Delete"
+                        app:icon="@drawable/home_material_ic_delete_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+
+
+                        >
+
+                    </com.google.android.material.button.MaterialButton>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/message_selection_close"
+
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginStart="0dp"
+                        app:icon="@drawable/home_material_ic_close_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        app:iconTint="?attr/colorOnSurface"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </com.google.android.material.button.MaterialButton>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/selectioncount"
+                        fullappfontstyleregular="@{0}"
+                        setchatthemecolorTintTxt="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                        android:layout_marginEnd="@dimen/mf_appbar_title_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="1 selected"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        app:layout_constraintBottom_toBottomOf="@+id/message_selection_close"
+                        app:layout_constraintEnd_toStartOf="@+id/selected_more_btn"
+                        app:layout_constraintStart_toEndOf="@+id/message_selection_close"
+                        app:layout_constraintTop_toTopOf="@+id/message_selection_close">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+            android:id="@+id/conversations_fastscroller"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="?attr/colorSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_menu_ar">
+
+            <com.simplemobiletools.commons.views.MyRecyclerView
+                android:id="@+id/allmassagerecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{adapter}"
+                android:background="?attr/colorSurface"
+                android:clipToPadding="false"
+                android:paddingEnd="@dimen/_8sdp"
+                android:layoutAnimation="@anim/layout_animation"
+                android:orientation="vertical"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="none"
+                app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager">
+
+            </com.simplemobiletools.commons.views.MyRecyclerView>
+
+        </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nomessagefound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recycling_bin_is_empty"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:visibility="@{nomessagefoundchack ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

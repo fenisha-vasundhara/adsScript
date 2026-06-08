@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.InMainAdapter" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecycleBinSendMessageActivity">
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/userid"
+                fullappfontstylesemibold="@{0}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10ssp"
+                android:maxLines="1"
+                android:singleLine="true"
+                setchatthemecolorTintTxt="@{0}"
+                setTextSizeFullApp="@{textsizechagefor15}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/more_btn_for_editing"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/maincanternar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jigar">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/messagecount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                setchatthemecolorTintTxt="@{0}"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:text="1"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintDimensionRatio="1:1"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/mf_appbar_back_icon"     app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/maincanternar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/toolbar_icon_ripple"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.7"
+                app:layout_constraintHorizontal_bias="0.14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/contacticon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/contacticon"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    ColorChangeImgeTint="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_round_shap"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.7"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fistcat"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="J"
+                    android:textColor="@color/white"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    android:textStyle="bold"
+                    android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/more_btn_for_editing"
+                style="@style/Widget.App.IconCloseButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                app:icon="@drawable/ic_m3_more_vert_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/copy_btn"
+                style="@style/Widget.App.IconCloseButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:icon="@drawable/message_copy_baseline_content_copy_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/delete_btn"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_btn"
+                style="@style/Widget.App.IconCloseButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                app:icon="@drawable/baseline_delete_24_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/more_btn_for_editing"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#31000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        </View>
+
+        <ImageView
+            android:id="@+id/customwallpaper_bg_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0.25"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            tools:layout_height="match_parent">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/customwallpaper_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+        </ImageView>
+
+        <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+            android:id="@+id/thread_messages_fastscroller"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:supportSwipeToRefresh="true">
+
+            <com.simplemobiletools.commons.views.MyRecyclerView
+                android:id="@+id/showusermessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{adapter}"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="none"
+                app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager"
+                app:stackFromEnd="true"
+                tools:listitem="@layout/item_message_in" />
+
+        </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

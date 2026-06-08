@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemnumberBtn"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.KeybordModelClass" />
+
+        <variable
+            name="chack"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:background="@drawable/lock_screen_keybord_number_bg"
+                android:text="@{itemnumberBtn.buttonCount}"
+                setLockScreenPinBackground="@{0}"
+                android:textSize="@dimen/_20sdp"
+                android:visibility="@{itemnumberBtn.show ? View.GONE : itemnumberBtn.buttonCount == chack ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1" />
+
+
+            <ImageView
+                android:id="@+id/backpress"
+                setKeybordimage="@{itemnumberBtn.buttonimg}"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:visibility="@{itemnumberBtn.show ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>

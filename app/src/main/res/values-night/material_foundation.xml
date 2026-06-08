@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Night tokens keep brand colors but switch surfaces/backgrounds to dark. -->
+    <color name="mf_color_primary">#4AA6FB</color>
+    <color name="mf_color_on_primary">#FFFFFFFF</color>
+    <color name="mf_color_secondary">#69B6FD</color>
+    <color name="mf_color_on_secondary">#FFFFFFFF</color>
+    <color name="mf_color_surface">#000000</color>
+    <color name="mf_color_on_surface">#FFFFFFFF</color>
+    <color name="mf_color_background">#000000</color>
+    <color name="mf_color_on_background">#FFFFFFFF</color>
+    <color name="mf_color_error">#E46962</color>
+    <color name="mf_color_on_error">#FFFFFFFF</color>
+
+    <bool name="mf_light_system_bars">false</bool>
+
+</resources>

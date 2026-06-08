@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"></import>
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.Languagesadapter" />
+
+
+        <variable
+            name="norecentfound"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+
+        tools:context=".fragment.LanguageFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/colorSurface"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/white"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+
+            <!-- <com.google.android.material.button.MaterialButton
+                 android:id="@+id/messagebutton2"
+                app:iconSize="@dimen/mf_appbar_back_icon_size"
+                 android:layout_width="@dimen/mf_appbar_action_size"
+                 android:layout_height="@dimen/mf_appbar_action_size"
+
+                 app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                 app:iconGravity="textStart"
+                 app:iconPadding="0dp"
+                 app:iconTint="?attr/colorOnSurface"
+                 android:layout_marginStart="0dp"
+                 android:padding="@dimen/mf_appbar_action_padding"
+                 style="@style/Widget.Material3.Button.IconButton"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:tint="@color/black2">-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:iconSize="@dimen/mf_appbar_back_icon"       app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+
+                app:iconTint="?attr/colorOnSurface"
+                android:contentDescription="@string/cd_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                fullappfontstylesemibold="@{0}"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                android:text="@string/Language_nre"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:textColor="@color/black2"
+                tools:visibility="visible">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lang_change"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size"
+                android:layout_height="@dimen/mf_appbar_action_size"
+                android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                android:padding="@dimen/mf_appbar_action_padding"
+                android:visibility="gone"
+                app:icon="@drawable/ic_true_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="@dimen/_15sdp"
+                app:iconTint="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lang_change_new"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size"
+                android:layout_height="@dimen/mf_appbar_action_size"
+                android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                android:padding="@dimen/mf_appbar_action_padding"
+                android:visibility="gone"
+                app:icon="@drawable/ic_true_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="@dimen/_15sdp"
+                app:iconTint="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tool_bar_main"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="?attr/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:layout_marginHorizontal="@dimen/_12sdp">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/messagebutton2"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size"
+                android:layout_height="@dimen/mf_appbar_action_size"
+                android:layout_marginStart="@dimen/mf_appbar_action_margin"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/search_message_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/serch_cleasr"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintStart_toEndOf="@+id/messagebutton2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/search_bar_full"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@null"
+                    android:hint="@string/languages"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textColorHint="?attr/colorOnSurfaceVariant"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/serch_cleasr"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size"
+
+                android:layout_height="@dimen/mf_appbar_action_size"
+                android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                android:contentDescription="@string/cd_voice_search_languages"
+                android:padding="@dimen/mf_appbar_action_padding"
+                android:visibility="visible"
+                app:icon="@drawable/baseline_mic_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="@dimen/mf_appbar_back_icon"
+
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView35"
+            fullappfontstyleregular="@{0}"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/No_Available_Languages"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:visibility="@{norecentfound ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loadadAbcotenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5ssp"
+            app:layout_constraintBottom_toTopOf="@+id/scroll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tool_bar_main"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+
+            <FrameLayout
+                android:id="@+id/loadad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/adlayer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha="0.25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:layout_constraintBottom_toTopOf="@+id/constSmallNativeAdView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loadadAbcotenar"
+            android:paddingHorizontal="@dimen/_12sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{adapter}"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_60sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constSmallNativeAdView"
+            android:layout_width="match_parent"
+            android:maxHeight="@dimen/_325sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <FrameLayout
+                android:id="@+id/frameSmallNativeAdBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/smallNativeAdShimmerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:elevation="@dimen/_2sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shimmer_auto_start="true"
+                app:shimmer_duration="800"
+                app:shimmer_fixed_width="@dimen/_160sdp"
+                app:shimmer_highlight_color="@color/white"
+                tools:layout_editor_absoluteX="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

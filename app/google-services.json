@@ -1,0 +1,1288 @@
+{
+  "project_info": {
+    "project_number": "787207734962",
+    "firebase_url": "https://android-apps-a0acb.firebaseio.com",
+    "project_id": "android-apps-a0acb",
+    "storage_bucket": "android-apps-a0acb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:b9d7fc8eb995b0a3a26bab",
+        "android_client_info": {
+          "package_name": "com.audio.editor.equalizer.volume.mixing.trimming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:36e95a4094f74922",
+        "android_client_info": {
+          "package_name": "com.auto.wallpaper.live.background.changer.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:b7140859004fca85",
+        "android_client_info": {
+          "package_name": "com.background.eraser.remover.photo.layers.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~8466358166"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:5da8dbbddc152a7ca26bab",
+        "android_client_info": {
+          "package_name": "com.calendar.simple.schedule.event.tools.list.plan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:8969b061565dcf69a26bab",
+        "android_client_info": {
+          "package_name": "com.call.message.notification.light.led.blink.alert.controller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:d96485ac95f4d8fda26bab",
+        "android_client_info": {
+          "package_name": "com.check.bank.balance.banking.tool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:c5eee9589dd6b70ba26bab",
+        "android_client_info": {
+          "package_name": "com.clicker.autoclicker.automatictap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:c2108a3bfc202469",
+        "android_client_info": {
+          "package_name": "com.cool.stylish.text.art.fancy.color.creator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~5287523184"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:0da1453782564dd2",
+        "android_client_info": {
+          "package_name": "com.crop.photo.image.resize.cut.tools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-gab9mut2leemh1hv76ofv7ofd6n2l9rs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crop.photo.image.resize.cut.tools",
+            "certificate_hash": "282d0c5a02ffe23c4347d11664080a2b5bf04c56"
+          }
+        },
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~8146399789"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:00616ae13a3b1677a26bab",
+        "android_client_info": {
+          "package_name": "com.custom.keyboard.fontboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:450976e0ffb76898a26bab",
+        "android_client_info": {
+          "package_name": "com.deleted.notification.historylog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:e998e270286bd547a26bab",
+        "android_client_info": {
+          "package_name": "com.family.tree.shape.photos.frame.collage.maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:f580342f8309bc41a26bab",
+        "android_client_info": {
+          "package_name": "com.fast.flashlight.on.clap.mobile.torch2021"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:b6ed0f81879425e6a26bab",
+        "android_client_info": {
+          "package_name": "com.financial.gst.loan.emicalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:2349045a9bcf0d87a26bab",
+        "android_client_info": {
+          "package_name": "com.gallery.manager.photo.album.vault"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~3525132376"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:d2de0e2987735b01a26bab",
+        "android_client_info": {
+          "package_name": "com.gps.mapcamera.timestamp.geotag.locationonphoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:6a503a662e68f460a26bab",
+        "android_client_info": {
+          "package_name": "com.graphic.design.digital.businessadsmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~2403622395"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:fd3b4bdd7e9c7be8a26bab",
+        "android_client_info": {
+          "package_name": "com.image.scan.text"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:2dd2eb813cecf6e8",
+        "android_client_info": {
+          "package_name": "com.led.scroller.text.display.light.messages"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:71de80264dc0a32ba26bab",
+        "android_client_info": {
+          "package_name": "com.loop.animate.live.moving.photo.motion.effect.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:06dfdbc8f4e0284ca26bab",
+        "android_client_info": {
+          "package_name": "com.messenger.phone.number.text.sms.service.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:672c9458897f4a5da26bab",
+        "android_client_info": {
+          "package_name": "com.musicplayer.musicbooster.musicequalizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:1f01b88167673eba",
+        "android_client_info": {
+          "package_name": "com.name.photo.birthday.cake.quotes.frame.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~7677841240"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:025ab4508df09d05a26bab",
+        "android_client_info": {
+          "package_name": "com.open.wifi.freewificonnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:af46bb279c3ce30ca26bab",
+        "android_client_info": {
+          "package_name": "com.photo.collage.frames.grid.filters.maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:6dfef5070f6cfc75a26bab",
+        "android_client_info": {
+          "package_name": "com.pip.camera.art.filter.photo.effect.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:8f8548c6b0f641a6a26bab",
+        "android_client_info": {
+          "package_name": "com.player.media.hdvideoplayer.audioplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:471a941ede0e460da26bab",
+        "android_client_info": {
+          "package_name": "com.ringtone.maker.mp3.music.cutter.audio.trim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:940e83c709b5dedea26bab",
+        "android_client_info": {
+          "package_name": "com.slideshow.videomaker.photo.music.video.editor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:d235f14935180576a26bab",
+        "android_client_info": {
+          "package_name": "com.slim.face.perfect.body.shape.editor.skinny.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~9881002838"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:caede30d56c33cbb",
+        "android_client_info": {
+          "package_name": "com.solid.color.wallpaper.hd.image.background"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:ec4d8d313cb0ace7a26bab",
+        "android_client_info": {
+          "package_name": "com.todo.schedule.planner.organize.time.task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:b66fa17fd0cc68c0a26bab",
+        "android_client_info": {
+          "package_name": "com.vasu.voicerecoding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:81c4c01b32182d3ca26bab",
+        "android_client_info": {
+          "package_name": "com.voice.changer.effects.sound.avatar.funny.audio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~4141098098"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787207734962:android:68cbe9780f30f86aa26bab",
+        "android_client_info": {
+          "package_name": "djmixer.sound.effects.musicmixplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPJ2TmXp2P9cYZJu_wARBFOI3Gg0uCGj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787207734962-mp1avs5afgp46v3ic4ua6q8oa1he7q7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "787207734962-1mmfsvtjeur36m72iad7gghn686armbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.voice.changer.audio.studio.effect.record.prank"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2033413118114270~5576580649"
+    }
+  ],
+  "configuration_version": "1"
+}

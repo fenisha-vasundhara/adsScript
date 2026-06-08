@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/tutorial_bg_new_dilog"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Done"
+                android:id="@+id/done_txt_copy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </Button>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12ssp"
+                android:text="@string/From_Messages"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/done_txt_copy">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10ssp"
+                android:layout_height="wrap_content"
+                tools:text="gkdfopgkdflpghkkkdfopgkdfpgkdopggkdfopgkdflpghkkkdfopgkdfpgkdopggkdfopgkdflpghkkkdfopgkdfpgkdopggkdfopgkdflpghkkkdfopgkdfpgkdopggkdfopgkdflpghkkkdfopgkdfpgkdopggkdfopgkdflpghkkkdfopgkdfpgkdopg"
+                android:gravity="top"
+                android:id="@+id/selected_txt"
+                android:textColor="@color/black2"
+                android:background="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

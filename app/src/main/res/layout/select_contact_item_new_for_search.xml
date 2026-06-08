@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="listdata"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Contact" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/user_profile_image"
+                ColorChangeImgeTint="@{0}"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/icon_round_shap"
+                android:visibility="gone"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.65"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            </ImageView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/numberfisttxt"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@{listdata.name.substring(0,1)}"
+                android:textColor="@color/white"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/user_profile_image"
+                app:layout_constraintEnd_toEndOf="@+id/user_profile_image"
+                app:layout_constraintStart_toStartOf="@+id/user_profile_image"
+                app:layout_constraintTop_toTopOf="@+id/user_profile_image"
+                tools:text="J">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+            <ImageView
+                android:id="@+id/contacticon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/contacticon"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.65"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+            </ImageView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/number"
+                fullappfontstyleregular="@{0}"
+                setchatthemecolorTintTxtcontactserch="@{0}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxEms="10"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@{listdata.name}"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                app:layout_constraintBottom_toBottomOf="@+id/user_profile_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/contacticon"
+                app:layout_constraintTop_toTopOf="@+id/user_profile_image"
+                tools:text="Akshay Patel Ref Vasundhara Infotech">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <ImageView
+                android:id="@+id/selection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_launcher_background"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.1"
+                app:tint="@color/black2">
+
+            </ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

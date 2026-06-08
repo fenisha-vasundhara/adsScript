@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/aftercall_pill_bg"
+    android:backgroundTint="@color/white"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_warning"
+ />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_15sdp"
+        android:text="The app can only function with Privacy Policy and Terms of Services accepted."
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="OK" />
+</LinearLayout>

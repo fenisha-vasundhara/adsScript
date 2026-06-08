@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="datacon"
+            type="com.messenger.phone.number.text.sms.service.apps.data.SimpleContact" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+android:id="@+id/clMain"
+
+        android:layout_height="@dimen/_45sdp">
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/member_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+           fullappfontstyleregular="@{0}"
+            android:text="@{datacon.name}"
+            android:textColor="?attr/colorOnSurface"
+            android:singleLine="true"
+            android:layout_marginEnd="@dimen/_10ssp"
+            app:layout_constraintHorizontal_bias="0"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="jigar">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/mem"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/home_material_ic_person_rounded_unselected"
+            app:tint="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

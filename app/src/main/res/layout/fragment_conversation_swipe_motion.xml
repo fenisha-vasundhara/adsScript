@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="swipe_right"
+            type="String" />
+
+        <variable
+            name="swipe_left"
+            type="String" />
+
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        tools:context=".fragment.Conversation_swipe_motion_Fragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconSize="@dimen/mf_appbar_back_icon"     app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                fullappfontstylesemibold="@{0}"
+                setTextSizeFullApp="@{textsizechagefor18}"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/Conversation_Swipe_Motion"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conversation_Swipe_Motion_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:visibility="visible"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conversation_Swipe_Motion_archive_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:transitionName="shared_element_transition_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ct1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintBottom_toTopOf="@+id/Swipe_Right_card"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Swipe_Right"
+                            fullappfontstylesemibold="@{0}"
+                            setchatthemecolorTintTxtFullapp="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/Swipe_Right"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            app:layout_constraintBottom_toTopOf="@+id/Swipe_Right_txt"
+                            app:layout_constraintEnd_toStartOf="@+id/right_swipw_btn"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Swipe_Right_txt"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:textColor="#8D8E8E"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Swipe_Right"
+                            tools:text="jigar">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                        <ImageView
+                            android:id="@+id/right_swipw_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/swipe_motion"
+                            app:layout_constraintBottom_toBottomOf="@+id/Swipe_Right_txt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintTop_toTopOf="@+id/Swipe_Right"
+                            app:layout_constraintWidth_percent="0.17">
+
+                        </ImageView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView17"
+                            fullappfontstylesemibold="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor10}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Change"
+                            android:textColor="@color/appcolor"
+                            app:layout_constraintBottom_toBottomOf="@+id/right_swipw_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/right_swipw_btn"
+                            app:layout_constraintStart_toStartOf="@+id/right_swipw_btn"
+                            app:layout_constraintTop_toTopOf="@+id/right_swipw_btn">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Swipe_Right_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/swip_right_expand_view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ct1">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/constraintLayout12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/swipe_motion_bg"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+
+                                    <ImageView
+                                        android:id="@+id/swipw_profile"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:src="@drawable/swipw_profile_new_pf"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.6"
+                                        app:layout_constraintHorizontal_bias="0.35"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/profile_three_line_9"
+                                        setTextSizeFullApp="@{textsizechagefor13}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="1"
+                                        android:text="Alan Walker"
+                                        app:layout_constraintBottom_toTopOf="@+id/profile_three_line_10"
+                                        app:layout_constraintStart_toStartOf="@+id/profile_three_line_10"
+                                        app:layout_constraintTop_toTopOf="@+id/swipw_profile"
+                                        app:layout_constraintVertical_chainStyle="packed"
+                                        app:layout_constraintWidth_percent="0.4">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/profile_three_line_10"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_25sdp"
+                                        android:maxLines="2"
+                                        android:text="@string/Default_message_1"
+                                        setTextSizeFullApp="@{textsizechagefor8}"
+                                        app:layout_constraintBottom_toBottomOf="@+id/swipw_profile"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.2"
+                                        app:layout_constraintStart_toEndOf="@+id/swipw_profile"
+                                        app:layout_constraintTop_toBottomOf="@+id/profile_three_line_9"
+                                        app:layout_constraintWidth_percent="0.4">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/constraintLayout11"
+                                    setbgcolor="@{swipe_right}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#138E41"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.25">
+
+
+                                    <ImageView
+                                        android:id="@+id/swipe_right_img"
+                                        setbgswipesrc="@{swipe_right}"
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:src="@drawable/swipe_archive"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/swip_right_expand_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Swipe_Right_card"
+                        tools:visibility="visible">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Archive"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/right_btn_Delete"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c1"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Archive"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt1"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_archive"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt1"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Archive"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c1">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <View
+                            android:id="@+id/view5"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Archive"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Archive"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Archive"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Delete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/right_btn_Call"
+                            app:layout_constraintStart_toEndOf="@+id/right_btn_Archive"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Delete"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt2"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_delete"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt2"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Delete"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c2">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Delete"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Delete"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Delete"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Call"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/right_btn_Mark"
+                            app:layout_constraintStart_toEndOf="@+id/right_btn_Delete"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c3"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Call"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt3"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_call"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt3"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Call"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c3">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view7"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Call"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Call"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Call"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Mark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/right_btn_Pin"
+                            app:layout_constraintStart_toEndOf="@+id/right_btn_Call"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c4"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Mark_as_read"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt4"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_mark"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt4"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Mark_as_read"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c4">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <View
+                            android:id="@+id/view8"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Mark"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Mark"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Mark"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Pin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toStartOf="@+id/right_btn_Private"
+                            app:layout_constraintStart_toEndOf="@+id/right_btn_Mark"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c5"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Pin"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt5"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_pin"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt5"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Pin"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c5">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view9"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Pin"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Pin"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Pin"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right_btn_Private"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/right_btn_Pin"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/c6"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:cardBackgroundColor="@color/Private_Chat"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/txt6"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.8">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_13sdp"
+                                    android:layout_height="@dimen/_13sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/swipe_private_chat"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/txt6"
+                                conversationswipemoitontxt="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/Privacy_chat"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/c6">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view10"
+                            android:layout_width="15dp"
+                            android:layout_height="3dp"
+                            android:background="@drawable/swip_motion_selection_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/right_btn_Private"
+                            app:layout_constraintStart_toStartOf="@+id/right_btn_Private"
+                            app:layout_constraintTop_toBottomOf="@+id/right_btn_Private"
+                            app:layout_constraintVertical_bias="1">
+
+                        </View>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ct2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/swip_right_expand_view">
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Swipe_Left"
+                            fullappfontstylesemibold="@{0}"
+                            setchatthemecolorTintTxtFullapp="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:text="@string/Swipe_Left"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            app:layout_constraintBottom_toTopOf="@+id/Swipe_Left_txt"
+                            app:layout_constraintEnd_toStartOf="@+id/left_swipw_btn"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Swipe_Left_txt"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:textColor="#8D8E8E"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Swipe_Left"
+                            tools:text="jigar">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                        <ImageView
+                            android:id="@+id/left_swipw_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:scaleType="fitXY"
+                          android:background="@drawable/swipe_motion"
+                            app:layout_constraintBottom_toBottomOf="@+id/Swipe_Left_txt"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintTop_toTopOf="@+id/Swipe_Left"
+                            app:layout_constraintWidth_percent="0.17">
+
+                        </ImageView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView18"
+                            fullappfontstylesemibold="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor10}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Change"
+                            android:textColor="@color/appcolor"
+                            app:layout_constraintBottom_toBottomOf="@+id/left_swipw_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/left_swipw_btn"
+                            app:layout_constraintStart_toStartOf="@+id/left_swipw_btn"
+                            app:layout_constraintTop_toTopOf="@+id/left_swipw_btn">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Swipe_Left_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toTopOf="@+id/swip_left_expand_view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ct2">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraintLayout14"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/swipe_motion_bg"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <ImageView
+                                    android:id="@+id/swipw_profile_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/swipw_profile_new_pf_two"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.6"
+                                    app:layout_constraintHorizontal_bias="0.07"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/profile_three_line_12"
+                                    setTextSizeFullApp="@{textsizechagefor13}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="Xena"
+                                    app:layout_constraintBottom_toTopOf="@+id/profile_three_line_11"
+                                    app:layout_constraintStart_toStartOf="@+id/profile_three_line_11"
+                                    app:layout_constraintTop_toTopOf="@+id/swipw_profile_2"
+                                    app:layout_constraintVertical_chainStyle="packed"
+                                    app:layout_constraintWidth_percent="0.4">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/profile_three_line_11"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:maxLines="2"
+                                    android:text="@string/Default_message_1"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    app:layout_constraintBottom_toBottomOf="@+id/swipw_profile_2"
+                                    app:layout_constraintHeight_percent="0.2"
+                                    app:layout_constraintStart_toEndOf="@+id/swipw_profile_2"
+                                    app:layout_constraintTop_toBottomOf="@+id/profile_three_line_12"
+                                    app:layout_constraintWidth_percent="0.4">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constraintLayout13"
+                                setbgcolor="@{swipe_left}"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="#EE4747"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.25">
+
+                                <ImageView
+                                    android:id="@+id/swipe_left_img"
+                                    setbgswipesrc="@{swipe_left}"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:src="@drawable/swipe_archive"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/swip_left_expand_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/Swipe_Left_card"
+                        tools:visibility="visible">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="0dp"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Archive"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/left_btn_Delete"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Archive"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt1"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_archive"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt1"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Archive"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc1">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <View
+                                android:id="@+id/leftview5"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Archive"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Archive"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Archive"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Delete"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/left_btn_Call"
+                                app:layout_constraintStart_toEndOf="@+id/left_btn_Archive"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Delete"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt2"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_delete"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt2"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Delete"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc2">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:id="@+id/leftview6"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Delete"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Delete"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Delete"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Call"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/left_btn_Mark"
+                                app:layout_constraintStart_toEndOf="@+id/left_btn_Delete"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Call"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt3"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_call"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt3"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Call"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc3">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:id="@+id/leftview7"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Call"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Call"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Call"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Mark"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/left_btn_Pin"
+                                app:layout_constraintStart_toEndOf="@+id/left_btn_Call"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Mark_as_read"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt4"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_mark"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt4"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Mark_as_read"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc4">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <View
+                                android:id="@+id/leftview8"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Mark"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Mark"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Mark"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Pin"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/left_btn_Private"
+                                app:layout_constraintStart_toEndOf="@+id/left_btn_Mark"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Pin"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt5"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_pin"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt5"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Pin"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc5">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:id="@+id/leftview9"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Pin"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Pin"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Pin"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/left_btn_Private"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/left_btn_Pin"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/leftc6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    app:cardBackgroundColor="@color/Private_Chat"
+                                    app:cardCornerRadius="@dimen/_10sdp"
+                                    app:layout_constraintBottom_toTopOf="@+id/lefttxt6"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.8">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/swipe_private_chat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/lefttxt6"
+                                    conversationswipemoitontxt="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_3sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Privacy_chat"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/leftc6">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <View
+                                android:id="@+id/leftview10"
+                                android:layout_width="15dp"
+                                android:layout_height="3dp"
+                                android:background="@drawable/swip_motion_selection_line"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/left_btn_Private"
+                                app:layout_constraintStart_toStartOf="@+id/left_btn_Private"
+                                app:layout_constraintTop_toBottomOf="@+id/left_btn_Private"
+                                app:layout_constraintVertical_bias="1">
+
+                            </View>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

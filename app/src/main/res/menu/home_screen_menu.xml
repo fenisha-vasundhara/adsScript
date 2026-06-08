@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/message_mark_as_read"
+
+        android:title="@string/Mark_all_as_read" />
+
+    <item
+        android:id="@+id/message_share"
+        android:title="@string/Share_app" />
+
+    <item
+        android:id="@+id/import_messages"
+        android:title="@string/Import_messages"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/message_export"
+        android:title="@string/Backup_Restore"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/select_all_message"
+        android:title="@string/Select_all_message"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/message_archive"
+        android:title="@string/Archived"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/message_Settings"
+        android:title="@string/Settings"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/message_block"
+        android:title="@string/Block_List"
+        android:visible="false"/>
+
+</menu>

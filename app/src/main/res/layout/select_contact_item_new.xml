@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="listdata"
+            type="com.messenger.phone.number.text.sms.service.apps.data.SimpleContact" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fistalbhabase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       fullappfontstylesemibold="@{0}"
+            android:text="+"
+            android:textColor="@color/appcolor"
+            setTextSizeFullApp="@{textsizechagefor18}"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="parent">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fistalbhabase">
+
+            <ImageView
+                android:id="@+id/linetop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                tools:visibility="visible"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                setchatthemecolorselect="@{0}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/contacticon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/contacticon"
+                android:visibility="@{isLetterorNot ? View.INVISIBLE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.65"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+            </ImageView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                android:maxEms="10"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toTopOf="@+id/lastmessageshow"
+                android:singleLine="true"
+                android:text="@{listdata.name}"
+                android:textColor="#C3000000"
+                setTextSizeFullApp="@{textsizechagefor15}"
+                android:textSize="@dimen/_25sdp"
+                app:layout_constraintEnd_toStartOf="@+id/selection_boder"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/contacticon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Akshay Patel Ref Vasundhara Infotech">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lastmessageshow"
+                app:layout_constraintTop_toBottomOf="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#98999C"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/selection_boder"
+                app:layout_constraintStart_toStartOf="@+id/number"
+                tools:text="l54354354354353454354354454354543545545">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <ImageView
+                android:id="@+id/selection"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_launcher_background"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.1"
+                app:tint="@color/black2">
+
+            </ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/selection_boder"
+                android:background="@drawable/editmodon_ic"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:backgroundTint="@color/black2"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/selection_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/editmodon_ic_btn_2"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.1"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

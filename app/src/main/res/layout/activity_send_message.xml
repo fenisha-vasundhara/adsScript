@@ -1,0 +1,1939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="replyChipAdapterData"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.ReplyChipAdapter" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.InMainAdapter" />
+
+        <variable
+            name="notreplychack"
+            type="Boolean" />
+
+        <variable
+            name="issimavailableornot"
+            type="Boolean" />
+
+        <variable
+            name="SimNumber"
+            type="String" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:transitionName="shared_element_container"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainbackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/constnativeBannerAdView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".SendMessageActivity">
+
+            <LinearLayout
+                android:id="@+id/vAnd15StatusBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:elevation="0dp"
+                android:padding="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetEndWithActions="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/toolbar_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/userid"
+                        fullappfontstylesemibold="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10ssp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/new_search"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/maincanternar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Jigar">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/messagecount"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.04"
+                        app:layout_constraintStart_toEndOf="@+id/back_btn"
+                        app:layout_constraintTop_toTopOf="@+id/back_btn"
+                        tools:text="1"
+                        tools:visibility="visible">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+
+                        android:layout_marginStart="@dimen/_5sdp"
+                        app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+
+                        app:iconSize="@dimen/mf_appbar_back_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/maincanternar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/toolbar_icon_ripple"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.7"
+                        app:layout_constraintHorizontal_bias="0.14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/contacticon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/contacticon"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.7"
+                            app:layout_constraintHorizontal_bias="0.16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            ColorChangeImgeTint="@{0}"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_round_shap"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.7"
+                            app:layout_constraintHorizontal_bias="0.16"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/fistcat"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:text="J"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="bold"
+                            android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/more_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/ic_m3_more_vert_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/more_btn_for_editing"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        app:icon="@drawable/ic_m3_more_vert_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/color_theme"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        app:icon="@drawable/baseline_color_lens_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/more_btn_for_editing"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/new_search"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        app:icon="@drawable/ic_m3_search_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/color_theme"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/info_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/inmessage_baseline_info_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/Share_btn"
+                        app:layout_constraintHeight_percent="0.35"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/Share_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/inmessage_baseline_share_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/delete_btn"
+                        app:layout_constraintHeight_percent="0.35"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/messagetraslateall"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/translate_all_message_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/translate_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.1"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/messageshare"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/baseline_reply_24_share"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/messagetraslateall"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.1"
+                        tools:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/translate_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:background="@drawable/toolbar_icon_ripple"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/copy_btn"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible">
+
+
+                        <Spinner
+                            android:id="@+id/selectlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#E5EAEF"
+                            android:fontFamily="@font/rubikregular"
+                            android:textColor="#6A6D6F"
+                            android:textColorHint="#6A6D6F"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </Spinner>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/translate_icon"
+                            style="@style/Widget.App.IconCloseButton"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            app:icon="@drawable/ic_m3_translate_24"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.72"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/full_chat_translate_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:icon="@drawable/baseline_g_translate_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/translate_btn"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/copy_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/message_copy_baseline_content_copy_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/delete_btn"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/delete_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/baseline_delete_24_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toStartOf="@+id/more_btn"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/forverd_btn"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:icon="@drawable/message_forward_baseline_forward_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.40"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/message_searchholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/tool_bar_main"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            >
+
+
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/messagebutton2"
+                                style="@style/Widget.Material3.Button.IconButton"
+                                android:layout_width="@dimen/mf_appbar_action_size"
+                                android:layout_height="@dimen/mf_appbar_action_size"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+
+                                android:layout_marginStart="@dimen/_5sdp"
+                                app:iconGravity="textStart"
+                                app:iconPadding="0dp"
+                                app:iconSize="@dimen/mf_appbar_back_icon"       android:clickable="true"
+                                android:focusable="true"
+                                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/search_message_bg"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/serch_cleasr"
+                                app:layout_constraintHeight_percent="0.8"
+                                app:layout_constraintStart_toEndOf="@+id/messagebutton2"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/messageserch"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:hint="@string/search"
+                                    android:imeOptions="actionDone"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+
+                                    android:textSize="@dimen/_12sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textfield.TextInputEditText>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/serch_cleasr"
+                                style="@style/Widget.App.IconCloseButton"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:visibility="gone"
+                                app:icon="@drawable/baseline_close_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.07"
+                                tools:visibility="visible" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            </View>
+
+            <ImageView
+                android:id="@+id/customwallpaper_bg_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha="0.25"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:layout_height="match_parent">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/customwallpaper_bg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+            </ImageView>
+
+
+            <FrameLayout
+                android:id="@+id/banner_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/sub_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sub_poster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/sub_poster_beground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner_add">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guideline1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.04">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guideline2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.74">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guideline3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guideline4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.77">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/Guideline5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.93">
+
+                </androidx.constraintlayout.widget.Guideline>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:background="@drawable/sub_button_to_buy"
+                    app:layout_constraintBottom_toTopOf="@+id/Guideline2"
+                    app:layout_constraintEnd_toStartOf="@+id/Guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/Guideline1"
+                    app:layout_constraintTop_toBottomOf="@+id/Guideline2">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:includeFontPadding="false"
+                        android:maxLength="17"
+                        android:text="@string/upgrade_today"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.94"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.60">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/oswaldmedium"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/Unlock_sub_line"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/Guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/Guideline1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/lato_regular"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/for_a_Better_Messaging_Experience"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/Guideline3"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="@+id/Guideline1"
+                    app:layout_constraintTop_toBottomOf="@+id/txt1">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/month_price_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="60%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_25sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/month_price_discount_static"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="@+id/Guideline3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/month_price_discount_static"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/OFF_static"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/month_price_discount"
+                    app:layout_constraintStart_toStartOf="@+id/month_price_discount"
+                    app:layout_constraintTop_toBottomOf="@+id/month_price_discount">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/messageserchlayoutcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/thread_add_contacts"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sub_poster"
+                tools:visibility="visible">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:text="1"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/message_up_btn"
+                    style="@style/Widget.App.IconCloseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:icon="@drawable/baseline_arrow_back_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_down_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/message_down_btn"
+                    style="@style/Widget.App.IconCloseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:icon="@drawable/baseline_arrow_forward_ios_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/thread_add_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/messageserchlayoutcontent"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/selected_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:orientation="vertical" />
+
+                <ImageView
+                    android:id="@+id/confirm_manage_contacts"
+                    android:layout_width="@dimen/normal_icon_size"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:padding="@dimen/small_margin"
+                    android:src="@drawable/ic_check_vector"
+                    app:tint="@color/black2" />
+
+                <View
+                    android:id="@+id/message_divider_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@+id/selected_contacts"
+                    android:background="@color/divider_grey"
+                    android:importantForAccessibility="no" />
+
+                <com.simplemobiletools.commons.views.MyAutoCompleteTextView
+                    android:id="@+id/add_contact_or_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_icon_size"
+                    android:layout_below="@+id/message_divider_one"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_toStartOf="@+id/confirm_inserted_number"
+                    android:background="@android:color/transparent"
+                    android:completionThreshold="2"
+                    android:gravity="center_vertical"
+                    android:hint="@string/add_contact_or_number"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/big_text_size" />
+
+                <ImageView
+                    android:id="@+id/confirm_inserted_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/add_contact_or_number"
+                    android:layout_alignBottom="@+id/add_contact_or_number"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/confirm_selection"
+                    android:paddingStart="@dimen/medium_margin"
+                    android:paddingEnd="@dimen/medium_margin"
+                    android:src="@drawable/ic_check_vector"
+                    android:visibility="gone"
+                    app:tint="@color/black2" />
+
+                <View
+                    android:id="@+id/message_divider_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_below="@+id/add_contact_or_number"
+                    android:background="@color/divider_grey"
+                    android:importantForAccessibility="no" />
+
+            </RelativeLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/smartRepliesRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5ssp"
+                android:adapter="@{replyChipAdapterData}"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/composer_bottom_root"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/smart_reply_chip" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/datetxt_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:padding="@dimen/_3ssp"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:layout_constraintBottom_toTopOf="@+id/composer_bottom_root"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/newmessagecount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/img_get"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/baseline_arrow_downward_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/datetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_get"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="1 new messages" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/composer_bottom_root"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_sheet_open"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:background="@color/lock_edit_screen"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scheduled_message_holder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/message_schedule_holder_bg"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/Swip_to_reply_holder"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:visibility="visible">
+
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:id="@+id/Schedule_Message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingStart="@dimen/small_margin"
+                        android:paddingEnd="@dimen/activity_margin"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@string/schedule_message"
+                        android:textColor="#1C1E20"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintBottom_toTopOf="@+id/scheduled_message_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/scheduled_message_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/scheduled_message_button"
+                        android:layout_alignBottom="@+id/scheduled_message_button"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:src="@drawable/ic_schedule_message_btn_new_clock"
+                        app:layout_constraintBottom_toBottomOf="@+id/scheduled_message_button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/scheduled_message_button" />
+
+                    <com.simplemobiletools.commons.views.MyTextView
+                        android:id="@+id/scheduled_message_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@drawable/ripple_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/normal_icon_size"
+                        android:paddingStart="@dimen/small_margin"
+                        android:paddingEnd="@dimen/activity_margin"
+                        android:textColor="#252729"
+                        android:textSize="@dimen/middle_text_size"
+                        app:layout_constraintEnd_toStartOf="@+id/discard_scheduled_message"
+                        app:layout_constraintStart_toEndOf="@+id/scheduled_message_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/Schedule_Message"
+                        tools:ignore="HardcodedText"
+                        tools:text="Tomorrow at 6PM GMT +05:30" />
+
+                    <ImageView
+                        android:id="@+id/discard_scheduled_message"
+                        android:layout_width="@dimen/normal_icon_size"
+                        android:layout_height="@dimen/normal_icon_size"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:padding="@dimen/normal_margin"
+                        android:src="@drawable/ic_cross_vector"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/scheduled_message_button"
+                        app:tint="#727476" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/Swip_to_reply_holder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/message_swip_holder_bg"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/composer_container"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_goneMarginBottom="@dimen/medium_margin"
+                    tools:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/swip_replay_under_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="#28138DDF"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/view_swip"
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:background="@color/Private_Chat"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/discard_replay_message"
+                            android:layout_width="@dimen/normal_icon_size"
+                            android:layout_height="@dimen/normal_icon_size"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="@dimen/normal_margin"
+                            android:src="@drawable/ic_cross_vector"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="#727476" />
+
+                        <com.simplemobiletools.commons.views.MyTextView
+                            android:id="@+id/Swip_Message_txt_recever_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:background="@drawable/ripple_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="Hello"
+                            android:textColor="@color/Private_Chat"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/Swip_Message_txt"
+                            app:layout_constraintEnd_toStartOf="@+id/discard_replay_message"
+                            app:layout_constraintStart_toEndOf="@+id/view_swip"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <com.simplemobiletools.commons.views.MyTextView
+                            android:id="@+id/Swip_Message_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:background="@drawable/ripple_background"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="5"
+                            android:text="Hello HelloHello"
+                            android:textColor="#1C1E20"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/discard_replay_message"
+                            app:layout_constraintStart_toEndOf="@+id/view_swip"
+                            app:layout_constraintTop_toBottomOf="@+id/Swip_Message_txt_recever_name"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/notreply"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="@{notreplychack ? View.VISIBLE : View.GONE}"
+                        tools:visibility="visible"
+                        tools:ignore="MissingConstraints">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtNoReplayBox"
+                    setchatthemecolorTintTxtFullapp="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/short_code"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"  android:textSize="@dimen/_14sdp"
+                    android:visibility="@{notreplychack ? View.VISIBLE : View.GONE}"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/composer_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/attach_file_btn"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/circle_background"
+                        android:paddingVertical="@dimen/_10sdp"
+                        android:src="@drawable/baseline_add_24"
+                        android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="@+id/composer_input_send_container"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/composer_input_send_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_4sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/attach_file_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:background="@color/lock_edit_screen">
+
+                        <androidx.constraintlayout.widget.Barrier
+                            android:id="@+id/composer_action_start_barrier"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:barrierDirection="start"
+                            app:constraint_referenced_ids="sedule_message_new,sendbutton" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:visibility="@{notreplychack ? View.INVISIBLE : View.VISIBLE}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/composer_action_start_barrier"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="@dimen/_19sdp"
+                                android:layout_height="@dimen/_19sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/emoji_btn"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/writemessageedt"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/writemessageedt" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/thread_attachments_recyclerview"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:clipToPadding="false"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/normal_margin"
+                                android:paddingEnd="@dimen/normal_margin"
+                                android:scrollbars="none"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:layout_constraintBottom_toTopOf="@id/writemessageedt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_goneMarginTop="@dimen/medium_margin"
+                                tools:itemCount="2"
+                                tools:listitem="@layout/item_attachment_document_preview"
+                                tools:visibility="visible" />
+
+                            <androidx.constraintlayout.widget.Barrier
+                                android:id="@+id/composer_input_trailing_barrier"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:barrierDirection="start"
+                                app:constraint_referenced_ids="selectsim,messagecountsend" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/writemessageedt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_4sdp"
+                                android:background="@null"
+                                android:hint="@string/Write_Message"
+                                android:imeOptions="actionSend|flagNoExtractUi"
+                                android:inputType="textCapSentences|textMultiLine"
+                                android:maxLines="5"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:textSize="@dimen/_12sdp"        android:paddingBottom="@dimen/_10sdp"
+                                android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/composer_input_trailing_barrier"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/thread_attachments_recyclerview"
+                                tools:text="Write Message"
+                                tools:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/selectsim"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/outline_sim_card_24"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/writemessageedt"
+                                app:layout_constraintEnd_toStartOf="@+id/messagecountsend"
+                                app:layout_constraintTop_toTopOf="@+id/writemessageedt"
+                                tools:visibility="visible" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/messagecountsend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:text="0"
+                                android:textSize="@dimen/_12sdp"
+                                app:layout_constraintBottom_toBottomOf="@+id/writemessageedt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/writemessageedt" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{SimNumber}"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="@+id/selectsim"
+                                app:layout_constraintEnd_toEndOf="@+id/selectsim"
+                                app:layout_constraintStart_toStartOf="@+id/selectsim"
+                                app:layout_constraintTop_toTopOf="@+id/selectsim"
+                                tools:text="1" />
+
+                            <ImageView
+                                android:id="@+id/microphone"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/microphone"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/selectsim"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/sendbutton"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:alpha="0.25"
+                            android:background="@drawable/toolbar_icon_ripple"
+                            android:padding="@dimen/_10sdp"
+                            android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            tools:src="@drawable/baseline_send_24"
+                            tools:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/sedule_message_new"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:src="@drawable/baseline_access_time_24"
+                            android:padding="@dimen/_8sdp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@+id/sendbutton"
+                            app:layout_constraintEnd_toStartOf="@+id/sendbutton"
+                            app:layout_constraintTop_toTopOf="@+id/sendbutton"
+
+                            tools:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/message_premium_new"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:src="@drawable/ic_message_premium_btn"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/sedule_message_new"
+                            app:layout_constraintEnd_toEndOf="@+id/sedule_message_new"
+                            app:layout_constraintTop_toTopOf="@+id/sedule_message_new"
+                            tools:visibility="gone" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+                android:id="@+id/thread_messages_fastscroller"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/smartRepliesRecycler"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thread_add_contacts"
+                app:supportSwipeToRefresh="true">
+
+                <com.simplemobiletools.commons.views.MyRecyclerView
+                    android:id="@+id/showusermessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adapter="@{adapter}"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:overScrollMode="ifContentScrolls"
+                    android:scrollbars="none"
+                    app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager"
+                    app:stackFromEnd="true"
+                    tools:listitem="@layout/item_message_in" />
+
+            </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottom_sheet_open"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="wrap"
+                app:layout_constraintHeight_percent="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:visibility="gone">
+
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/imageattachmentpickerprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/appcolor"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+
+                <!--            unuse-->
+                <ImageView
+                    android:id="@+id/select_contact"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/selectcontact"
+                    android:visibility="gone"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/schedule_message"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_schedule_message_btn_new"
+                    android:visibility="gone"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/select_contact"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_schedule_message_btn_new_clock"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/schedule_message"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="@+id/schedule_message"
+                    app:layout_constraintStart_toStartOf="@+id/schedule_message"
+                    app:layout_constraintTop_toTopOf="@+id/schedule_message"
+                    app:layout_constraintWidth_percent="0.06">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/select_map_send"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/selectlocasion"
+                    android:visibility="gone"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/schedule_message"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/rubikregular"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/Locaiton"
+                    android:textColor="#232121"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/select_map_send"
+                    app:layout_constraintStart_toStartOf="@+id/select_map_send"
+                    app:layout_constraintTop_toBottomOf="@+id/select_map_send">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <ImageView
+                    android:id="@+id/select_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/selectcontact"
+                    android:visibility="gone"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/select_map_send"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_image"
+                    setchatthemecolorTintTxt="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/rubikregular"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="Image"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/select_image"
+                    app:layout_constraintStart_toStartOf="@+id/select_image"
+                    app:layout_constraintTop_toBottomOf="@+id/select_image">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/rubikregular"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/Contacts"
+                    android:textColor="#232121"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/select_contact"
+                    app:layout_constraintStart_toStartOf="@+id/select_contact"
+                    app:layout_constraintTop_toBottomOf="@+id/select_contact">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/rubikregular"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/Schedulemessage"
+                    android:textColor="#232121"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/schedule_message"
+                    app:layout_constraintStart_toStartOf="@+id/schedule_message"
+                    app:layout_constraintTop_toBottomOf="@+id/schedule_message">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <!--            unuse-->
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fisrtcontenar"
+                        app:layout_constraintVertical_bias="0">
+
+                        <com.simplemobiletools.commons.views.MyRecyclerView
+                            android:id="@+id/imageandvideolist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            android:layoutAnimation="@anim/layout_animation"
+                            android:nestedScrollingEnabled="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0"
+                            tools:listitem="@layout/view_all_image_item_date">
+
+                        </com.simplemobiletools.commons.views.MyRecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/gotobuttom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:backgroundTint="#E8F4FF"
+                android:visibility="gone"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@+id/thread_messages_fastscroller"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_arrow_down_vector"
+                app:tint="@color/black2"
+                tools:ignore="ContentDescription"
+                tools:visibility="visible">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <ImageView
+                android:id="@+id/blurebg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone">
+
+            </ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/attechmentlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/composer_bottom_root"
+                app:layout_constraintEnd_toEndOf="@+id/composer_bottom_root"
+                app:layout_constraintHeight_percent="0.29"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@+id/composer_bottom_root"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintWidth_percent="0.5"
+                tools:background="@color/background"
+                tools:visibility="gone">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/select_contact_2_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/schedule_message_2_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/select_contact_2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_selectcontact_new"
+                        android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.15"
+                        tools:visibility="visible">
+
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_contacts_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/Contacts"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/select_contact_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/select_contact_2"
+                        app:layout_constraintTop_toTopOf="@+id/select_contact_2">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/schedule_message_2_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/select_map_2_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/select_contact_2_card">
+
+                    <ImageView
+                        android:id="@+id/schedule_message_2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_schedule_new"
+                        android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.15"
+                        tools:visibility="visible">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/message_premium"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/ic_message_premium_btn"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/schedule_message_2"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="@+id/schedule_message_2"
+                        app:layout_constraintTop_toTopOf="@+id/schedule_message_2"
+                        app:layout_constraintWidth_percent="0.06"
+                        tools:visibility="visible">
+
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_contacts_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/Schedulemessage"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/schedule_message_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/schedule_message_2"
+                        app:layout_constraintTop_toTopOf="@+id/schedule_message_2">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageView
+                        android:id="@+id/imageView24_2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_schedule_message_btn_new_clock"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/schedule_message_2"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="@+id/schedule_message_2"
+                        app:layout_constraintStart_toStartOf="@+id/schedule_message_2"
+                        app:layout_constraintTop_toTopOf="@+id/schedule_message_2"
+                        app:layout_constraintWidth_percent="0.06">
+
+                    </ImageView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/select_map_2_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/schedule_message_2_card">
+
+                    <ImageView
+                        android:id="@+id/select_map_send_2"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_selectlocasion_new"
+                        android:visibility="@{notreplychack ? View.GONE : View.VISIBLE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.15"
+                        tools:visibility="visible">
+
+                    </ImageView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_contacts_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/rubikregular"
+                        android:text="@string/Locaiton"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="@+id/select_map_send_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/select_map_send_2"
+                        app:layout_constraintTop_toTopOf="@+id/select_map_send_2">
+
+                    </com.google.android.material.textview.MaterialTextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constnativeBannerAdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <FrameLayout
+                android:id="@+id/framenativeBannerAdBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/nativeBannerAdShimmerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:elevation="@dimen/_2sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shimmer_auto_start="true"
+                app:shimmer_duration="800"
+                app:shimmer_fixed_width="@dimen/_160sdp"
+                app:shimmer_highlight_color="@color/white"
+                tools:layout_editor_absoluteX="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

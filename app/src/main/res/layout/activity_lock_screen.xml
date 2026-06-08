@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="keybordadapter"
+            type="com.messenger.phone.number.text.sms.service.apps.lockscreen.LockKeyBordAdapter" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_constraint"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        tools:context=".LockScreenActivity">
+
+
+
+
+        <com.messenger.phone.number.text.sms.service.apps.lockscreen.OtpView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:itemBackground="@drawable/bg_otp_item"
+            android:textAllCaps="true"
+            app:OtpHideLineWhenFilled="true"
+            app:OtpItemCount="6"
+            app:OtpItemHeight="@dimen/_30sdp"
+            app:OtpItemSpacing="6dp"
+            app:OtpItemWidth="@dimen/_22sdp"
+            tools:text="123"
+            app:OtpLineColor="@android:color/transparent"
+            app:OtpState_filled="true"
+            app:OtpViewType="line"
+            app:layout_constraintBottom_toTopOf="@+id/keybordadapterset"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/keybordadapterset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:adapter="@{keybordadapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otp_view"
+            app:layout_constraintVertical_bias="0.8"
+            app:spanCount="3"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_number_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forgotpass"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="@string/Forgot_Password_new"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:textColor="@color/appcolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keybordadapterset">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/whatlock"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/Forgot_Password"
+            app:layout_constraintBottom_toTopOf="@+id/otp_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/whatlockpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/Enter_your_pin"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            app:layout_constraintBottom_toTopOf="@+id/otp_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/whatlock">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

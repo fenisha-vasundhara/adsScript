@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".CustomWallpaperActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/colorSurface"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                app:iconSize="@dimen/mf_appbar_back_icon"    android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                android:contentDescription="@string/cd_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+           fullappfontstylesemibold="@{0}"
+                android:text="@string/Preview"
+                android:textColor="?attr/colorOnSurface"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.percentlayout.widget.PercentRelativeLayout
+            android:layout_width="0dp"
+            android:id="@+id/mainlayoutper"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/solid_color"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+            <com.messenger.phone.number.text.sms.service.apps.PorterShapeImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/p9_1">
+
+            </com.messenger.phone.number.text.sms.service.apps.PorterShapeImageView>
+
+            <ImageView
+                android:id="@+id/customwallpaper_bg_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.25"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+            </ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/alphaset"
+                android:background="@color/black2"
+                android:alpha="0"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/datetxt"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/Wednesday_March"
+             android:layout_marginTop="@dimen/_8sdp"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newmessagecountandbottomscrollin">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/datetxt_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_3ssp"
+            android:padding="@dimen/_3ssp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newmessagecountandbottomscrollin"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:background="@drawable/datetxt_con">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/datetxt_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="@string/Wednesday_March"
+                android:includeFontPadding="false"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/Wednesday_March">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/dateline2"-->
+            <!--                    setchatthemecolorDateSrcImRight="@{0}"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="@dimen/_5sdp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+            <!--                    app:layout_constraintStart_toEndOf="@+id/datetxt"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+            <!--                </ImageView>-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/dateline1"-->
+            <!--                    setchatthemecolorDateLineSrcImLeft="@{0}"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="@dimen/_5sdp"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/datetxt"-->
+            <!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+            <!--                </ImageView>-->
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/newmessagecountandbottomscrollin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="@string/Unread_Message_2"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toTopOf="@+id/datetxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+        </Button>
+
+
+        <ImageView
+            android:id="@+id/dateline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dateline2"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/datetxt"
+            app:layout_constraintStart_toEndOf="@+id/datetxt"
+            app:layout_constraintTop_toTopOf="@+id/datetxt">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/dateline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dateline1"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/datetxt"
+            app:layout_constraintEnd_toStartOf="@+id/datetxt"
+            app:layout_constraintTop_toTopOf="@+id/datetxt">
+
+        </ImageView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_out"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:visibility="visible"
+            app:cardBackgroundColor="#E8F4FF"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datetxt"
+            app:layout_constraintWidth_percent="0.5">
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="@string/Pinch_to_zoom"
+                android:textColor="#282A2D">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_in"
+            android:layout_width="0dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/appcolor"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_out"
+            app:layout_constraintWidth_percent="0.55">
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/inmessagetext"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+               fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/_7sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="@string/Default_message_2"
+                android:textColor="@color/white">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout19"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0.5"
+            android:background="?attr/colorSurface"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/image_alpha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            android:progress="50"
+            android:valueFrom="0"
+            android:valueTo="55"
+            app:layout_constraintBottom_toTopOf="@+id/custom_wallpaper_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout19"
+            app:layout_constraintWidth_percent="0.88"
+            app:thumbStrokeColor="@color/white"
+            app:thumbStrokeWidth="2dp"
+            app:trackHeight="@dimen/_5sdp">
+
+        </com.google.android.material.slider.Slider>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/custom_wallpaper_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/image_alpha"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/Custom_Wallpaper_set"
+            android:textColor="?attr/colorOnSurface"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout19"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout19">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns0="http://schemas.android.com/tools">
+    <string name="app_name_" translatable="false">#Messages</string>
+    <string name="app_name">Messages</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <array name="letter_tile_colors">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+    <dimen name="tile_letter_font_size">17sp</dimen>
+    <dimen name="letter_tile_size">32dp</dimen>
+    <string name="search" translatable="false">
+        <font size="17">Search Messages</font>
+    </string>
+    <string name="languages" translatable="false">
+        <font size="17">Search Languages</font>
+    </string>
+    <string name="searchcon" translatable="false">
+        <font size="17">Search Contact</font>
+    </string>
+
+
+    //admob id live
+
+    <string name="Banner_archive" translatable="false">ca-app-pub-2033413118114270/9832339165</string>
+    <string name="Banner_language" translatable="false">ca-app-pub-2033413118114270/2086212094</string>
+    <string name="Banner_home_collabe" translatable="false">ca-app-pub-2033413118114270/8345647462</string>
+    <string name="Nativeadvanced_chat" translatable="false">ca-app-pub-2033413118114270/4771584170</string>
+    <string name="Nativeadvanced_settings" translatable="false">ca-app-pub-2033413118114270/2452542594</string>
+    <string name="app_open_inter" translatable="false">ca-app-pub-2033413118114270/2344709308</string>
+    <string name="Appopen_onappopen" translatable="false">ca-app-pub-2033413118114270/8341079937</string>
+    <string name="Banner_contactdetails" translatable="false">ca-app-pub-2033413118114270/4896658946</string>
+    <string name="app_id" translatable="false">ca-app-pub-2033413118114270~4263569981</string>
+    <string name="nativ_id" translatable="false">ca-app-pub-2033413118114270/8702319507</string>
+    <string name="Banner_Aftercall" translatable="false">ca-app-pub-2033413118114270/7134686347</string>
+    <string name="Native_advanced_Aftercall" translatable="false">ca-app-pub-2033413118114270/8141210900</string>
+    <string name="Inter_id" translatable="false">ca-app-pub-2033413118114270/1418725855</string>
+    <string name="Open_id" translatable="false">ca-app-pub-2033413118114270/6786602609</string>
+    <string name="banner_id" translatable="false">ca-app-pub-2033413118114270/4418663403</string>
+    <string name="reward_id" translatable="false">ca-app-pub-2033413118114270/1015401174</string>
+    <string name="google_maps_key">AIzaSyCtfkNdYYEP0yl4-_PigOSGas3AcF7mRq8</string>
+    <string name="facebook_app_id" translatable="false">681036313413650</string>
+    <string name="empty_destination_address">Can\'t send message to an empty number</string>
+    <string name="unable_to_save_message">Unable to save message to the telephony database</string>
+    <string name="error_service_is_unavailable">Couldn\'t send message, service unavailable</string>
+    <string name="error_radio_turned_off" translatable="false">Couldn\'t send message, radio turned off</string>
+    <string name="carrier_send_error">Couldn\'t send message, carrier error</string>
+    <string name="unknown_error_occurred_sending_message">Couldn\'t send message, error code: %d</string>
+    <string name="invalid_short_code">Can\'t reply to short codes like this</string>
+    <string name="invalid_short_code_desc">You can only reply to short codes with numbers like \"503501\" but not to codes containing letters and numbers like \"AB-CD0\".</string>
+    <string name="attachment_sized_exceeds_max_limit">Attachment size exceeds max MMS limit</string>
+    <string name="sim_card_not_available">SIM card not available</string>
+    <string name="channel_received_sms">Received SMS</string>
+    <string name="new_message">New message</string>
+    <string name="mark_as_read_message">Mark as Read</string>
+    <string name="mark_as_unread">Mark as Unread</string>
+    <string name="me">Me</string>
+    <string name="reply_message">Reply</string>
+    <string name="message_not_sent_short">Message not sent</string>
+    <string name="export_messages">Export messages</string>
+    <string name="empty_name">Please enter a name</string>
+    <string name="name_taken">A file or folder with that name already exists</string>
+    <string name="no_option_selected">You have to select at least one item</string>
+    <string name="unknown_error_occurred">An unknown error occurred</string>
+    <string name="allow_notifications_incoming_messages">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="new_conversation_ms">New conversation</string>
+    <string name="new_search_ms">Search conversation</string>
+    <string name="add_contact_or_number">Add Contact or Number…</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="export_sms">Export SMS</string>
+    <string name="export_mms">Export MMS</string>
+    <string name="messages">Messages</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="invalid_name">The name contains invalid characters</string>
+    <string name="system_service_disabled">System service for selecting files and folders is unavailable</string>
+    <string name="confirm_storage_access_android_text">confirm_storage_access_android_text</string>
+    <string name="could_not_create_file">could_not_create_file</string>
+    <string name="exporting">Exporting…</string>
+    <string name="exporting_successful">Exporting successful</string>
+    <string name="exporting_failed">Exporting failed</string>
+    <string name="wrong_folder_selected">wrong_folder_selected</string>
+    <string name="import_messages">Import messages</string>
+    <string name="import_settings">Import settings</string>
+    <string name="importing">Importing…</string>
+    <string name="importing_failed">Importing failed</string>
+    <string name="importing_some_entries_failed">Importing some entries failed</string>
+    <string name="importing_successful">Importing successful</string>
+    <string name="no_items_found">No items found.</string>
+    <string name="invalid_file_format">Invalid file format</string>
+    <string name="no_app_found">No valid app found</string>
+    <string name="block_confirmation">Are you sure you want to block \"%s\"?</string>
+    <string name="schedule_send_warning">Keep the phone on and make sure there is nothing killing the app while in background.</string>
+    <string name="schedule_message">Schedule message</string>
+    <string name="must_pick_time_in_the_future">You must pick a time in the future</string>
+    <string name="share">Share</string>
+    <string name="no_contacts_found">No contacts found</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_access_to_contacts">The app could not access your contacts</string>
+    <string name="Privacy_and_security">Privacy and security</string>
+    <string name="Feedback">Feedback</string>
+    <string name="About">About</string>
+    <string name="Notifications_and_Sound">Notifications and sound</string>
+    <string name="Conversation_Setting">Conversation setting</string>
+    <string name="Driving_Mode">Driving mode</string>
+    <string name="Language">Language</string>
+    <string name="Language_nre">App language</string>
+    <string name="Two_Conversation">2 Conversation</string>
+    <string name="Settings">Settings</string>
+    <string name="Conversation">Conversation</string>
+    <string name="jigar">jigar</string>
+    <string name="Security_Setting">Security Setting</string>
+    <string name="Who_Can_see_your_Content">Who Can see your Content</string>
+    <string name="Auto_otp_delete">Delete OTP automatically after 24 hr</string>
+    <string name="Blocked_User">Blocked user</string>
+    <string name="Privacy_chat">Private chat</string>
+    <string name="Archived">Archived</string>
+    <string name="No_archive_found">No archive any conversation</string>
+    <string name="No_privat_found">No private chat available</string>
+    <string name="Invite_a_Friend">Invite a friend</string>
+    <string name="Let_Messag">Let’s switch to message :</string>
+    <string name="Notification_and_sound">Notification and sound</string>
+    <string name="Allow_Notifications">Allow Notifications</string>
+    <string name="Notifications_Previews">Notifications Previews</string>
+    <string name="Show_name_and_message">Show name and message</string>
+    <string name="Show_name">Show name</string>
+    <string name="Hide_contents">Hide contents</string>
+    <string name="Notification_previews">Notification previews</string>
+    <string name="Driving_Mode_Auto">Driving Mode Auto - Reply</string>
+    <string name="Driving_Mode_Auto_new">Auto Response</string>
+    <string name="Edit_Auto_new">Reply Message</string>
+    <string name="Edit_Auto">Edit Auto - Reply Message</string>
+    <string name="Please_Select_Another_Message">Please Select Another Message</string>
+    <string name="Please_Enter_Message">Please_Enter_Message</string>
+    <string name="Edit_Driving_Mode_Auto_Reply">Edit Driving Mode Auto Reply</string>
+    <string name="Save">Save</string>
+    <string name="Default_message_1">Good Morning, Dear How\nAre You ?</string>
+    <string name="Default_message_2">Very Good Morning I’m Fine !\nyou ?</string>
+    <string name="Font">Font</string>
+    <string name="Small">Small</string>
+    <string name="Normal">Normal</string>
+    <string name="Large">Large</string>
+    <string name="Extra_Large">Extra Large</string>
+    <string name="Message_Corner">Message Corner</string>
+    <string name="Conversation_List_View">Conversation List View</string>
+    <string name="Two_Lines">Two Lines</string>
+    <string name="Three_Lines">Three Lines</string>
+    <string name="Conversation_Swipe_Motion">Conversation swipe motion</string>
+    <string name="Swipe_Right">Swipe Right</string>
+    <string name="Swipe_Left">Swipe Left</string>
+    <string name="Other_Setting">Other Setting</string>
+    <string name="App_Browser">In-App browser</string>
+    <string name="Open_External_Links">Open external links within the app</string>
+    <string name="Change">Change</string>
+    <string name="Right">Right</string>
+    <string name="Left">Left</string>
+    <string name="Call">Call</string>
+    <string name="Pin">Pin</string>
+    <string name="Change_Action">Change Action</string>
+
+    <string name="Chat">Chat</string>
+    <string name="Undo">Undo</string>
+    <string name="Delete">Delete</string>
+    <string name="Loading">Loading…</string>
+    <string name="Something_Went_Wrong">Something Went Wrong</string>
+    <string name="Delete_this_conversation">Delete this conversation?</string>
+    <string name="This_is_permanent">Do you really want to delete this Conversation?</string>
+    <string name="conversation_archived"> conversation archived</string>
+    <string name="conversation_unarchived"> conversation Unarchived</string>
+    <string name="mark_all_messages_as_read">Are you sure you want to mark all messages as read?</string>
+    <string name="selected">selected</string>
+    <string name="Messages_Loading">Messages Loading </string>
+    <string name="conversation_deleted"> conversation deleted</string>
+    <string name="Block_Number">Block number</string>
+    <string name="No_block_number">No block number</string>
+    <string name="Mark_all_as_read">Mark all as read</string>
+    <string name="Share_app">Share app</string>
+    <string name="Import_messages">Import messages</string>
+    <string name="Backup_Restore">Backup &amp; Restore</string>
+    <string name="Select_all_message">Select all message</string>
+    <string name="Block_List">Block List</string>
+    <string name="Forward">Forward</string>
+    <string name="View_Details">View Details</string>
+    <string name="Mark_as_read">Mark as read</string>
+    <string name="Move_to_Privacy_Chat">Move to Privacy Chat</string>
+    <string name="Add_to_contact">Add to contact</string>
+    <string name="Forgot_Password">Forgot Password</string>
+    <string name="Message_details">Message details</string>
+    <string name="Type_Text_Message">Type : Text Message \n :</string>
+    <string name="Type_Text_Message_send">Type : Text Message \n :</string>
+    <string name="Message_Not_Found">Message Not Found</string>
+    <string name="Delete_this_message">Delete this message?</string>
+    <string name="This_action_cannot_be_undone">This action cannot be undone.</string>
+    <string name="Write_Message">Write Message</string>
+    <string name="Contacts">Contacts</string>
+    <string name="Schedulemessage">Schedule\nmessage</string>
+    <string name="short_code">Can\'t reply this short code</string>
+    <string name="UnArchive">UnArchive</string>
+    <string name="Archive">Archive</string>
+    <string name="UnBlock">UnBlock</string>
+    <string name="Block">Block</string>
+    <string name="Copied_to_Clipboard">Copied to Clipboard</string>
+    <string name="permission_required">Permission required</string>
+    <string name="SMS">SMS</string>
+    <string name="More_Info">More Info</string>
+    <string name="Contact_info">Contact info</string>
+    <string name="View_More">View More</string>
+    <string name="No_Recent_Search">No Recent Search</string>
+    <string name="Contact">Contact</string>
+    <string name="Message">Message</string>
+    <string name="Recent_Search">Recent Search</string>
+    <string name="CLEAR_SEARCH_HISTORY">CLEAR SEARCH HISTORY</string>
+    <string name="request_the_required_permissions">Request the required permissions</string>
+    <string name="No_Contact_Found">No Contact Found</string>
+    <string name="New_Chat">New Chat</string>
+    <string name="Send_to">Send to </string>
+    <string name="Watch_Video">Watch Video</string>
+    <string name="Watch_the_video_and_schedule_the_message">Schedule the message</string>
+    <string name="Get_Premium">Get Premium</string>
+    <string name="Without_ads_and_limitations">Without ads and limitations</string>
+    <string name="For_unrestricted_access">For unrestricted access to everything, Upgrade \n or watch videos to unlock schedule message</string>
+    <string name="Unlock">Unlock</string>
+    <string name="Features">Features</string>
+    <string name="Backup_and_Restore">Backup and Restore</string>
+    <string name="Secure_Message">Secure Message</string>
+    <string name="Remove_Ads">Remove Ads</string>
+    <string name="Schedule_Message">Schedule a Message</string>
+    <string name="User_Support">24/7 User Support</string>
+    <string name="Message_Text_Size">Message Text Size</string>
+    <string name="General">General</string>
+    <string name="Advanced_Setting">Advanced Setting</string>
+    <string name="About_Phone">About Phone</string>
+    <string name="PrivacyPolicy">Privacy Policy</string>
+    <string name="TermsandCondition">Terms &amp; Condition</string>
+    <string name="Chack_Update">Check for update</string>
+    <string name="Try_Again">Try Again</string>
+    <string name="and_Restore_message">Backup and Restore message</string>
+    <string name="and_can_be_backup_anytime">Message can be backup to your device and can be backup anytime</string>
+    <string name="Backup">Backup</string>
+    <string name="Restore">Restore</string>
+    <string name="Done">Done</string>
+    <string name="Auto_otp_delete_new">Auto-expire OTP</string>
+    <string name="No_Available_Languages">No Available Languages</string>
+    <string name="locksechint">
+        <font size="15">Enter your answer</font>
+    </string>
+    <string name="lockhint" translatable="true">
+        <font size="15">6 Digit password</font>
+    </string>
+    <string name="two_Step_Verification">2 Step Verification</string>
+    <string name="Security_questions">Use security questions to recover your password \n in case if you forget your password</string>
+    <string name="select_any_security_question">Select any Security Question</string>
+    <string name="which_is_your_favorite_movies">Which is your favorite movies ?</string>
+    <string name="which_is_your_favourite_food">Which is your favourite food ?</string>
+    <string name="which_is_your_favourite_actress">Which is your favourite actress ?</string>
+    <string name="what_your_lucky_number">What’s your lucky number ?</string>
+    <string name="in_which_city_were_you_born">In which city were you born ?</string>
+    <string name="Two_new_step_Verification">Two-step Verification</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Sign_in_using_fingerprint">Sign in using fingerprint</string>
+    <string name="Enter_Messages_Pin">Enter Messages Pin</string>
+    <string name="Authentication_succeeded">Authentication succeeded!</string>
+    <string name="Authentication_failed">Authentication failed.</string>
+    <string name="Authentication_error">Authentication error: </string>
+    <string name="New_Password">New Password</string>
+    <string name="Enter_New_Password">Enter New Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="Turn_off">Turn off</string>
+    <string name="Turn_off_verification">Turn off two-step verification</string>
+    <string name="Forgot_PIN">Forgot PIN</string>
+    <string name="Change_PIN">Change PIN</string>
+    <string name="Tuen_on">Turn On</string>
+    <string name="Verification_has_been_turned_on">Two-Step Verification has been turned on</string>
+    <string name="Move_to_Private">Move to Private</string>
+    <string name="Remove_to_Private">Remove to Private</string>
+    <string name="Show_Notication">Show Notification</string>
+    <string name="change_the_password">"To change the password, add the answer \n to the questions asked"</string>
+    <string name="It_is_using_private_chat">"It is using private chat. If you register yourself on message again, you'll have to enter your PIN."</string>
+    <string name="It_is_using_two_step">"It is using two-step verification. If you register your on message again, you'll have to enter your PIN."</string>
+    <string name="When_you_private_chat">"When you re-register message, make sure to enable \n privacy chat  for added security.\n this will require a PIN."</string>
+    <string name="When_you_two_step">"When you re-register message, make sure to enable \n two-step verification for added security.\n this will require a PIN."</string>
+    <string name="Enter_your_pin">"Enter Pin"</string>
+    <string name="Show_character_count">Show a character count</string>
+    <string name="color_theme">Color theme</string>
+    <string name="what_new">What’s New</string>
+    <string name="two_Step_Verification_new">2-Step Verification</string>
+    <string name="Auto_Reply">Auto Reply</string>
+    <string name="whatnewprivatechat_srctital">Secret conversations allow users to have confidential discussions with friends by using end-to-end encrypted messages in private chats. This ensures that only the sender and recipient can view the messages. In addition, the secret messages automatically delete themselves after a certain time, adding an extra layer of confidentiality.</string>
+    <string name="whatnewprivatechat_last">Go to Setting &gt; Privacy and Security  &gt; Private Chat</string>
+    <string name="conversation_titalbottomtxt">Go to Setting &gt; Conversation Setting &gt; Conversation Swipe Motion</string>
+    <string name="conversation_srcbottomtxt">The swipe mode and various actions like Archive, Delete, Call, Mark as Read, Pin, and Private Chat can be customized in the messenger app. This can be done by using the change button and then selecting customize swipe actions.</string>
+    <string name="messagecorner_titalbottomtxt">Go to Setting &gt; Conversation Setting &gt; Message Corner</string>
+    <string name="messagecorner_srcbottomtxt">The seekbar can be used to change the message corner and then check the chat screen for the desired cool action.</string>
+    <string name="colortheme_titalbottomtxt">Go to Setting &gt; Conversation Setting &gt; Color theme</string>
+    <string name="colortheme_srcbottomtxt">This messenger app allows users to change the color theme, customize settings, and access four different modes. Users have the flexibility to change the theme at any time and enjoy the app in their preferred color scheme.</string>
+    <string name="autoreply_srcbottomtxt">Select your auto-reply word and tap to easily send smart replies.</string>
+    <string name="drivingmode_titalbottomtxt">Go to Setting &gt; Driving Mode</string>
+    <string name="drivingmode_srcbottomtxt">You can control driving settings for Assistant, toggle driving mode, and allow Assistants to handle incoming calls and respond to messages while driving.</string>
+    <string name="Confirm_PIN">Confirm PIN</string>
+    <string name="Security_Question">Security Question</string>
+    <string name="Turned_on">Turned on</string>
+    <string name="whatnew2sep1">2. Step - 1</string>
+    <string name="whatnew2">Step - 2</string>
+    <string name="whatnew3">Step - 3</string>
+    <string name="whatnew4">Step - 4</string>
+    <string name="Select_Your_Language">Select Your Language</string>
+    <string name="translate_to">Translate to</string>
+    <string name="Tap_to_turn_on_Button">Tap to turn on Button</string>
+    <string name="Create6Digit">Create 6 Digit Pin For two-fector Authentication</string>
+    <string name="AddedSecurity">Added Security Question for your Security</string>
+    <string name="TwoStepverification">Two Step verification has been turned on</string>
+    <string name="Two_factor_authentication">Two-factor authentication is a security measure that adds an extra layer of protection to Business Manager accounts. It requires users to input a security code whenever they attempt to access their account from an unrecognized browser or device. This helps prevent unauthorized access and enhances the overall security of Business Manager accounts.</string>
+    <string name="con_autoreply"> Select your auto-reply word and tap to easily send \n smart replies.</string>
+    <string name="con_click_slide"> Swipe from the side to check if your message has been sent</string>
+    <string name="con_time_click"> You can use this method to check the messages you\'ve made and the time</string>
+    <string name="con_text"> Set your message font size in different formats like small, large, extra small</string>
+    <string name="Show_More">Show More</string>
+    <string name="Next">Next</string>
+    <string name="con_theme">theme, customize settings, and access four differentscheme. modes. Users have the flexibility to change the theme at any time and enjoy the app in their preferred color</string>
+    <string name="con_swipe_motion">Customize the actions of Call, Mark as Read, Pin, and Private Chat buttons by selecting the customize swipe option in the messenger app. This can be accomplished using the swipe mode and various actions.</string>
+    <string name="con_private_chat">Two-factor authentication enhances Business Manager account security by requiring users to input a security code when accessing their accounts, thus providing an additional layer of protection.</string>
+    <string name="Translate_Conversation">Translate Conversation</string>
+    <string name="Translate_Conversation_new">8. Translate Conversation</string>
+    <string name="Translate_Message">Translate Message</string>
+    <string name="This_messenger_app_enables_users_to_engage">This messenger app enables users to engage in conversations effortlessly. Language translation can be swiftlychanged by tapping the translate icon. However, thisicon remains visible for only 30 seconds. </string>
+    <string name="Should_the_user_wish_to_translate">Should the user wish to translate the conversation thereafter, they can select the conversation, click on the translate icon, and modify the language. These features are remarkably simple and user-friendly.</string>
+    <string name="Notification_Action">Notification Action</string>
+    <string name="Button_1">Button 1</string>
+    <string name="Button_2">Button 2</string>
+    <string name="Button_3">Button 3</string>
+    <string name="None">None</string>
+    <string name="Reply">Reply</string>
+    <string name="Wake_screen">Wake screen</string>
+    <string name="Delivery_Confirmation">Delivery confirmation</string>
+    <string name="Select_Your_Language_new">Select Your Preferred Language</string>
+    <string name="Schedule_Message_Show">Schedule</string>
+    <string name="Scheduled_Message">Scheduled message</string>
+    <string name="Copy_text">Copy text</string>
+    <string name="Send_Now">Send Now</string>
+    <string name="Send_a_message_automatically">Send a message automatically at the\ntime you choose</string>
+    <string name="Coversation_list_view">List view</string>
+    <string name="Coversation_swipe_motion">Swipe motion</string>
+    <string name="Signature">Signature</string>
+    <string name="Day">Day</string>
+    <string name="Dark">Dark</string>
+    <string name="Night">Night</string>
+    <string name="Arctic">Arctic</string>
+    <string name="Signature_hint">Enter Your Signature</string>
+    <string name="Selecte_Signature_hint">Please select another Signature</string>
+    <string name="Advanced_Setting_new">Advance</string>
+    <string name="Add_Category">Add Category</string>
+    <string name="Rename_Category">Rename Category</string>
+    <string name="Rename_Broadcast">Rename Broadcast</string>
+    <string name="Add_Contact">Add Contact</string>
+    <string name="Conversation_Categories">Categories</string>
+    <string name="Please_Select_Another_Category_Name">Please Select Another Category Name</string>
+    <string name="Please_Select_Another_Broadcast_Name">Please Select Another Broadcast Name</string>
+    <string name="Category_Name">Category Name</string>
+    <string name="Please_Category_Name">Please Enter Category Name</string>
+    <string name="Please_Broadcast_Name">Please Enter Broadcast Name</string>
+    <string name="Manage_Category">Manage category</string>
+    <string name="All_Categories">All Categories</string>
+    <string name="Create_Category">Create Category</string>
+    <string name="Edit">Edit</string>
+    <string name="This_is_permanent_cat">Do you really want to delete this Category?</string>
+    <string name="Select_the_conversations_you_want">Select the conversations you want to add to the category</string>
+    <string name="Remove_From_Category">Remove From Category</string>
+    <string name="Create_Group">Create Group</string>
+    <string name="Group_Name">Group Name</string>
+    <string name="Add_Member">Add Member</string>
+    <string name="People">People</string>
+    <string name="Searchconversationnew">
+        <font size="17">Search conversation</font>
+    </string>
+    <string name="All_Messages">All Messages</string>
+    <string name="Personal">Personal</string>
+    <string name="Transaction">Transaction</string>
+    <string name="OTPs">OTPs</string>
+    <string name="Offers">Offers</string>
+    <string name="Auto_message_delete">Delete old messages automatically</string>
+    <string name="From_Messages">From Messages</string>
+    <string name="To_to">To : </string>
+    <string name="From_to">From : </string>
+    <string name="type_message">Type : Text Message \n </string>
+    <string name="To_to_Send">Send : </string>
+    <string name="To_to_Recive">Received : </string>
+    <string name="Add_to_contact_new">Add to\ncontact</string>
+    <string name="draft">Draft</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="allow_alarm_scheduled_messages">You must allow the app accessing internal alarms, else it cannot send scheduled messages.</string>
+    <string name="leku_app_name" translatable="false" ns0:ignore="UnusedResources">Leku</string>
+    <string name="leku_title_activity_location_picker" ns0:ignore="UnusedResources">Location Picker</string>
+    <string name="leku_no_geocoder_available">Service not available</string>
+    <string name="leku_load_location_error">Something went wrong. Please try again.</string>
+    <string name="leku_no_search_results">There are no search results</string>
+    <string name="leku_network_resource">network</string>
+    <string name="leku_unknown_location">unknown location</string>
+    <string name="leku_voice_search_promp">Search by voice…</string>
+    <string name="leku_voice_search_extra_language">en-EN</string>
+    <string name="leku_toolbar_action_voice_title">Voice</string>
+    <string name="leku_search_hint">Search</string>
+    <string name="leku_longitude">Longitude</string>
+    <string name="leku_latitude">Latitude</string>
+    <string name="leku_coordinates">Coordinates</string>
+    <string name="leku_use_this_location">Use this location</string>
+    <string name="leku_accessibility_remove_current_location">Remove current location</string>
+    <string name="leku_accessibility_satellite_button_description">Switch to Satellite/Street view</string>
+    <string name="leku_accessibility_my_location_button_description">Select my current location</string>
+    <string name="access_this_feature">Allow permission to access this feature.</string>
+    <string name="enable_them">Location services are disabled. Do you want to enable them?</string>
+    <string name="leku_formatted_address" translatable="false">%1$s, %2$s</string>
+    <string name="show_as_bubble">Show as Bubble</string>
+    <string name="description_icon">Profile icon</string>
+    <string name="description_voice_call">Make a voice call (dummy)</string>
+    <string name="description_send">Send</string>
+    <string name="sender_you">You</string>
+    <string name="label_reply">Reply</string>
+    <string name="description_photo">Photo</string>
+    <string name="hint_input">Type a message…</string>
+    <string name="channel_new_messages">New messages</string>
+    <string name="channel_new_messages_description">All new incoming messages.</string>
+    <string name="chat_with_contact">Chat with %s</string>
+    <string name="voice_call_explanation">This is a dummy voice call screen.</string>
+    <string name="permission_message">This app requires the notification permission.</string>
+    <string name="permission_rationale">Please grant the notification permission so that the app can demonstrate usage of the Notification APIs.</string>
+    <string name="permission_grant">GRANT</string>
+    <string name="Successfully_send_scheduled_message_to">Successfully send scheduled message to </string>
+    <string name="Messages_will_be_deleted">Messages will be deleted after the specified number of days</string>
+    <string name="Daily">Daily</string>
+    <string name="Monthly">Monthly</string>
+    <string name="Weekly">Weekly</string>
+    <string name="Yearly">Yearly</string>
+    <string name="Or">Or</string>
+    <string name="Enter_days_manually">Enter days manually:</string>
+    <string name="Number_of_manually">Number of manually</string>
+    <string name="Never">Never</string>
+    <string name="group_message_mms_new">Send group messages as MMS</string>
+    <string name="send_long_message_mms_new">Send long messages as MMS</string>
+    <string name="send_In_remove_accents">Remove accents and diacritics at sending messages</string>
+    <string name="attachment">Attachment</string>
+    <plurals name="and_other_contacts">
+        <item quantity="one">and %d other</item>
+        <item quantity="other">and %d others</item>
+    </plurals>
+    <string name="duplicate_item_warning">Duplicate item was not included</string>
+    <string name="Blocked_User_keyword">Manage blocked keywords</string>
+    <string name="blocked_keywords">Blocked keywords</string>
+    <string name="not_blocking_keywords">You are not blocking any keywords. You may add keywords here to block all messages containing them.</string>
+    <string name="add_a_blocked_keyword">Add a blocked keyword</string>
+    <string name="keyword">Keyword</string>
+    <string name="end_to_end_encryption">End to end encryption</string>
+    <string name="Schedule_Message_intro">Schedule Message</string>
+    <string name="Secure_Messages">Secure Messages</string>
+    <string name="Pin_Conversation">Pin Conversation</string>
+    <string name="Plan_a_crucial_intro">Plan a crucial message to be sent.</string>
+    <string name="Recover_your_deleted_intro">Recover your deleted communication.</string>
+    <string name="To_safeguard_your_intro">To safeguard your privacy, encrypt messages.</string>
+    <string name="Keep_track_of_intro">Keep track of an important conversation</string>
+    <string name="Skip">Skip</string>
+    <string name="Welcome_To_Messages">Welcome To Messages</string>
+    <string name="A_Light_And_Fast_Messages">A Light And Fast Messages</string>
+    <string name="Need_Permission">Need Permission</string>
+    <string name="Allow_Access">Allow Access</string>
+    <string name="Now_you_can_use_Messenger">Now you can use Messenger to read your SMS\nConversations too. Standard text messaging rates\napply and SMS will only be accessible on your\nphone. you can hum this off in settings anytime.</string>
+    <string name="allow_notifications_incoming_messages_per">You must allow the app displaying notifications, else it cannot show incoming messages.</string>
+    <string name="filter_media">Filter media</string>
+    <string name="images">Images</string>
+    <string name="videos">Videos</string>
+    <string name="gifs">GIFs</string>
+    <string name="raw_images">RAW images</string>
+    <string name="svgs">SVGs</string>
+    <string name="portraits">Portraits</string>
+    <string name="no_media_with_filters">No media files have been found with the selected filters.</string>
+    <string name="change_filters_underlined">
+        <u>Change filters</u>
+    </string>
+    <string name="send_In_remove_accents_new">Remove accents and diacritics</string>
+    <string name="info1">Add a signature to the end of your messages</string>
+    <string name="info2">Show a character counter at writing messages</string>
+    <string name="info3">Group messaging as MMS allows sending messages to multiple recipients simultaneously</string>
+    <string name="info4">send text messages exceeding the character limit using (MMS)</string>
+    <string name="info5">App removes accents and diacritics while typing messages.</string>
+    <string name="info6">Configure swipe actions for conversation</string>
+    <string name="info7">Confirm that messages were send successfully</string>
+    <string name="info8">Wake screen when notification arrives</string>
+    <string name="info9">Tap to on/off notification</string>
+    <string name="info10">Delete otp automatically</string>
+    <string name="and_can_be_backup_anytime_new">Message can be backup in your device and can \n be recovered any time</string>
+    <string name="long_press_on_any_message">Long press on any message to instantly translate it into your preferred language. Enhance communication and understanding with this convenient feature</string>
+    <string name="Translation_on_Long">Instant Translation on Long Press</string>
+    <string name="Translate_Message_with_a_Click">Translate Message with a Click</string>
+    <string name="Translate_messages_effortlessly">Translate messages effortlessly with a single click. Streamline communication across languages by clicking this intuitive button.</string>
+    <string name="Expand_Options">Expand Options</string>
+    <string name="Clickheretorevealadditional">Click here to reveal additional options for customization and control. Streamline your experience by accessing advanced features with just one tap</string>
+    <string name="Profile_Access_Shortcut">Profile Access Shortcut</string>
+    <string name="Clickheretoquickly">Click here to quickly access your profile details. Streamline navigation and manage your account effortlessly with this convenient shortcut.</string>
+    <string name="translate">Translate</string>
+    <string name="Auto_message_delete_new">Delete old messages automatically</string>
+    <string name="View_Profile">View Profile</string>
+    <string name="Locaiton">Location</string>
+    <string name="For_unrestricted_access_backup">For unrestricted access to everything, Upgrade \n or watch videos to unlock Backup &amp; Restore</string>
+    <string name="For_unrestricted_access_Signature">For unrestricted access to everything, Upgrade \n or watch videos to unlock Signature</string>
+    <string name="For_unrestricted_access_motion">For unrestricted access to everything, Upgrade \n or watch videos to unlock Swipe motion</string>
+    <string name="For_unrestricted_access_confirmation">For unrestricted access to everything, Upgrade \n or watch videos to unlock Delivery Confirmation</string>
+    <string name="Notifications_and_Sound_new">Notification</string>
+    <string name="Notifications_Lookup">Notifications Lookup</string>
+    <string name="Hide_message">Hide message</string>
+    <string name="Privacy_setting">Privacy</string>
+    <string name="Security_setting">Security</string>
+    <string name="two_Step_Verification_new_ui">App lock with 2 step verification</string>
+    <string name="Add_to_contact_new_ui">Add</string>
+    <string name="translate_new_ui">Translate language</string>
+    <string name="chat_theme">Chat theme</string>
+    <string name="Show_name_new_ui">Only show name</string>
+    <string name="blocked_keywords_new_ui">Blocked Keywords</string>
+    <string name="copy_to_clipboard_new_ui">Copy to clipboard</string>
+    <string name="not_blocking_keywords_ui">You are not blocking any keywords. You may add keywords here to block all messages containing them.</string>
+    <string name="add_a_blocked_keyword_ui">Add a blocked keyword</string>
+    <string name="keyword_ui">Keyword</string>
+    <string name="Unread">Unread</string>
+    <string name="Message_new">Message</string>
+    <string name="SelectFromGallery_customwallpaper">Select From\nGallery</string>
+    <string name="Default_customwallpaper">Default</string>
+    <string name="Candy_customwallpaper">Candy</string>
+    <string name="Unicorn_customwallpaper">Unicorn</string>
+    <string name="Rocket_customwallpaper">Rocket</string>
+    <string name="Ocean_customwallpaper">Ocean</string>
+    <string name="Apple_customwallpaper">Apple</string>
+    <string name="Honey_customwallpaper">Honey</string>
+    <string name="Kiwi_customwallpaper">Kiwi</string>
+    <string name="Rose_customwallpaper">Rose</string>
+    <string name="Lavender_customwallpaper">Lavender</string>
+    <string name="Ocean_customwallpaper_two">Ocean</string>
+    <string name="multi_items">%s items</string>
+    <string name="single_item">1 item</string>
+    <string name="Switch_Theme">Switch theme</string>
+    <string name="Day_Mode">Day mode</string>
+    <string name="Dark_Mode">Dark mode</string>
+    <string name="Night_Mode">Night mode</string>
+    <string name="Arctic_Mode">Arctic mode</string>
+    <string name="Custom_Wallpaper">Custom Wallpaper</string>
+    <string name="Reset">Reset</string>
+    <string name="Solid_Colors">Solid Colors</string>
+    <string name="My_Photos">My Photos</string>
+    <string name="Default_Wallpaper">Default Wallpaper</string>
+    <string name="Gallery">Gallery</string>
+    <string name="Resents">Resents</string>
+    <string name="Preview">Preview</string>
+    <string name="Unread_Message_2">Unread Message 2</string>
+    <string name="Wednesday_March">Wednesday, 13 March</string>
+    <string name="Pinch_to_zoom">Pinch to zoom. Drag to adjust. </string>
+    <string name="Custom_Wallpaper_set">Set Custom Wallpaper</string>
+    <string name="txt_pri_1" translatable="false">Image Crop, Wallpapers, Flyers, Messages &amp; Tools built this app as a Freemium app. This SERVICE is provided by Image Crop, Wallpapers, Flyers, Messages &amp; Tools at no cost and is intended for use as is.\n\n This page is used to inform visitors regarding my policies regarding the collection, use, and disclosure of Personal Information if anyone decides to use my Service.\n If you choose to use my Service, then you agree to the collection and use of information to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.\n\n The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at this app unless otherwise defined in this Privacy Policy.</string>
+    <string name="information_collection_and_use" translatable="false">Information Collection and Use</string>
+    <string name="txt_pri_2" translatable="false">For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.\n The app does use third-party services that may collect information used to identify you.\n Link to the privacy policy of third-party service providers used by the app</string>
+    <string name="google_play_services" translatable="false">Google Play Services</string>
+    <string name="admob" translatable="false">AdMob</string>
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="firebase_crashlytics" translatable="false">Firebase Crashlytics</string>
+    <string name="google_analytics_for_firebase" translatable="false">Google Analytics for Firebase</string>
+    <string name="log_data" translatable="false">Log Data</string>
+    <string name="txt_pri_3" translatable="false">I want to inform you that whenever you use my Service, in the case of an error in the app I collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.</string>
+    <string name="cookies" translatable="false">Cookies</string>
+    <string name="txt_pri_4" translatable="false">Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device\'s internal memory. This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</string>
+    <string name="service_providers" translatable="false">Service Providers</string>
+    <string name="txt_pri_5" translatable="false">I may employ third-party companies and individuals due to the following reasons:</string>
+    <string name="to_facilitate_our_service" translatable="false">To facilitate our Service;</string>
+    <string name="to_provide_the_service_on_our_behalf" translatable="false">To provide the Service on our behalf;</string>
+    <string name="to_perform_service_related_services_or" translatable="false">To perform Service-related services; or</string>
+    <string name="to_assist_us_in_analyzing_how_our_service_is_used" translatable="false">To assist us in analyzing how our Service is used.</string>
+    <string name="txt_pri_6" translatable="false">I want to inform users of this Service that these third parties have access to their Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</string>
+    <string name="security" translatable="false">Security</string>
+    <string name="txt_pri_7" translatable="false">I value your trust in providing us with your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable,\n and I cannot guarantee its absolute security.\n\n The below details the processing of personal data and the purpose:</string>
+    <string name="txt_pri_8" translatable="false">1. <b>Contact Information :</b> If you voluntarily contact us, you may be required to provide us with certain information such as your name, email address and any additional information you decide to share with us. We don\'t receive your email. We only have access to this matter if there was any will on the user\'s behalf to get in touch via survey or form.</string>
+    <string name="txt_pri_9" translatable="false">2. <b>Phone number :</b> As part of our SMS/MMS Messaging feature, you will be required to provide us permissions to your Phone Number. We may use your encrypted phone number to privately collect the information required by our SMS/MMS messaging feature, such as when your messages are received and read or when someone is writing to you. We don\'t store the content of your communications on our servers. The phone number will be used when you send messages, and it\'ll only be used by your cell carrier. All SMS/MMS, phone numbers are transited via your mobile carrier never by us when you send/receive messages.</string>
+    <string name="txt_pri_10" translatable="false">3. <b>GPS Location Information :</b> Certain features may require access to your GPS location permissions. In addition, in certain features, we will use \'access fine location\' permission in the background while you are using the app so that we can locate the wifi networks and connection to provide the services. This information will be processed to provide the services. Further, we wish to clarify that we don\'t store any GPS location information on our servers and any processing activity shall be done solely on your device.</string>
+    <string name="txt_pri_11" translatable="false">4. <b>Push Notifications :</b> We may store Firebase Cloud Messages token. If you wish to stop getting push notifications, you may do so simply by disabling push notifications on your device\'s settings. This information will be processed to allow us to send push notifications to users from our server.</string>
+    <string name="txt_pri_12" translatable="false">5. <b>Passwords of any kind :</b> All passwords are fully encrypted, and your access credentials are under the most strict algorithm security methods.</string>
+    <string name="txt_pri_13" translatable="false">6. <b>Credit card or any billing or payment details :</b> All sensitive data regarding payments such as credit card and/or banking information is handled &amp; processed by Google for any digital products consumed through the apps. We don\'t have access to this information or related banking elements.</string>
+    <string name="links_to_other_sites" translatable="false">Links to Other Sites</string>
+    <string name="txt_pri_14" translatable="false">This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</string>
+    <string name="children_s_privacy" translatable="false">Children’s Privacy</string>
+    <string name="txt_pri_16" translatable="false">These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13 years of age. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to take the necessary actions.</string>
+    <string name="contact_us" translatable="false">Contact Us</string>
+    <string name="txt_pri_17" translatable="false">If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at profagnesh009@gmail.com.</string>
+    <string name="Set_theme">Set theme</string>
+    <string name="Set_wallpaper">Set wallpaper</string>
+    <string name="For_all_chats">For all chats</string>
+    <string name="For_this_chat">For this chat</string>
+    <string name="Set_default_wallpaper">Set default wallpaper</string>
+    <string name="password_reset_email">Set password reset email</string>
+    <string name="password_reset_email_lang">password reset email</string>
+    <string name="Edit_message">Edit Message</string>
+    <string name="Enter_Messaege">Enter Message</string>
+    <string name="Enter_Email_Address">Enter email address</string>
+    <string name="Forgot_Password_using_email">Forgot Password Using Email id</string>
+    <string name="Please_remember_to_keep">Please remember to keep your password secure and do not share it with anyone.</string>
+    <string name="tw_Messages">© 2024 Messages : SMS &amp; Private Chat. All rights reserved.</string>
+    <string name="contact_us_at">Contact us at profagnesh009@gmail.com for any assistance.</string>
+    <string name="Your_password_has_been">Your password has been sent successfully. Please find your password below:</string>
+    <string name="hello_ms">Hello,</string>
+    <string name="Your_Password">Your Password</string>
+    <string name="Rate_this_App">Rate this App</string>
+    <string name="message_rating">if you love our app,\nplease take a moment and rate us!</string>
+    <string name="second_line_def">Messages : Chat &amp; SMS can only start &amp; receive messages if \nit’s your default message app.\n\nWe NEVER COLLECT your personal information without\nyour explicit permission</string>
+    <string name="three_txt_def">I agree to Terms of Service &amp; Privacy Policy</string>
+    <string name="set_as_default_app">Set as Default app</string>
+    <string name="last_line_def">
+        <font color="#5EB4FD">Term of Service </font>
+        <font color="#5EB4FD">&amp;</font>
+        <font color="#5EB4FD"> Privacy Policies</font>
+    </string>
+    <string name="All_Messages_set">  All  </string>
+    <string name="set_us_as_default_app">Set us as Default app</string>
+    <string name="Please_set_first_private">Please set first private chat pin</string>
+    <string name="Select_any_question">Select any question</string>
+    <string name="first_set_email_address">first set email address to reset password</string>
+    <string name="please_wait">Please wait</string>
+    <string name="Email_Address_Not">Email Address Not Valid</string>
+    <string name="Please_turn_on">Please turn on internet</string>
+    <string name="Please_enter_Answer">Please enter Answer</string>
+    <string name="e_g_idiot">e.g (3 idiot)</string>
+    <string name="e_g_pizza">e.g (pizza)</string>
+    <string name="e_g_samantha">e.g (samantha)</string>
+    <string name="e_g_12">e.g (12)</string>
+    <string name="e_g_surat">e.g (surat)</string>
+    <string name="Please_enter_your_email">Please enter your email id</string>
+    <string name="Email_saved_successfully">Email saved successfully</string>
+    <string name="Please_enter_valid_email">Please enter valid email id</string>
+    <string name="Wrong_Answer">Wrong Answer</string>
+    <string name="Thanks_for_Rating">Thanks for Rating</string>
+    <string name="Please_enter_message">Please enter message</string>
+    <string name="Something_went_wrong_new">Something went wrong please try again</string>
+    <string name="send_special_characters">couldn\'t send special characters message</string>
+    <string name="Backup_Not_Found">Backup Not Found</string>
+    <string name="Confirmation">Confirmation</string>
+    <string name="Are_you_sure_you_want">Are you sure you want to stop the process?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="NotWorking">Not Working</string>
+    <string name="Thiskeyword">This keyword already exists</string>
+    <string name="EnterAnotherTime">Please Enter Another Time</string>
+    <string name="please_enter_time">Please Enter Time</string>
+    <string name="speech_recognition_not_supported_new">Speech recognition not supported</string>
+    <string name="sms_not_supported">SMS is not supported on this device.</string>
+    <string name="microphone_permission_denied_new">Microphone permission denied</string>
+    <string name="message_copied_to_clipboard_new">Message copied to clipboard</string>
+    <string name="Password_Not_mach">Password Not mach</string>
+    <string name="Wrong_pin">Wrong pin</string>
+    <string name="translation_failed">Translation failed</string>
+    <string name="model_download_failed">Model download failed</string>
+    <string name="select_contact_NEW">Select Contact</string>
+    <string name="Sent_Successfully">Sent Successfully</string>
+    <string name="Setting">Setting</string>
+    <string name="Please_Enter_Con_password">Please Enter Conform password</string>
+    <string name="Please_Enter_password">Please Enter New password</string>
+    <string name="Forgot_Password_new">Forgot Password?</string>
+    <string name="Forgot_Password_using_email_new">Forgot Password Using Email id?</string>
+    <string name="game_over">GAME OVER</string>
+    <string name="_00">00</string>
+    <string name="high_score">High Score : 00</string>
+    <string name="restart">restart</string>
+    <string name="catch_the_ball">Catch the Ball</string>
+    <string name="play">PLAY</string>
+    <string name="_10_point">10 Point</string>
+    <string name="_30_point">30 Point</string>
+    <string name="Welcome_To">Welcome To</string>
+    <string name="Messages_App">Messages App</string>
+    <string name="For_sending_and_receiving">For sending and receiving messages,</string>
+    <string name="Make_it_your_default_SMS">Make it your default SMS</string>
+    <string name="app_chack">app.</string>
+    <string name="Set_as_Default_SMS_app">Set as default SMS app</string>
+    <string name="default_sms_banner_title">Make SMS default</string>
+    <string name="default_sms_banner_subtitle">Choose this app as your default SMS handler.</string>
+    <string name="default_sms_banner_cta">Click here</string>
+    <string name="default_sms_instruction_title">Make Default SMS</string>
+    <string name="default_sms_instruction_h2">Set this app as your default SMS app</string>
+    <string name="default_sms_instruction_subtitle">Follow these steps in phone settings.</string>
+    <string name="default_sms_instruction_step_1_label">STEP 1</string>
+    <string name="default_sms_instruction_step_2_label">STEP 2</string>
+    <string name="default_sms_instruction_step_3_label">STEP 3</string>
+    <string name="default_sms_instruction_step_1">Click on <b>Default SMS</b> app</string>
+    <string name="default_sms_instruction_step_2">Select our <b>#Messages</b> app.</string>
+    <string name="default_sms_instruction_step_3">Tap SMS app and select %1$s.</string>
+    <string name="default_sms_instruction_image_cd">Default SMS setup hint illustration</string>
+    <string name="default_sms_instruction_step_1_image_cd">Step 1 illustration</string>
+    <string name="default_sms_instruction_step_2_image_cd">Step 2 illustration</string>
+    <string name="default_sms_instruction_step_3_image_cd">Step 3 illustration</string>
+    <string name="Easily_reply_with_a_tap">Easily reply with a tap</string>
+    <string name="Secure_messages_for_you">Secure messages for you</string>
+    <string name="malicious_website_txt">Detect malicious links</string>
+    <string name="malicious_website_txt_info">Use phishing link &amp; URL checker to find bad links in texts.</string>
+    <string name="Potential_Threat_Detected">Potential Threat Detected</string>
+    <string name="This_link_may_be_harmful">This link may be harmful. Proceed with caution or avoid clicking.</string>
+    <string name="open">open</string>
+    <string name="system_mode">System mode</string>
+    <string name="Places">Places</string>
+    <string name="Links">Links</string>
+    <string name="no_search_result_found">No search result found</string>
+    <string name="All_Messages_new">    All</string>
+    <string name="results_found_search"> results found</string>
+    <string name="get_started">Get started</string>
+    <string name="Pin_Message">Pin Message</string>
+    <string name="Keep_track_of_intro_new">Pin your favourite chats to the top of your inbox for quick access.</string>
+    <string name="Plan_a_crucial_intro_new">Time-Saving Magic: Simplify Your Day with Scheduled Messaging</string>
+    <string name="To_safeguard_your_intro_new">Keep Your Personal Chats Safe: The Benefits of Using Secure Message</string>
+    <string name="resend_send">Resend</string>
+    <string name="rate_now">Rate Now!</string>
+    <string name="rating_for_me">Rating for me !</string>
+    <string name="rate_this_app">Do you love this app ?</string>
+    <string name="messagetraslateshowcase">Translate messages instantly for clear communication.</string>
+    <string name="messageseduleeshowcase">Schedule messages with perfect timing.</string>
+    <string name="lib_name" translatable="false">PatternLockView</string>
+    <string name="message_pattern_dot_added" translatable="false">Dot added to pattern</string>
+    <string name="message_pattern_started" translatable="false">Pattern drawing started</string>
+    <string name="message_pattern_detected" translatable="false">Pattern drawing completed</string>
+    <string name="message_pattern_cleared" translatable="false">Pattern cleared</string>
+    <string name="ad_loading">Ad Loading...</string>
+    <string name="Translate">Translate</string>
+    <string name="Recovery_pattern">Recovery pattern</string>
+    <string name="select_the_authentication_method_to_access_and_get_back_your_locker_files_when_you_lose_your_password">Select the authentication method to access and get back your locker files when you lose your password</string>
+    <string name="set_recovery_pattern">Set recovery pattern</string>
+    <string name="easy_to_memorise">Easy to memorise</string>
+    <string name="or">OR</string>
+    <string name="create_security_question">
+        <u>Create security question</u>
+    </string>
+    <string name="patten_change_the_password">"To change the password, draw pattern"</string>
+    <string name="Patten_Security_questions">Use pattern to recover your password \n in case if you forget your password</string>
+    <string name="draw_your_patten">Draw authentication pattern</string>
+    <string name="draw_your_patten_conform">Repeat pattern to confirm</string>
+    <string name="pattern">please draw pattern using at least 4 nodes.</string>
+    <string name="pattern_not_mach">Pattern not match</string>
+    <string name="Message_Corner_new">Corner</string>
+    <string name="Message_Text_Size_new">Text Size</string>
+    <string name="Custom_Wallpaper_new">Wallpaper</string>
+    <string name="Move_to_Private_new">Move to private chat</string>
+    <string name="permisson_screen">This app will be allowed to send you\nNotification, and will be given access\nto your Camera,Contacts, Files,\nMicrophone,Phone, and SMS</string>
+    <string name="set_as_default">Set as default</string>
+    <string name="allow_alarm_scheduled_messages_new">You must allow the app accessing internal alarms, else it cannot send Notification.</string>
+    <string name="allow_alarm_for_three_day_try_new">You must allow the app accessing internal alarms, else you can not user two step verification</string>
+    <string name="for_a_Better_Messaging_Experience">for a Better Messaging Experience!</string>
+    <string name="OFF_static">OFF</string>
+    <string name="Unlock_sub_line">
+        <font color="#FEFDF6">UNLOCK </font>
+        <font color="#FDEFB5">PREMIUM</font>
+        <font color="#FCDB4C"> FEATURES</font>
+    </string>
+    <string name="upgrade_today">Upgrade Today! 🌟</string>
+    <string name="Keep_chats_secure_and_recoverable">Keep chats secure and recoverable with\nyour selected method</string>
+    <string name="set">Set</string>
+    <string name="Security_questions_new">Draw your recovery pattern to reset \n your password</string>
+    <string name="days_for_free">Try 3 days for free</string>
+    <string name="Set_Notication">Set Notification</string>
+    <string name="custom_Notication">Custom Notification</string>
+    <string name="remainder_for_sendmessage">Remainder</string>
+    <string name="remainder_for_sendmessage_name">Remainder Name</string>
+    <string name="add_custom_notification">Add Custom Notification</string>
+    <string name="Recent_tab">Recent</string>
+    <string name="Backup_now">Backup now</string>
+    <string name="backing_up_messages">Backing up messages</string>
+    <string name="restoring_up_messages">Restoring from backup</string>
+    <string name="plz_wait">please wait</string>
+    <string name="last_backup">Last backup</string>
+    <string name="select_a_backup">Select a backup</string>
+    <string name="backups_not_found">backups not found</string>
+    <string name="content_and_tools">Content and tools</string>
+    <string name="attachments_tools_title">Tools</string>
+    <string name="attachments_content_title">Content</string>
+    <string name="invite_friends_with_a_tap">Invite friends with a tap!</string>
+    <string name="share_with_friends">Share with Friends!</string>
+    <string name="Get_premium_today">Get premium today</string>
+    <string name="Remove_ads_and_unlock_all">Unlock all features</string>
+    <string name="backup_note">Currently, only SMS And MMS is supported by Backup and Restore. and scheduled backups will be coming soon!</string>
+    <string name="please_give_your_feedback">Please give your feedback</string>
+    <string name="we_are_working_hard_for_a_better_user_experience">We are working hard for a better user experience.</string>
+    <string name="we_d_greatly_appreciate_if_you_can_rate_us">we\'d greatly appreciate if you can rate us.</string>
+    <string name="the_best_we_can_get">The best we can get</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="check1">I don\'t like the design</string>
+    <string name="check2">It doesn\'t have the function as I need</string>
+    <string name="check3">It\'s not easy to use</string>
+    <string name="check4">It\'s too complicated</string>
+    <string name="enter_your_feedback_here">Enter your feedback here</string>
+    <string name="submit">Submit</string>
+    <string name="image">Image</string>
+    <string name="share_image">Share Image</string>
+    <string name="file">File</string>
+    <string name="share_file">Share File</string>
+    <string name="share_video">Share Video</string>
+    <string name="take_photo">Take photo</string>
+    <string name="take_photo_share">Take photo share</string>
+    <string name="record_video">Record video</string>
+    <string name="record_video_share">record video share</string>
+    <string name="record_audio">Record audio</string>
+    <string name="record_audio_share">record audio share</string>
+    <string name="choose_contact_vcf">Choose contact vcf</string>
+    <string name="contact_vcf_share">contact vcf share</string>
+    <string name="audio">Audio</string>
+    <string name="capture_photo">Capture Photo</string>
+    <string name="photos">Photos</string>
+    <string name="video">Video</string>
+    <string name="photo">Photo</string>
+    <string name="camera_unavailable">Camera unavailable</string>
+    <string name="camera_open_error">An error occurred accessing the camera</string>
+    <string name="video_creating_error">An error occurred creating the video file</string>
+    <string name="video_mode_error">Switching to video mode failed</string>
+    <string name="save_error_internal_storage">An error occurred, save folder changed to internal storage</string>
+    <string name="camera_switch_error">Switching camera failed</string>
+    <string name="click_to_resume_preview">Click on the image to resume preview</string>
+    <string name="photo_not_saved">The photo could not be saved</string>
+    <string name="setting_resolution_failed">Setting proper resolution failed</string>
+    <string name="video_recording_failed">Video recording failed, try using a different resolution</string>
+    <string name="camera_in_use_error">Camera is in use by another app, please close the app and try again</string>
+    <string name="camera_configure_error">An error occurred while configuring the camera</string>
+    <string name="camera_disabled_by_admin_error">Camera is disabled by the admin</string>
+    <string name="camera_dnd_error">"Do Not Disturb" mode is enabled. Please disable and try again</string>
+    <string name="photo_capture_failed">Photo capture failed</string>
+    <string name="video_capture_insufficient_storage_error">Video recording failed due to insufficient storage</string>
+    <string name="capture_mode">Capture mode</string>
+    <string name="maximize_quality">Maximize quality</string>
+    <string name="minimize_latency">Minimize latency</string>
+    <string name="toggle_photo_video">Toggle photo/video mode</string>
+    <string name="change_resolution">Change Resolution</string>
+    <string name="view_last_media">View last captured media</string>
+    <string name="toggle_camera">Toggle front/back camera</string>
+    <string name="toggle_flash">Toggle the flashlight mode</string>
+    <string name="toggle_timer">Toggle the timer mode</string>
+    <string name="folder">Folder</string>
+    <string name="recycle_bin">Recycle Bin</string>
+    <string name="recycling_bin_is_empty">Recycling bin is empty</string>
+    <string name="This_is_permanent_re_all_delete">Are you sure you want to empty the Recycle Bin? The messages will be permanently lost.</string>
+    <string name="restore_all_message">Restore All Message</string>
+    <string name="restore">Restore</string>
+    <string name="settingsnew">Settings</string>
+    <string name="update">Update</string>
+    <string name="tap_to_start_downloading_the_update">Tap to start downloading the update.</string>
+    <string name="updating">Updating..</string>
+    <string name="downloading_update_please_wait">Downloading update... Please wait.</string>
+    <string name="restart_new">Restart</string>
+    <string name="an_update_has_just_been_downloaded">An update has just been downloaded.</string>
+    <string name="filter">Filter</string>
+    <string name="theme">Theme</string>
+
+
+    //traslate
+
+    <string name="apply">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="Default">Default</string>
+    <string name="month_new_filter">Month</string>
+    <string name="year_new_filter">Year</string>
+    <string name="Date_Range">Date Range</string>
+    <string name="label_month">MONTH</string>
+    <string name="label_year">YEAR</string>
+
+    <string name="stay_connected">
+        <font color="#24282D">STAY\n</font>
+        <font color="#1D71F2">CONNECTED\n</font>
+        <font color="#24282D">EVERYWHERE</font>
+    </string>
+    <string name="highest_rated_app">Highest Rated App</string>
+    <string name="_1m_users_trust_us">Trusted by 1M+ Users!</string>
+    <string name="_100">100%</string>
+    <string name="safe_nsecure">Safe\nSecure</string>
+    <string name="watch_the_video_to_enable_this_feature">Watch the Video to Enable This Feature</string>
+    <string name="unlock_all_features">Unlock All Features</string>
+    <string name="pro_dialog_new">Upgrade for unlimited access to all features, or\nwatch videos to unlock incredible options</string>
+    <string name="sync_messages">Sync Messages</string>
+    <string name="all_message">All</string>
+    <string name="get_on_with_your_chat">Get-on with your chat!</string>
+    <string name="pre_dialog_new">Watch an AD or upgrate your plan\n to enjoy premium features.</string>
+    <string name="watch_ad">Watch ad</string>
+    <string name="skip_ads">Skip Ads</string>
+    <string name="conversation_remove">Conversation remove</string>
+    <string name="clear_conversation">Clear conversation</string>
+    <string name="clear_con">Clear</string>
+    <string name="do_you_really_want_to_clear_this_conversation">Do you really want to clear this Conversation?</string>
+    <string name="material">Material</string>
+    <string name="more_color">more color+</string>
+    <string name="hex">HEX</string>
+    <string name="theme_applied_successfully">Theme applied successfully</string>
+    <string name="access_now">Access Now</string>
+    <string name="upgrade_to_enjoy_unlimited_messaging_features">Upgrade to enjoy unlimited features</string>
+    <string name="messages_sms_amp_private_chat">Messages : SMS &amp; Private Chat</string>
+    <string name="unlock_unlimited">Unlock Unlimited</string>
+    <string name="upto">Upto</string>
+    <string name="off">off</string>
+    <string name="font_size_new">Font size</string>
+    <string name="remainder">Remainder</string>
+    <string name="enter_remainder_text">Enter Remainder Text</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="messages_new">Messages</string>
+    <string name="send_mail">Send Mail</string>
+    <string name="calendar">Calendar</string>
+    <string name="web">Web</string>
+    <string name="sorry_i_can_t_talk_right_now">Sorry, I can\'t talk right now</string>
+    <string name="can_i_call_you_later">Can I call you later?</string>
+    <string name="i_m_on_my_way">I\'m on my way</string>
+    <string name="write_personal_message">Write personal message</string>
+    <string name="private_numbers">Private Numbers</string>
+    <string name="incoming">incoming</string>
+    <string name="duration_00">Duration:00</string>
+    <string name="duration">Duration: %1$s</string>
+    <string name="caller_information">Caller information screen</string>
+    <string name="see_call_details_instantly_after_each_call_nenable_overlay_permission">See call details instantly after each call!\nEnable overlay permission.</string>
+    <string name="for_better_experience_enable_after_call_feature">For better experience Enable After Call Feature.</string>
+    <string name="app_overlay_permission">App Overlay Permission</string>
+    <string name="enable_feature">Enable Feature</string>
+    <string name="you_can_disable_this_anytime_in_setting">You can disable this anytime in setting.</string>
+    <string name="by_tapping_agree_amp_continue_you_indicate_that_you_have_read_out">By tapping Agree &amp; continue, you indicate that you have read out
+        <b>
+            <u>
+                <font color="#4AA6FB"> Privacy Policy</font>
+            </u>
+        </b>.<br />
+    </string>
+    <string name="agree_amp_continue">Agree &amp; Continue</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="messages_ne">Messages</string>
+    <string name="permissions">Permissions</string>
+    <string name="permission_dialog_txt">We access your call status during incoming and outgoing calls to monitor the call\'s activity and display After Call Screen information. This feature improves call management by providing you with relevant call details after call ends.</string>
+    <string name="your_contacts_and_messages_are_safe_and_will_not_be_shared_with_anyone">Your contacts and messages are safe and will not be shared with anyone</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="app_open_ad_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+    <string name="mBannerAdsid" translatable="false">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="mInterstitialAdsid" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="mRewardedAdsid" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="mNativeAdsid" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="mCollapsibleAdsid" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+    <string name="close">close</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_clear_search">Clear search text</string>
+    <string name="cd_open_keyboard">Open keyboard</string>
+    <string name="cd_copy_number">Copy number</string>
+    <string name="cd_search_languages">Search languages</string>
+    <string name="cd_voice_search_languages">Voice search languages</string>
+    <string name="having_trouble_setting_as_default">Having trouble setting as default?</string>
+    <string name="click_here_for_help">[Click here for help]</string>
+    <string name="limited_reward">Limited Reward!</string>
+    <string name="few_mins_left">Few mins left!</string>
+    <string name="min">Min</string>
+    <string name="sec">Sec</string>
+    <string name="reveal">Reveal</string>
+    <string name="enable_smart_caller_features">Enable Smart Caller Features</string>
+    <string name="ldentify_callers_block_spam_and_secure_nyour_conversations_all_in_one">ldentify callers,block spam,and secure\nyour conversations all in one.</string>
+    <string name="set_now">SET NOW</string>
+    <string name="permission_txtone">Permission Required</string>
+    <string name="this_permission_lets_the_app_show_an_email_overlay_right_after_your_call_ends">This permission lets the app show CallerId screen right after your call ends.</string>
+    <string name="not_now">Not now</string>
+    <string name="allow">Allow</string>
+    <string name="permission_required_1">Permission Required</string>
+    <string name="we_need_permission_to_display_overlays_on_other_apps">We need permission to display overlays on other apps.</string>
+    <string name="grant_permission_1">Grant Permission</string>
+    <string name="cancel_1">Cancel</string>
+<!--    <string name="mAnchoredBannerHome" translatable="false">ca-app-pub-2033413118114270/2640084125</string>-->
+    <string name="mAppOpenCommon" translatable="false">ca-app-pub-2033413118114270/2171575608</string>
+    <string name="mCollapsibleBannerLanguage" translatable="false">ca-app-pub-2033413118114270/9229181819</string>
+    <string name="mInlineBannerAfterCall" translatable="false">ca-app-pub-2033413118114270/4797738940</string>
+    <string name="mInlineBannerContactDetail" translatable="false">ca-app-pub-2033413118114270/4288207712</string>
+    <string name="mInterstitialCommon" translatable="false">ca-app-pub-2033413118114270/3484657275</string>
+    <string name="mRewardedCommon" translatable="false">ca-app-pub-2033413118114270/5289936802</string>
+    <string name="mSmallNativeChat" translatable="false">ca-app-pub-2033413118114270/6290358982</string>
+    <string name="mSmallNativeSettings" translatable="false">ca-app-pub-2033413118114270/7700839117</string>
+    <string name="Native_languagesmall" translatable="false">ca-app-pub-2033413118114270/8210798945</string>
+    <string name="Inter_setdefaultapp" translatable="false">ca-app-pub-2033413118114270/6568454339</string>
+    <string name="ad_unit_native_languagesmall_high" translatable="false">ca-app-pub-2033413118114270/8164106994</string>
+    <string name="ad_unit_banner_home_high" translatable="false">ca-app-pub-2033413118114270/3682485245</string>
+    <string name="ad_unit_inter_setdefaultapp_high" translatable="false">ca-app-pub-2033413118114270/4887422566</string>
+    <string name="ad_unit_appopen_common_high" translatable="false">ca-app-pub-2033413118114270/5402212283</string>
+    <string name="ad_unit_native_aftercall_high" translatable="false">ca-app-pub-2033413118114270/1056321907</string>
+    <string name="banner_1" translatable="false">ca-app-pub-2033413118114270/7526085816</string>
+    <string name="banner_2" translatable="false">ca-app-pub-2033413118114270/3047752937</string>
+    <string name="banner_aftercall" translatable="false">ca-app-pub-2033413118114270/7134686347</string>
+    <string name="inter_comman_use" translatable="false">ca-app-pub-2033413118114270/3101513893</string>
+    <string name="enable_smart_calling">Enable Smart Calling</string>
+    <string name="smart_caller_title">Turn On After-Call Features</string>
+    <string name="smart_caller_subtitle">Grant call permission to access features available after a call.</string>
+    <string name="smart_caller_cta">Activate Now</string>
+    <string name="smart_caller_bottom_title">Enhance Your Call Experience</string>
+    <string name="smart_caller_bottom_subtitle">Unlock advanced features to make your calls better.</string>
+    <string name="find_out_who_s_calling_stop_unwanted_calls_and_protect_your_chats">Find out who’s calling, stop unwanted calls, and protect your chats.</string>
+    <string name="please_check_internet_connection">Please check internet connection</string>
+    <string name="privacy_text">By continuing, you agree to the
+</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="after_call_more_send_title">Send Message</string>
+    <string name="after_call_more_send_subtitle">Send message to anyone with ease!</string>
+    <string name="after_call_more_view_title">View Message</string>
+    <string name="after_call_more_view_subtitle">View message with just one tap!</string>
+    <string name="overlay_permission_title">Enjoy a Better Messaging Experience</string>
+    <string name="overlay_permission_content">To provide the best experience, we need access to certain features.</string>
+    <string name="overlay_permission_text">Enable Overlay permission to you can use our <b>
+            <font color="#2196F3">after-call</font>
+        </b> feature.</string>
+    <string name="load_ad" translatable="false">Load Ad</string>
+    <string name="terms_condition">Terms &amp; Condition</string>
+    <string name="line_one">Recurring billing per Month/Year</string>
+    <string name="line_two">You can cancel subscription anytime</string>
+    <string name="line_three">After the trial period the amount will be changed from your payment method automatically</string>
+    <string name="line_four">Subscription will automatically renew at the end of each term and will be charged to your payment method through Google Play</string>
+    <string name="line_five">You can turn off auto-renew at anytime from Google Play account setting</string>
+    <string name="line_six">Purchase policy can be changed without any prior notice</string>
+    <string name="choose_one">Choose One</string>
+    <string name="User_Support_new">Premium support</string>
+    <string name="Access_All_Time">Access All Time Premium Features</string>
+    <string name="Premium">Premium</string>
+    <string name="Basic">Basic</string>
+    <string name="start_free_trial">start free trial</string>
+    <string name="Continue">Continue</string>
+    <string name="Subscription_will">Subscription will auto-renew. Cancel anytime</string>
+    <string name="Month_after">Month after</string>
+    <string name="FREE_trial">of FREE trial.</string>
+    <string name="Month">Month</string>
+    <string name="FREE_trial_new">FREE trial</string>
+    <string name="OR_TRY_LIMITED_VERSION">"OR TRY LIMITED VERSION"</string>
+    <string name="Click_here_for_more_plans">"Click here for more plans"</string>
+    <string name="Enjoy_The_Superemeness">Enjoy The Superemeness Of The Premium Feature!</string>
+    <string name="Cancel_anytime">Subscription will auto-renew. cancel anytime.</string>
+    <string name="FREE_trial_Then_Enjoy">at FREE trial, Then Enjoy</string>
+    <string name="month_after_FREE">month after FREE</string>
+    <string name="Days">Days</string>
+    <string name="trial">trial</string>
+    <string name="year_after_FREE">year after FREE</string>
+    <string name="month_BEST_price">month as BEST price</string>
+    <string name="month_BEST_price_NEW"> ₹275/month as BEST price</string>
+    <string name="Enjoy">Enjoy</string>
+    <string name="enjoy_the_luxury">Unlock all premium features and enjoy the luxury.</string>
+    <string name="Restore_Purchase">Restore Purchase</string>
+    <string name="Unlock_All_Features">Unlock All Features </string>
+    <string name="Try_free_for">Try free for 7 days</string>
+    <string name="Backup_new">Backup &amp; \nRestore</string>
+    <string name="SecureMessage_new">Secure\nMessage</string>
+    <string name="ScheduleMessage_new">Schedule\nMessage</string>
+    <string name="CustomReoplay_new">Custom\nReply</string>
+    <string name="RemoveAds_new">Remove\nAds</string>
+    <string name="UserSupport_new">24/7 User\nSupport</string>
+    <string name="Monthly_new">Monthly Plan</string>
+    <string name="Yearly_new">Yearly Plan</string>
+    <string name="Pay_Nothing_Now">Pay Nothing Now</string>
+    <string name="year_static">Year</string>
+    <string name="month_static">/Month</string>
+    <string name="day_static">/Day</string>
+    <string name="Prime_Cost">Prime Cost</string>
+    <string name="con_1_name">Ethan Reynolds</string>
+    <string name="con_2_name">Olivia Mitchell</string>
+    <string name="con_3_name">Jackson Carter</string>
+    <string name="con_4_name">Zoe Anderson</string>
+    <string name="con_1_title">Incredible App for Safeguarding Precious Memories</string>
+    <string name="con_2_title">Unbelievable Memory Guardian App</string>
+    <string name="con_3_title">Exceptional Tool to Preserve Cherished Moments</string>
+    <string name="con_4_title">Outstanding App for Securing Your Special Memories</string>
+    <string name="con_1">Absolutely love this messaging app! The interface is clean and user-friendly, making it a breeze to stay connected with friends and family. The features are top-notch</string>
+    <string name="con_3">This one really good messaging app. I am using still last one month but it replace my defult messaging application. very useful feature like language translation</string>
+    <string name="con_2">Great text messaging app! Easy to use, fast, and secure. I love the customization options and the ability to sync across devices. Highly recommended!</string>
+    <string name="con_4">Hands down the best messaging app out there! It\'s fast, reliable, and packed with awesome features. I especially appreciate the security measures in place</string>
+    <string name="con_1_name_new">Chetan Patel</string>
+    <string name="con_2_name_new">chaitany gevareeya</string>
+    <string name="con_3_name_new">Julian Williams</string>
+    <string name="con_4_name_new">Mohimin</string>
+    <string name="con_1_title_new">Top-Rated Text Messaging App: Seamless, Fast, Secure, and Customizable!</string>
+    <string name="con_2_title_new">Ultimate Messaging App: Features!</string>
+    <string name="con_3_title_new">App Thriving Despite Privacy.</string>
+    <string name="con_4_title_new">Smooth Interface; Regrettable Deletion</string>
+    <string name="con_1_new">Great text messaging app! Easy to use, fast, and secure. I love the customization options and the ability to sync across devices. Highly recommended!</string>
+    <string name="con_3_new">Enjoying this app, still my top choice despite invasiveness. Noticing concerns like text message privacy, but overall it\'s excellent. Improvements since my review show responsiveness. They\'re back as #1. ❤️</string>
+    <string name="con_2_new">Found an amazing messaging app! Been using it for a month. It\'s replaced my default one. Awesome features like translation, font styles, and themes.</string>
+    <string name="con_4_new">Overall, great experiences with smooth interfaces. Accidentally deleted important work texts once, couldn\'t retrieve. Hope for a trash feature in future updates</string>
+    <string name="days" translatable="false">%1$s Days</string>
+    <string name="months" translatable="false">%1$s Months</string>
+    <string name="_7_day" translatable="false">7 Day</string>
+    <string name="_12_months" translatable="false">12 Months</string>
+    <string name="some_time_after_try_again" translatable="false">Some Time After Try Again</string>
+    <string name="monthly_price">%s/Month</string>
+    <string name="continue_txt">Continue</string>
+    <string name="price_with_trial">%1\$s/Month after %2\$s FREE trial.</string>
+    <string name="enjoy_month_trial">Enjoy %s Free Trial</string>
+    <string name="month_as_best_price">/month as BEST price</string>
+    <string name="feature_description">%1\$s/month after FREE %2\$s trial</string>
+    <string name="please_check_connection">Please check internet connection.</string>
+    <string name="unlock_benefits">
+        <font color="#1A1C1E">Exclusive </font>
+        <font color="#2187E6">Benefits!</font>
+    </string>
+    <string name="never_forget">
+        <font color="#000000">Never Forget, </font>
+        <font color="#8448E9">Scheduling </font>
+        <font color="#000000">Messaging</font>
+    </string>
+    <string name="Customize_Theme">
+        <font color="#000000">Customize </font>
+        <font color="#0AA86E">Theme </font>
+        <font color="#000000">&amp; Notifications </font>
+    </string>
+    <string name="Secure_Message_sec">
+        <font color="#000000">Secure Message With </font>
+        <font color="#043BFF">Private Chat</font>
+    </string>
+    <string name="end_to_end">
+        <font color="#000000">End-To-End </font>
+        <font color="#FF4370">Encrypted</font>
+        <font color="#000000"> Security</font>
+    </string>
+    <string name="keep_data_safe">
+        <font color="#000000">Keep Data Safe, SMS </font>
+        <font color="#DB51FF">Backup &amp; Restore</font>
+    </string>
+    <string name="Prime_Cost_new">Prime\nCost</string>
+    <string name="Unlock_new_sub">Unlock</string>
+    <string name="Renewal_is_automatic">Renewal is automatic, cancel anytime.</string>
+    <string name="Terms_of_Use_new_sub">Terms of Use</string>
+    <string name="Youve_cancelled">You\'ve cancelled the Google play billing process</string>
+    <string name="Item_not_found">Item not found or Google play billing error</string>
+    <string name="never_forget_new">
+        <font color="#8448E9">Scheduled </font>
+        <font color="#000000">messaging </font>
+    </string>
+    <string name="Customize_Theme_new">
+        <font color="#0AA86E">Theme </font>
+        <font color="#000000">&amp; Notifications  </font>
+    </string>
+    <string name="Secure_Message_sec_new">
+        <font color="#000000">Private, </font>
+        <font color="#043BFF">secure</font>
+        <font color="#000000"> messaging</font>
+    </string>
+    <string name="end_to_end_new">
+        <font color="#FF4370">End-To-End </font>
+        <font color="#000000">encrypted</font>
+    </string>
+    <string name="keep_data_safe_new">
+        <font color="#000000">Safe data, </font>
+        <font color="#DB51FF">SMS backup</font>
+    </string>
+    <string name="Free_txt">Free</string>
+    <string name="Pro_txt">Pro</string>
+    <string name="Weekly_new_plan">Weekly</string>
+    <string name="Monthly_new_plan">Monthly</string>
+    <string name="Yearly_new_plan">Yearly</string>
+    <string name="per_week">per week</string>
+    <string name="per_month">per month</string>
+    <string name="Lifetime_new_m">Purchase once, delight indefinitely</string>
+    <string name="offer_price">Offer Price</string>
+    <string name="price_with_trial_monthly">%1\$s/Month, after %2\$s FREE trial.</string>
+    <string name="price_with_trial_yearly">%1\$s/Year, after %2\$s FREE trial.</string>
+    <string name="price_with_trial_weekly">%1\$s/Week, after %2\$s FREE trial.</string>
+    <string name="price_with_trial_lifetime">%1\$s/Lifetime</string>
+    <string name="week_price">%s/Week</string>
+    <string name="year_price">%s/Year</string>
+    <string name="lifetime_price">%s/Lifetime</string>
+    <string name="Weekly_new">Weekly Plan</string>
+    <string name="Lifetime_new">Lifetime Plan</string>
+    <string name="week_static">/week</string>
+    <string name="Lifetime_static">/Lifetime</string>
+    <string name="skeptical">Skeptical ?</string>
+    <string name="get_your">Get your </string>
+    <string name="day_free_trial">7-day free trial.</string>
+    <string name="today">Today</string>
+    <string name="day_5">Day 5</string>
+    <string name="day_7">Day 7</string>
+    <string name="get_instant_access">Get instant access and see how it can change your conversation.</string>
+    <string name="we_will_remind_you">We\'ll remind you with en email or notification that your trial is ending.</string>
+    <string name="you_will_be_charged">You\'ll be charged on %s, cancel anytime before.</string>
+    <string name="cancel_anytime">Cancel anytime,Secure with PlayStore.</string>
+    <string name="cancel_anytime2">Cancel anytime,secure with PlayStore.</string>
+    <string name="super_easy_to_cancel">2 taps to start, super easy to cancel</string>
+    <string name="trial_and_price_year">%1\$s/year</string>
+    <string name="trial_and_price_month">(%1\$s/month)</string>
+    <string name="annual_discount">
+        <strike>₹598.00</strike> -49% Annual Discount</string>
+    <string name="price_with_trial1"> %1\$s FREE trial.</string>
+    <string name="start_free_trial2">Start Free Trial</string>
+    <string name="trial_and_price">%1\$s free trial, then </string>
+    <string name="premium_price_with_trial">%1\$s/Month, after %2\$s FREE trial.</string>
+    <string name="no_string_attached">No strings attached, here\'s how it works:</string>
+    <string name="Block_Numbre">
+        <font color="#0AA86E">Block </font>
+        <font color="#000000">number  </font>
+    </string>
+    <string name="traslate_message">
+        <font color="#0AA86E">Translate message </font>
+        <font color="#000000">number  </font>
+    </string>
+    <string name="customization_Theme_new">
+        <font color="#0AA86E">Theme </font>
+        <font color="#000000">&amp; customization  </font>
+    </string>
+    <string name="swip_Theme_new">
+        <font color="#0AA86E">Swipe </font>
+        <font color="#000000">motion  </font>
+    </string>
+    <string name="Schedule_Message_ex">Schedule Message</string>
+    <string name="Translate_Message_ex">Translate Message</string>
+    <string name="Block_Unwanted_Messages_ex">Block Unwanted Messages</string>
+    <string name="No_Ads_ex">No Ads</string>
+    <string name="Customize_Theme_ex">Customize Theme</string>
+    <string name="Exclusive_ex">Exclusive</string>
+    <string name="Premium_ex">Premium</string>
+    <string name="lifetime_static">Lifetime</string>
+    <string name="_7_days">7 Days</string>
+    <string name="FREE_trial_new_new">free trial</string>
+    <string name="than_price_ex"> , then </string>
+    <string name="trial_and_price_month_ex">%1\$s/month</string>
+    <string name="get_instant_access_ex">Get instant access and see how it can change your conversation.</string>
+    <string name="per_week_new">Week</string>
+    <string name="popular_week">Popular</string>
+    <string name="continue_txt_2">Try 7 day for FREE</string>
+    <string name="continue_txt_22">Try </string>
+    <string name="continue_txt_222"> for FREE</string>
+    <string name="premium_message_new_trial_screen">Day %1$s: Premium Begins</string>
+    <string name="txtDay2_premium_message_new_trial_screen">Day %1$s: Trial Reminder</string>
+    <string name="static_weekly">/Weekly</string>
+    <string name="static_monthly">/Monthly</string>
+    <string name="static_yearly">/Yearly</string>
+    <string name="One_Time_Payment_static">One Time Payment</string>
+    <string name="Now">Now</string>
+    <string name="static_Pay_Once_Enjoy_forever">Pay Once, Enjoy forever</string>
+    <string name="Unlock_all_the_features">Unlock all the features</string>
+    <string name="Today_Get_Instant_Access">Today: Get Instant Access</string>
+    <string name="HAVE_DOUBTS">HAVE DOUBTS?</string>
+    <string name="Start_with_a_free_trial">Start with a free trial</string>
+    <string name="trial_and_price_week_ex">%1\$s/week</string>
+    <string name="Get_a_reminder_about">Get a reminder about when your free trial will end. Cancel anytime in 15 seconds.</string>
+    <string name="Your_trial_will_convert_to">Your trial will convert to full price unless cancelled</string>
+    <string name="Pay_Noting_Now">Pay Nothing Now</string>
+    <string name="View_All_Plans">View All Plans</string>
+    <string name="try_premium">TRY PREMIUM</string>
+    <string name="never_forget_new_sub_NEW">Schedule Messages</string>
+    <string name="keep_data_safe_new_sub_NEW">Safe data, SMS backup</string>
+    <string name="Customize_Theme_new_sub_NEW">Theme &amp; Notifications</string>
+    <string name="Secure_Message_sec_new_sub_NEW">Private,secure messaging</string>
+    <string name="Limited_Time_Offer">Limited Time Offer</string>
+    <string name="Recommended">Recommended</string>
+    <string name="Most_Popular">Most Popular</string>
+    <string name="never_forget_new_sub">
+        <font color="#000">Schedule </font>
+        <font color="#000">Messages </font>
+    </string>
+    <string name="keep_data_safe_new_sub">
+        <font color="#000000">Safe data, </font>
+        <font color="#000000">SMS backup</font>
+    </string>
+    <string name="Customize_Theme_new_sub">
+        <font color="#000000">Theme </font>
+        <font color="#000000">&amp; Notifications  </font>
+    </string>
+    <string name="Secure_Message_sec_new_sub">
+        <font color="#000000">Private, </font>
+        <font color="#000000">secure</font>
+        <font color="#000000"> messaging</font>
+    </string>
+    <string name="keep_data_safe_new_sub_ic">Chat &amp; SMS backup</string>
+    <string name="continue_txt_new">CONTINUE</string>
+    <string name="Secure_Message_sec_new_sub_new">Private, secure transaction</string>
+    <string name="Secure_Message_sec_new_sub_new_ic">SMS Backup &amp; Restore</string>
+    <string name="one_time_purchase">One-Time Purchase</string>
+    <string name="_50_off_never_miss_out">Never Miss out!!</string>
+    <string name="price_299_per_month">price ₹ 299 per month</string>
+    <string name="price">price</string>
+    <string name="get_premium">GET PREMIUM</string>
+    <string name="experience_messaging_like_never_before">Experience Messaging Like Never Before!</string>
+    <string name="sms_backup_amp_restore">SMS Backup &amp; Restore</string>
+    <string name="schedule_messages">Schedule Messages</string>
+    <string name="theme_amp_notification">Theme &amp; Notification</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="upgrade_to_premium">
+        <font color="#000000">Upgrade to </font>
+        <font color="#0C9AFF">Premium</font>
+    </string>
+    <string name="enjoy_exclusive_features">Enjoy exclusive features</string>
+    <string name="choose_your_plan">Choose Your Plan</string>
+    <string name="lifetime">Lifetime</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="best_offer">Best Offer</string>
+    <string name="Premium_Categories">Premium Categories</string>
+    <string name="Schedule_Messages">Schedule Messages</string>
+    <string name="Theme_Notification">Safe data, SMS backup</string>
+    <string name="Global_Translation">Global Translation</string>
+    <string name="Private_Chat">Private Chat</string>
+    <string name="user_agreement">
+        <u>User Agreement</u>
+    </string>
+    <string name="PrivacyPolicyNew">
+        <u>Privacy Policy</u>
+    </string>
+    <string name="new_sub_bottom_screen">Payment will be charged to Google Play account at the end of the trial period of purchase. If vou cancel vour auto-renewal subschiption during the free trial period, you will not be charged Subscrintion automatically renews unless auto-renews is turned off at least 24 hours betore the end of the current oeriod. You can manane and turn off auto-renewal of the suhesrintion from your <b>Google Play account</b> settings</string>
+    <string name="auto_renew_cancel_anytime">Auto Renew, cancel anytime.</string>
+    <string name="number_location_lookup">Number Location Lookup</string>
+    <string name="private_messages_box">Private Messages Box</string>
+    <string name="no_ads">No Ads</string>
+    <string name="save">Save %1$d%%</string>
+    <string name="message_scheduling">Message Scheduling</string>
+    <string name="new_sub_bottom_screen_new">Payment will be charged to your Google Play account upon purchase. Subscription automatically renews unless auto-renewal is turned off at least 24 hours before the end of the current period. You can manage and turn off auto-renewal from your <b>Google Play account</b> settings.</string>
+    <string name="sms_private_chat">SMS &amp; Private Chat</string>
+    <string name="upgrade_your_chat">Upgrade Your Chat.</string>
+    <string name="with_premium_you_get_powerful_tools_early_access_to_new_features_and_a_seriously_better_chat_experience_let_s_gooo">With Premium, you get powerful tools, early access to new features, and a seriously better chat experience. Let’s gooo!</string>
+    <string name="increased_message_limits">Increased Message Limits</string>
+    <string name="store_up_to_100_000_messages_unlimited_pinned_chats_and_more">Store up to 100,000 messages, Unlimited pinned chats, and more.</string>
+    <string name="faster_sync_amp_smart_backup">Faster Sync &amp; Smart Backup</string>
+    <string name="experience_lightning_fast_priority_syncing_no_delays_just_seamless_performance">Experience lightning-fast priority syncing — no delays, just seamless performance.</string>
+    <string name="schedule_messages_new">Schedule Messages</string>
+    <string name="write_now_send_later_perfect_for_reminders_birthdays_or_professional_messages">Write now, send later. Perfect for reminders, birthdays, or professional messages.</string>
+    <string name="auto_reply">Auto Reply</string>
+    <string name="set_custom_automatic_replies_when_you_re_busy_driving_or_offline">Set custom automatic replies when you\'re busy, driving, or offline.</string>
+    <string name="chat_themes_amp_customization">Chat Themes &amp; Customization</string>
+    <string name="unlock_exclusive_chat_themes_bubble_styles_fonts_and_dark_modes">Unlock exclusive chat themes, bubble styles, fonts, and dark modes.</string>
+    <string name="app_lock_amp_privacy_vault">App Lock &amp; Privacy Vault</string>
+    <string name="secure_your_messages_with_fingerprint_or_pin_hide_private_chats_with_ease">Secure your messages with fingerprint or PIN. Hide private chats with ease.</string>
+    <string name="smart_cleaner">Smart Cleaner</string>
+    <string name="automatically_detect_and_clean_old_messages_media_and_junk_to_free_up_space_and_keep_your_inbox_organized">Automatically detect and clean old messages, media, and junk to free up space and keep your inbox organized.</string>
+    <string name="off_today">%1$d%% OFF TODAY</string>
+    <string name="store_100k_messages_unlimited_pins_amp_more">Store 100K messages, unlimited pins &amp; more.</string>
+    <string name="fast_sync_no_delays_just_smooth">Fast sync — no delays, just smooth.</string>
+    <string name="type_now_deliver_later_simple_amp_smart">Type now, deliver later — simple &amp; smart.</string>
+    <string name="unlock_themes_bubbles_fonts_amp_dark_mode">Unlock themes, bubbles, fonts &amp; dark mode.</string>
+    <string name="privacy_made_easy_pin_or_fingerprint">Privacy made easy — PIN or fingerprint.</string>
+    <string name="year">/year</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="ms">Ms</string>
+    <string name="hurry_offer_ends_in">Hurry! Offer ends in:</string>
+    <string name="upgrade_your_chat_experience_now">Upgrade your Chat experience now</string>
+    <string name="welcome_offer">WELCOME OFFER</string>
+    <string name="discount_offer">80% OFF FIRST TIME</string>
+    <string name="upgrade_amp_chat">
+        <font color="#000">UPGRADE &amp;</font>
+        <font color="#0000FF"> CHAT</font>
+    </string>
+    <string name="hey_there">Hey! there</string>
+    <string name="no_ads_1">No Ads</string>
+    <string name="backup_amp_restore">Backup &amp; Restore</string>
+    <string name="secure_chat">Secure Chat</string>
+    <string name="customization">Customization</string>
+    <string name="by_1m_users">by 1M+ users</string>
+    <string name="lifetime_plan">Lifetime Plan</string>
+    <string name="one_time_payment">One-Time Payment</string>
+    <string name="weekly_plan">Weekly Plan</string>
+    <string name="great_for_short_term_use">Great for short-term use</string>
+    <string name="week">/week</string>
+    <string name="secure_purchase_cancel_anytime">Secure Purchase, Cancel Anytime</string>
+    <string name="upgrade">UPGRADE</string>
+    <string name="and">&amp;</string>
+    <string name="chat">CHAT</string>
+    <string name="without">Without</string>
+    <string name="limits">Limits!</string>
+    <string name="Allow_Overlay_Access">Allow overlay access</string>
+    <string name="review_form_name_label">Name</string>
+    <string name="review_form_name_hint">Enter name</string>
+    <string name="review_form_email_label">Email</string>
+    <string name="review_form_fill_all_fields">Please fill all fields</string>
+    <string name="review_form_invalid_email">Please enter a valid email</string>
+    <string name="review_form_submit_success">Thank you for your feedback!</string>
+    <string name="review_form_submit_failed">Failed to submit feedback</string>
+    <string name="allow_display_over_other_app">Allow Display Over Other Apps</string>
+    <string name="enable_overlay_permission_to_see_helpful_actions_after_your_calls">Enable overlay permission to see helpful actions after your calls</string>
+
+    <string name="permission_required_keyword_allow" translatable="false">"Allow"</string>
+    <string name="permission_required_allow_button" translatable="false">Allow Permission</string>
+    <string name="you_can_manage_this_setting_anytime_from_settings">You can manage this setting anytime from Settings.</string>
+    <string name="view_call_details_instantly_after_every_call_with_overlay_permission">View call details instantly after every call with overlay permission.</string>
+    <string name="app_overlay_access">App overlay access</string>
+    <string name="enable_after_call_features_to_instantly_see_call_details">Enable after-call features to instantly see call details.</string>
+    <string name="default_sms_settings_message">Default SMS selection is disabled. Open Settings and set this app as your default SMS app.</string>
+    <string name="custom_image">Custom Image</string>
+    <string name="cd_home_open_navigation">Open navigation drawer</string>
+    <string name="cd_home_search_messages">Search messages</string>
+    <string name="cd_home_more_options">More options</string>
+    <string name="cd_home_filter_messages">Filter messages</string>
+    <string name="cd_home_archive_selected">Archive selected messages</string>
+    <string name="cd_home_delete_selected">Delete selected messages</string>
+    <string name="cd_home_pin_selected">Pin selected messages</string>
+    <string name="cd_home_unpin_selected">Unpin selected messages</string>
+    <string name="cd_home_select_all">Select all messages</string>
+    <string name="cd_home_close_selection">Close selection mode</string>
+    <string name="dark_mode">Dark Mode</string>
+
+    <string name="take_action_without_switching_apps">Take action without switching apps</string>
+    <string name="view_caller_details_instantly">View caller details instantly</string>
+    <string name="get_quick_reply_options_after_every_call">Get quick reply options after every call</string>
+    <string name="instant_replies_and_call_insights_right_when_you_need_them">Instant replies and call insights - right when you need them</string>
+    <string name="included_features">Included Features</string>
+    <string name="smart_features">Smart Features</string>
+    <string name="make_every_call_smarter">Make Every Call Smarter</string>
+
+    <string name="No_Message_Found">No Message Found</string>
+    <string name="no_results_found">No results found</string>
+    <string name="home_search_hint">Search messages</string>
+    <string name="restore_from_backup">Restore from backup</string>
+    <string name="are_u_sure_you_want_to_restore_from_backup">Are you sure you would like to restore your messages from this backup?</string>
+    <string name="theme_mode">Theme Mode</string>
+    <string name="select_theme_mode">Select Theme Mode</string>
+    <string name="system_default">System Default</string>
+    <string name="light_mode">Light</string>
+    <string name="use_system_font">Use System Font</string>
+
+    <string name="permission_required_messages_title">Permission required to use the Messages app.</string>
+    <string name="permission_required_open_settings">Open settings, then</string>
+    <string name="permission_required_step1">1. Tap Permissions</string>
+    <string name="permission_required_step2_phone">2. Find %1$s</string>
+    <string name="permission_required_step2_notifications">2. Find %1$s</string>
+    <string name="permission_required_step3">3. Choose %1$s</string>
+    <string name="permission_required_keyword_phone_call">"Phone Call"</string>
+    <string name="permission_required_keyword_notifications">"Notifications"</string>
+
+
+
+    <string name="un_terms_condition"><u>Terms &amp; Condition</u></string>
+    <string name="un_privacy_policy"><u>Privacy Policy</u></string>
+    <string name="we_respect_your_privacy">We respect your privacy</string>
+    <string name="your_data_stays_safe_and_is_never_shared">Your data stays safe and is never shared</string>
+    <string name="phone_status">Phone status</string>
+    <string name="help_you_see_who_s_calling_in_real_time_and_handle_calls_more_smoothly">Help you see who\'s calling in real time and handle calls more smoothly.</string>
+    <string name="notification">Notification</string>
+    <string name="stay_updated_with_important_alerts_right_when_they_matter">Stay updated with important alerts right when they matter.</string>
+    <string name="txt_and">and</string>
+    <string name="one_last_step">One last step</string>
+    <string name="please_allow_permission_to_show_caller_id_feature">Please allow permission to show caller id feature</string>
+    <string name="stay_connected_easily">Stay connected easily</string>
+    <string name="allow_this_to_access_messages_and_respond_without_switching_apps">Allow this to access messages and respond without switching apps</string>
+
+    <string name="declaration_dilog_ol">The app can only function if the draw over other apps permission is granted</string>
+    <string name="declaration_dilog_phonestate">Enable this setting to keep messaging smooth during calls and avoid interruptions</string>
+    <string name="see_and_reply_to_messages_instantly_without_leaving_what_you_re_doing">See and reply to messages instantly without leaving what you\'re doing</string>
+
+
+    <string name="default_but_not_permission_info">Let the app use your messages, calls, and contacts so everything works smoothly.</string>
+    <string name="default_but_not_permission_GRANTSSETTING">Change permissions in your device\'s app settings. Give Messages access to SMS, Phone, and Contacts.</string>
+    <string name="default_but_not_permission_cta">Continue</string>
+    <string name="whatsapp">WhatsApp</string>
+  <string name="set_as_default_1">Set as default</string>
+
+    <string name="One_Time_Pay">One time pay</string>
+    <string name="upgrade_to_messages_pro">Upgrade to Messages Pro</string>
+    <string name="faster_smarter_amp_more_private_messaging_experience">Faster, smarter &amp; more private messaging experience</string>
+    <string name="best_value">Best Value</string>
+    <string name="yearly_plan">Yearly Plan</string>
+    <string name="all_premium_features">All premium features</string>
+    <string name="ad_free_experience">Ad-free experience</string>
+    <string name="TermsandCondition_ul"><u>Terms of Use</u></string>
+    <string name="PrivacyPolicy_ul"><u>Privacy Policy</u></string>
+    <string name="subscription_will_auto_renew_cancel_anytime">Subscription will auto renew. Cancel anytime</string>
+    <string name="full_access_for">Full Access for</string>
+    <string name="search_number_name_amp_more">Search number, name &amp; more</string>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="messagetxt"
+            type="String" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/framchip"
+        style="@style/Widget.Material3.Chip.Assist"
+        setTextSizeFullApp="@{textsizechagefor10}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checkable="false"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@{messagetxt}"
+        app:chipCornerRadius="@dimen/_50sdp"
+        app:closeIcon="@drawable/chip_message_24px"
+        app:closeIconEnabled="true"
+        app:closeIconSize="@dimen/_12sdp"
+        app:closeIconTint="@color/black"
+        app:ensureMinTouchTargetSize="true"
+        tools:text="Smart reply 1" />
+</layout>

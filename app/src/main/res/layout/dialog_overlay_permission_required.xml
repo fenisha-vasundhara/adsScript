@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constCard"
+        android:background="@drawable/caller_module_floating_background"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            fullappfontstylesemibold="@{0}"
+            setTextColorThemeWise="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/permission_required_1"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/img"
+            fullappfontstyleregular="@{0}"
+            setTextColorThemeWise="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:includeFontPadding="false"
+            android:text="@string/this_permission_lets_the_app_show_an_email_overlay_right_after_your_call_ends"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnCancel"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_secondary_bg"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/not_now"
+                    android:textColor="@color/defnotdone"
+                    android:textSize="@dimen/_13ssp" />
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnAllow"
+                    fullappfontstylebold="@{0}"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_secondary_bg"
+                    android:backgroundTint="@color/appcolor"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/allow"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

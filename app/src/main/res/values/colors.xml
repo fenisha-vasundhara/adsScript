@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey">#a9a9a9</color>
+    <color name="black">#FF000000</color>
+    <color name="afterCallnewBlue">#1A73E9</color>
+    <color name="black2">#000000</color>
+    <color name="blackDim">#141414</color>
+    <color name="newmessage">#2D2D2D</color>
+    <color name="newmessageic">#0A0B0B</color>
+    <color name="newmessageTwo">#5D666F</color>
+    <color name="newmessageTwoic">#090A0A</color>
+    <color name="oldmessage">#777777</color>
+    <color name="oldmessageic">#5A5A63</color>
+    <color name="newmessagesecound">#929191</color>
+    <color name="oldmessagesecound">#75797D</color>
+    <color name="oldmessagesecoundic">#5A5A63</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pre_new">#2DCCE4FB</color>
+    <color name="activated_item_foreground">#6A000000</color>
+    <color name="pressed_item_foreground">#08000000</color>
+    <color name="item_out">#4CAF50</color>
+    <color name="appcolor">#4AA6FB</color>
+    <!-- Fallback for API < 31 (values-v31 overrides with dynamic system colors) -->
+    <color name="you_primary_color">@color/grey</color>
+    <color name="cta_don">#147fe3</color>
+    <color name="procolor">#BECDDB</color>
+    <color name="unselectedlangcolor">#34373E</color>
+    <color name="red">#E10505</color>
+    <color name="datemessage">#80050505</color>
+    <color name="sub_text">#151515</color>
+    <color name="ucrop_color_black">#FFFFFF</color>
+    <color name="selectmessage">#136EC3</color>
+    <color name="ybgm">#E62F83D1</color>
+    <color name="defnotdone">#8A95A8</color>
+    <color name="defnotdone_">#E0E0E0</color>
+    <color name="defnotdonecard">#E9EDF4</color>
+    <color name="inmessagedefaultcolor">#EBEFF2</color>
+    <color name="sun_intro">#115acb</color>
+    <color name="con_ad">#5C3C4B5D</color>
+    <color name="colorE">#c4c4c4</color>
+    <color name="buttontintlasttxt">#85C4FF</color>
+    <color name="buttontintstarttxt">#053272</color>
+    <color name="Archive">#4AA6FB</color>
+    <color name="Delete">#EE4747</color>
+    <color name="Call">#01A23D</color>
+    <color name="Mark_as_read">#0168A2</color>
+    <color name="Pin">#E5622A</color>
+    <color name="Private_Chat">#B946FF</color>
+    <color name="toolbarcolor1">#FFFFFF</color>
+    <color name="chatbgcolor1">#FFFFFF</color>
+    <color name="after_call_toolbar">#E9E9E9</color>
+    <color name="unselectmessagein">#4AA6FB</color>
+    <color name="unselectmessageout">#E8F4FF</color>
+    <color name="messageoutcolor_1">#282A2D</color>
+    <color name="messageincolor_1">#FFFFFF</color>
+    <color name="chatpreouttxtdatecolor_1">#2D3032</color>
+    <color name="chatpreintxtdatecolor_1">#EEF4F9</color>
+    <color name="toolbarcolor2">#445768</color>
+    <color name="toolbarcolor33">#5D7285</color>
+    <color name="toolbarcolor2stock">#5D7991</color>
+    <color name="chatbgcolor2">#1E3244</color>
+    <color name="chatbgcolor22">#627B91</color>
+    <color name="unselectmessagein_2">#365B7C</color>
+    <color name="unselectmessageout_2">#445768</color>
+    <color name="messageoutcolor_2">#A8B8C8</color>
+    <color name="messageincolor_2">#FFFFFF</color>
+    <color name="chatpreouttxtdatecolor_2">#B2B2B2</color>
+    <color name="chatpreintxtdatecolor_2">#EEF4F9</color>
+    <color name="navdark">#090909</color>
+    <color name="toolbarcolor3">#111111</color>
+    <color name="toolbarcolor3new">#121318</color>
+<!--    <color name="toolbarcolor3new">#232323</color>-->
+    <color name="toolbarcolor3new_">#4A4A4A</color>
+    <color name="toolbarcolor3new3">#454545</color>
+    <color name="toolbarcolor3newstock">#4C4B4B</color>
+    <color name="chatbgcolor3">#000000</color>
+    <color name="chatdatecommancolor">#8B8B8B</color>
+    <color name="unselectmessageout_3">#151617</color>
+    <color name="messageoutcolor_3">#5C6169</color>
+    <color name="messageincolor_3">#FFFFFF</color>
+    <color name="chatpreouttxtdatecolor_3">#3C3E41</color>
+    <color name="chatpreintxtdatecolor_3">#EEF4F9</color>
+    <color name="toolbarcolor4">#7CB8EF</color>
+    <color name="chatbgcolor4">#ADD7FD</color>
+    <color name="chatdatecolor">#232020</color>
+    <color name="unselectmessageout_4">#E8F4FF</color>
+    <color name="messageoutcolor_4">#282A2D</color>
+    <color name="messageincolor_4">#FFFFFF</color>
+    <color name="chatpreouttxtdatecolor_4">#2D3032</color>
+    <color name="chatpreintxtdatecolor_4">#EEF4F9</color>
+    <color name="greyish">#aaa8a8</color>
+    <color name="mine_shaft">#303030</color>
+    <color name="lock_edit_screen">#E5EAEF</color>
+    <color name="tab_unselected_color">#879FB2</color>
+    <color name="colorChipViewBackground">#E0E0E0</color>
+    <color name="chips_opened_bg">#009688</color>
+    <color name="colorCloseChip">#ababab</color>
+    <color name="white_transparency">#b9ffffff</color>
+    <color name="colorAccent">?attr/colorAccent</color>
+    <color name="leku_white">#FFFFFF</color>
+    <color name="leku_white_alpha">#F2FFFFFF</color>
+    <color name="leku_soft_grey">#ECEEEF</color>
+    <color name="leku_mid_grey">#85969f</color>
+    <color name="leku_strong_grey">#50545A</color>
+    <color name="leku_search_background">#0000</color>
+    <color name="leku_blackish">#171d20</color>
+    <color name="leku_black_20_transparent">#33000000</color>
+    <color name="leku_ic_close">@null</color>
+    <color name="leku_ic_gps">@null</color>
+    <color name="leku_ic_satellite">@null</color>
+    <color name="leku_ic_maps">@null</color>
+    <color name="leku_location_accept_button_bg">@null</color>
+    <color name="new_theme_toolbar_1">#FFFFFF</color>
+    <color name="new_theme_toolbar_2">#FFFFFF</color>
+    <color name="new_theme_toolbar_3">#FDF2FF</color>
+    <color name="new_theme_toolbar_4">#F6F2FF</color>
+    <color name="new_theme_toolbar_5">#FFECE7</color>
+    <color name="new_theme_toolbar_6">#E7F1FF</color>
+    <color name="new_theme_toolbar_7">#FCCCCC</color>
+    <color name="new_theme_toolbar_8">#FEE1AD</color>
+    <color name="new_theme_toolbar_9">#B9FBD0</color>
+    <color name="new_theme_toolbar_10">#FFCEE5</color>
+    <color name="new_theme_toolbar_11">#B9BCFC</color>
+    <color name="new_theme_toolbar_12">#FFE7E7</color>
+    <color name="color_theme_seletion">#3B9F9D9D</color>
+    <color name="settingbuttonfullapp">#FCFDFE</color>
+    <color name="lockscreen">#25282B</color>
+    <color name="lockscreenhint">#9C474545</color>
+    <color name="lockscreenpin">#74000000</color>
+    <color name="lockscreenhintsecound">#95F1EEEE</color>
+    <color name="lockscreensettingstock">#D9EDFF</color>
+    <color name="lockscreensetting">#EFF7FF</color>
+    <color name="swipemotioncolor">#282626</color>
+    <color name="tablayoutbg">#F0F6FB</color>
+    <color name="managecatbgone">#E5F2FF</color>
+    <color name="managecatallonestroke">#D5E9FC</color>
+    <color name="managecatallonesolid">#F9FCFF</color>
+    <color name="managecatallonesolidtxtcolor">#36383A</color>
+    <color name="sedulemessagetext">#201D1D</color>
+    <color name="lanunselectedcolor">#D4E1ED</color>
+    <color name="langsechbg">#EEEEEE</color>
+    <color name="colorselectcontact">#C3000000</color>
+    <color name="recentserchcolor">#595858</color>
+    <color name="recentserchcolortext">#6F6C6C</color>
+    <color name="groupnameshow">#383F45</color>
+    <color name="seleccontact">#87A0B7</color>
+    <color name="commandialogposbutton">#F3F9FF</color>
+    <color name="signachurdialog">#929397</color>
+    <color name="oldmessagedelete">#101010</color>
+    <color name="automessagedelete_cardcolor">#FBFAFA</color>
+    <color name="automessagedelete_cardcolor_pos">#D7ECFF</color>
+    <color name="automessagedelete_cardcolor_pos_two">#26394A</color>
+    <color name="commanfornewtabselection">#2E9BFF</color>
+    <color name="commanfornewtabselectionstock">#72BBFF</color>
+    <color name="commanfornewtabselectionstock1">#7D7F82</color>
+    <color name="commanfornewtabselection1">#2A4863</color>
+    <color name="commanfornewtabselection2">#353E45</color>
+    <color name="commanfornewtabselectiontxt">#CBCBCB</color>
+    <color name="emoji_background">#eceff1</color>
+    <color name="emoji_popup_background">#ffe9edef</color>
+    <color name="emoji_icons">#61000000</color>
+    <color name="emoji_divider">#1f000000</color>
+    <color name="divider_color">#4ACDCACA</color>
+    <color name="demo_txt">#D9D9D9</color>
+    <color name="demo_txt_2">#181818</color>
+    <color name="demo_txt_3">#2E2E2E</color>
+    <color name="scr_tint_traslapantioncolor">#00000000</color>
+    <color name="scr_tint">#7E8892</color>
+    <color name="showcasecoor">#BF000000</color>
+    <color name="pomegranate">#f4511e</color>
+    <color name="commanfornewtabselectionstock1ab">#85878B</color>
+    <color name="setting_button_color_boder">#E4EEF7</color>
+    <color name="setting_button_color_boder1">#314354</color>
+    <color name="setting_button_color_boder2">#141414</color>
+    <color name="setting_button_color_solid2">#2B3E50</color>
+    <color name="setting_button_color_solid3">#0D0D0D</color>
+    <color name="fragment_setting_ab_color">#53595E</color>
+    <color name="fragment_setting_ab_color_title">#2487E1</color>
+    <color name="setting_icon_stock_color_1">#2E3439</color>
+    <color name="setting_icon_stock_color_2">#AFBAC3</color>
+    <color name="setting_icon_stock_color_3">#AFBAC3</color>
+    <color name="setting_text_color_1">@color/fragment_setting_ab_color</color>
+<!--    <color name="status_bar_ab_color">#F1F5F9</color>-->
+    <color name="status_bar_ab_color">#FEFBFF</color>
+    <color name="drawer_bg_color_3">#121212</color>
+    <color name="drawer_bg_color_2">#25394B</color>
+    <color name="overlay_color">#2e000000</color>
+    <color name="fontWhiteEnable">#FFF</color>
+    <color name="fontWhiteDisable">#85FFFFFF</color>
+    <color name="fontBlackEnable">#000000</color>
+    <color name="fontBlackDisable">#50000000</color>
+    <color name="swipReplayUnderBg">#28138DDF</color>
+    <color name="attachmnet_dialog_theme_dark">#22FFFFFF</color>
+    <color name="attachmnet_dialog_theme_light">#0D000000</color>
+    <color name="attachmnet_dialog_theme_light_icon">#1C274C</color>
+    <color name="attachmnet_dialog_theme_dark_icon">@color/white</color>
+    <color name="black_line">#11000000</color>
+    <color name="dark_theme_line">#72333333</color>
+    <color name="blackOrg">#000000</color>
+    <color name="outColor">#777777</color>
+    <color name="L1">#3C6FF1</color>
+    <color name="cardTextBal">#3C6FF1</color>
+    <color name="tools_theme">#00838F</color>
+    <color name="textPrimary">#49555F</color>
+    <color name="contacticon_1">#FFE25050</color>
+    <color name="contacticon_2">#FFE25096</color>
+    <color name="contacticon_3">#FF7F1EAD</color>
+    <color name="contacticon_4">#FFDF50E2</color>
+    <color name="contacticon_5">#FF6550E2</color>
+    <color name="contacticon_6">#FFA250E2</color>
+    <color name="contacticon_7">#FF505FE2</color>
+    <color name="contacticon_8">#FF7F50E2</color>
+    <color name="contacticon_9">#FF4C6892</color>
+    <color name="contacticon_10">#FF4FB477</color>
+    <color name="contacticon_11">#FF5068E2</color>
+    <color name="contacticon_12">#FF50E2AE</color>
+    <color name="contacticon_13">#FF90E250</color>
+    <color name="contacticon_14">#FFE2B150</color>
+    <color name="contacticon_15">#FFE29650</color>
+    <color name="contacticon_16">#FFE27350</color>
+    <color name="after_call_title">#E9E9E9</color>
+    <array name="random_colors">
+        <item>#06C9AF</item>
+        <item>#6DC966</item>
+        <item>#F1AF28</item>
+        <item>#FF8963</item>
+        <item>#FF6969</item>
+        <item>#5D99FF</item>
+        <item>#8899EC</item>
+    </array>
+    <array name="material_red">
+        <item>#FFEBEE</item>
+        <item>#FFCDD2</item>
+        <item>#EF9A9A</item>
+        <item>#E57373</item>
+        <item>#EF5350</item>
+        <item>#F44336</item>
+        <item>#E53935</item>
+        <item>#D32F2F</item>
+        <item>#C62828</item>
+        <item>#B71C1C</item>
+    </array>
+    <array name="material_pink">
+        <item>#FCE4EC</item>
+        <item>#F8BBD0</item>
+        <item>#F48FB1</item>
+        <item>#F06292</item>
+        <item>#EC407A</item>
+        <item>#E91E63</item>
+        <item>#D81B60</item>
+        <item>#C2185B</item>
+        <item>#AD1457</item>
+        <item>#880E4F</item>
+    </array>
+    <array name="material_purple">
+        <item>#F3E5F5</item>
+        <item>#E1BEE7</item>
+        <item>#CE93D8</item>
+        <item>#BA68C8</item>
+        <item>#AB47BC</item>
+        <item>#9C27B0</item>
+        <item>#8E24AA</item>
+        <item>#7B1FA2</item>
+        <item>#6A1B9A</item>
+        <item>#4A148C</item>
+    </array>
+    <array name="material_deep_purple">
+        <item>#EDE7F6</item>
+        <item>#D1C4E9</item>
+        <item>#B39DDB</item>
+        <item>#9575CD</item>
+        <item>#7E57C2</item>
+        <item>#673AB7</item>
+        <item>#5E35B1</item>
+        <item>#512DA8</item>
+        <item>#4527A0</item>
+        <item>#311B92</item>
+    </array>
+    <array name="material_indigo">
+        <item>#E8EAF6</item>
+        <item>#C5CAE9</item>
+        <item>#9FA8DA</item>
+        <item>#7986CB</item>
+        <item>#5C6BC0</item>
+        <item>#3F51B5</item>
+        <item>#3949AB</item>
+        <item>#303F9F</item>
+        <item>#283593</item>
+        <item>#1A237E</item>
+    </array>
+    <array name="material_blue">
+        <item>#E3F2FD</item>
+        <item>#BBDEFB</item>
+        <item>#90CAF9</item>
+        <item>#64B5F6</item>
+        <item>#42A5F5</item>
+        <item>#2196F3</item>
+        <item>#1E88E5</item>
+        <item>#1976D2</item>
+        <item>#1565C0</item>
+        <item>#0D47A1</item>
+    </array>
+    <array name="material_light_blue">
+        <item>#E1F5FE</item>
+        <item>#B3E5FC</item>
+        <item>#81D4FA</item>
+        <item>#4FC3F7</item>
+        <item>#29B6F6</item>
+        <item>#03A9F4</item>
+        <item>#039BE5</item>
+        <item>#0288D1</item>
+        <item>#0277BD</item>
+        <item>#01579B</item>
+    </array>
+    <array name="material_cyan">
+        <item>#E0F7FA</item>
+        <item>#B2EBF2</item>
+        <item>#80DEEA</item>
+        <item>#4DD0E1</item>
+        <item>#26C6DA</item>
+        <item>#00BCD4</item>
+        <item>#00ACC1</item>
+        <item>#0097A7</item>
+        <item>#00838F</item>
+        <item>#006064</item>
+    </array>
+    <array name="material_teal">
+        <item>#E0F2F1</item>
+        <item>#B2DFDB</item>
+        <item>#80CBC4</item>
+        <item>#4DB6AC</item>
+        <item>#26A69A</item>
+        <item>#009688</item>
+        <item>#00897B</item>
+        <item>#00796B</item>
+        <item>#00695C</item>
+        <item>#004D40</item>
+    </array>
+    <array name="material_green">
+        <item>#E8F5E9</item>
+        <item>#C8E6C9</item>
+        <item>#A5D6A7</item>
+        <item>#81C784</item>
+        <item>#66BB6A</item>
+        <item>#4CAF50</item>
+        <item>#43A047</item>
+        <item>#388E3C</item>
+        <item>#2E7D32</item>
+        <item>#1B5E20</item>
+    </array>
+    <array name="material_light_green">
+        <item>#F1F8E9</item>
+        <item>#DCEDC8</item>
+        <item>#C5E1A5</item>
+        <item>#AED581</item>
+        <item>#9CCC65</item>
+        <item>#8BC34A</item>
+        <item>#7CB342</item>
+        <item>#689F38</item>
+        <item>#558B2F</item>
+        <item>#33691E</item>
+    </array>
+    <array name="material_lime">
+        <item>#F9FBE7</item>
+        <item>#F0F4C3</item>
+        <item>#E6EE9C</item>
+        <item>#DCE775</item>
+        <item>#D4E157</item>
+        <item>#CDDC39</item>
+        <item>#C0CA33</item>
+        <item>#AFB42B</item>
+        <item>#9E9D24</item>
+        <item>#827717</item>
+    </array>
+    <array name="material_yellow">
+        <item>#FFFDE7</item>
+        <item>#FFF9C4</item>
+        <item>#FFF59D</item>
+        <item>#FFF176</item>
+        <item>#FFEE58</item>
+        <item>#FFEB3B</item>
+        <item>#FDD835</item>
+        <item>#FBC02D</item>
+        <item>#F9A825</item>
+        <item>#F57F17</item>
+    </array>
+    <array name="material_amber">
+        <item>#FFF8E1</item>
+        <item>#FFECB3</item>
+        <item>#FFE082</item>
+        <item>#FFD54F</item>
+        <item>#FFCA28</item>
+        <item>#FFC107</item>
+        <item>#FFB300</item>
+        <item>#FFA000</item>
+        <item>#FF8F00</item>
+        <item>#FF6F00</item>
+    </array>
+    <array name="material_orange">
+        <item>#FFF3E0</item>
+        <item>#FFE0B2</item>
+        <item>#FFCC80</item>
+        <item>#FFB74D</item>
+        <item>#FFA726</item>
+        <item>#FF9800</item>
+        <item>#FB8C00</item>
+        <item>#F57C00</item>
+        <item>#EF6C00</item>
+        <item>#E65100</item>
+    </array>
+    <array name="material_deep_orange">
+        <item>#FBE9E7</item>
+        <item>#FFCCBC</item>
+        <item>#FFAB91</item>
+        <item>#FF8A65</item>
+        <item>#FF7043</item>
+        <item>#FF5722</item>
+        <item>#F4511E</item>
+        <item>#E64A19</item>
+        <item>#D84315</item>
+        <item>#BF360C</item>
+    </array>
+    <array name="material_brown">
+        <item>#EFEBE9</item>
+        <item>#D7CCC8</item>
+        <item>#BCAAA4</item>
+        <item>#A1887F</item>
+        <item>#8D6E63</item>
+        <item>#795548</item>
+        <item>#6D4C41</item>
+        <item>#5D4037</item>
+        <item>#4E342E</item>
+        <item>#3E2723</item>
+    </array>
+    <array name="material_gray">
+        <item>#FAFAFA</item>
+        <item>#F5F5F5</item>
+        <item>#EEEEEE</item>
+        <item>#E0E0E0</item>
+        <item>#BDBDBD</item>
+        <item>#9E9E9E</item>
+        <item>#757575</item>
+        <item>#616161</item>
+        <item>#424242</item>
+        <item>#212121</item>
+    </array>
+    <array name="material_blue_gray">
+        <item>#ECEFF1</item>
+        <item>#CFD8DC</item>
+        <item>#B0BEC5</item>
+        <item>#90A4AE</item>
+        <item>#78909C</item>
+        <item>#607D8B</item>
+        <item>#546E7A</item>
+        <item>#455A64</item>
+        <item>#37474F</item>
+        <item>#263238</item>
+    </array>
+    <color name="lightPermissionContent">#808080</color>
+    <color name="textColor1">#3C3C3C</color>
+    <color name="textColor1_night">#FFFFFF</color>
+    <color name="lightPermissionContent_night">#8F9091</color>
+    <color name="ratingTextColor">#555555</color>
+    <color name="toolbar_color">#F5FAFF</color>
+    <color name="toolbar_color_aftercall">#F5FAFF</color>
+    <color name="toolbar_color_aftercall_dark">#1D1D1D</color>
+    <color name="black_new_theme">#181919</color>
+    <color name="overLayerAppNameLight">#FF000000</color>
+    <color name="overLayerAppBgLight">#F8F8F8</color>
+    <color name="overLayerAppNameDark">#FFFFFFFF</color>
+    <color name="overLayerAppBgDark">#2A2A2A</color>
+    <color name="overlay_permission_title">#000000</color>
+    <color name="overlay_permission_bg">#fff</color>
+    <color name="overlay_permission_content">#353535</color>
+    <color name="overlay_permission_text">#4E4E4E</color>
+    <color name="overlay_permission_cancel">#2F2F2F</color>
+    <color name="overlay_permission_cancel_bg">#F0F0F0</color>
+    <color name="overlay_permission_title_dark">#FFFFFF</color>
+    <color name="overlay_permission_bg_dark">#141414</color>
+    <color name="overlay_permission_content_dark">#CFCFCF</color>
+    <color name="overlay_permission_text_dark">#fff</color>
+    <color name="overlay_permission_cancel_dark">#FFFFFF</color>
+    <color name="overlay_permission_cancel_bg_dark">#2E2E2E</color>
+    <color name="review_form_bg_light">#FFFFFF</color>
+    <color name="review_form_bg_dark">#1E1E1E</color>
+    <color name="review_form_title_light">#000000</color>
+    <color name="review_form_title_dark">#FFFFFF</color>
+    <color name="review_form_label_light">#5F6368</color>
+    <color name="review_form_label_dark">#C7C7C7</color>
+    <color name="review_form_input_bg_light">#F4F3F3</color>
+    <color name="review_form_input_bg_dark">#0B0B0B</color>
+    <color name="review_form_input_stroke_light">#D5E9FC</color>
+    <color name="review_form_input_stroke_dark">#3C3C3C</color>
+    <color name="aftercall_permission_pill_fill_light">#E8F4FF</color>
+    <color name="aftercall_permission_pill_stroke_light">#C4E5FF</color>
+    <color name="aftercall_permission_pill_fill_dark">#26394A</color>
+    <color name="aftercall_permission_pill_stroke_dark">#314354</color>
+    <color name="aftercall_permission_card_fill_light">#FFFFFF</color>
+    <color name="aftercall_permission_card_fill_dark">#1D1D1D</color>
+    <color name="aftercall_permission_card_stroke_light">#D5E9FC</color>
+    <color name="aftercall_permission_card_stroke_dark">#3C3C3C</color>
+    <color name="review_form_input_text_light">#1A1A1A</color>
+    <color name="review_form_input_text_dark">#FFFFFF</color>
+    <color name="review_form_input_hint_light">#8A8C8E</color>
+    <color name="review_form_input_hint_dark">#8B8B8B</color>
+    <color name="review_form_button_bg_light">#E3E6EA</color>
+    <color name="review_form_button_bg_dark">#3A3A3A</color>
+    <color name="review_form_button_text_light">#1E1E1E</color>
+    <color name="review_form_button_text_dark">#FFFFFF</color>
+    <color name="review_form_icon_light">#5F6368</color>
+    <color name="review_form_icon_dark">#FFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="status_color">#4A7DEF</color>
+    <color name="whitenew">#FFFFFFFF</color>
+    <color name="icon_unselected">#999999</color>
+    <color name="dark_gray">#808080</color>
+    <color name="dark_gray_one">#6E6C6C</color>
+    <color name="light_gray_color">#808080</color>
+    <color name="colorLine">#000000</color>
+    <color name="nav_color">#FFFFFFFF</color>
+    <color name="icon_unselected_test">#999999</color>
+    <color name="grey_test">#3C4B5D</color>
+    <color name="mcolorPrimary">#FF03DAC5</color>
+    <color name="mcolorPrimaryDark">#FF03DAC5</color>
+    <color name="lightGrey">#DDDEDF</color>
+    <color name="duskYellow">#FFC516</color>
+    <color name="selected_color">#2F91EB</color>
+    <color name="unselected_color">#D3E3F8</color>
+    <color name="comman_color">#D20464F5</color>
+    <color name="ol_bootom_content_txt_light">#4B5563</color>
+    <color name="ol_bootom_content_txt_dark">#E3E3E3</color>
+    <color name="ol_bootom_notnow_txt_light">#898989</color>
+    <color name="ol_bootom_notnow_txt_dark">#B1B1B1</color>
+    <color name="permission_bs_bg_light">#FFFFFF</color>
+    <color name="permission_bs_bg_dark">#1E1E1E</color>
+    <color name="permission_bs_title_light">#000000</color>
+    <color name="permission_bs_title_dark">#FFFFFF</color>
+    <color name="permission_bs_text_light">#8C8C8C</color>
+    <color name="permission_bs_text_dark">#B3B3B3</color>
+    <color name="permission_bs_button_green">#2DB24A</color>
+    <color name="permission_bs_highlight">#147fe3</color>
+    <color name="recovery_method_card_light">#EFF4F9</color>
+    <color name="newPerLightBg">#F4F4F4</color>
+    <color name="newPerDarkBg">#252525</color>
+
+    <color name="newPerLightBg1">#FEFEFE</color>
+    <color name="newPerDarkBg1">#252525</color>
+    <color name="dilog_dark_color">#1A1B20</color>
+    <color name="dilog_light_color">#FEFBFF</color>
+
+
+    <color name="paywall_bg_light_color">#F5F5F5</color>
+    <color name="paywall_bg_dark_color">#121212</color>
+    <color name="paywall_primry_color">#205FE0</color>
+    <color name="paywall_plan_un_light_color">#FFFFFF</color>
+    <color name="paywall_plan_un_light_color1">#EFEFEF</color>
+    <color name="paywall_plan_un_dark_color">#1F1F1F</color>
+    <color name="paywall_plan_un_dark_color1">#222222</color>
+</resources>

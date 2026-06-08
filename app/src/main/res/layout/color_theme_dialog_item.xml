@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_convwesation_dialog_bg"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/message_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/message_txt_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+           fullappfontstylesemibold="@{0}"
+                android:includeFontPadding="false"
+                android:text="@string/chat_theme"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+            <Button
+                android:id="@+id/doneBtn"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_27sdp"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/Done"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/message_txt_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/message_txt_size">
+
+            </Button>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_in">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/day"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/Dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/theme_selected_font_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/theme_selected_font_one">
+
+                    <ImageView
+                        android:id="@+id/theme_selected_1"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_55sdp"
+                        android:src="@drawable/unchacked_redio_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Dark"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/Night"
+                app:layout_constraintStart_toEndOf="@+id/day"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/theme_selected_font_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/theme_selected_font_two">
+
+
+                    <ImageView
+                        android:id="@+id/theme_selected_2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_55sdp"
+                        android:src="@drawable/unchacked_redio_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+             fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:text="@string/Day"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/day"
+                app:layout_constraintStart_toStartOf="@+id/day"
+                app:layout_constraintTop_toBottomOf="@+id/day">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+             fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:text="@string/Dark"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Dark"
+                app:layout_constraintStart_toStartOf="@+id/Dark"
+                app:layout_constraintTop_toBottomOf="@+id/Dark">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+             fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:text="@string/Night"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Night"
+                app:layout_constraintStart_toStartOf="@+id/Night"
+                app:layout_constraintTop_toBottomOf="@+id/Night">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+             fullappfontstyleregular="@{0}"
+                android:includeFontPadding="false"
+                android:text="@string/Arctic"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Arctic"
+                app:layout_constraintStart_toStartOf="@+id/Arctic"
+                app:layout_constraintTop_toBottomOf="@+id/Arctic">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Night"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/Arctic"
+                app:layout_constraintStart_toEndOf="@+id/Dark"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/theme_selected_font_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/theme_selected_font_three">
+
+
+                    <ImageView
+                        android:id="@+id/theme_selected_3"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_55sdp"
+                        android:src="@drawable/unchacked_redio_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Arctic"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Night"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/theme_selected_font_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/theme_selected_font_four">
+
+
+                    <ImageView
+                        android:id="@+id/theme_selected_4"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_55sdp"
+                        android:src="@drawable/unchacked_redio_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

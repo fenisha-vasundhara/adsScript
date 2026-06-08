@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/item_click"
+        android:layout_height="@dimen/_70sdp">
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:textColor="@color/newmessage"
+            android:textSize="@dimen/_15sdp"
+            tools:text="numberghbhjbijhbijhierrew">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lastmessageshow"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/rubikregular"
+            android:maxLines="2"
+            android:textColor="@color/newmessageTwo"
+            android:textSize="@dimen/_12sdp"
+            tools:text="last message yhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyuyhjtyhytutuyuyuyuyu">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+<!--       <LinearLayout-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:orientation="vertical"-->
+<!--           android:layout_height="@dimen/_70sdp">-->
+
+<!--&lt;!&ndash;           <FrameLayout&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_width="@dimen/_50sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_height="@dimen/_50sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_gravity="center_vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_marginStart="@dimen/_10sdp">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;               <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:id="@+id/user_profile_image"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:src="@drawable/icon_round_shap"&ndash;&gt;-->
+<!--&lt;!&ndash;                   app:cardElevation="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   app:cardUseCompatPadding="true">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;               </ImageView>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                <com.google.android.material.textview.MaterialTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:id="@+id/numberfisttxt"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:textSize="@dimen/_20sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                   tools:text="J">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </com.google.android.material.textview.MaterialTextView>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;               <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:id="@+id/contacticon"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:src="@drawable/contacticon">&ndash;&gt;-->
+
+<!--&lt;!&ndash;               </ImageView>&ndash;&gt;-->
+
+<!--&lt;!&ndash;           </FrameLayout>&ndash;&gt;-->
+
+<!--          -->
+
+
+<!--&lt;!&ndash;           <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_width="@dimen/_50sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;               android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;               android:orientation="vertical">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;               <FrameLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_height="match_parent">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <com.google.android.material.textview.MaterialTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:id="@+id/messagelastdate"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:fontFamily="@font/rubikregular"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:textColor="@color/newmessage"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:textSize="@dimen/_13sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_marginTop="@dimen/_10sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:visibility="gone"&ndash;&gt;-->
+<!--&lt;!&ndash;                       tools:visibility="visible"&ndash;&gt;-->
+<!--&lt;!&ndash;                       tools:text="20 Fab">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </com.google.android.material.textview.MaterialTextView>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <com.google.android.material.textview.MaterialTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:id="@+id/messagelasttime"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:fontFamily="@font/inter"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:textColor="#75797D"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:textSize="@dimen/_13sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:layout_marginTop="@dimen/_10sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                       android:visibility="gone"&ndash;&gt;-->
+<!--&lt;!&ndash;                       tools:visibility="visible"&ndash;&gt;-->
+<!--&lt;!&ndash;                       tools:text="21 Fab">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </com.google.android.material.textview.MaterialTextView>&ndash;&gt;-->
+
+<!--&lt;!&ndash;               </FrameLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <com.google.android.material.textview.MaterialTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:id="@+id/lastmessagetime"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_width="@dimen/_17sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_height="@dimen/_17sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:background="@drawable/icon_round_shap_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:backgroundTint="#4AA6FB"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:maxLines="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_marginBottom="@dimen/_15sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:layout_gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:textSize="@dimen/_10sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;                   android:visibility="gone"&ndash;&gt;-->
+<!--&lt;!&ndash;                   tools:text="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                   tools:visibility="visible">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </com.google.android.material.textview.MaterialTextView>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;           </LinearLayout>&ndash;&gt;-->
+
+<!--       </LinearLayout>-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="3dp"-->
+<!--            android:background="@drawable/line_new"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/mainlayout">-->
+
+<!--        </View>-->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

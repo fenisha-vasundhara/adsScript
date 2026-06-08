@@ -1,0 +1,13 @@
+  <string name="default_sms_instruction_title">Make Default SMS</string>
+    <string name="default_sms_instruction_h2">Set this app as your default SMS app</string>
+    <string name="default_sms_instruction_subtitle">Follow these steps in phone settings.</string>
+    <string name="default_sms_instruction_step_1_label">STEP 1</string>
+    <string name="default_sms_instruction_step_2_label">STEP 2</string>
+    <string name="default_sms_instruction_step_3_label">STEP 3</string>
+    <string name="default_sms_instruction_step_1">Click on Default SMS app</string>
+    <string name="default_sms_instruction_step_2">Select our <b>#Messages</b> app.</string>
+    <string name="default_sms_instruction_step_3">Tap SMS app and select %1$s.</string>
+    <string name="default_sms_instruction_image_cd">Default SMS setup hint illustration</string>
+    <string name="default_sms_instruction_step_1_image_cd">Step 1 illustration</string>
+    <string name="default_sms_instruction_step_2_image_cd">Step 2 illustration</string>
+    <string name="default_sms_instruction_step_3_image_cd">Step 3 illustration</string>

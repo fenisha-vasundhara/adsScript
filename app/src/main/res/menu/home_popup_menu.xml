@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_menu_language"
+        android:icon="@drawable/ic_m3_translate_24"
+        android:title="@string/Language_nre" />
+
+    <item
+        android:id="@+id/home_menu_mark_read"
+        android:icon="@drawable/ic_m3_check_circle_24"
+        android:title="@string/Mark_all_as_read" />
+
+    <item
+        android:id="@+id/home_menu_filter"
+        android:icon="@drawable/ic_m3_filter_list_24"
+
+        android:title="@string/filter" />
+
+    <item
+        android:id="@+id/home_menu_archive"
+        android:icon="@drawable/ic_m3_archive_24"
+        android:title="@string/Archive" />
+
+    <item
+        android:id="@+id/home_menu_share"
+        android:icon="@drawable/ic_m3_share_24"
+        android:title="@string/Share_app" />
+
+    <item
+        android:id="@+id/home_menu_settings"
+        android:icon="@drawable/ic_m3_settings_24"
+        android:title="@string/Settings" />
+
+</menu>

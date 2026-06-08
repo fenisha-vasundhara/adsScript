@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.BackupsFileDialogAdapter" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/last_progress_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/last_progres_btn"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            setchatthemecolorforbutton="@{0}"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.1"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/ic_last_progres"
+                                settingABicontintset="@{0}"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:src="@drawable/baseline_history_24"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView41last"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.45"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView41last">
+
+                            </ImageView>
+
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textView41last"
+                                fullappfontstyleregular="@{0}"
+                                setchatthemecolorTintTxtFullapp="@{0}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:includeFontPadding="false"
+                                android:text="@string/backups"
+                                android:textSize="@dimen/_15sdp"
+                                app:layout_constraintBottom_toTopOf="@+id/textView42last"
+                                app:layout_constraintStart_toEndOf="@+id/ic_last_progres"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textView42last"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:includeFontPadding="false"
+                                android:text="Documents/MessageApp/backup"
+                                android:textColor="#8D8E8E"
+                                android:textSize="@dimen/_11sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/textView41last"
+                                app:layout_constraintTop_toBottomOf="@+id/textView41last">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="#34000000"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/last_progres_btn">
+
+
+                        </View>
+
+
+                        <com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView
+                            android:id="@+id/backups_file_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:adapter="@{adapter}"
+                            android:orientation="vertical"
+                            app:layoutManager=".recyclerviewCustom.MyLinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/backups_file_dialog_adapter_item"
+                            tools:visibility="visible">
+
+                        </com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/backups_not_found"
+                            fullappfontstyleregular="@{0}"
+                            setchatthemecolorTintTxtFullapp="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/backups_not_found"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/imageView18"
+                        settingABicontintset="@{0}"
+                        style="@style/Widget.App.IconCloseButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:icon="@drawable/close_icon"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.08" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

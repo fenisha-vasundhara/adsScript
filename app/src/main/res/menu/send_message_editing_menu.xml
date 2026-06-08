@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/select_all_message"
+        android:title="@string/Select_all_message"
+        android:visible="false"></item>
+
+    <item
+        android:id="@+id/add_contact_menu_btn"
+        android:title="@string/Add_Contact"></item>
+    <item
+        android:id="@+id/view_profile_menu_btn"
+        android:title="@string/View_Profile"></item>
+    <item
+        android:id="@+id/view_profile_message_search"
+        android:title="@string/leku_search_hint"
+        android:visible="false"></item>
+
+    <item
+        android:id="@+id/message_corner_menu_btn"
+        android:title="@string/Message_Corner"
+        ></item>
+    <item
+        android:id="@+id/message_text_size_menu_btn"
+        android:visible="false"
+        android:title="@string/Message_Text_Size"></item>
+
+    <item
+        android:id="@+id/message_translate"
+        android:title="@string/translate_new_ui" />
+
+
+    <item
+        android:id="@+id/custom_wallpaper_menu_btn"
+        android:title="@string/Custom_Wallpaper"
+        android:visible="true"></item>
+
+    <item
+        android:id="@+id/theme_wallpaper_menu_btn"
+        android:title="@string/theme"
+        android:visible="false"></item>
+
+</menu>

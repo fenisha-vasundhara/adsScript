@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="6dp"
+        android:paddingStart="6dp"
+        tools:ignore="RtlSymmetry">
+
+         <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nirali"
+            android:id="@+id/sender_name"
+       fullappfontstylesemibold="@{0}"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_15sdp"
+            tools:ignore="HardcodedText" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sender_message"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/rubikregular"
+            android:text="OTP for Aadhaar (XX2058) is 213866 (valid for 10 mins). Lock/Unlock your Aadhaar by Sending SMS to 1947. For more details visit uidai.gov.in"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="HardcodedText,SmallSp" />
+    </LinearLayout>
+
+</RelativeLayout>

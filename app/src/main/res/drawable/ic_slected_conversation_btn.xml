@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Background Circle -->
+    <path
+        android:name="circle"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"
+        android:fillColor="@color/appcolor"/>
+
+    <!-- Tick -->
+    <path
+        android:name="tick"
+        android:pathData="M12.501,22.385C12.822,22.073 13.257,21.897 13.711,21.897C14.165,21.897 14.601,22.073 14.922,22.385L20.975,28.283L33.077,16.489C33.236,16.334 33.424,16.211 33.632,16.127C33.84,16.043 34.062,16 34.287,16C34.512,16 34.735,16.043 34.943,16.127C35.15,16.211 35.339,16.333 35.498,16.488C35.657,16.643 35.783,16.827 35.869,17.029C35.956,17.232 36,17.449 36,17.668C36,17.887 35.956,18.104 35.87,18.306C35.784,18.509 35.658,18.692 35.499,18.847L20.975,33L12.501,24.744C12.18,24.431 12,24.007 12,23.565C12,23.122 12.18,22.698 12.501,22.385Z"
+        android:fillColor="#FFFFFF"/>
+</vector>

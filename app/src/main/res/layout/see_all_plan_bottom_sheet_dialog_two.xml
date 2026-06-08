@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_dialog_bg">
+
+    <RelativeLayout
+        android:id="@+id/mCLYearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mCLLIFELayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/yearconstraintid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bgyearopacity_black"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="₹820.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/week_year_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_year_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="₹150.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/year_price"
+                app:layout_constraintTop_toBottomOf="@+id/year_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_month_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text=" /Week"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/week_year_price"
+                app:layout_constraintStart_toEndOf="@+id/week_year_price"
+                app:layout_constraintTop_toTopOf="@+id/week_year_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="/Yearly"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/year_price"
+                app:layout_constraintStart_toEndOf="@+id/year_price"
+                app:layout_constraintTop_toTopOf="@+id/year_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/year_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="81%"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/year_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/year_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/off_year_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="OFF"
+                android:textColor="#80505050"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/year_month_price_static"
+                app:layout_constraintEnd_toEndOf="@+id/year_price_discount"
+                app:layout_constraintStart_toStartOf="@+id/year_price_discount"
+                app:layout_constraintTop_toBottomOf="@+id/year_price_discount">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/year_discount_show"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        app:cardBackgroundColor="#CEDDFA"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mCLYearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/mCLYearLayout"
+        app:layout_constraintStart_toStartOf="@+id/mCLYearLayout"
+        app:layout_constraintTop_toTopOf="@+id/mCLYearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_year_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/Recommended"
+                    android:textColor="@color/black2"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/mCLMonthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mCLYearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/monthconstraintid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bgyear_black"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/month_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="₹820.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/week_month_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_month_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="₹150.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/month_price"
+                app:layout_constraintTop_toBottomOf="@+id/month_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/month_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text=" /Monthly"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/month_price"
+                app:layout_constraintStart_toEndOf="@+id/month_price"
+                app:layout_constraintTop_toTopOf="@+id/month_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_month_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text=" /Week"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/week_month_price"
+                app:layout_constraintStart_toEndOf="@+id/week_month_price"
+                app:layout_constraintTop_toTopOf="@+id/week_month_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="81%"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/month_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/month_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/off_week_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="OFF"
+                android:textColor="#80505050"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/week_month_price_static"
+                app:layout_constraintEnd_toEndOf="@+id/week_price_discount"
+                app:layout_constraintStart_toStartOf="@+id/week_price_discount"
+                app:layout_constraintTop_toBottomOf="@+id/week_price_discount">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/month_discount_show"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        app:cardBackgroundColor="#92DAE6"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mCLMonthLayout"
+        app:layout_constraintEnd_toEndOf="@+id/mCLMonthLayout"
+        app:layout_constraintStart_toStartOf="@+id/mCLMonthLayout"
+        app:layout_constraintTop_toTopOf="@+id/mCLMonthLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_month_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="@string/Most_Popular"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/mCLWeekLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mCLMonthLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/weekconstraintid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bgyearopacity_black"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="₹820.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/week_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text=" /Weekly"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/week_price"
+                app:layout_constraintStart_toEndOf="@+id/week_price"
+                app:layout_constraintTop_toTopOf="@+id/week_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:alpha="0.3"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_close"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".08"
+        app:tint="@color/black2"
+        tools:ignore="NewApi" />
+
+
+    <RelativeLayout
+        android:id="@+id/mCLLIFELayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closeBtn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lifeconstraintid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/bgyearopacity_black"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lifetime_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="8900.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/lifetime_year_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lifetime_year_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="₹150.00"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lifetime_price"
+                app:layout_constraintTop_toBottomOf="@+id/lifetime_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lifetime_month_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text=" Pay Once, Enjoy forever"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/lifetime_year_price"
+                app:layout_constraintStart_toEndOf="@+id/lifetime_year_price"
+                app:layout_constraintTop_toTopOf="@+id/lifetime_year_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lifetime_price_static"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="/One Time Payment"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/lifetime_price"
+                app:layout_constraintStart_toEndOf="@+id/lifetime_price"
+                app:layout_constraintTop_toTopOf="@+id/lifetime_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/lifetime_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="81%"
+                android:textColor="#0E0E0E"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/lifetime_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lifetime_price">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/off_lifetime_price_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="OFF"
+                android:textColor="#80505050"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/lifetime_month_price_static"
+                app:layout_constraintEnd_toEndOf="@+id/lifetime_price_discount"
+                app:layout_constraintStart_toStartOf="@+id/lifetime_price_discount"
+                app:layout_constraintTop_toBottomOf="@+id/lifetime_price_discount">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lifetime_discount_show"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        app:cardBackgroundColor="#FFD68D"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/mCLLIFELayout"
+        app:layout_constraintEnd_toEndOf="@+id/mCLLIFELayout"
+        app:layout_constraintStart_toStartOf="@+id/mCLLIFELayout"
+        app:layout_constraintTop_toTopOf="@+id/mCLLIFELayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txt_lifetime_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:text="@string/Limited_Time_Offer"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/saveiconpro"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mCLYearLayout"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/mCLYearLayout"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="@+id/mCLYearLayout" />
+
+     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/persenttxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Prime_Cost_new"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+     </com.google.android.material.textview.MaterialTextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

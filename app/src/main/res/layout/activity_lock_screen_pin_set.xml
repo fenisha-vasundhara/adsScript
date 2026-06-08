@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:background="@color/white"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LockScreenPinSetActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            tools:background="@color/appcolor"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconSize="@dimen/mf_appbar_back_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                fullappfontstylesemibold="@{0}"
+                setchatthemecolorTintTxt="@{0}"
+                tools:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                android:text="@string/New_Password"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/days_for_free"
+            setTextSizeFullApp="@{textsizechagefor18}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/enterNewpasstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/Enter_New_Password"
+           android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/enterNewpasstxt_2"
+            android:layout_width="wrap_content"
+             android:alpha="0.7"
+            android:layout_height="wrap_content"
+            android:text="  e.g (123456)"
+             android:textSize="@dimen/_12ssp"
+
+             app:layout_constraintBottom_toBottomOf="@+id/enterNewpasstxt"
+            app:layout_constraintStart_toEndOf="@+id/enterNewpasstxt"
+            app:layout_constraintTop_toTopOf="@+id/enterNewpasstxt">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterNewpasstxt">
+
+            <EditText
+                android:id="@+id/newpasswordtxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:hint="@string/lockhint"
+                android:inputType="numberPassword"
+                android:maxEms="6"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:singleLine="true"
+                setTextSizeFullApp="@{textsizechagefor13}"
+
+                app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            </EditText>
+
+        </androidx.cardview.widget.CardView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/confirmenterNewpasstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:text="@string/Confirm_Password"
+             android:textSize="@dimen/_12ssp"
+
+             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/enterNewpasstxt_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:alpha="0.7"
+            android:text="  e.g (123456)"
+             android:textSize="@dimen/_12ssp"
+
+             app:layout_constraintBottom_toBottomOf="@+id/confirmenterNewpasstxt"
+            app:layout_constraintStart_toEndOf="@+id/confirmenterNewpasstxt"
+            app:layout_constraintTop_toTopOf="@+id/confirmenterNewpasstxt">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmenterNewpasstxt">
+
+            <EditText
+                android:id="@+id/confermnewpasswordtxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:hint="@string/lockhint"
+                android:inputType="numberPassword"
+                android:maxEms="6"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:singleLine="true"
+                setTextSizeFullApp="@{textsizechagefor13}"
+
+                app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            </EditText>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+             <com.google.android.material.textview.MaterialTextView
+                 android:id="@+id/savebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/_24sdp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 android:paddingHorizontal="@dimen/_60sdp"
+                 android:paddingVertical="@dimen/_13sdp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/cardView4"
+                android:layout_gravity="center"
+                android:text="@string/Confirm"
+                android:textColor="@color/black"
+                setTextSizeFullApp="@{textsizechagefor15}">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

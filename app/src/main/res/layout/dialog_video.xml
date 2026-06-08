@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lnr_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/_11ssp"
+        android:padding="@dimen/_11ssp"
+        android:background="@drawable/bg_install_check_call">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/defult_screen"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/Set_as_Default_SMS_app"
+            android:layout_marginTop="16dp"
+
+
+
+            android:textAllCaps="true"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            style="@style/Widget.Material3.Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+            />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="@dimen/_245sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:background="@drawable/pro_dialog_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/wachads_header"
+                android:visibility="gone"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.3">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/dialogclose"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="0.5"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/wachdialog_close_btn"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.08"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black2">
+
+            </ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView48"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/pro_dialog_top"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout5">
+
+        </ImageView>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/imageView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/imageView49"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/pro_dialog_new"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/getpremium"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <ImageView
+            android:id="@+id/imageView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prodialog_line"
+            app:layout_constraintBottom_toTopOf="@+id/imageView14"
+            app:layout_constraintEnd_toEndOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        </ImageView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView11"
+            fullappfontstylebold="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/unlock_all_features"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView49"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView48"
+            app:layout_constraintVertical_chainStyle="packed">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView10"
+            fullappfontstylemediam="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/Features"
+            android:textColor="#F37321"
+            android:textSize="@dimen/_16sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView11">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_premiam_dialog">
+
+        </ImageView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/getpremium"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/prodialog_button"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView48"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:src="@drawable/prodialog_button_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/Premiumtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubiksemibold"
+                    android:includeFontPadding="false"
+                    android:text="@string/Get_Premium"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black2"
+                    app:layout_constraintBottom_toTopOf="@+id/newtxt"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView12"
+                    app:layout_constraintHorizontal_bias="0.09"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/newtxt"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/Without_ads_and_limitations"
+                    android:textColor="#3F4347"
+                    android:textSize="@dimen/_7sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/Premiumtxt"
+                    app:layout_constraintTop_toBottomOf="@+id/Premiumtxt">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3D362D"
+            android:text="@string/watch_the_video_to_enable_this_feature"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/imageView48"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintVertical_chainStyle="packed">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="#3D362D"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/textView48"
+            app:layout_constraintStart_toStartOf="@+id/textView48"
+            app:layout_constraintTop_toBottomOf="@+id/textView48">
+
+        </View>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_170sdp"
+            android:background="@drawable/watch_ads_dialog_bg_sec"
+            android:elevation="0dp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout5">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/watchvideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/watch_ads_dialog_btn_bg"
+                    android:elevation="0dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:alpha="0.7"
+                            android:src="@drawable/ad_wach_dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.10">
+
+                        </ImageView>
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Watchtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/rubiksemibold"
+                            android:includeFontPadding="false"
+                            android:text="@string/Watch_Video"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toTopOf="@+id/featurestxt"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+                            app:layout_constraintHorizontal_bias="0.09"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/featurestxt"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Watch_the_video_and_schedule_the_message"
+                            android:textColor="#3F4347"
+                            android:textSize="@dimen/_6sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/Watchtxt"
+                            app:layout_constraintTop_toBottomOf="@+id/Watchtxt">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

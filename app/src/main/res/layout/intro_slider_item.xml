@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data_slider"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.IntroModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line_intero"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/tital_txt"
+            app:layout_constraintStart_toStartOf="@+id/tital_txt"
+            app:layout_constraintTop_toBottomOf="@+id/tital_txt">
+
+        </ImageView>
+
+
+        <ImageView
+            android:id="@+id/intro_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/intro_1"
+            app:layout_constraintBottom_toTopOf="@+id/tital_txt"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintWidth_percent="0.9">
+
+        </ImageView>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/intro_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2">
+
+        </ImageView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tital_txt"
+            fullappfontstylesemibold="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@{data_slider.tital}"
+            android:textColor="@color/appcolor"
+            android:textSize="@dimen/_19sdp"
+            app:layout_constraintBottom_toTopOf="@+id/body_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/intro_img"
+            tools:text="234234234234234234234"
+            tools:textColor="@color/appcolor">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/body_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@{data_slider.body}"
+            setchatthemecolorTintTxt="@{0}"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tital_txt"
+            tools:text="gjgdfklgbklbgmklhmgklhklklghdflhgld;ghdfkhg2353245232353535234243432423"
+            tools:textColor="@color/black2">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

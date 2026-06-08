@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".BlockManageActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/colorSurface"
+            android:elevation="0dp"
+            android:visibility="visible"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_btn"
+
+                    app:iconSize="@dimen/mf_appbar_back_icon"   style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="@dimen/mf_appbar_action_size1"
+                    android:layout_height="@dimen/mf_appbar_action_size1"
+                    android:layout_marginStart="0dp"
+                    app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="?attr/colorOnSurface"
+                    android:contentDescription="@string/cd_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView3"
+                    fullappfontstylesemibold="@{0}"
+                    setTextSizeFullApp="@{textsizechagefor18}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/Block"
+                    android:textColor="?attr/colorOnSurface"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/back_btn"
+                    app:layout_constraintTop_toTopOf="@+id/back_btn"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fist_contenar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blocked_user_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_user_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_user_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/block_user_btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9"
+                        fullappfontstyleregular="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Block_Number"
+                        android:textColor="?attr/colorOnSurface"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_user_btn"
+                        app:layout_constraintStart_toEndOf="@+id/block_user_btn"
+                        app:layout_constraintTop_toTopOf="@+id/block_user_btn">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/block_user_count_card"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/block_user_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textColor="?attr/colorOnSurface"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/block_user_count_icon"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/block_user_count"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.3"
+                                app:layout_constraintTop_toTopOf="@+id/block_user_count"
+                                app:layout_constraintWidth_percent="0.1">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/blocked_user_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blocked_keywords_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:transitionName="shared_element_transition_name"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blocked_user_btn_card"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_keywords_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_keywords_btn"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/manage_blocked_ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9keywords"
+                        fullappfontstyleregular="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Blocked_User_keyword"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_keywords_btn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/block_keywords_btn"
+                        app:layout_constraintTop_toTopOf="@+id/block_keywords_btn">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/blocked_keywords_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fist_contenar_ab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blocked_user_btn_card_ab"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_user_btn_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_user_btn_ab"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/block_user_btn_ab"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9_ab"
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Block_Number"
+                        android:textColor="?attr/colorOnSurface"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_user_btn_ab"
+                        app:layout_constraintStart_toEndOf="@+id/block_user_btn_ab"
+                        app:layout_constraintTop_toTopOf="@+id/block_user_btn_ab">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/block_user_count_card_ab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="@dimen/_30sdp"
+                        app:cardElevation="0dp"
+                        android:elevation="0dp"
+                        app:cardMaxElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintStart_toEndOf="@+id/textView9_ab"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/block_user_count_ab"
+                                setTextSizeFullApp="@{textsizechagefor13}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:text="1000"
+                                android:textColor="?attr/colorOnSurface"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/block_user_count_icon_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/block_user_count_ab"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintTop_toTopOf="@+id/block_user_count_ab"
+                                app:layout_constraintWidth_percent="0.1">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blocked_keywords_btn_card_ab"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:transitionName="shared_element_transition_name"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blocked_user_btn_card_ab"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_keywords_btn_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_keywords_btn_ab"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/manage_blocked_ic_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9keywords_ab"
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Blocked_User_keyword"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_keywords_btn_ab"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/block_keywords_btn_ab"
+                        app:layout_constraintTop_toTopOf="@+id/block_keywords_btn_ab">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

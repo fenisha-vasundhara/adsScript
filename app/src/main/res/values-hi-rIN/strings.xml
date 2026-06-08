@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_sms_banner_title">SMS को डिफ़ॉल्ट बनाएं</string>
+    <string name="default_sms_banner_subtitle">इस ऐप को अपना डिफ़ॉल्ट SMS हैंडलर चुनें।</string>
+    <string name="default_sms_banner_cta">यहाँ टैप करें</string>
+    <string name="smart_caller_title">कॉल के बाद की सुविधाएँ चालू करें</string>
+    <string name="smart_caller_subtitle">कॉल के बाद की सुविधाएँ उपयोग करने के लिए कॉल अनुमति दें।</string>
+    <string name="smart_caller_cta">अभी सक्रिय करें</string>
+    <string name="smart_caller_bottom_title">अपना कॉल अनुभव बेहतर बनाएं</string>
+    <string name="smart_caller_bottom_subtitle">बेहतर कॉल के लिए उन्नत सुविधाएँ अनलॉक करें।</string>
+    <string name="custom_image">Custom Image</string>
+    <string name="default_sms_instruction_title">डिफ़ॉल्ट SMS बनाएं</string>
+    <string name="default_sms_instruction_h2">इस ऐप को अपनी डिफ़ॉल्ट SMS ऐप के रूप में सेट करें</string>
+    <string name="default_sms_instruction_subtitle">फ़ोन सेटिंग्स में ये चरण अपनाएँ।</string>
+    <string name="default_sms_instruction_step_1_label">चरण 1</string>
+    <string name="default_sms_instruction_step_2_label">चरण 2</string>
+    <string name="default_sms_instruction_step_3_label">चरण 3</string>
+    <string name="default_sms_instruction_step_1"><b>डिफ़ॉल्ट SMS ऐप</b> पर टैप करें</string>
+    <string name="default_sms_instruction_step_2">हमारी <b>#Messages</b> ऐप चुनें।</string>
+    <string name="default_sms_instruction_step_3">SMS ऐप पर टैप करें और %1$s चुनें।</string>
+    <string name="default_sms_instruction_image_cd">डिफ़ॉल्ट SMS सेटअप संकेत चित्र</string>
+    <string name="default_sms_instruction_step_1_image_cd">चरण 1 का चित्र</string>
+    <string name="default_sms_instruction_step_2_image_cd">चरण 2 का चित्र</string>
+    <string name="default_sms_instruction_step_3_image_cd">चरण 3 का चित्र</string>
+</resources>

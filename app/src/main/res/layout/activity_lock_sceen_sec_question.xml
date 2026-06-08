@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/white"
+
+        tools:context=".LockSceenSecQuestionActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="visible"
+
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconSize="@dimen/mf_appbar_back_icon"
+                app:iconPadding="0dp"
+                app:iconGravity="textStart"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+           fullappfontstylesemibold="@{0}"
+                android:text="@string/Forgot_Password"
+                setchatthemecolorTintTxt="@{0}"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/enterNewpasstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:fontFamily="@font/rubikregular"
+            android:gravity="center"
+            android:text="@string/Security_questions"
+            setchatthemecolorTintTxtFullappForLocksetup="@{0}"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            app:layout_constraintBottom_toTopOf="@+id/example_show"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterNewpasstxt">
+
+            <Spinner
+                android:id="@+id/newpasswordtxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/_7sdp"
+
+                android:fontFamily="@font/rubikregular"
+                android:textColor="#6A6D6F"
+                android:textColorHint="#6A6D6F"
+                app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            </Spinner>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/arrorw"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_arrow_down_vector_new_black"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/example_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:fontFamily="@font/rubikregular"
+            setchatthemecolorTintTxtFullappForLocksetupforhint="@{0}"
+            setTextSizeFullApp="@{textsizechagefor10}"
+            app:layout_constraintBottom_toTopOf="@+id/cardView4"
+            app:layout_constraintStart_toStartOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/example_show">
+
+            <EditText
+                android:id="@+id/newpasswordtxt2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/rubikregular"
+                android:hint="@string/locksechint"
+                android:maxLength="15"
+                android:background="@null"
+                android:maxLines="1"
+                android:singleLine="true"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+            </EditText>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/savebtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/appcolor"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4"
+            app:layout_constraintWidth_percent="0.5">
+
+             <com.google.android.material.textview.MaterialTextView
+                 android:id="@+id/savebtntxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+           fullappfontstylesemibold="@{0}"
+                android:text="@string/Confirm"
+                android:textColor="@color/white"
+                setTextSizeFullApp="@{textsizechagefor13}">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+        </androidx.cardview.widget.CardView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forgotpassusingemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/Forgot_Password_using_email_new"
+            android:textColor="@color/appcolor"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/savebtn">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

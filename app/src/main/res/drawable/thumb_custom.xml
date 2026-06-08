@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/thumb">
+        <shape android:shape="oval">
+            <solid android:color="@color/appcolor" />
+        </shape>
+    </item>
+    <item android:id="@+id/text">
+        <bitmap
+            android:gravity="center"
+            android:src="@color/white" />
+    </item>
+</layer-list>

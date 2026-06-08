@@ -1,0 +1,3170 @@
+{
+  "all": {
+    "Current Offering": {
+      "annual$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "availablePackages": [
+        {
+          "identifier": "$rc_weekly",
+          "offering": "Current Offering",
+          "packageType": "WEEKLY",
+          "product": {
+            "basePlanId": "p1w",
+            "defaultOption": {
+              "basePlanId": "p1w",
+              "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1W",
+                    "unit": "WEEK",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 85000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹85.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_weekly_messages",
+                    "type": "subs",
+                    "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Message - Weekly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                            "basePlanId": "p1w",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 85000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹85.00",
+                                    "billingPeriod": "P1W",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_weekly_messages",
+                "zzd": "subs",
+                "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Message - Weekly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1w",
+                    "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹85.00",
+                          "zzb": 85000000,
+                          "zzc": "INR",
+                          "zzd": "P1W",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_weekly_messages",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1W",
+              "unit": "WEEK",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Current Offering",
+            "price": {
+              "amountMicros": 85000000,
+              "currencyCode": "INR",
+              "formatted": "₹85.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_weekly_messages",
+                  "type": "subs",
+                  "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Message - Weekly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                          "basePlanId": "p1w",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 85000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹85.00",
+                                  "billingPeriod": "P1W",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_weekly_messages",
+              "zzd": "subs",
+              "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Message - Weekly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1w",
+                  "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹85.00",
+                        "zzb": 85000000,
+                        "zzc": "INR",
+                        "zzd": "P1W",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_weekly_messages",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1w",
+                "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                "presentedOfferingIdentifier": "Current Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1W",
+                      "unit": "WEEK",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 85000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹85.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "subscribe_weekly_messages",
+                      "type": "subs",
+                      "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Message - Weekly PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                              "basePlanId": "p1w",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 85000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹85.00",
+                                      "billingPeriod": "P1W",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "subscribe_weekly_messages",
+                  "zzd": "subs",
+                  "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Message - Weekly PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1w",
+                      "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹85.00",
+                            "zzb": 85000000,
+                            "zzc": "INR",
+                            "zzd": "P1W",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "subscribe_weekly_messages",
+                "tags": []
+              }
+            ],
+            "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_monthly",
+          "offering": "Current Offering",
+          "packageType": "MONTHLY",
+          "product": {
+            "basePlanId": "p1m",
+            "defaultOption": {
+              "basePlanId": "p1m",
+              "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1M",
+                    "unit": "MONTH",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 260000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹260.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_monthly_messages",
+                    "type": "subs",
+                    "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Messages - Monthly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                            "basePlanId": "p1m",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 260000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹260.00",
+                                    "billingPeriod": "P1M",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_monthly_messages",
+                "zzd": "subs",
+                "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Messages - Monthly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1m",
+                    "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹260.00",
+                          "zzb": 260000000,
+                          "zzc": "INR",
+                          "zzd": "P1M",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_monthly_messages",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1M",
+              "unit": "MONTH",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Current Offering",
+            "price": {
+              "amountMicros": 260000000,
+              "currencyCode": "INR",
+              "formatted": "₹260.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_monthly_messages",
+                  "type": "subs",
+                  "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Messages - Monthly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                          "basePlanId": "p1m",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 260000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹260.00",
+                                  "billingPeriod": "P1M",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_monthly_messages",
+              "zzd": "subs",
+              "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Messages - Monthly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1m",
+                  "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹260.00",
+                        "zzb": 260000000,
+                        "zzc": "INR",
+                        "zzd": "P1M",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_monthly_messages",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1m",
+                "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                "presentedOfferingIdentifier": "Current Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1M",
+                      "unit": "MONTH",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 260000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹260.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "subscribe_monthly_messages",
+                      "type": "subs",
+                      "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Messages - Monthly PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                              "basePlanId": "p1m",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 260000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹260.00",
+                                      "billingPeriod": "P1M",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "subscribe_monthly_messages",
+                  "zzd": "subs",
+                  "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Messages - Monthly PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1m",
+                      "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹260.00",
+                            "zzb": 260000000,
+                            "zzc": "INR",
+                            "zzd": "P1M",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "subscribe_monthly_messages",
+                "tags": []
+              }
+            ],
+            "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_annual",
+          "offering": "Current Offering",
+          "packageType": "ANNUAL",
+          "product": {
+            "basePlanId": "p1y",
+            "defaultOption": {
+              "basePlanId": "p1y",
+              "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1Y",
+                    "unit": "YEAR",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 1550000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹1,550.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_yearly_messagess",
+                    "type": "subs",
+                    "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Mesaagess - Annual PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                            "basePlanId": "p1y",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 1550000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹1,550.00",
+                                    "billingPeriod": "P1Y",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_yearly_messagess",
+                "zzd": "subs",
+                "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Mesaagess - Annual PRO",
+                "zzg": "",
+                "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1y",
+                    "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹1,550.00",
+                          "zzb": 1550000000,
+                          "zzc": "INR",
+                          "zzd": "P1Y",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_yearly_messagess",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1Y",
+              "unit": "YEAR",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Current Offering",
+            "price": {
+              "amountMicros": 1550000000,
+              "currencyCode": "INR",
+              "formatted": "₹1,550.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_yearly_messagess",
+                  "type": "subs",
+                  "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Mesaagess - Annual PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                          "basePlanId": "p1y",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 1550000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹1,550.00",
+                                  "billingPeriod": "P1Y",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_yearly_messagess",
+              "zzd": "subs",
+              "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Mesaagess - Annual PRO",
+              "zzg": "",
+              "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1y",
+                  "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹1,550.00",
+                        "zzb": 1550000000,
+                        "zzc": "INR",
+                        "zzd": "P1Y",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_yearly_messagess",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1y",
+                "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                "presentedOfferingIdentifier": "Current Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1Y",
+                      "unit": "YEAR",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 1550000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹1,550.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "subscribe_yearly_messagess",
+                      "type": "subs",
+                      "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Mesaagess - Annual PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                              "basePlanId": "p1y",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 1550000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹1,550.00",
+                                      "billingPeriod": "P1Y",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "subscribe_yearly_messagess",
+                  "zzd": "subs",
+                  "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Mesaagess - Annual PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1y",
+                      "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹1,550.00",
+                            "zzb": 1550000000,
+                            "zzc": "INR",
+                            "zzd": "P1Y",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "subscribe_yearly_messagess",
+                "tags": []
+              }
+            ],
+            "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_lifetime",
+          "offering": "Current Offering",
+          "packageType": "LIFETIME",
+          "product": {
+            "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+            "presentedOfferingIdentifier": "Current Offering",
+            "price": {
+              "amountMicros": 3500000000,
+              "currencyCode": "INR",
+              "formatted": "₹3,500.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_lifetime_message\",\"type\":\"inapp\",\"title\":\"Lifetime Free Offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Lifetime Free Offer\",\"description\":\"SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \\nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \\ntailored for Android users.\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d\",\"oneTimePurchaseOfferDetails\":{\"priceAmountMicros\":3500000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹3,500.00\",\"offerIdToken\":\"Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW\\/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d\"}}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_lifetime_message",
+                  "type": "inapp",
+                  "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+                  "name": "Lifetime Free Offer",
+                  "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d",
+                  "oneTimePurchaseOfferDetails": {
+                    "nameValuePairs": {
+                      "priceAmountMicros": 3500000000,
+                      "priceCurrencyCode": "INR",
+                      "formattedPrice": "₹3,500.00",
+                      "offerIdToken": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d"
+                    }
+                  }
+                }
+              },
+              "zzc": "subscribe_lifetime_message",
+              "zzd": "inapp",
+              "zze": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Lifetime Free Offer",
+              "zzg": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+              "zzh": "AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzm": [
+                {
+                  "zza": "₹3,500.00",
+                  "zzb": 3500000000,
+                  "zzc": "INR",
+                  "zzd": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d",
+                  "zze": "",
+                  "zzf": []
+                }
+              ]
+            },
+            "productId": "subscribe_lifetime_message",
+            "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+            "type": "INAPP"
+          }
+        }
+      ],
+      "identifier": "Current Offering",
+      "lifetime$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "metadata": {},
+      "monthly$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "serverDescription": "Standard price with 7 days trial",
+      "sixMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "threeMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "twoMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "weekly$delegate": {
+        "_value": {},
+        "initializer": {}
+      }
+    },
+    "Experiment Offering": {
+      "annual$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "availablePackages": [
+        {
+          "identifier": "$rc_weekly",
+          "offering": "Experiment Offering",
+          "packageType": "WEEKLY",
+          "product": {
+            "basePlanId": "p1w",
+            "defaultOption": {
+              "basePlanId": "p1w",
+              "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+              "presentedOfferingIdentifier": "Experiment Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1W",
+                    "unit": "WEEK",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 85000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹85.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"experiment_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "experiment_weekly_messages",
+                    "type": "subs",
+                    "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Message - Weekly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                            "basePlanId": "p1w",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 85000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹85.00",
+                                    "billingPeriod": "P1W",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "experiment_weekly_messages",
+                "zzd": "subs",
+                "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Message - Weekly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1w",
+                    "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹85.00",
+                          "zzb": 85000000,
+                          "zzc": "INR",
+                          "zzd": "P1W",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "experiment_weekly_messages",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1W",
+              "unit": "WEEK",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Experiment Offering",
+            "price": {
+              "amountMicros": 85000000,
+              "currencyCode": "INR",
+              "formatted": "₹85.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"experiment_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "experiment_weekly_messages",
+                  "type": "subs",
+                  "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Message - Weekly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                          "basePlanId": "p1w",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 85000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹85.00",
+                                  "billingPeriod": "P1W",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "experiment_weekly_messages",
+              "zzd": "subs",
+              "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Message - Weekly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1w",
+                  "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹85.00",
+                        "zzb": 85000000,
+                        "zzc": "INR",
+                        "zzd": "P1W",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "experiment_weekly_messages",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1w",
+                "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                "presentedOfferingIdentifier": "Experiment Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1W",
+                      "unit": "WEEK",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 85000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹85.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"experiment_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "experiment_weekly_messages",
+                      "type": "subs",
+                      "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Message - Weekly PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                              "basePlanId": "p1w",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 85000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹85.00",
+                                      "billingPeriod": "P1W",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "experiment_weekly_messages",
+                  "zzd": "subs",
+                  "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Message - Weekly PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4IkUy_5PI3pu0tU7VCZ6SrJRKiYQz63DWgnJjnZjdpFNLrrcNYgmmJxaJWiOj81",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1w",
+                      "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹85.00",
+                            "zzb": 85000000,
+                            "zzc": "INR",
+                            "zzd": "P1W",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "experiment_weekly_messages",
+                "tags": []
+              }
+            ],
+            "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_monthly",
+          "offering": "Experiment Offering",
+          "packageType": "MONTHLY",
+          "product": {
+            "basePlanId": "p1m",
+            "defaultOption": {
+              "basePlanId": "p1m",
+              "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+              "presentedOfferingIdentifier": "Experiment Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1M",
+                    "unit": "MONTH",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 260000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹260.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"monthly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "monthly_messages_experiment",
+                    "type": "subs",
+                    "title": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Message - Monthly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                            "basePlanId": "p1m",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 260000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹260.00",
+                                    "billingPeriod": "P1M",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "monthly_messages_experiment",
+                "zzd": "subs",
+                "zze": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Message - Monthly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1m",
+                    "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹260.00",
+                          "zzb": 260000000,
+                          "zzc": "INR",
+                          "zzd": "P1M",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "monthly_messages_experiment",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1M",
+              "unit": "MONTH",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Experiment Offering",
+            "price": {
+              "amountMicros": 260000000,
+              "currencyCode": "INR",
+              "formatted": "₹260.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"monthly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "monthly_messages_experiment",
+                  "type": "subs",
+                  "title": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Message - Monthly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                          "basePlanId": "p1m",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 260000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹260.00",
+                                  "billingPeriod": "P1M",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "monthly_messages_experiment",
+              "zzd": "subs",
+              "zze": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Message - Monthly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1m",
+                  "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹260.00",
+                        "zzb": 260000000,
+                        "zzc": "INR",
+                        "zzd": "P1M",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "monthly_messages_experiment",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1m",
+                "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                "presentedOfferingIdentifier": "Experiment Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1M",
+                      "unit": "MONTH",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 260000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹260.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"monthly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "monthly_messages_experiment",
+                      "type": "subs",
+                      "title": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Message - Monthly PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                              "basePlanId": "p1m",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 260000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹260.00",
+                                      "billingPeriod": "P1M",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "monthly_messages_experiment",
+                  "zzd": "subs",
+                  "zze": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Message - Monthly PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4K0M1bDPnuXaAfG4ea7ic2w155YtjdeoHXGxx_fhTI4dT2ku_cOMbAMG7RdNtJW",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1m",
+                      "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹260.00",
+                            "zzb": 260000000,
+                            "zzc": "INR",
+                            "zzd": "P1M",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "monthly_messages_experiment",
+                "tags": []
+              }
+            ],
+            "title": "Message - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_annual",
+          "offering": "Experiment Offering",
+          "packageType": "ANNUAL",
+          "product": {
+            "basePlanId": "p1y",
+            "defaultOption": {
+              "basePlanId": "p1y",
+              "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+              "presentedOfferingIdentifier": "Experiment Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1Y",
+                    "unit": "YEAR",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 1550000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹1,550.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"yearly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Yearly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Yearly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "yearly_messages_experiment",
+                    "type": "subs",
+                    "title": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Message - Yearly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                            "basePlanId": "p1y",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 1550000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹1,550.00",
+                                    "billingPeriod": "P1Y",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "yearly_messages_experiment",
+                "zzd": "subs",
+                "zze": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Message - Yearly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1y",
+                    "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹1,550.00",
+                          "zzb": 1550000000,
+                          "zzc": "INR",
+                          "zzd": "P1Y",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "yearly_messages_experiment",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1Y",
+              "unit": "YEAR",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Experiment Offering",
+            "price": {
+              "amountMicros": 1550000000,
+              "currencyCode": "INR",
+              "formatted": "₹1,550.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"yearly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Yearly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Yearly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "yearly_messages_experiment",
+                  "type": "subs",
+                  "title": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Message - Yearly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                          "basePlanId": "p1y",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 1550000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹1,550.00",
+                                  "billingPeriod": "P1Y",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "yearly_messages_experiment",
+              "zzd": "subs",
+              "zze": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Message - Yearly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1y",
+                  "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹1,550.00",
+                        "zzb": 1550000000,
+                        "zzc": "INR",
+                        "zzd": "P1Y",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "yearly_messages_experiment",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1y",
+                "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                "presentedOfferingIdentifier": "Experiment Offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1Y",
+                      "unit": "YEAR",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 1550000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹1,550.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"yearly_messages_experiment\",\"type\":\"subs\",\"title\":\"Message - Yearly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Yearly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "yearly_messages_experiment",
+                      "type": "subs",
+                      "title": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+                      "name": "Message - Yearly PRO",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                              "basePlanId": "p1y",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 1550000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹1,550.00",
+                                      "billingPeriod": "P1Y",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "yearly_messages_experiment",
+                  "zzd": "subs",
+                  "zze": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Message - Yearly PRO",
+                  "zzg": "",
+                  "zzh": "AEuhp4JT20s5YoWQ16caDequUe6_r4_UnB_7RERCm2vY-hers8tEaeU1aXnz6FTUj28R",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1y",
+                      "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹1,550.00",
+                            "zzb": 1550000000,
+                            "zzc": "INR",
+                            "zzd": "P1Y",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "yearly_messages_experiment",
+                "tags": []
+              }
+            ],
+            "title": "Message - Yearly PRO (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        },
+        {
+          "identifier": "$rc_lifetime",
+          "offering": "Experiment Offering",
+          "packageType": "LIFETIME",
+          "product": {
+            "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+            "presentedOfferingIdentifier": "Experiment Offering",
+            "price": {
+              "amountMicros": 3500000000,
+              "currencyCode": "INR",
+              "formatted": "₹3,500.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"experiment_lifetime_message\",\"type\":\"inapp\",\"title\":\"Lifetime Free Offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Lifetime Free Offer\",\"description\":\"SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \\nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \\ntailored for Android users.\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4ItCvOKzA2stcDEV7_miERgXAyyddVj609cc0J9Gmol1UGZG08QN838YbruJw3NNZfmNjFeEpA\u003d\",\"oneTimePurchaseOfferDetails\":{\"priceAmountMicros\":3500000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹3,500.00\",\"offerIdToken\":\"Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW\\/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d\"}}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "experiment_lifetime_message",
+                  "type": "inapp",
+                  "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+                  "name": "Lifetime Free Offer",
+                  "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4ItCvOKzA2stcDEV7_miERgXAyyddVj609cc0J9Gmol1UGZG08QN838YbruJw3NNZfmNjFeEpA\u003d",
+                  "oneTimePurchaseOfferDetails": {
+                    "nameValuePairs": {
+                      "priceAmountMicros": 3500000000,
+                      "priceCurrencyCode": "INR",
+                      "formattedPrice": "₹3,500.00",
+                      "offerIdToken": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d"
+                    }
+                  }
+                }
+              },
+              "zzc": "experiment_lifetime_message",
+              "zzd": "inapp",
+              "zze": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Lifetime Free Offer",
+              "zzg": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+              "zzh": "AEuhp4ItCvOKzA2stcDEV7_miERgXAyyddVj609cc0J9Gmol1UGZG08QN838YbruJw3NNZfmNjFeEpA\u003d",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzm": [
+                {
+                  "zza": "₹3,500.00",
+                  "zzb": 3500000000,
+                  "zzc": "INR",
+                  "zzd": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d",
+                  "zze": "",
+                  "zzf": []
+                }
+              ]
+            },
+            "productId": "experiment_lifetime_message",
+            "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+            "type": "INAPP"
+          }
+        }
+      ],
+      "identifier": "Experiment Offering",
+      "lifetime$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "metadata": {},
+      "monthly$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "serverDescription": "Experimental plan offering",
+      "sixMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "threeMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "twoMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "weekly$delegate": {
+        "_value": {},
+        "initializer": {}
+      }
+    },
+    "Offer plan offering": {
+      "annual$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "availablePackages": [
+        {
+          "identifier": "$rc_annual",
+          "offering": "Offer plan offering",
+          "packageType": "ANNUAL",
+          "product": {
+            "basePlanId": "p1y",
+            "defaultOption": {
+              "basePlanId": "p1y",
+              "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+              "presentedOfferingIdentifier": "Offer plan offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1Y",
+                    "unit": "YEAR",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 750000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹750.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"experiment_yearly_offer_messages\",\"type\":\"subs\",\"title\":\"Yearly offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Yearly offer\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":750000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹750.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "experiment_yearly_offer_messages",
+                    "type": "subs",
+                    "title": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+                    "name": "Yearly offer",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                            "basePlanId": "p1y",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 750000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹750.00",
+                                    "billingPeriod": "P1Y",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "experiment_yearly_offer_messages",
+                "zzd": "subs",
+                "zze": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Yearly offer",
+                "zzg": "",
+                "zzh": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1y",
+                    "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹750.00",
+                          "zzb": 750000000,
+                          "zzc": "INR",
+                          "zzd": "P1Y",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "experiment_yearly_offer_messages",
+              "tags": []
+            },
+            "description": "",
+            "period": {
+              "iso8601": "P1Y",
+              "unit": "YEAR",
+              "value": 1
+            },
+            "presentedOfferingIdentifier": "Offer plan offering",
+            "price": {
+              "amountMicros": 750000000,
+              "currencyCode": "INR",
+              "formatted": "₹750.00"
+            },
+            "productDetails": {
+              "zza": "{\"productId\":\"experiment_yearly_offer_messages\",\"type\":\"subs\",\"title\":\"Yearly offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Yearly offer\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":750000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹750.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "experiment_yearly_offer_messages",
+                  "type": "subs",
+                  "title": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+                  "name": "Yearly offer",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                          "basePlanId": "p1y",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 750000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹750.00",
+                                  "billingPeriod": "P1Y",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "experiment_yearly_offer_messages",
+              "zzd": "subs",
+              "zze": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Yearly offer",
+              "zzg": "",
+              "zzh": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1y",
+                  "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹750.00",
+                        "zzb": 750000000,
+                        "zzc": "INR",
+                        "zzd": "P1Y",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "experiment_yearly_offer_messages",
+            "subscriptionOptions": [
+              {
+                "basePlanId": "p1y",
+                "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                "presentedOfferingIdentifier": "Offer plan offering",
+                "pricingPhases": [
+                  {
+                    "billingCycleCount": 0,
+                    "billingPeriod": {
+                      "iso8601": "P1Y",
+                      "unit": "YEAR",
+                      "value": 1
+                    },
+                    "price": {
+                      "amountMicros": 750000000,
+                      "currencyCode": "INR",
+                      "formatted": "₹750.00"
+                    },
+                    "recurrenceMode": "INFINITE_RECURRING"
+                  }
+                ],
+                "productDetails": {
+                  "zza": "{\"productId\":\"experiment_yearly_offer_messages\",\"type\":\"subs\",\"title\":\"Yearly offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Yearly offer\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":750000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹750.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                  "zzb": {
+                    "nameValuePairs": {
+                      "productId": "experiment_yearly_offer_messages",
+                      "type": "subs",
+                      "title": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+                      "name": "Yearly offer",
+                      "localizedIn": {
+                        "values": [
+                          "en-US"
+                        ]
+                      },
+                      "skuDetailsToken": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+                      "subscriptionOfferDetails": {
+                        "values": [
+                          {
+                            "nameValuePairs": {
+                              "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                              "basePlanId": "p1y",
+                              "pricingPhases": {
+                                "values": [
+                                  {
+                                    "nameValuePairs": {
+                                      "priceAmountMicros": 750000000,
+                                      "priceCurrencyCode": "INR",
+                                      "formattedPrice": "₹750.00",
+                                      "billingPeriod": "P1Y",
+                                      "recurrenceMode": 1
+                                    }
+                                  }
+                                ]
+                              },
+                              "offerTags": {
+                                "values": []
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "zzc": "experiment_yearly_offer_messages",
+                  "zzd": "subs",
+                  "zze": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+                  "zzf": "Yearly offer",
+                  "zzg": "",
+                  "zzh": "AEuhp4J5m6DyuW9bbIjOtr-DzqF96yobrTaENs5gDr7c0r_gaKNeZHKVPTiO6UQian7b",
+                  "zzi": "",
+                  "zzj": "",
+                  "zzk": "",
+                  "zzl": [
+                    {
+                      "zza": "p1y",
+                      "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                      "zzd": {
+                        "zza": [
+                          {
+                            "zza": "₹750.00",
+                            "zzb": 750000000,
+                            "zzc": "INR",
+                            "zzd": "P1Y",
+                            "zze": 0,
+                            "zzf": 1
+                          }
+                        ]
+                      },
+                      "zze": []
+                    }
+                  ]
+                },
+                "productId": "experiment_yearly_offer_messages",
+                "tags": []
+              }
+            ],
+            "title": "Yearly offer (Messages : SMS \u0026 Private Chat)",
+            "type": "SUBS"
+          }
+        }
+      ],
+      "identifier": "Offer plan offering",
+      "lifetime$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "metadata": {},
+      "monthly$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "serverDescription": "Annual offer price with discount",
+      "sixMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "threeMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "twoMonth$delegate": {
+        "_value": {},
+        "initializer": {}
+      },
+      "weekly$delegate": {
+        "_value": {},
+        "initializer": {}
+      }
+    }
+  },
+  "current": {
+    "annual$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "availablePackages": [
+      {
+        "identifier": "$rc_weekly",
+        "offering": "Current Offering",
+        "packageType": "WEEKLY",
+        "product": {
+          "basePlanId": "p1w",
+          "defaultOption": {
+            "basePlanId": "p1w",
+            "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+            "presentedOfferingIdentifier": "Current Offering",
+            "pricingPhases": [
+              {
+                "billingCycleCount": 0,
+                "billingPeriod": {
+                  "iso8601": "P1W",
+                  "unit": "WEEK",
+                  "value": 1
+                },
+                "price": {
+                  "amountMicros": 85000000,
+                  "currencyCode": "INR",
+                  "formatted": "₹85.00"
+                },
+                "recurrenceMode": "INFINITE_RECURRING"
+              }
+            ],
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_weekly_messages",
+                  "type": "subs",
+                  "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Message - Weekly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                          "basePlanId": "p1w",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 85000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹85.00",
+                                  "billingPeriod": "P1W",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_weekly_messages",
+              "zzd": "subs",
+              "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Message - Weekly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1w",
+                  "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹85.00",
+                        "zzb": 85000000,
+                        "zzc": "INR",
+                        "zzd": "P1W",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_weekly_messages",
+            "tags": []
+          },
+          "description": "",
+          "period": {
+            "iso8601": "P1W",
+            "unit": "WEEK",
+            "value": 1
+          },
+          "presentedOfferingIdentifier": "Current Offering",
+          "price": {
+            "amountMicros": 85000000,
+            "currencyCode": "INR",
+            "formatted": "₹85.00"
+          },
+          "productDetails": {
+            "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+            "zzb": {
+              "nameValuePairs": {
+                "productId": "subscribe_weekly_messages",
+                "type": "subs",
+                "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                "name": "Message - Weekly PRO",
+                "localizedIn": {
+                  "values": [
+                    "en-US"
+                  ]
+                },
+                "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                "subscriptionOfferDetails": {
+                  "values": [
+                    {
+                      "nameValuePairs": {
+                        "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                        "basePlanId": "p1w",
+                        "pricingPhases": {
+                          "values": [
+                            {
+                              "nameValuePairs": {
+                                "priceAmountMicros": 85000000,
+                                "priceCurrencyCode": "INR",
+                                "formattedPrice": "₹85.00",
+                                "billingPeriod": "P1W",
+                                "recurrenceMode": 1
+                              }
+                            }
+                          ]
+                        },
+                        "offerTags": {
+                          "values": []
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "zzc": "subscribe_weekly_messages",
+            "zzd": "subs",
+            "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+            "zzf": "Message - Weekly PRO",
+            "zzg": "",
+            "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+            "zzi": "",
+            "zzj": "",
+            "zzk": "",
+            "zzl": [
+              {
+                "zza": "p1w",
+                "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                "zzd": {
+                  "zza": [
+                    {
+                      "zza": "₹85.00",
+                      "zzb": 85000000,
+                      "zzc": "INR",
+                      "zzd": "P1W",
+                      "zze": 0,
+                      "zzf": 1
+                    }
+                  ]
+                },
+                "zze": []
+              }
+            ]
+          },
+          "productId": "subscribe_weekly_messages",
+          "subscriptionOptions": [
+            {
+              "basePlanId": "p1w",
+              "offerToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1W",
+                    "unit": "WEEK",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 85000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹85.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_weekly_messages\",\"type\":\"subs\",\"title\":\"Message - Weekly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Message - Weekly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm2pHmnmy\\/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d\",\"basePlanId\":\"p1w\",\"pricingPhases\":[{\"priceAmountMicros\":85000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹85.00\",\"billingPeriod\":\"P1W\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_weekly_messages",
+                    "type": "subs",
+                    "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Message - Weekly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                            "basePlanId": "p1w",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 85000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹85.00",
+                                    "billingPeriod": "P1W",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_weekly_messages",
+                "zzd": "subs",
+                "zze": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Message - Weekly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4LKbuYSlFcoQB1PoePdK4lwCAE_f-anMiQeWL5rdn5V_g-q_hq3dwSGy6kyKJiO",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1w",
+                    "zzc": "Aezw0sm2pHmnmy/J7L0+busirOJlOX53fy19KCaKHbSSTNer2khp2eeNIkrGmNCb5Y2WHtcTyQ\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹85.00",
+                          "zzb": 85000000,
+                          "zzc": "INR",
+                          "zzd": "P1W",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_weekly_messages",
+              "tags": []
+            }
+          ],
+          "title": "Message - Weekly PRO (Messages : SMS \u0026 Private Chat)",
+          "type": "SUBS"
+        }
+      },
+      {
+        "identifier": "$rc_monthly",
+        "offering": "Current Offering",
+        "packageType": "MONTHLY",
+        "product": {
+          "basePlanId": "p1m",
+          "defaultOption": {
+            "basePlanId": "p1m",
+            "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+            "presentedOfferingIdentifier": "Current Offering",
+            "pricingPhases": [
+              {
+                "billingCycleCount": 0,
+                "billingPeriod": {
+                  "iso8601": "P1M",
+                  "unit": "MONTH",
+                  "value": 1
+                },
+                "price": {
+                  "amountMicros": 260000000,
+                  "currencyCode": "INR",
+                  "formatted": "₹260.00"
+                },
+                "recurrenceMode": "INFINITE_RECURRING"
+              }
+            ],
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_monthly_messages",
+                  "type": "subs",
+                  "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Messages - Monthly PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                          "basePlanId": "p1m",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 260000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹260.00",
+                                  "billingPeriod": "P1M",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_monthly_messages",
+              "zzd": "subs",
+              "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Messages - Monthly PRO",
+              "zzg": "",
+              "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1m",
+                  "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹260.00",
+                        "zzb": 260000000,
+                        "zzc": "INR",
+                        "zzd": "P1M",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_monthly_messages",
+            "tags": []
+          },
+          "description": "",
+          "period": {
+            "iso8601": "P1M",
+            "unit": "MONTH",
+            "value": 1
+          },
+          "presentedOfferingIdentifier": "Current Offering",
+          "price": {
+            "amountMicros": 260000000,
+            "currencyCode": "INR",
+            "formatted": "₹260.00"
+          },
+          "productDetails": {
+            "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+            "zzb": {
+              "nameValuePairs": {
+                "productId": "subscribe_monthly_messages",
+                "type": "subs",
+                "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                "name": "Messages - Monthly PRO",
+                "localizedIn": {
+                  "values": [
+                    "en-US"
+                  ]
+                },
+                "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                "subscriptionOfferDetails": {
+                  "values": [
+                    {
+                      "nameValuePairs": {
+                        "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                        "basePlanId": "p1m",
+                        "pricingPhases": {
+                          "values": [
+                            {
+                              "nameValuePairs": {
+                                "priceAmountMicros": 260000000,
+                                "priceCurrencyCode": "INR",
+                                "formattedPrice": "₹260.00",
+                                "billingPeriod": "P1M",
+                                "recurrenceMode": 1
+                              }
+                            }
+                          ]
+                        },
+                        "offerTags": {
+                          "values": []
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "zzc": "subscribe_monthly_messages",
+            "zzd": "subs",
+            "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+            "zzf": "Messages - Monthly PRO",
+            "zzg": "",
+            "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+            "zzi": "",
+            "zzj": "",
+            "zzk": "",
+            "zzl": [
+              {
+                "zza": "p1m",
+                "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                "zzd": {
+                  "zza": [
+                    {
+                      "zza": "₹260.00",
+                      "zzb": 260000000,
+                      "zzc": "INR",
+                      "zzd": "P1M",
+                      "zze": 0,
+                      "zzf": 1
+                    }
+                  ]
+                },
+                "zze": []
+              }
+            ]
+          },
+          "productId": "subscribe_monthly_messages",
+          "subscriptionOptions": [
+            {
+              "basePlanId": "p1m",
+              "offerToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1M",
+                    "unit": "MONTH",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 260000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹260.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_monthly_messages\",\"type\":\"subs\",\"title\":\"Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Messages - Monthly PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0skkPdy6pU\\/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d\",\"basePlanId\":\"p1m\",\"pricingPhases\":[{\"priceAmountMicros\":260000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹260.00\",\"billingPeriod\":\"P1M\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_monthly_messages",
+                    "type": "subs",
+                    "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Messages - Monthly PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                            "basePlanId": "p1m",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 260000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹260.00",
+                                    "billingPeriod": "P1M",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_monthly_messages",
+                "zzd": "subs",
+                "zze": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Messages - Monthly PRO",
+                "zzg": "",
+                "zzh": "AEuhp4K9AkdS5f7Cvk-KFBcA-gE3NdZA7-Zxeh9i0HHvLqnf45-E8oY8DqbJnkxKHNOi",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1m",
+                    "zzc": "Aezw0skkPdy6pU/DECUibLautKUgvuw1MvDFPXsul41Nlz229cEQ3OXgb1HzqEcr8CkgE59Lrw\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹260.00",
+                          "zzb": 260000000,
+                          "zzc": "INR",
+                          "zzd": "P1M",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_monthly_messages",
+              "tags": []
+            }
+          ],
+          "title": "Messages - Monthly PRO (Messages : SMS \u0026 Private Chat)",
+          "type": "SUBS"
+        }
+      },
+      {
+        "identifier": "$rc_annual",
+        "offering": "Current Offering",
+        "packageType": "ANNUAL",
+        "product": {
+          "basePlanId": "p1y",
+          "defaultOption": {
+            "basePlanId": "p1y",
+            "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+            "presentedOfferingIdentifier": "Current Offering",
+            "pricingPhases": [
+              {
+                "billingCycleCount": 0,
+                "billingPeriod": {
+                  "iso8601": "P1Y",
+                  "unit": "YEAR",
+                  "value": 1
+                },
+                "price": {
+                  "amountMicros": 1550000000,
+                  "currencyCode": "INR",
+                  "formatted": "₹1,550.00"
+                },
+                "recurrenceMode": "INFINITE_RECURRING"
+              }
+            ],
+            "productDetails": {
+              "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+              "zzb": {
+                "nameValuePairs": {
+                  "productId": "subscribe_yearly_messagess",
+                  "type": "subs",
+                  "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                  "name": "Mesaagess - Annual PRO",
+                  "localizedIn": {
+                    "values": [
+                      "en-US"
+                    ]
+                  },
+                  "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                  "subscriptionOfferDetails": {
+                    "values": [
+                      {
+                        "nameValuePairs": {
+                          "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                          "basePlanId": "p1y",
+                          "pricingPhases": {
+                            "values": [
+                              {
+                                "nameValuePairs": {
+                                  "priceAmountMicros": 1550000000,
+                                  "priceCurrencyCode": "INR",
+                                  "formattedPrice": "₹1,550.00",
+                                  "billingPeriod": "P1Y",
+                                  "recurrenceMode": 1
+                                }
+                              }
+                            ]
+                          },
+                          "offerTags": {
+                            "values": []
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "zzc": "subscribe_yearly_messagess",
+              "zzd": "subs",
+              "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+              "zzf": "Mesaagess - Annual PRO",
+              "zzg": "",
+              "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+              "zzi": "",
+              "zzj": "",
+              "zzk": "",
+              "zzl": [
+                {
+                  "zza": "p1y",
+                  "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                  "zzd": {
+                    "zza": [
+                      {
+                        "zza": "₹1,550.00",
+                        "zzb": 1550000000,
+                        "zzc": "INR",
+                        "zzd": "P1Y",
+                        "zze": 0,
+                        "zzf": 1
+                      }
+                    ]
+                  },
+                  "zze": []
+                }
+              ]
+            },
+            "productId": "subscribe_yearly_messagess",
+            "tags": []
+          },
+          "description": "",
+          "period": {
+            "iso8601": "P1Y",
+            "unit": "YEAR",
+            "value": 1
+          },
+          "presentedOfferingIdentifier": "Current Offering",
+          "price": {
+            "amountMicros": 1550000000,
+            "currencyCode": "INR",
+            "formatted": "₹1,550.00"
+          },
+          "productDetails": {
+            "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+            "zzb": {
+              "nameValuePairs": {
+                "productId": "subscribe_yearly_messagess",
+                "type": "subs",
+                "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                "name": "Mesaagess - Annual PRO",
+                "localizedIn": {
+                  "values": [
+                    "en-US"
+                  ]
+                },
+                "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                "subscriptionOfferDetails": {
+                  "values": [
+                    {
+                      "nameValuePairs": {
+                        "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                        "basePlanId": "p1y",
+                        "pricingPhases": {
+                          "values": [
+                            {
+                              "nameValuePairs": {
+                                "priceAmountMicros": 1550000000,
+                                "priceCurrencyCode": "INR",
+                                "formattedPrice": "₹1,550.00",
+                                "billingPeriod": "P1Y",
+                                "recurrenceMode": 1
+                              }
+                            }
+                          ]
+                        },
+                        "offerTags": {
+                          "values": []
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "zzc": "subscribe_yearly_messagess",
+            "zzd": "subs",
+            "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+            "zzf": "Mesaagess - Annual PRO",
+            "zzg": "",
+            "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+            "zzi": "",
+            "zzj": "",
+            "zzk": "",
+            "zzl": [
+              {
+                "zza": "p1y",
+                "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                "zzd": {
+                  "zza": [
+                    {
+                      "zza": "₹1,550.00",
+                      "zzb": 1550000000,
+                      "zzc": "INR",
+                      "zzd": "P1Y",
+                      "zze": 0,
+                      "zzf": 1
+                    }
+                  ]
+                },
+                "zze": []
+              }
+            ]
+          },
+          "productId": "subscribe_yearly_messagess",
+          "subscriptionOptions": [
+            {
+              "basePlanId": "p1y",
+              "offerToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+              "presentedOfferingIdentifier": "Current Offering",
+              "pricingPhases": [
+                {
+                  "billingCycleCount": 0,
+                  "billingPeriod": {
+                    "iso8601": "P1Y",
+                    "unit": "YEAR",
+                    "value": 1
+                  },
+                  "price": {
+                    "amountMicros": 1550000000,
+                    "currencyCode": "INR",
+                    "formatted": "₹1,550.00"
+                  },
+                  "recurrenceMode": "INFINITE_RECURRING"
+                }
+              ],
+              "productDetails": {
+                "zza": "{\"productId\":\"subscribe_yearly_messagess\",\"type\":\"subs\",\"title\":\"Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)\",\"name\":\"Mesaagess - Annual PRO\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ\",\"subscriptionOfferDetails\":[{\"offerIdToken\":\"Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d\",\"basePlanId\":\"p1y\",\"pricingPhases\":[{\"priceAmountMicros\":1550000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹1,550.00\",\"billingPeriod\":\"P1Y\",\"recurrenceMode\":1}],\"offerTags\":[]}]}",
+                "zzb": {
+                  "nameValuePairs": {
+                    "productId": "subscribe_yearly_messagess",
+                    "type": "subs",
+                    "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                    "name": "Mesaagess - Annual PRO",
+                    "localizedIn": {
+                      "values": [
+                        "en-US"
+                      ]
+                    },
+                    "skuDetailsToken": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                    "subscriptionOfferDetails": {
+                      "values": [
+                        {
+                          "nameValuePairs": {
+                            "offerIdToken": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                            "basePlanId": "p1y",
+                            "pricingPhases": {
+                              "values": [
+                                {
+                                  "nameValuePairs": {
+                                    "priceAmountMicros": 1550000000,
+                                    "priceCurrencyCode": "INR",
+                                    "formattedPrice": "₹1,550.00",
+                                    "billingPeriod": "P1Y",
+                                    "recurrenceMode": 1
+                                  }
+                                }
+                              ]
+                            },
+                            "offerTags": {
+                              "values": []
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "zzc": "subscribe_yearly_messagess",
+                "zzd": "subs",
+                "zze": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+                "zzf": "Mesaagess - Annual PRO",
+                "zzg": "",
+                "zzh": "AEuhp4K6-IzExzHZn8GskzZRoiAzUMaPnHBfxtDgUCosbl2kK7fJPPpYAxAW79UW-XaJ",
+                "zzi": "",
+                "zzj": "",
+                "zzk": "",
+                "zzl": [
+                  {
+                    "zza": "p1y",
+                    "zzc": "Aezw0sm0HTBb6fjzQvqmJUWg1DpoXgVnxN0Le6o+Hc+gl8UJ8Zo33XM0gxb3PSfJD6RpcvywrA\u003d\u003d",
+                    "zzd": {
+                      "zza": [
+                        {
+                          "zza": "₹1,550.00",
+                          "zzb": 1550000000,
+                          "zzc": "INR",
+                          "zzd": "P1Y",
+                          "zze": 0,
+                          "zzf": 1
+                        }
+                      ]
+                    },
+                    "zze": []
+                  }
+                ]
+              },
+              "productId": "subscribe_yearly_messagess",
+              "tags": []
+            }
+          ],
+          "title": "Mesaagess - Annual PRO (Messages : SMS \u0026 Private Chat)",
+          "type": "SUBS"
+        }
+      },
+      {
+        "identifier": "$rc_lifetime",
+        "offering": "Current Offering",
+        "packageType": "LIFETIME",
+        "product": {
+          "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+          "presentedOfferingIdentifier": "Current Offering",
+          "price": {
+            "amountMicros": 3500000000,
+            "currencyCode": "INR",
+            "formatted": "₹3,500.00"
+          },
+          "productDetails": {
+            "zza": "{\"productId\":\"subscribe_lifetime_message\",\"type\":\"inapp\",\"title\":\"Lifetime Free Offer (Messages : SMS \u0026 Private Chat)\",\"name\":\"Lifetime Free Offer\",\"description\":\"SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \\nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \\ntailored for Android users.\",\"localizedIn\":[\"en-US\"],\"skuDetailsToken\":\"AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d\",\"oneTimePurchaseOfferDetails\":{\"priceAmountMicros\":3500000000,\"priceCurrencyCode\":\"INR\",\"formattedPrice\":\"₹3,500.00\",\"offerIdToken\":\"Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW\\/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d\"}}",
+            "zzb": {
+              "nameValuePairs": {
+                "productId": "subscribe_lifetime_message",
+                "type": "inapp",
+                "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+                "name": "Lifetime Free Offer",
+                "description": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+                "localizedIn": {
+                  "values": [
+                    "en-US"
+                  ]
+                },
+                "skuDetailsToken": "AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d",
+                "oneTimePurchaseOfferDetails": {
+                  "nameValuePairs": {
+                    "priceAmountMicros": 3500000000,
+                    "priceCurrencyCode": "INR",
+                    "formattedPrice": "₹3,500.00",
+                    "offerIdToken": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d"
+                  }
+                }
+              }
+            },
+            "zzc": "subscribe_lifetime_message",
+            "zzd": "inapp",
+            "zze": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+            "zzf": "Lifetime Free Offer",
+            "zzg": "SMS \u0026 Text Message is your ultimate messaging App! Lifetime Free Offer: \nEnjoy Unlimited Access. Providing a seamless and feature-rich experience \ntailored for Android users.",
+            "zzh": "AEuhp4ICN87vM80ogbyLeCDrcDuNcaeyNJe74LQz0ffdr-9jYSwgp_szek21ats6TRCyIzjcwSVdTtM\u003d",
+            "zzi": "",
+            "zzj": "",
+            "zzk": "",
+            "zzm": [
+              {
+                "zza": "₹3,500.00",
+                "zzb": 3500000000,
+                "zzc": "INR",
+                "zzd": "Aezw0snrtsQnLTftJgcJDOMRbT6N3An79UeTPxyBlaSYeU+cxW/mOnJos4xbKYAfryBvayAdm8c8iEtas7pWL9Blcg\u003d\u003d",
+                "zze": "",
+                "zzf": []
+              }
+            ]
+          },
+          "productId": "subscribe_lifetime_message",
+          "title": "Lifetime Free Offer (Messages : SMS \u0026 Private Chat)",
+          "type": "INAPP"
+        }
+      }
+    ],
+    "identifier": "Current Offering",
+    "lifetime$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "metadata": {},
+    "monthly$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "serverDescription": "Standard price with 7 days trial",
+    "sixMonth$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "threeMonth$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "twoMonth$delegate": {
+      "_value": {},
+      "initializer": {}
+    },
+    "weekly$delegate": {
+      "_value": {},
+      "initializer": {}
+    }
+  }
+}

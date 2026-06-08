@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.messenger.phone.number.text.sms.service.apps.subscription.SubscriptionDynamicViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".Activity.Paywall_FourPlan_Activity">
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_2sdp"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close_icon_test"
+            android:tint="#3B000000"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.020"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar" />
+
+
+        <ImageView
+            android:id="@+id/img_close111"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/_2sdp"
+            android:scaleType="fitCenter"
+            android:visibility ="gone"
+            android:src="@drawable/close_icon_test"
+            android:tint="#3B000000"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.020"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_28sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/upgrade_to_messages_pro"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar" />
+
+        <TextView
+            android:id="@+id/textTitleDis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingHorizontal="@dimen/_41sdp"
+            android:text="@string/faster_smarter_amp_more_private_messaging_experience"
+            android:textColor="#B5B7B8"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/myviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/mCLYearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTitleDis" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/worm_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dotsColor="#D9D9D9"
+            app:dotsCornerRadius="5dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="4dp"
+            app:dotsStrokeColor="#D9D9D9"
+            app:dotsStrokeWidth="2dp"
+            app:dotsWidthFactor="2"
+            app:layout_constraintBottom_toBottomOf="@+id/myviewpager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/myviewpager"
+            app:layout_constraintVertical_bias="0.95"
+            app:selectedDotColor="#4B69FF" />
+
+
+        <RelativeLayout
+            android:id="@+id/mCLYearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_9sdp"
+            app:layout_constraintBottom_toTopOf="@+id/mCLMonthLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myviewpager">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/yearconstraintid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_auto_renew_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="@string/yearly_plan"
+                    android:textColor="#313E47"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/year_discount_show"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#1A009B1C"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_auto_renew_year"
+                    app:layout_constraintStart_toEndOf="@+id/txt_auto_renew_year"
+                    app:layout_constraintTop_toTopOf="@+id/txt_auto_renew_year">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txt_year_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingVertical="@dimen/_3ssp"
+                                android:text="save 63%"
+                                android:textColor="#009B1C"
+                                android:textSize="@dimen/_8sdp"
+                                android:textStyle="italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </TextView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/yearstaticprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:text="₹30"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_18sdp"
+                    android:visibility="visible"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+
+                    app:layout_constraintStart_toStartOf="@+id/txt_auto_renew_year"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_auto_renew_year">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/yesrstatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/week"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/yearstaticprice"
+                    app:layout_constraintStart_toEndOf="@+id/yearstaticprice"
+                    app:layout_constraintTop_toTopOf="@+id/yearstaticprice">
+
+                </TextView>
+
+                <!--/////////-->
+                <TextView
+                    android:id="@+id/txtYearlyPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLength="26"
+                    android:text="₹1550"
+                    android:textColor="#313E47"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/yesrstatic"
+                    app:layout_constraintEnd_toStartOf="@+id/yeartxtcustom" />
+
+                <TextView
+                    android:id="@+id/yeartxtcustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLength="26"
+                    android:text="@string/year"
+                    android:textColor="#313E47"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/yesrstatic"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtlifediscountid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLength="26"
+                    android:text="₹5200"
+                    android:textColor="#313E47"
+                    android:textSize="@dimen/_8ssp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/yeartxtcustom"
+                    app:layout_constraintStart_toStartOf="@+id/yeartxtcustom"
+                    app:layout_constraintTop_toBottomOf="@+id/yeartxtcustom" />
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginVertical="@dimen/_5ssp"
+                    android:background="#838383"
+                    android:backgroundTint="#838383"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/yearstaticprice" />
+
+
+                <ImageView
+                    android:id="@+id/iv_tick_1"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_right_paywall"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/tv_all_pre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="@string/all_premium_features"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_tick_1"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintWidth_percent="0.40" />
+
+                <ImageView
+                    android:id="@+id/iv_tick_2"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_right_paywall"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/tv_all_pre"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/tv_ads_freee"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:paddingStart="@dimen/_5sdp"
+
+                    android:text="@string/ad_free_experience"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_tick_2"
+
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/year_tag"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_19sdp"
+            android:background="@drawable/huryupicon22"
+            app:layout_constraintEnd_toEndOf="@+id/mCLYearLayout"
+            app:layout_constraintTop_toTopOf="@+id/mCLYearLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/best_value"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9ssp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mCLLIFELayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/textsub"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toEndOf="@+id/mCLWeekLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lifeconstraintid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bgyearnewexperiment"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_auto_renew_life"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:text="@string/lifetime_static"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+
+                <TextView
+                    android:id="@+id/txtlifePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="₹3500.00"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_auto_renew_life"
+                    />
+
+
+                <TextView
+                    android:id="@+id/lifetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+
+                    android:text="@string/One_Time_Pay"
+                    app:layout_constraintVertical_bias="0.36"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtlifePrice">
+
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/mCLMonthLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            app:layout_constraintBottom_toTopOf="@+id/textsub"
+            app:layout_constraintEnd_toStartOf="@+id/mCLWeekLayout"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/monthconstraintid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bgyearopacitynewexperiment"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_auto_renew_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:text="@string/Monthly_new_plan"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+
+                <TextView
+                    android:id="@+id/monthstaticprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:text="₹65"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/monthstatic"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/monthstatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/week"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/monthstaticprice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/monthstaticprice"
+                    app:layout_constraintTop_toTopOf="@+id/monthstaticprice">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtMonthlyPrice"
+                    android:text="₹260.00"
+                    android:textSize="@dimen/_9sdp"
+
+
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"
+
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLength="26"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/monthstaticprice"
+                    app:layout_constraintVertical_bias="0.36"
+
+
+        />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/mCLWeekLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/textsub"
+            app:layout_constraintEnd_toStartOf="@+id/mCLLIFELayout"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toEndOf="@+id/mCLMonthLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weekconstraintid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bgyearopacitynewexperiment"
+               >
+
+
+                <TextView
+                    android:id="@+id/txt_auto_renew_week"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:text="@string/Weekly_new_plan"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+
+
+
+                <TextView
+                    android:id="@+id/weekstaticprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:text="₹65"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/weekstatic"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/weekstatic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/week"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/weekstaticprice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/weekstaticprice"
+                    app:layout_constraintTop_toTopOf="@+id/weekstaticprice">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/txtweekPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:maxLength="26"
+                    android:text="₹85.00"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weekstaticprice"
+                    app:layout_constraintVertical_bias="0.36"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textsub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical|center"
+            android:lines="1"
+            android:paddingVertical="@dimen/_7sdp"
+            android:text="@string/Renewal_is_automatic"
+            android:textColor="#B5B7B8"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/mCLUnlockLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+          />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCLUnlockLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            app:cardBackgroundColor="@color/paywall_primry_color"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           >
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:shimmer_auto_start="true"
+                app:shimmer_duration="2000"
+                app:shimmer_fixed_width="@dimen/_160sdp"
+                app:shimmer_highlight_color="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shimmer_layout">
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/txt_unlock_kriadl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="@string/Continue"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="36"
+            android:text="@string/subscription_will_auto_renew_cancel_anytime"
+            android:textColor="#C8D0D7"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/mCLUnlockLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/mCLUnlockLayout"
+            app:layout_constraintStart_toStartOf="@+id/mCLUnlockLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mCLUnlockLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/txtTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/TermsandCondition_ul"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/paywall_primry_color"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dottt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dottt"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/paywall_primry_color"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/PrivacyPolicy_ul"
+                android:textColor="@color/paywall_primry_color"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/dottt"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupTopBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="img_close,textTitle,textTitleDis" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupCarousel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="myviewpager,worm_dots_indicator" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupPlans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="mCLYearLayout,year_tag,mCLMonthLayout,mCLWeekLayout,mCLLIFELayout" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="textsub,mCLUnlockLayout,txtBottom,mCLUnlockLayout2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

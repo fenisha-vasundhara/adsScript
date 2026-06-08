@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:weightSum="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="RtlSymmetry">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/otp_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+           fullappfontstylesemibold="@{0}"
+                android:text="213866"
+                android:letterSpacing="0.09"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="HardcodedText" />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/otp_sender_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP from NIRALI"
+               fullappfontstyleregular="@{0}"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_9sdp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/message_copy"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/message_copy_baseline_content_copy_24_notification"
+                android:layout_height="@dimen/_18sdp"
+                app:tint="@color/appcolor">
+
+            </ImageView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:text="Copy"
+                android:includeFontPadding="false"
+               fullappfontstyleregular="@{0}"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/appcolor"
+                android:layout_height="wrap_content">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/message_delete"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/baseline_delete_24_black_notification"
+                android:layout_height="@dimen/_18sdp"
+                app:tint="@color/appcolor">
+
+            </ImageView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:text="Delete"
+                android:includeFontPadding="false"
+               fullappfontstyleregular="@{0}"
+                android:textSize="@dimen/_8sdp"
+                android:textColor="@color/appcolor"
+                android:layout_height="wrap_content">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

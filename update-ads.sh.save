@@ -1,0 +1,46 @@
+#!/bin/bash
+
+PROJECT_DIR="/Volumes/Extra/Fenisha/MessagerApp/2.4.1/MaterialMessages"
+JSON_FILE="$PROJECT_DIR/app/src/main/assets/ads_config.json"
+
+cd "$PROJECT_DIR" || { echo "❌ Cannot access project folder"; exit 1; }
+
+echo "🚀 Ads Config Updater"
+echo "Current version: $(jq -r '.version' "$JSON_FILE" 2>/dev/null || echo 'Unknown')"
+
+read -p "Enter new version (e.g. 2.4.5): " NEW_VERSION
+
+if [ -z "$NEW_VERSION" ]; then
+  echo "❌ Version is required!"
+  exit 1
+fi
+
+# Update version
+jq ".version = \"$NEW_VERSION\"" "$JSON_FILE" > temp.json && mv temp.json "$JSON_FILE"
+
+echo "✅ Version updated to $NEW_VERSION"
+
+# Git
+git add app/src/main/assets/ads_config.json
+
+git commit -m "chore: update ads config to version ${NEW_VERSION}"
+
+if [ $? -eq 0 ]; then
+  git push origin main
+  if [ $? -eq 0 ]; then
+    echo "🎉 Successfully pushed v${NEW_VERSION} to GitHub!"
+    echo "✅ Now run 'Update Ads from GitHub' in your Google Sheet"
+  else
+    echo "⚠️ Git push failed. Check internet or git remote."
+  fi
+else
+  echo "⚠️ No changes to commit."
+fi
+
+
+
+
+chmod +x update-ads.sh
+./update-ads.sh
+cd /Volumes/Extra/Fenisha/MessagerApp/2.4.1/MaterialMessages && VERSION="2.4.5" && jq ".version = \"$VERSION\"" app/src/main/assets/ads_config.json > temp.json && mv temp.json app/src/main/assets/ads_config.json && git add app/src/main/assets/ads_config.json && git commit -m "chore: update ads config to version $VERSION" && git push origin main
+

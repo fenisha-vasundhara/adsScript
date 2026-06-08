@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".ManageBlockedKeywordsActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/colorSurface"
+            android:elevation="0dp"
+            android:visibility="visible"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/back_btn"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="@dimen/mf_appbar_action_size1"
+                    android:layout_height="@dimen/mf_appbar_action_size1"
+                    android:layout_marginStart="0dp"
+                    app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="?attr/colorOnSurface"
+                    app:iconSize="@dimen/mf_appbar_back_icon"      android:contentDescription="@string/cd_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    fullappfontstylesemibold="@{0}"
+                    android:text="@string/blocked_keywords_new_ui"
+                    android:textColor="?attr/colorOnSurface"
+                    setTextSizeFullApp="@{textsizechagefor18}"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/back_btn"
+                    app:layout_constraintTop_toTopOf="@+id/back_btn"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/manage_blocked_keywords_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp">
+
+            <com.simplemobiletools.commons.views.MyRecyclerView
+                android:id="@+id/manage_blocked_keywords_list"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:scrollbars="vertical"
+                app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_manage_blocked_keyword" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/manage_blocked_keywords_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingTop="@dimen/activity_margin"
+                android:paddingEnd="@dimen/activity_margin"
+                android:text="@string/not_blocking_keywords_ui"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.simplemobiletools.commons.views.MyTextView
+                android:id="@+id/manage_blocked_keywords_placeholder_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_all_corners"
+                android:gravity="center"
+                android:padding="@dimen/activity_margin"
+                android:text="@string/add_a_blocked_keyword_ui"
+                android:textColor="?attr/colorPrimary"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/manage_blocked_keywords_placeholder" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_new_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:contentDescription="@string/add_a_blocked_keyword_ui"
+            android:src="@drawable/ic_plus_vector"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:backgroundTint="?attr/colorPrimary">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

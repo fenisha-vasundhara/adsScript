@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:shimmer_base_alpha="0.8"
+    android:id="@+id/shim_call_top"
+    android:layout_height="wrap_content"
+    app:shimmer_auto_start="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:background="@drawable/top_bans_bg">
+
+        <ImageView
+            android:id="@+id/smart_caller_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintWidth_percent="0.07"
+            android:src="@drawable/smart_caller_image_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/smart_caller_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/smart_caller_title"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/_12sdp" />
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:maxLines="2"
+                    android:text="@string/smart_caller_subtitle"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:strokeColor="#C4E5FF"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardBackgroundColor="#52B7FF"
+                app:cardCornerRadius="@dimen/_30sdp"
+                app:strokeWidth="0.9dp">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/smart_caller_cta"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.facebook.shimmer.ShimmerFrameLayout>

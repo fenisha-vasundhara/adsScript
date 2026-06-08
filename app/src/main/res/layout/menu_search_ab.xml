@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isselection"
+            type="Boolean" />
+
+        <variable
+            name="isSystemFont"
+            type="Boolean" />
+
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+
+    </data>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/top_app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0.8dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_toolbar_holder"
+            setchatthemecolorformainscreen="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#20000000"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </View>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/defaulttoolshow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:visibility="@{isselection ? View.GONE : View.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                tools:visibility="visible">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView3"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.07"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/whatsnewbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="top"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true">
+
+                </com.airbnb.lottie.LottieAnimationView>
+
+
+                <ImageView
+                    android:id="@+id/search_message_bg"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_search"
+                    android:visibility="visible"
+                    android:foreground="@drawable/ripple_all_corners"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/qurekaaa"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/qurekaaa"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/appicon_sub"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_message_bg"
+                    app:layout_constraintEnd_toEndOf="@+id/filter_message_bg"
+                    app:layout_constraintTop_toTopOf="@+id/search_message_bg" />
+
+                <ImageView
+                    android:id="@+id/filter_message_bg"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/filter_bg"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_premium"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/message_premium"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_message_premium_btn"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/more_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/more_button"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/baseline_more_vert_24_new_ab"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/ic_drawer_ab_button"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginStart="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/ic_drawer_ab_new_ab"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                <com.messenger.phone.number.text.sms.service.apps.MSTextView
+                    android:id="@+id/messagebutton2"
+                    setTextSizeFullApp="@{textsizechagefor18}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/messages"
+                    android:visibility="visible"
+                    app:customFontFamily="poppins_semibold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/search_message_bg"
+                    app:layout_constraintStart_toEndOf="@+id/ic_drawer_ab_button"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/selectioncontenar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{isselection ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                >
+
+                <ImageView
+                    android:id="@+id/message_archive"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_archive"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_delete"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/message_delete"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_delete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/more_button_mark"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="364dp">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/message_pin"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_pin"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_archive"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/message_unpin"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_unpin"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/message_archive"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/pin_action_start_barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierAllowsGoneWidgets="false"
+                    app:barrierDirection="start"
+                    app:constraint_referenced_ids="message_pin,message_unpin,message_archive" />
+
+
+                <ImageView
+                    android:id="@+id/selectallmessage"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_select_all"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pin_action_start_barrier"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/message_selection_close"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginStart="@dimen/mf_appbar_action_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/x_ic_close"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                 >
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/more_button_mark"
+                    HomescreenmessagelableNew="@{0}"
+                    android:layout_width="@dimen/mf_appbar_action_size"
+                    android:layout_height="@dimen/mf_appbar_action_size"
+                    android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                    android:padding="@dimen/mf_appbar_action_padding"
+                    android:src="@drawable/baseline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                </ImageView>
+
+
+                <com.messenger.phone.number.text.sms.service.apps.MSTextView
+                    android:id="@+id/selectioncount"
+                    setTextSizeFullApp="@{textsizechagefor18}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                    android:layout_marginEnd="@dimen/mf_appbar_title_spacing"
+                    android:ellipsize="marquee"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="1 selected"
+                    android:textColor="@color/white"
+                    app:customFontFamily="rubikregular"
+                    app:layout_constraintBottom_toBottomOf="@+id/message_selection_close"
+                    app:layout_constraintEnd_toStartOf="@+id/selectallmessage"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toEndOf="@+id/message_selection_close"
+                    app:layout_constraintTop_toTopOf="@+id/message_selection_close">
+
+                </com.messenger.phone.number.text.sms.service.apps.MSTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#263C4B5D"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.75">
+
+            </View>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>

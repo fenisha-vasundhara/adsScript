@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AfterCallScreen.permission.PermissionAfterActivity">
+
+        <View
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/smartFeaturesPill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/aftercall_pill_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/smartFeaturesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/smart_features"
+                android:textColor="@color/selected_color"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/smartFeaturesPill">
+
+            <ImageView
+                android:id="@+id/imageFeature1"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/pan_one"
+                android:tint="@color/afterCallnewBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="@string/make_every_call_smarter"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintEnd_toStartOf="@+id/imageFeature2"
+                app:layout_constraintStart_toEndOf="@+id/imageFeature1"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitleTag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="2"
+                android:text="@string/instant_replies_and_call_insights_right_when_you_need_them"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toStartOf="@+id/imageFeature2"
+                app:layout_constraintStart_toEndOf="@+id/imageFeature1"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle2">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+            <ImageView
+                android:id="@+id/imageFeature2"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:src="@drawable/pan_two"
+                android:tint="@color/afterCallnewBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/afterCallContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/lay_includefeature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con_top1">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgVector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+android:scaleType="centerCrop"
+                android:src="@drawable/ic_vec_new_per_aftercall_light"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/more_button"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay_includefeature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_4sdp"
+            android:paddingTop="@dimen/_40sdp"
+            app:layout_constraintBottom_toTopOf="@+id/afterCallContentbottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_line73"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/includedFeaturesTitle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/includedFeaturesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:singleLine="true"
+                android:text="@string/included_features"
+                android:textSize="@dimen/_15ssp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:rotation="180"
+                android:src="@drawable/ic_line73"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/includedFeaturesTitle"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/afterCallContentbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/constAdViewBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_dialog_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:elevation="@dimen/_2sdp"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="2dp">
+
+
+                <LinearLayout
+                    android:id="@+id/featuresList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_3sdp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/featureText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_blue_twinquel"
+                            android:drawableEnd="@drawable/ic_blue_twinquel"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:singleLine="true"
+                            android:text="@string/get_quick_reply_options_after_every_call"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_3sdp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/featureText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_blue_twinquel"
+                            android:drawableEnd="@drawable/ic_blue_twinquel"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:singleLine="true"
+                            android:text="@string/view_caller_details_instantly"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_3sdp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/featureText3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_blue_twinquel"
+                            android:drawableEnd="@drawable/ic_blue_twinquel"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:fontFamily="@font/inter_semibold"
+                            android:singleLine="true"
+                            android:text="@string/take_action_without_switching_apps"
+                            android:textSize="@dimen/_11ssp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constTitleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <FrameLayout
+                    android:id="@+id/btnFramePermissions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.175"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        app:shimmer_auto_start="true"
+                        app:shimmer_base_alpha="0.8"
+                        app:shimmer_direction="left_to_right"
+                        app:shimmer_duration="1500"
+                        app:shimmer_shape="radial">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="#1A73E9"
+                            app:cardCornerRadius="@dimen/_10sdp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="false"
+                            app:strokeColor="@android:color/transparent"
+                            app:strokeWidth="0dp"
+
+                            />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                </FrameLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBeDefault"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/inter_semibold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/grant_permission"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/_25sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnFramePermissions"
+                    app:layout_constraintEnd_toEndOf="@+id/btnFramePermissions"
+                    app:layout_constraintStart_toStartOf="@+id/btnFramePermissions"
+                    app:layout_constraintTop_toTopOf="@+id/btnFramePermissions" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constAdViewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/bannerShimmerBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/shimmerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </FrameLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameAdBottom"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:paddingVertical="0.7dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

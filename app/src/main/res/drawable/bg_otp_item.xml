@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:OtpState_filled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#E5EAEF" />
+            <stroke android:width="2dp" android:color="#E5EAEF" />
+        </shape>
+    </item>
+    <item android:drawable="@color/lock_edit_screen" />
+</selector>

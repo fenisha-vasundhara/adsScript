@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.MainMassageAdapter" />
+
+        <variable
+            name="isselection"
+            type="Boolean" />
+
+        <variable
+            name="nomessagefoundchack"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PrivacyChatActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/main_menu_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tool_bar_main"
+                setchatthemecolor="@{0}"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/defaulttoolshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="@{isselection ? View.GONE : View.VISIBLE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible"
+        android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:background="@drawable/ripple_custom_circle"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/back_btn"-->
+<!--                        style="@style/Widget.Material3.Button.IconButton"-->
+<!--                        android:layout_width="@dimen/mf_appbar_action_size1"-->
+<!--                        android:layout_height="@dimen/mf_appbar_action_size1"-->
+<!--                        android:layout_marginStart="0dp"-->
+<!--                        app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"-->
+<!--                        app:iconGravity="textStart"-->
+<!--                        app:layout_constraintDimensionRatio="1:1"-->
+<!--                             app:iconPadding="0dp"-->
+<!--                        app:iconTint="?attr/colorOnSurface"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView3"
+                        fullappfontstylesemibold="@{0}"
+                        setchatthemecolorTintTxt="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/Privacy_chat"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                        app:layout_constraintEnd_toStartOf="@+id/more_btn"
+                        app:layout_constraintStart_toEndOf="@+id/back_btn"
+                        app:layout_constraintTop_toTopOf="@+id/back_btn"
+                        tools:visibility="visible">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageView
+                        android:id="@+id/more_btn"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/baseline_more_vert_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/selectioncontenar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:visibility="@{isselection ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                   >
+
+                    <ImageView
+                        android:id="@+id/message_select_all"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/baseline_select_all_24"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/message_archive"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/message_archive"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:background="@drawable/ripple_custom_circle"
+                        android:src="@drawable/baseline_unlock_24"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/message_delete"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/message_delete"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                        android:background="@drawable/ripple_custom_circle"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/baseline_delete_24_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/message_selection_close"
+                        setchatthemecolorTintImfullapp="@{0}"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:background="@drawable/ripple_custom_circle"
+                        android:layout_marginStart="0dp"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/close_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/selectioncount"
+                        fullappfontstyleregular="@{0}"
+                        setchatthemecolorTintTxt="@{0}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                        android:layout_marginEnd="@dimen/mf_appbar_title_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="1 selected"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        app:layout_constraintBottom_toBottomOf="@+id/message_selection_close"
+                        app:layout_constraintEnd_toStartOf="@+id/message_select_all"
+                        app:layout_constraintStart_toEndOf="@+id/message_selection_close"
+                        app:layout_constraintTop_toTopOf="@+id/message_selection_close">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+            android:id="@+id/conversations_fastscroller"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_menu_ar"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <com.simplemobiletools.commons.views.MyRecyclerView
+                android:id="@+id/allmassagerecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{adapter}"
+                android:clipToPadding="false"
+                android:layoutAnimation="@anim/layout_animation"
+                android:orientation="vertical"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="none"
+                app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager">
+
+            </com.simplemobiletools.commons.views.MyRecyclerView>
+
+        </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/no_private_chat_found"
+            android:visibility="@{nomessagefoundchack ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4">
+
+        </ImageView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nomessagefound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/No_privat_found"
+            android:textColor="#A8AEB4"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:visibility="@{nomessagefoundchack ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@+id/imageView15"
+            app:layout_constraintStart_toStartOf="@+id/imageView15"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15"
+            tools:visibility="visible">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

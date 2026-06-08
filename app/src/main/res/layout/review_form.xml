@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_sheet_rounded_bg"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:reviewFormBackground="@{0}">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/cancelButton"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/ripple_custom_circle"
+            android:contentDescription="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:reviewFormIconTint="@{0}"
+            app:srcCompat="@drawable/close_icon_subs" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtname"
+            fullappfontstylesemibold="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="@string/give_feedback"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:reviewFormTitleColor="@{0}" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nameLabel"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/review_form_name_label"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtname"
+            app:reviewFormLabelColor="@{0}" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_review_input"
+            android:hint="@string/review_form_name_hint"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+            app:reviewFormInputBackground="@{0}"
+            app:reviewFormInputColors="@{0}" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emailLabel"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/review_form_email_label"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput"
+            app:reviewFormLabelColor="@{0}" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_review_input"
+            android:hint="@string/Enter_Email_Address"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel"
+            app:reviewFormInputBackground="@{0}"
+            app:reviewFormInputColors="@{0}" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/messageLabel"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/Message"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailInput"
+            app:reviewFormLabelColor="@{0}" />
+
+        <EditText
+            android:id="@+id/feedbackInput"
+            fullappfontstyleregular="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_review_input"
+            android:gravity="top|start"
+            android:hint="@string/enter_your_feedback_here"
+            android:inputType="textMultiLine"
+            android:maxLength="120"
+            android:minLines="4"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageLabel"
+            app:reviewFormInputBackground="@{0}"
+            app:reviewFormInputColors="@{0}" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/okButton"
+            fullappfontstylesemibold="@{0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_gray_bg"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/submit"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:backgroundTint="#01504F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedbackInput"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

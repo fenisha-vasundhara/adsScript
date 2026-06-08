@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+
+    <!-- Your original gradient shape goes here as the content -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/_30sdp"/>
+            <gradient
+                android:startColor="#A0DFFE"
+                android:endColor="#8CC8FF"
+                android:angle="45" />  <!-- optional: angle for nicer gradient direction -->
+        </shape>
+    </item>
+
+</ripple>

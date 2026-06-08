@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mf_appbar_action_size">@dimen/_30sdp</dimen>
+    <dimen name="mf_appbar_action_size1">@dimen/_30sdp</dimen>
+    <dimen name="mf_appbar_action_size_large">@dimen/_34sdp</dimen>
+    <dimen name="mf_appbar_back_icon_size">@dimen/_20sdp</dimen>
+    <dimen name="mf_appbar_action_padding">0dp</dimen>
+    <dimen name="mf_appbar_action_margin">2dp</dimen>
+    <dimen name="mf_appbar_action_edge_margin">6dp</dimen>
+    <dimen name="mf_appbar_title_spacing">6dp</dimen>
+    <dimen name="mf_appbar_back_icon">@dimen/_20sdp</dimen>
+    <dimen name="mf_appbar_action_icon_size">24dp</dimen>
+</resources>

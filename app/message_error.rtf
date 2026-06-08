@@ -1,0 +1,690 @@
+issue 1:"> Task :app:kaptReleaseKotlin
+         error: [Hilt]
+           Unsupported metadata version. Check that your Kotlin version is >= 1.0: java.lang.IllegalStateException: Unsupported metadata version. Check that your Kotlin version is >= 1.0
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.metadataOf(KotlinMetadata.java:200)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.from(KotlinMetadata.java:182)
+           	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataFactory.create(KotlinMetadataFactory.java:54)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectClass(KotlinMetadataUtil.java:102)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectOrCompanionObjectClass(KotlinMetadataUtil.java:119)
+           	at dagger.hilt.processor.internal.Processors.requiresModuleInstance(Processors.java:950)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processModule(AggregatedDepsProcessor.java:169)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processEach(AggregatedDepsProcessor.java:120)
+           	at dagger.hilt.processor.internal.BaseProcessor.process(BaseProcessor.java:195)
+           	at org.jetbrains.kotlin.kapt.base.incremental.IncrementalProcessor.process(incrementalProcessors.kt:88)
+           	at org.jetbrains.kotlin.kapt.base.ProcessorWrapper.process(annotationProcessing.kt:217)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:1023)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:939)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment$Round.run(JavacProcessingEnvironment.java:1267)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:1382)
+           	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:1234)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:98)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:37)
+           	at org.jetbrains.kotlin.kapt.base.Kapt.kapt(Kapt.kt:46)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.gradle.internal.KaptExecution.run(KaptWithoutKotlincTask.kt:336)
+           	at org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction.execute(KaptWithoutKotlincTask.kt:273)
+           	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+           	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+           	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+           	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:170)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+           	at org.gradle.internal.Factories$1.create(Factories.java:31)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+           	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+           	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+           	at java.base/java.lang.Thread.run(Thread.java:840)
+
+           [Hilt] Processing did not complete. See error above for details.
+         error: [Hilt]
+           Unsupported metadata version. Check that your Kotlin version is >= 1.0: java.lang.IllegalStateException: Unsupported metadata version. Check that your Kotlin version is >= 1.0
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.metadataOf(KotlinMetadata.java:200)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.from(KotlinMetadata.java:182)
+           	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataFactory.create(KotlinMetadataFactory.java:54)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectClass(KotlinMetadataUtil.java:102)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectOrCompanionObjectClass(KotlinMetadataUtil.java:119)
+           	at dagger.hilt.processor.internal.Processors.requiresModuleInstance(Processors.java:950)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processModule(AggregatedDepsProcessor.java:169)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processEach(AggregatedDepsProcessor.java:120)
+           	at dagger.hilt.processor.internal.BaseProcessor.process(BaseProcessor.java:195)
+           	at org.jetbrains.kotlin.kapt.base.incremental.IncrementalProcessor.process(incrementalProcessors.kt:88)
+           	at org.jetbrains.kotlin.kapt.base.ProcessorWrapper.process(annotationProcessing.kt:217)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:1023)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:939)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment$Round.run(JavacProcessingEnvironment.java:1267)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:1382)
+           	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:1234)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:98)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:37)
+           	at org.jetbrains.kotlin.kapt.base.Kapt.kapt(Kapt.kt:46)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.gradle.internal.KaptExecution.run(KaptWithoutKotlincTask.kt:336)
+           	at org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction.execute(KaptWithoutKotlincTask.kt:273)
+           	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+           	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+           	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+           	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:170)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+           	at org.gradle.internal.Factories$1.create(Factories.java:31)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+           	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+           	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+           	at java.base/java.lang.Thread.run(Thread.java:840)
+
+           [Hilt] Processing did not complete. See error above for details.
+         error: [Hilt]
+           Unsupported metadata version. Check that your Kotlin version is >= 1.0: java.lang.IllegalStateException: Unsupported metadata version. Check that your Kotlin version is >= 1.0
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.metadataOf(KotlinMetadata.java:200)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.from(KotlinMetadata.java:182)
+           	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataFactory.create(KotlinMetadataFactory.java:54)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectClass(KotlinMetadataUtil.java:102)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectOrCompanionObjectClass(KotlinMetadataUtil.java:119)
+           	at dagger.hilt.processor.internal.Processors.requiresModuleInstance(Processors.java:950)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processModule(AggregatedDepsProcessor.java:169)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processEach(AggregatedDepsProcessor.java:120)
+           	at dagger.hilt.processor.internal.BaseProcessor.process(BaseProcessor.java:195)
+           	at org.jetbrains.kotlin.kapt.base.incremental.IncrementalProcessor.process(incrementalProcessors.kt:88)
+           	at org.jetbrains.kotlin.kapt.base.ProcessorWrapper.process(annotationProcessing.kt:217)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:1023)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:939)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment$Round.run(JavacProcessingEnvironment.java:1267)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:1382)
+           	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:1234)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:98)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:37)
+           	at org.jetbrains.kotlin.kapt.base.Kapt.kapt(Kapt.kt:46)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.gradle.internal.KaptExecution.run(KaptWithoutKotlincTask.kt:336)
+           	at org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction.execute(KaptWithoutKotlincTask.kt:273)
+           	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+           	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+           	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+           	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:170)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+           	at org.gradle.internal.Factories$1.create(Factories.java:31)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+           	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+           	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+           	at java.base/java.lang.Thread.run(Thread.java:840)
+
+           [Hilt] Processing did not complete. See error above for details.
+         error: [Hilt]
+           Unsupported metadata version. Check that your Kotlin version is >= 1.0: java.lang.IllegalStateException: Unsupported metadata version. Check that your Kotlin version is >= 1.0
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.metadataOf(KotlinMetadata.java:200)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadata.from(KotlinMetadata.java:182)
+           	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataFactory.create(KotlinMetadataFactory.java:54)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectClass(KotlinMetadataUtil.java:102)
+           	at dagger.hilt.processor.internal.kotlin.KotlinMetadataUtil.isObjectOrCompanionObjectClass(KotlinMetadataUtil.java:119)
+           	at dagger.hilt.processor.internal.Processors.requiresModuleInstance(Processors.java:950)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processModule(AggregatedDepsProcessor.java:169)
+           	at dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsProcessor.processEach(AggregatedDepsProcessor.java:120)
+           	at dagger.hilt.processor.internal.BaseProcessor.process(BaseProcessor.java:195)
+           	at org.jetbrains.kotlin.kapt.base.incremental.IncrementalProcessor.process(incrementalProcessors.kt:88)
+           	at org.jetbrains.kotlin.kapt.base.ProcessorWrapper.process(annotationProcessing.kt:217)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.callProcessor(JavacProcessingEnvironment.java:1023)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.discoverAndRunProcs(JavacProcessingEnvironment.java:939)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment$Round.run(JavacProcessingEnvironment.java:1267)
+           	at jdk.compiler/com.sun.tools.javac.processing.JavacProcessingEnvironment.doProcessing(JavacProcessingEnvironment.java:1382)
+           	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.processAnnotations(JavaCompiler.java:1234)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:98)
+           	at org.jetbrains.kotlin.kapt.base.AnnotationProcessingKt.doAnnotationProcessing(annotationProcessing.kt:37)
+           	at org.jetbrains.kotlin.kapt.base.Kapt.kapt(Kapt.kt:46)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+           	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+           	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+           	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+           	at org.jetbrains.kotlin.gradle.internal.KaptExecution.run(KaptWithoutKotlincTask.kt:336)
+           	at org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction.execute(KaptWithoutKotlincTask.kt:273)
+           	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+           	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+           	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+           	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+           	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+           	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+           	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:170)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+           	at org.gradle.internal.Factories$1.create(Factories.java:31)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
+           	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+           	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+           	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+           	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+           	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+           	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+           	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+           	at java.base/java.lang.Thread.run(Thread.java:840)
+
+           [Hilt] Processing did not complete. See error above for details.
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Remindermodel.java:8: warning: There are multiple good constructors and Room will pick the no-arg constructor. You can use the @Ignore annotation to eliminate unwanted constructors.
+         public final class Remindermodel {
+                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:15: warning: There are multiple good constructors and Room will pick the no-arg constructor. You can use the @Ignore annotation to eliminate unwanted constructors.
+         public final class Conversationbin {
+                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:58: warning: The query returns some columns [id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.lang.Object gettredidfromemessageid(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:83: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallconversation();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Remindermodel.java:8: warning: There are multiple good constructors and Room will pick the no-arg constructor. You can use the @Ignore annotation to eliminate unwanted constructors.
+         public final class Remindermodel {
+                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:91: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getallconversationOnlyList();
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:95: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getallconversationunPrivacyOrnotList();
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:99: warning: The query returns some columns [id, catName, filterName, isDefaultCategory] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, catName, filterName, isDefaultCategory.
+             public abstract java.lang.Object getallTabOnlyList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:107: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallconversationunarchiv();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:111: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.paging.PagingSource<java.lang.Integer, com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getPagedConversations();
+                                                                                                                                                       ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:115: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getallconversationunarchivforcontact();
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:119: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallScheduleconversationu();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:123: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallconversationunarchivOrnot();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:127: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallconversationunPrivacyOrnot();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:15: warning: There are multiple good constructors and Room will pick the no-arg constructor. You can use the @Ignore annotation to eliminate unwanted constructors.
+         public final class Conversationbin {
+                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:131: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, draftmessage, messagetype, messageotp, groupName, CategoryName, customtimeuri, phoneNumber, snippet, title, photoUri, messageStatus, isbanneradshow, isnewmessagescroll, isonlyselectedthem, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, isarchived, ispinned, isnewmessage, isnumaric, read, usesCustomTitle, messageId, threadId, time, pinneddate, type, newMessageCount, themenumber.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin>> getalldeleteconversationun();
+                                                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:135: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getallconversationunblockOrnot();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:139: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getUserMessage(long tredid);
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:143: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, draftmessage, messagetype, messageotp, groupName, CategoryName, customtimeuri, phoneNumber, snippet, title, photoUri, messageStatus, isbanneradshow, isnewmessagescroll, isonlyselectedthem, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, isarchived, ispinned, isnewmessage, isnumaric, read, usesCustomTitle, messageId, threadId, time, pinneddate, type, newMessageCount, themenumber.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin>> getUserDeleteMessage(long tredid);
+                                                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:147: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getUserMessageListChack(long tredid);
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:151: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, draftmessage, messagetype, messageotp, groupName, CategoryName, customtimeuri, phoneNumber, snippet, title, photoUri, messageStatus, isbanneradshow, isnewmessagescroll, isonlyselectedthem, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, isarchived, ispinned, isnewmessage, isnumaric, read, usesCustomTitle, messageId, threadId, time, pinneddate, type, newMessageCount, themenumber.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin> getUserMessageRecyListChack(long tredid);
+                                                                                                                         ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:155: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, draftmessage, messagetype, messageotp, groupName, CategoryName, customtimeuri, phoneNumber, snippet, title, photoUri, messageStatus, isbanneradshow, isnewmessagescroll, isonlyselectedthem, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, isarchived, ispinned, isnewmessage, isnumaric, read, usesCustomTitle, messageId, threadId, time, pinneddate, type, newMessageCount, themenumber.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversationbin> getUserMessageRecyListChack(@org.jetbrains.annotations.NotNull()
+                                                                                                                         ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:160: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getUserMessageMobileListChack(@org.jetbrains.annotations.NotNull()
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:165: warning: The query returns some columns [id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.lang.Object getUserMessageList(long tredid, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:170: warning: The query returns some columns [id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.lang.Object getUserOTPMessageList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:176: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getuserpersonalMessasge();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:180: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract androidx.lifecycle.LiveData<java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> getuserunknownMessasge();
+                                                                                                                                                   ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:438: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> getnewmessagecount(@org.jetbrains.annotations.NotNull()
+                                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:526: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation getScheduledMessageWithId(long threadId, long messageId);
+                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:530: warning:  com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation has some fields [messagewithattachment] which are not returned by the query. If they are not supposed to be read from the result, you can mark them with @Ignore annotation. You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation getMessageWithId(long threadId, long messageId);
+                                                                                                      ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:550: warning: The query returns some columns [id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, date, read, title, photoUri, usesCustomTitle, phoneNumber, snippet, time, type, isnumaric, messageStatus, isnewmessage, newMessageCount, messageId, threadId, isarchived, ispinned, pinneddate, isblocknumber, isexpandmessageview, is_scheduled, isMessagefound, isPrivateChat, draftmessage, messagetype, messageotp, shownotification, messagetraslateshow, messagetraslationanimationshow, isgroupmessage, groupName, CategoryName, isnewmessagescroll, isonlyselectedthem, themenumber, customtimeuri, isbanneradshow.
+             public abstract java.lang.Object getisnewMessage(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:555: warning: The query returns some columns [id, remindertitle, reminderstartdate, reminderenddate, selected] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, remindertitle, reminderstartdate, reminderenddate, selected.
+             public abstract java.lang.Object getRemainderMessage(long id, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/GalleryDAO.java:28: warning: The query returns some columns [id, foldername, folderimgcount, folderthumimage, folderpath] which are not used by java.lang.Object. You can use @ColumnInfo annotation on the fields to specify the mapping. You can annotate the method with @RewriteQueriesToDropUnusedColumns to direct Room to rewrite your query to avoid fetching unused columns.  You can suppress this warning by annotating the method with @SuppressWarnings(RoomWarnings.CURSOR_MISMATCH). Columns returned by the query: id, foldername, folderimgcount, folderthumimage, folderpath.
+             public abstract java.lang.Object getallTFolderList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Remindermodel.java:10: error: Cannot find setter for field.
+             private final int id = 0;
+                               ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:17: error: Cannot find setter for field.
+             private final int id = 0;
+                               ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:51: error: Cannot find setter for field.
+             private boolean is_scheduled;
+                             ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:63: error: Cannot find setter for field.
+             private final java.lang.Long threadId = null;
+                                          ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:52: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object updateremaindertitle(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:54: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:52: error: Unused parameter: $completion
+             public abstract java.lang.Object updateremaindertitle(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:58: error: Not sure how to convert a Cursor to this method's return type (java.lang.Object).
+             public abstract java.lang.Object gettredidfromemessageid(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:59: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation> $completion);
+                                                                                                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:58: error: Unused parameter: $completion
+             public abstract java.lang.Object gettredidfromemessageid(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:63: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteAll(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:64: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:63: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteAll(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:68: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deletemessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:69: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:68: error: Unused parameter: $completion
+             public abstract java.lang.Object deletemessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:73: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removedeletemessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:74: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:73: error: Unused parameter: $completion
+             public abstract java.lang.Object removedeletemessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:78: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removeTraslatedMessagemessage(long threadId1, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:79: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:78: error: Unused parameter: $completion
+             public abstract java.lang.Object removeTraslatedMessagemessage(long threadId1, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Remindermodel.java:10: error: Cannot find setter for field.
+             private final int id = 0;
+                               ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:99: error: Not sure how to convert a Cursor to this method's return type (java.lang.Object).
+             public abstract java.lang.Object getallTabOnlyList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:100: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Category>> $completion);
+                                                                                                                                          ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:99: error: Unused parameter: $completion
+             public abstract java.lang.Object getallTabOnlyList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:17: error: Cannot find setter for field.
+             private final int id = 0;
+                               ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:51: error: Cannot find setter for field.
+             private boolean is_scheduled;
+                             ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/modelClass/Conversationbin.java:63: error: Cannot find setter for field.
+             private final java.lang.Long threadId = null;
+                                          ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:165: error: Not sure how to convert a Cursor to this method's return type (java.lang.Object).
+             public abstract java.lang.Object getUserMessageList(long tredid, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:166: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> $completion);
+                                                                                                                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:165: error: Unused parameter: $completion
+             public abstract java.lang.Object getUserMessageList(long tredid, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:170: error: Not sure how to convert a Cursor to this method's return type (java.lang.Object).
+             public abstract java.lang.Object getUserOTPMessageList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:172: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super java.util.List<com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation>> $completion);
+                                                                                                                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:170: error: Unused parameter: $completion
+             public abstract java.lang.Object getUserOTPMessageList(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:208: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteDataByCatName(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:210: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:208: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteDataByCatName(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:236: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super java.lang.Integer> $completion);
+                                                                       ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:235: error: Unused parameter: $completion
+             public abstract java.lang.Object isarchivornot(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:241: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super java.lang.Integer> $completion);
+                                                                       ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:240: error: Unused parameter: $completion
+             public abstract java.lang.Object isnumberblockornot(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:245: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteDataByCatNumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:247: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:245: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteDataByCatNumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:257: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removeNumberToStar(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:259: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:257: error: Unused parameter: $completion
+             public abstract java.lang.Object removeNumberToStar(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:263: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteRemainder(int idin, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:264: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:263: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteRemainder(int idin, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:268: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteblocknumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:270: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:268: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteblocknumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:274: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object archivConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:276: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:274: error: Unused parameter: $completion
+             public abstract java.lang.Object archivConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:280: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object PrivacyConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:282: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:280: error: Unused parameter: $completion
+             public abstract java.lang.Object PrivacyConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:286: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object UpdateMessageTitle(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:288: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:286: error: Unused parameter: $completion
+             public abstract java.lang.Object UpdateMessageTitle(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:292: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object addnumbertoblock(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:293: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:292: error: Unused parameter: $completion
+             public abstract java.lang.Object addnumbertoblock(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:297: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object addmessagefound(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:298: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:297: error: Unused parameter: $completion
+             public abstract java.lang.Object addmessagefound(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:302: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removemessagefound(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:303: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:302: error: Unused parameter: $completion
+             public abstract java.lang.Object removemessagefound(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:310: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removenumbertoblock(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:311: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:310: error: Unused parameter: $completion
+             public abstract java.lang.Object removenumbertoblock(long threadId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:315: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removearchivConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:317: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:315: error: Unused parameter: $completion
+             public abstract java.lang.Object removearchivConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:321: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object addnotshownotification(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:323: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:321: error: Unused parameter: $completion
+             public abstract java.lang.Object addnotshownotification(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:327: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removenotshownotification(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:329: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:327: error: Unused parameter: $completion
+             public abstract java.lang.Object removenotshownotification(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:333: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object removePrivacyConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:335: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:333: error: Unused parameter: $completion
+             public abstract java.lang.Object removePrivacyConversation(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:339: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object updateMessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:341: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:339: error: Unused parameter: $completion
+             public abstract java.lang.Object updateMessage(long messageId, @org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:376: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object deleteDataByStarNumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:378: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:376: error: Unused parameter: $completion
+             public abstract java.lang.Object deleteDataByStarNumber(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:382: error: To use RxJava2 features, you must add `rxjava2` artifact from Room as a dependency. androidx.room:room-rxjava2:<version>
+             public abstract java.lang.Object updatemessagestatus(@org.jetbrains.annotations.NotNull()
+                                              ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:384: error: Query method parameters should either be a type that can be converted into a database column or a List / Array that contains such type. You can consider adding a Type Adapter for this.
+             kotlin.coroutines.Continuation<? super kotlin.Unit> $completion);
+                                                                 ^
+         /Volumes/Extra/backup/Messages/MessagerApp (1.1.8) no ui change/app/build/tmp/kapt3/stubs/release/com/messenger/phone/number/text/sms/service/apps/DAOClass/MessageDAO.java:382: error: Unused parameter: $completion
+             public abstract java.lang.Object updatemessagestatus(@org.jetbrains.annotations.NotNull()
+                                              ^
+
+         > Task :app:kaptReleaseKotlin FAILED
+
+         Execution failed for task ':app:kaptReleaseKotlin'.
+         > A failure occurred while executing org.jetbrains.kotlin.gradle.internal.KaptWithoutKotlincTask$KaptExecutionWorkAction
+            > java.lang.reflect.InvocationTargetException (no error message)
+
+"
+
+issue 2:"> Task :app:checkReleaseDuplicateClasses FAILED
+         Execution failed for task ':app:checkReleaseDuplicateClasses'.
+         > A failure occurred while executing com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable
+            > Duplicate class kotlinx.android.parcel.IgnoredOnParcel found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.Parceler found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.Parceler$DefaultImpls found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.Parcelize found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.RawValue found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.TypeParceler found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.TypeParceler$Container found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+              Duplicate class kotlinx.android.parcel.WriteWith found in modules jetified-kotlin-android-extensions-runtime-1.7.10 (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.10) and jetified-kotlin-parcelize-runtime-2.2.21 (org.jetbrains.kotlin:kotlin-parcelize-runtime:2.2.21)
+
+              Go to the documentation to learn how to Fix dependency resolution errors.
+
+
+
+"

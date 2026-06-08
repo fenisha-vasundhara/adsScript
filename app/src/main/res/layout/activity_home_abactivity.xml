@@ -1,0 +1,2302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="adapter"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.MainMassageAdapter" />
+
+
+        <variable
+            name="adapterTab"
+            type="com.messenger.phone.number.text.sms.service.apps.adapter.Tab_AB_Adapter" />
+
+        <variable
+            name="nomessagefoundchack"
+            type="Boolean" />
+
+        <variable
+            name="notdefault"
+            type="Boolean" />
+
+
+        <variable
+            name="ispro"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        setchatthemecolorforHomeScreenBg="@{0}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeABActivity">
+
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            setchatthemecolorformainscreen="@{0}"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/vAnd15StatusBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+            <com.messenger.phone.number.text.sms.service.apps.helperClass.FullDrawerLayout
+                android:id="@+id/ic_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/main_coordinator"
+                    setchatthemecolorforHomeScreenBg="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:visibility="visible">
+
+                    <com.messenger.phone.number.text.sms.service.apps.MySearchMenuABBCP
+                        android:id="@+id/main_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.messenger.phone.number.text.sms.service.apps.MySearchMenuABBCP>
+
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/conversations_progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        android:visibility="gone"
+                        app:hideAnimationBehavior="outward"
+                        app:showAnimationBehavior="inward"
+                        app:showDelay="250"
+                        tools:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/main_nested_scrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:scrollbars="none"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                        <include
+                            android:id="@+id/smart_caller"
+                            layout="@layout/layout_smart_caller_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/smart_caller"
+                            android:adapter="@{adapterTab}"
+                            android:nestedScrollingEnabled="true"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <LinearLayout
+                            android:id="@+id/loadadAbcotenar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tabLayout"
+                            android:orientation="vertical">
+
+
+                            <FrameLayout
+                                android:id="@+id/loadadAbnew"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_below="@+id/loadadAbcotenar"
+                            android:background="@drawable/line_new"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                        </View>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/mainlayout_ad"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/view4">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/moreOPtion"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <Button
+                                    android:id="@+id/Category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Category"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Star"
+                                    app:layout_constraintHorizontal_bias="0.93"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </Button>
+
+                                <ImageView
+                                    android:id="@+id/Star"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:src="@drawable/stock_star_button"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.4"
+                                    app:layout_constraintHorizontal_bias="0.945"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/search_message_bg2"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:background="@drawable/home_screen_search_rectangle"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.055"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="gone">
+
+
+                                <ImageView
+                                    android:id="@+id/search_button_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/search_button_3"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.05">
+
+                                </ImageView>
+
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/SearchContact"
+                                    setTextSizeFullApp="@{textsizechagefor10}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:background="@null"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:text="@string/search"
+                                    android:textColor="#D0D0D0"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/search_button_2"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <ImageView
+                                android:id="@+id/sub"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:src="@drawable/ic_premium_new"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/search_bar_con"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toStartOf="@+id/search_contact"
+                                app:layout_constraintHeight_percent="0.038"
+                                app:layout_constraintTop_toTopOf="@+id/search_bar_con"
+                                tools:layout_editor_absoluteX="366dp">
+
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/search_contact"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:src="@drawable/share_icon"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/search_bar_con"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.035"
+                                app:layout_constraintTop_toTopOf="@+id/search_bar_con">
+
+                            </ImageView>
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/search_bar_con"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:background="@drawable/home_screen_search_rectangle"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toStartOf="@+id/sub"
+                                app:layout_constraintHeight_percent="0.06"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/moreOPtion">
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <ProgressBar
+                                android:id="@+id/messageloading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:indeterminateTint="@color/appcolor"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ProgressBar>
+
+
+                            <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+                                android:id="@+id/conversations_fastscroller"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/loadad"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView
+                                    android:id="@+id/allmassagerecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:adapter="@{adapter}"
+                                    android:clipToPadding="false"
+                                    android:layoutAnimation="@anim/layout_animation"
+                                    android:orientation="vertical"
+                                    android:overScrollMode="ifContentScrolls"
+                                    android:scrollbars="none"
+                                    app:layoutManager=".recyclerviewCustom.MyLinearLayoutManager">
+
+                                </com.messenger.phone.number.text.sms.service.apps.recyclerviewCustom.MyRecyclerView>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/defaultlayer"
+                                    setchatthemecolorforHomeScreenBg="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone"
+                                    tools:visibility="visible">
+
+                                    <ImageView
+                                        android:id="@+id/imageView19"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintBottom_toTopOf="@+id/textView32"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.4"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.44"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView32"
+                                        setTextSizeFullApp="@{textsizechagefor13}"
+                                        setperColor="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:fontFamily="@font/opensansregular"
+                                        android:singleLine="true"
+                                        android:text="@string/For_sending_and_receiving"
+                                        app:layout_constraintBottom_toTopOf="@+id/textView33"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/imageView19"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView33"
+                                        setTextSizeFullApp="@{textsizechagefor13}"
+                                        setperColor="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/opensanssemibold"
+                                        android:maxLength="24"
+                                        android:singleLine="true"
+                                        android:text="@string/Make_it_your_default_SMS"
+                                        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+                                        app:layout_constraintEnd_toStartOf="@+id/textView44"
+                                        app:layout_constraintHorizontal_chainStyle="packed"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/linearLayout8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView44"
+                                        app:layout_constraintStart_toStartOf="@+id/textView33"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView33"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                        <View
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="@dimen/_5sdp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/ic_round_black"
+                                            android:backgroundTint="#8B8C8F" />
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            setTextSizeFullApp="@{textsizechagefor13}"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/opensansregular"
+                                            android:singleLine="true"
+                                            android:text="@string/Easily_reply_with_a_tap"
+                                            android:textColor="#8B8C8F" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearLayout9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintBottom_toTopOf="@+id/setDefault"
+                                        app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                                        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+                                        <View
+                                            android:layout_width="@dimen/_5sdp"
+                                            android:layout_height="@dimen/_5sdp"
+                                            android:layout_gravity="center"
+                                            android:background="@drawable/ic_round_black"
+                                            android:backgroundTint="#8B8C8F"
+                                            android:gravity="center" />
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            setTextSizeFullApp="@{textsizechagefor13}"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/opensansregular"
+                                            android:singleLine="true"
+                                            android:text="@string/Secure_messages_for_you"
+                                            android:textColor="#8B8C8F" />
+
+                                    </LinearLayout>
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/setDefault"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_45sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        app:cardBackgroundColor="@color/comman_color"
+                                        app:cardCornerRadius="@dimen/_70sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+                                        app:layout_constraintWidth_percent="0.85">
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/btntxt"
+                                            setTextSizeFullApp="@{textsizechagefor15}"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:ellipsize="marquee"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:marqueeRepeatLimit="marquee_forever"
+                                            android:padding="10dp"
+                                            android:scrollHorizontally="true"
+                                            android:singleLine="true"
+                                            android:text="@string/Set_as_Default_SMS_app"
+                                            android:textColor="@color/white"
+                                            app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/checkBox"
+                                            app:layout_constraintTop_toTopOf="@+id/checkBox">
+
+                                         </com.google.android.material.textview.MaterialTextView>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/setDefault_help"
+                                        setTextSizeFullApp="@{textsizechagefor10}"
+                                        setperColor="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:text="@string/having_trouble_setting_as_default"
+                                        app:layout_constraintEnd_toEndOf="@+id/setDefault"
+                                        app:layout_constraintStart_toStartOf="@+id/setDefault"
+                                        app:layout_constraintTop_toBottomOf="@+id/setDefault">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/setDefault_click"
+                                        setTextSizeFullApp="@{textsizechagefor10}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:text="@string/click_here_for_help"
+                                        android:textColor="@color/appcolor"
+                                        app:layout_constraintEnd_toEndOf="@+id/setDefault_help"
+                                        app:layout_constraintStart_toStartOf="@+id/setDefault_help"
+                                        app:layout_constraintTop_toBottomOf="@+id/setDefault_help">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView44"
+                                        setTextSizeFullApp="@{textsizechagefor13}"
+                                        setperColor="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_3sdp"
+                                        android:fontFamily="@font/opensansregular"
+                                        android:singleLine="true"
+                                        android:text="@string/app_chack"
+                                        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/textView33"
+                                        app:layout_constraintTop_toTopOf="@+id/textView33">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <FrameLayout
+                                        android:id="@+id/serchfragmentload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        tools:layout_editor_absoluteX="0dp">
+
+                                    </FrameLayout>
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
+
+                            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                                android:id="@+id/newmessage"
+                                setTextSizeFullApp="@{textsizechagefor15}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|end"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:backgroundTint="@color/appcolor"
+                                android:text="@string/Chat"
+                                android:textColor="@color/white"
+                                android:visibility="gone"
+                                app:icon="@drawable/flot_icon"
+                                app:iconSize="@dimen/_20sdp"
+                                app:iconTint="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/loadad"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+
+                            </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/mainpro"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toTopOf="@+id/loadad">
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/messageper"
+                                    fullappfontstylesemibold="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor13}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_3sdp"
+                                    android:text="@string/sync_messages"
+                                    android:textColor="@color/appcolor"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toTopOf="@+id/messageloadinglottie2"
+                                    app:layout_constraintStart_toStartOf="@+id/messageloadinglottie2"
+                                    tools:visibility="visible">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/messageperper"
+                                    fullappfontstylesemibold="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor13}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(1%)"
+                                    android:textColor="@color/appcolor"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="@+id/messageper"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/messageper"
+                                    tools:visibility="visible">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/messageloadingloti"
+                                    android:layout_width="@dimen/_50sdp"
+                                    android:layout_height="0dp"
+                                    android:padding="@dimen/_5sdp"
+                                    android:scaleType="centerCrop"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="@+id/messageper"
+                                    app:layout_constraintHeight_percent="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/messageper"
+                                    app:layout_constraintTop_toTopOf="@+id/messageper"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    app:lottie_rawRes="@raw/messagetraslate"
+                                    tools:visibility="visible">
+
+                                </com.airbnb.lottie.LottieAnimationView>
+
+                                <com.google.android.material.progressindicator.LinearProgressIndicator
+                                    android:id="@+id/messageloadinglottie2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="bottom"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintVertical_bias="0.95"
+                                    app:layout_constraintWidth_percent="0.88"
+                                    app:trackColor="#4DE7E7E7"
+                                    app:trackCornerRadius="@dimen/_10sdp"
+                                    app:trackThickness="@dimen/_5sdp"
+                                    tools:visibility="visible">
+
+                                </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/loadad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toTopOf="@+id/constAdViewBottom"
+                                app:layout_constraintTop_toBottomOf="@+id/conversations_fastscroller"
+                                tools:visibility="gone">
+
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/notistxt"
+                                    setTextSizeFullApp="@{textsizechagefor13}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:fontFamily="@font/lato_regular"
+                                    android:text="@string/an_update_has_just_been_downloaded"
+                                    android:textColor="@color/black2"
+                                    app:layout_constraintBottom_toTopOf="@+id/progress_bar_ab"
+                                    app:layout_constraintEnd_toStartOf="@+id/clicktoupdateapp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+
+                                <Button
+                                    android:id="@+id/clicktoupdateapp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/update"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintBottom_toTopOf="@+id/progress_bar_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </Button>
+
+                                <com.google.android.material.progressindicator.LinearProgressIndicator
+                                    android:id="@+id/progress_bar_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:indeterminate="true"
+                                    app:hideAnimationBehavior="outward"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:showAnimationBehavior="inward"
+                                    app:showDelay="250">
+
+                                </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <!--AdBom-->
+
+                            <FrameLayout
+                                android:id="@+id/adload"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toTopOf="@+id/offer_time_contenar"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:layout_height="@dimen/_50sdp"
+                                tools:visibility="visible">
+
+                            </FrameLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/offer_time_contenar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/timer_background_image_new"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toTopOf="@+id/smart_caller_bottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/shimer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:shimmer_auto_start="true"
+                                    app:shimmer_duration="2000"
+                                    app:shimmer_fixed_width="@dimen/_160sdp"
+                                    app:shimmer_highlight_color="@color/white">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/shimmer_layout">
+
+                                    </LinearLayout>
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView17"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:singleLine="true"
+                                    android:text="@string/limited_reward"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@+id/textView18"
+                                    app:layout_constraintEnd_toStartOf="@+id/minutes_contenar"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                                 <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView18"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:singleLine="true"
+                                    android:text="@string/few_mins_left"
+                                    android:textColor="#E7DAFA"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/textView17"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+                                 </com.google.android.material.textview.MaterialTextView>
+
+                                <LinearLayout
+                                    android:id="@+id/minutes_contenar"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:background="@drawable/perdaybg_new"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/seconds_contenar"
+                                    app:layout_constraintStart_toEndOf="@+id/textView17"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/minutes_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_weight="1"
+                                        android:text="9"
+                                        android:textColor="#61199A"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:textStyle="bold">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/min"
+                                        android:textColor="#61199A"
+                                        android:textSize="@dimen/_9sdp">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/seconds_contenar"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:layout_marginEnd="@dimen/_25sdp"
+                                    android:background="@drawable/perdaybg_new"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                                    app:layout_constraintHeight_percent="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/minutes_contenar"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.21">
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/seconds_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:layout_weight="1"
+                                        android:text="60"
+                                        android:textColor="#61199A"
+                                        android:textSize="@dimen/_12sdp"
+                                        android:textStyle="bold">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_3sdp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/sec"
+                                        android:textColor="#61199A"
+                                        android:textSize="@dimen/_9sdp">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    app:cardBackgroundColor="#FAC636"
+                                    app:cardCornerRadius="@dimen/_5sdp"
+                                    app:cardElevation="@dimen/_10sdp"
+                                    app:cardPreventCornerOverlap="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/seconds_contenar"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:layout_marginBottom="@dimen/_5sdp"
+                                            android:gravity="center"
+                                            android:text="@string/reveal"
+                                            android:textColor="@color/black2"
+                                            android:textSize="@dimen/_13sdp"
+                                            android:textStyle="bold"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                         </com.google.android.material.textview.MaterialTextView>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <include
+                                android:id="@+id/smart_caller_bottom"
+                                layout="@layout/layout_smart_caller_bottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toTopOf="@+id/constAdViewBottom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/offer_time_contenar" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/constAdViewBottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintVertical_bias="1">
+
+                                <com.facebook.shimmer.ShimmerFrameLayout
+                                    android:id="@+id/bannerShimmerBottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <FrameLayout
+                                        android:id="@+id/shimmerContainer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+
+                                    </FrameLayout>
+                                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/frameAdBottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:background="@android:color/transparent"
+                                    android:paddingVertical="0.7dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </RelativeLayout>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nomessagefound"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/No_Message_Found"
+                        android:textColor="#6A929191"
+                        android:visibility="@{nomessagefoundchack ? notdefault ? View.GONE : View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/messageloadinglottie"
+                        android:layout_width="@dimen/_300sdp"
+                        android:layout_height="@dimen/_300sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_80sdp"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/message_loading_lotti"
+                        tools:visibility="gone">
+
+                    </com.airbnb.lottie.LottieAnimationView>
+
+
+                    <LinearLayout
+                        android:id="@+id/contactPhotoBig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/appdefaultlottie"
+                            android:layout_width="@dimen/_300sdp"
+                            android:layout_height="@dimen/_300sdp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/demo333">
+
+                        </com.airbnb.lottie.LottieAnimationView>
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_back"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/close"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nav_drawer"
+                    setchatthemecolorforHomeScreenBg="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:orientation="vertical"
+                    tools:background="@color/white"
+                        android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/top_message_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_115sdp"
+                        android:background="#E8F1FE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView39"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Messages : SMS &amp;\nPrivate Chat"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.11">
+
+                    </androidx.constraintlayout.widget.Guideline>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.179">
+
+                    </androidx.constraintlayout.widget.Guideline>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.8">
+
+                    </androidx.constraintlayout.widget.Guideline>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.21">
+
+                    </androidx.constraintlayout.widget.Guideline>
+
+                    <ImageView
+                        android:id="@+id/imageView41"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_17sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/drawer_ab_navigation"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_1"
+                        setTextSizeFullApp="@{textsizechagefor13}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_60sdp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:fontFamily="@font/lato_bold"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/share_with_friends"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/txt_2"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_4"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline_3"
+                        app:layout_constraintTop_toTopOf="@+id/imageView41"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:fontFamily="@font/lato_regular"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/invite_friends_with_a_tap"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView41"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline_4"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@+id/guideline_3"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_1">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:scrollbars="none"
+                        app:layout_constraintBottom_toTopOf="@+id/Setting_btn_card"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Language_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/Language_archive_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_language_btn"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/ic_fl_language_btn"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView40"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Language_nre"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_language_btn"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_language_btn"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_language_btn">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/card1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginEnd="@dimen/_15sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp"
+                                        app:cardElevation="0dp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/textView40"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.4"
+                                        app:layout_constraintTop_toTopOf="@+id/textView40"
+                                        app:layout_constraintWidth_percent="0.13">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                             <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/app_language_txt"
+                                                setTextSizeFullApp="@{textsizechagefor8}"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:layout_marginEnd="@dimen/_10sdp"
+                                                android:text=""
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/appcolor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/Color_ThemeimageView19"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                             </com.google.android.material.textview.MaterialTextView>
+
+                                            <ImageView
+                                                android:id="@+id/Color_ThemeimageView19"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:layout_marginEnd="@dimen/_3sdp"
+                                                android:src="@drawable/block_btn_fl"
+                                                app:layout_constraintBottom_toBottomOf="@+id/app_language_txt"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintHeight_percent="0.3"
+                                                app:layout_constraintTop_toTopOf="@+id/app_language_txt"
+                                                app:layout_constraintWidth_percent="0.1">
+
+                                            </ImageView>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view11"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Conversation_Swip_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/Language_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/Conversation_Swip_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintBottom_toBottomOf="@+id/view13"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_Conversation_Swip_txt"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/conersation_swip_motion_btn_new"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/swipe_txt"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Coversation_swipe_motion"
+                                        app:layout_constraintBottom_toTopOf="@+id/info6"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_Conversation_Swip_txt"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/info6"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor8}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:gravity="end"
+                                        android:includeFontPadding="false"
+                                        android:singleLine="true"
+                                        android:text="@string/info6"
+                                        android:textColor="#8D8E8E"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0"
+                                        app:layout_constraintStart_toStartOf="@+id/swipe_txt"
+                                        app:layout_constraintTop_toBottomOf="@+id/swipe_txt">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <ImageView
+                                        android:id="@+id/swipe_con_premium"
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:src="@drawable/ic_message_premium_btn"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.08"
+                                        tools:visibility="gone">
+
+                                    </ImageView>
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginEnd="@dimen/_15sdp"
+                                        android:visibility="gone"
+                                        app:cardBackgroundColor="#E9EFF4"
+                                        app:cardCornerRadius="@dimen/_5sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.4"
+                                        app:layout_constraintHorizontal_bias="0.925"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.13">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                             <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/Conversation_Swip_user_count"
+                                                setTextSizeFullApp="@{textsizechagefor8}"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:layout_marginEnd="@dimen/_10sdp"
+                                                android:text="@string/Two_Conversation"
+                                                android:textColor="@color/black2"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/Conversation_SwipmageView17"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                             </com.google.android.material.textview.MaterialTextView>
+
+                                            <ImageView
+                                                android:id="@+id/Conversation_SwipmageView17"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:layout_marginEnd="@dimen/_3sdp"
+                                                android:src="@drawable/block_btn_fl"
+                                                app:layout_constraintBottom_toBottomOf="@+id/Conversation_Swip_user_count"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintHeight_percent="0.3"
+                                                app:layout_constraintTop_toTopOf="@+id/Conversation_Swip_user_count"
+                                                app:layout_constraintWidth_percent="0.1">
+
+                                            </ImageView>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view13"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/conversation_Signature_btn_card_show_mesage_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.055"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/schedule_message_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/conversation_other_Signature_btn_show_mesage_count"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:transitionName="shared_element_transition_name"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <com.google.android.material.materialswitch.MaterialSwitch
+                                            android:id="@+id/In_App_Signature_show_mesage_count"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="@dimen/_15sdp"
+                                            android:checked="true"
+                                            android:scaleX="0.7"
+                                            android:scaleY="0.7"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:thumbTint="@color/white"
+                                            app:trackTint="@color/switch_track_color_selector" />
+
+                                        <ImageView
+                                            android:id="@+id/ic_fl_Signature_Swip_txt"
+                                            setchatthemecolorTintImfullappforrecyler="@{0}"
+                                            android:layout_width="@dimen/_18sdp"
+                                            android:layout_height="@dimen/_18sdp"
+                                            android:layout_marginStart="@dimen/_15sdp"
+                                            android:src="@drawable/signatior_btn_new"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintDimensionRatio="1:1"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                        </ImageView>
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/In_Signature_show_mesage_count"
+                                            fullappfontstyleregular="@{0}"
+                                            setTextSizeFullApp="@{textsizechagefor15}"
+                                            setchatthemecolorTintTxtFullapp="@{0}"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_15sdp"
+                                            android:includeFontPadding="false"
+                                            android:text="@string/Signature"
+                                            app:layout_constraintBottom_toTopOf="@+id/info1"
+                                            app:layout_constraintStart_toEndOf="@+id/ic_fl_Signature_Swip_txt"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintVertical_chainStyle="packed">
+
+                                         </com.google.android.material.textview.MaterialTextView>
+
+                                         <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/info1"
+                                            fullappfontstyleregular="@{0}"
+                                            setTextSizeFullApp="@{textsizechagefor8}"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_1sdp"
+                                            android:gravity="start"
+                                            android:includeFontPadding="false"
+                                            android:layoutDirection="locale"
+                                            android:singleLine="true"
+                                            android:text="@string/info1"
+                                            android:textAlignment="viewStart"
+                                            android:textColor="#8D8E8E"
+                                            android:visibility="gone"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/In_App_Signature_show_mesage_count"
+                                            app:layout_constraintHorizontal_bias="0"
+                                            app:layout_constraintStart_toStartOf="@+id/In_Signature_show_mesage_count"
+                                            app:layout_constraintTop_toBottomOf="@+id/In_Signature_show_mesage_count">
+
+                                         </com.google.android.material.textview.MaterialTextView>
+
+                                        <ImageView
+                                            android:id="@+id/signature_con_premium"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_20sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:src="@drawable/ic_message_premium_btn"
+                                            android:visibility="gone"
+                                            app:layout_constraintBottom_toTopOf="@+id/info1"
+                                            app:layout_constraintDimensionRatio="1:1"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintWidth_percent="0.08"
+                                            tools:visibility="gone">
+
+                                        </ImageView>
+
+                                        <ImageView
+                                            android:id="@+id/signature_not_show"
+                                            android:layout_width="@dimen/_23ssp"
+                                            android:layout_height="@dimen/_23ssp"
+                                            android:layout_marginStart="@dimen/_5ssp"
+                                            android:src="@drawable/baseline_arrow_drop_down_24"
+                                            android:visibility="gone"
+                                            app:layout_constraintBottom_toBottomOf="@+id/In_Signature_show_mesage_count"
+                                            app:layout_constraintStart_toEndOf="@+id/signature_con_premium"
+                                            app:layout_constraintTop_toTopOf="@+id/In_Signature_show_mesage_count">
+
+                                        </ImageView>
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/signature_not"
+                                        fullappfontstyleregular="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5ssp"
+                                        android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                                        android:textColor="@color/black2"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/conversation_other_Signature_btn_show_mesage_count">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view500"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/schedule_message_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/RecycleBin_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/schedule_message_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/schedule_message_imageView16"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/schedule_menu_btn"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView20"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Scheduled_Message"
+                                        app:layout_constraintBottom_toBottomOf="@+id/schedule_message_imageView16"
+                                        app:layout_constraintStart_toEndOf="@+id/schedule_message_imageView16"
+                                        app:layout_constraintTop_toTopOf="@+id/schedule_message_imageView16">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <ImageView
+                                        android:id="@+id/schedule_premium"
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:src="@drawable/ic_message_premium_btn"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.08"
+                                        tools:visibility="gone">
+
+                                    </ImageView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view501"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/backup_and_restore_btn_card_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/conversation_Signature_btn_card_show_mesage_count">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/backup_and_restore_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/backup_and_restore_imageView16"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/ic_fl_backup_btn"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/textView19"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:fontFamily="@font/lato_regular"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Backup_Restore"
+                                        app:layout_constraintBottom_toBottomOf="@+id/backup_and_restore_imageView16"
+                                        app:layout_constraintStart_toEndOf="@+id/backup_and_restore_imageView16"
+                                        app:layout_constraintTop_toTopOf="@+id/backup_and_restore_imageView16">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <ImageView
+                                        android:id="@+id/backup_premium"
+                                        android:layout_width="@dimen/_20sdp"
+                                        android:layout_height="@dimen/_20sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:src="@drawable/ic_message_premium_btn"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.08"
+                                        tools:visibility="gone">
+
+                                    </ImageView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view502"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/preandsec_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/backup_and_restore_btn_card_new">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/preandsec_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView16"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/priandsecbtn"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/txt44"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:fontFamily="@font/lato_regular"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Privacy_and_security"
+                                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                        app:layout_constraintTop_toTopOf="@+id/imageView16">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view503"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Color_Theme_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/Conversation_Swip_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/Color_Theme_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_Color_Theme_txt"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/color_theme_btn_new"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/txt45"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/theme_mode"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Color_Theme_txt"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_Color_Theme_txt"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_Color_Theme_txt">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/theme_change"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_15sdp"
+                                        android:checked="true"
+                                        android:scaleX="0.7"
+                                        android:scaleY="0.7"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:thumbTint="@color/white"
+                                        app:trackTint="@color/switch_track_color_selector" />
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/card2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_marginEnd="@dimen/_15sdp"
+                                        android:visibility="gone"
+                                        app:cardCornerRadius="@dimen/_5sdp"
+                                        app:cardElevation="0dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHeight_percent="0.4"
+                                        app:layout_constraintHorizontal_bias="0.925"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.13">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                             <com.google.android.material.textview.MaterialTextView
+                                                android:id="@+id/Color_Theme_user_count"
+                                                setTextSizeFullApp="@{textsizechagefor8}"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:layout_marginEnd="@dimen/_10sdp"
+                                                android:text="@string/Two_Conversation"
+                                                android:textAllCaps="true"
+                                                android:textColor="@color/appcolor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/Color_ThemeimageView17"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent">
+
+                                             </com.google.android.material.textview.MaterialTextView>
+
+                                            <ImageView
+                                                android:id="@+id/Color_ThemeimageView17"
+                                                android:layout_width="0dp"
+                                                android:layout_height="0dp"
+                                                android:layout_marginEnd="@dimen/_3sdp"
+                                                android:src="@drawable/block_btn_fl"
+                                                app:layout_constraintBottom_toBottomOf="@+id/Color_Theme_user_count"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintHeight_percent="0.3"
+                                                app:layout_constraintTop_toTopOf="@+id/Color_Theme_user_count"
+                                                app:layout_constraintWidth_percent="0.1">
+
+                                            </ImageView>
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view504"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Font_Size_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/Color_Theme_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/Font_Size_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_Font_Size_txt"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/setting_message_size"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/Font_Size"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/font_size_new"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Font_Size_txt"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_Font_Size_txt"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_Font_Size_txt">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view505"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/RecycleBin_btn_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardBackgroundColor="#00000000"
+                                app:cardCornerRadius="@dimen/_5sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/Font_Size_btn_card">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/RecycleBi_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.1"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_RecycleBi_txt"
+                                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                                        android:layout_width="@dimen/_18sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/recylerbin_button"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                     <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/txt47"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        setchatthemecolorTintTxtFullapp="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/recycle_bin"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_RecycleBi_txt"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_RecycleBi_txt"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_RecycleBi_txt">
+
+                                     </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <View
+                                    android:id="@+id/view506"
+                                    setHomeViewBgColor="@{0}"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent">
+
+                                </View>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </ScrollView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Setting_btn_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="#00000000"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Setting_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.1"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/ic_fl_Setting_btn"
+                                setchatthemecolorTintImfullappforrecyler="@{0}"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/settings_new_ab_image"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ImageView>
+
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textView40Setting"
+                                setTextSizeFullApp="@{textsizechagefor15}"
+                                setchatthemecolorTintTxtFullapp="@{0}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:fontFamily="@font/lato_bold"
+                                android:includeFontPadding="false"
+                                android:text="@string/settingsnew"
+                                app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Setting_btn"
+                                app:layout_constraintStart_toEndOf="@+id/ic_fl_Setting_btn"
+                                app:layout_constraintTop_toTopOf="@+id/ic_fl_Setting_btn">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/ic_fl_Setting_btn_2"
+                                setchatthemecolorTintImfullappforrecyler="@{0}"
+                                android:layout_width="@dimen/_18sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:src="@drawable/ic_fl_setting_btn_next"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView40Setting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView40Setting">
+
+                            </ImageView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginStart="0dp"
+                        app:iconSize="@dimen/mf_appbar_back_icon"      android:layout_marginBottom="@dimen/_19sdp"
+                        app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="?attr/colorOnSurface"
+                        setchatthemecolorTintImfullappforrecyler="@{0}"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView39"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView39"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.messenger.phone.number.text.sms.service.apps.helperClass.FullDrawerLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

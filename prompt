@@ -1,0 +1,3 @@
+it works, but i notice our instant conversation show viewed so when i click it and go in SendMessageActivity of their thread and the it instantly chats ui jumping because of we little little conversation adding in it so maybe it multiple time observing via viewmodel. so if in SendMessageActivity, and their thread related some emited to be take observe, not all overs. and be safe of no any issue need in db or datat related formates or shorting issue. we lready give ore time in it to fix.
+
+if any doubt before start, please let me know

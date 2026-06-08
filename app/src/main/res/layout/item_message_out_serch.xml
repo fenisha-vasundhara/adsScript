@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="list"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation" />
+
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/datetxt"
+                setNewDateYear="@{list.time}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:gravity="center"
+                android:text="Date"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/itemclick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#00000000"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/maincanternar"
+                app:layout_constraintTop_toTopOf="@+id/maincanternar"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.8">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sectionbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/appnametxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        fullappfontstyleregular="@{0}"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:textColor="@color/black2"
+                        setTextSizeFullApp="@{textsizechagefor13}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="fghdfghfhfhfghgfhfhfgghfghgfhfghfghfghfghgfhfghghfgh">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/messagetime"
+                        setNewDateYear="@{list.time}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:textColor="#8A000000"
+                        setTextSizeFullApp="@{textsizechagefor8}"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appnametxt"
+                        tools:text="2:00 AM">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/messagedate"
+                setNewTime="@{list.time}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_7sdp"
+                android:paddingRight="@dimen/_7sdp"
+                android:textColor="#98999C"
+                setTextSizeFullApp="@{textsizechagefor8}"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/itemclick"
+                app:layout_constraintTop_toBottomOf="@+id/itemclick"
+                tools:text="2:00 AM"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/maincanternar"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/contacticon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/contacticon"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.7"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    ColorChangeImgeTint="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_round_shap"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.7"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fistcat"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="J"
+                    android:textColor="@color/white"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mess_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/rubikregular"
+                android:includeFontPadding="false"
+                android:text="@{list.title}"
+                android:textColor="#7A7E86"
+                setTextSizeFullApp="@{textsizechagefor13}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/maincanternar"
+                app:layout_constraintStart_toEndOf="@+id/maincanternar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Jigar">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

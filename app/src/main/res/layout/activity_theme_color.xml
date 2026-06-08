@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".ThemeColorActivity">
+
+        <LinearLayout
+            android:id="@+id/vAnd15StatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorSurface"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/main_menu_ar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vAnd15StatusBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tool_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="?attr/colorSurface"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/defaulttoolshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorSurface"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:background="@color/appcolor"
+                    tools:visibility="visible"
+        android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/back_btn"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="@dimen/mf_appbar_action_size1"
+                        android:layout_height="@dimen/mf_appbar_action_size1"
+                        android:layout_marginStart="0dp"
+                        app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                        app:iconSize="@dimen/mf_appbar_back_icon"       app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="?attr/colorOnSurface"
+                        android:contentDescription="@string/cd_back"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView3"
+                        fullappfontstylesemibold="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor18}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/theme"
+                        android:textColor="?attr/colorOnSurface"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                        app:layout_constraintEnd_toStartOf="@+id/select_all_message"
+                        app:layout_constraintStart_toEndOf="@+id/back_btn"
+                        app:layout_constraintTop_toTopOf="@+id/back_btn"
+                        tools:visibility="visible">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageView
+                        android:id="@+id/select_all_message"
+                        android:layout_width="@dimen/mf_appbar_action_size"
+                        android:layout_height="@dimen/mf_appbar_action_size"
+                        android:layout_marginEnd="@dimen/mf_appbar_action_edge_margin"
+                        android:contentDescription="@string/cd_home_select_all"
+                        android:padding="@dimen/mf_appbar_action_padding"
+                        android:src="@drawable/home_material_ic_select_all_rounded"
+                        android:visibility="gone"
+                        app:tint="?attr/colorOnSurfaceVariant"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+
+                    </ImageView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/material_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/material"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            fullappfontstylesemibold="@{0}"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_menu_ar">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/more_color"
+            fullappfontstylesemibold="@{0}"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/more_color"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textAllCaps="true"
+            app:layout_constraintStart_toEndOf="@+id/material_color"
+            app:layout_constraintTop_toBottomOf="@+id/main_menu_ar">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:id="@+id/reset_btn"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_marginEnd="@dimen/_10sdp"
+            fullappfontstylesemibold="@{0}"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            app:layout_constraintBottom_toBottomOf="@+id/more_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/more_color"
+            app:layout_constraintTop_toTopOf="@+id/more_color">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+        <com.messenger.phone.number.text.sms.service.apps.helper.SafeViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/more_color" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

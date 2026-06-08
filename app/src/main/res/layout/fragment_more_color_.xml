@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".fragment.More_color_Fragment">
+
+        <com.messenger.phone.number.text.sms.service.apps.themepicker.HSVPickerView
+            android:id="@+id/picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hexLabel"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/hex"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/picker" />
+
+        <View
+            android:id="@+id/hexSeparator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="@id/hexLabel"
+            app:layout_constraintStart_toEndOf="@id/hexLabel"
+            app:layout_constraintTop_toTopOf="@id/hexLabel" />
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hexSign"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="#"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/hexLabel"
+            app:layout_constraintStart_toEndOf="@id/hexSeparator"
+            app:layout_constraintTop_toTopOf="@id/hexLabel" />
+
+        <EditText
+            android:id="@+id/hex"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingEnd="16dp"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/hexLabel"
+            app:layout_constraintStart_toEndOf="@id/hexSign"
+            app:layout_constraintTop_toTopOf="@id/hexLabel" />
+
+
+        <View
+            android:id="@+id/applyDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picker" />
+
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@drawable/rounded_rectangle_2dp"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_25sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/apply"
+            android:textColor="?attr/colorOnSurface"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/applyDivider"
+            tools:backgroundTint="@color/tools_theme" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

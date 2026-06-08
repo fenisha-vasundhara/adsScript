@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="list"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation" />
+
+        <variable
+            name="textsizechage2"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_item_click"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:padding="@dimen/_3ssp"
+                android:id="@+id/datetxt_con"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/datetxt_con"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_marginBottom="@dimen/_3ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newmessagecountandbottomscrollout"
+                android:layout_height="wrap_content">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/datetxt"
+                    setNewDateYear="@{list.time}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Date"
+                    android:textColor="#232121"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/dateline2"-->
+<!--                    setchatthemecolorDateSrcImRight="@{0}"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_5sdp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/datetxt"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+<!--                </ImageView>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/dateline1"-->
+<!--                    setchatthemecolorDateLineSrcImLeft="@{0}"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="@dimen/_5sdp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/datetxt"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+<!--                </ImageView>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <Button
+                android:id="@+id/newmessagecountandbottomscrollout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unread Message 11"
+                android:backgroundTint="#EEEEEE"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textColor="#8E8D8D"
+                app:layout_constraintBottom_toTopOf="@+id/datetxt_con"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Button>
+
+
+
+
+
+
+
+            <ImageView
+                android:layout_width="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:id="@+id/message_traslate_btn_out"
+                android:src="@drawable/message_traslate_icon_new"
+                app:layout_constraintBottom_toBottomOf="@+id/itemclick"
+                app:layout_constraintStart_toEndOf="@+id/itemclick"
+                app:layout_constraintTop_toTopOf="@+id/itemclick">
+
+            </ImageView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/itemclick"
+                app:layout_constraintBottom_toTopOf="@+id/timecontenar"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#00000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datetxt_con"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.8">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sectionbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E8F4FF">
+
+                    <Spinner
+                        android:id="@+id/selectlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="#E5EAEF"
+                        android:textColor="#6A6D6F"
+                        android:textColorHint="#6A6D6F"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </Spinner>
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/appnametxt"
+                        setTextSize="@{textsizechage2}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                     fullappfontstyleregular="@{0}"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:text="@{list.snippet}"
+                        android:textColor="@color/black2"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/selectlan"
+                        tools:text="message traslate to gujrati 5345345345">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/messagetime"
+                        setNewTime="@{list.time}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:textColor="#8A000000"
+                        android:textSize="@dimen/_8sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appnametxt"
+                        tools:text="2:00 AM">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/messagewebprecontenar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/map_bg_linr"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appnametxt"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/web_url_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/message_icon"
+                            android:layout_marginStart="@dimen/_1ssp"
+                            android:layout_marginEnd="@dimen/_1ssp"
+                            app:layout_constraintBottom_toTopOf="@+id/web_url_dis"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/web_url_dis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                         fullappfontstyleregular="@{0}"
+                            android:singleLine="true"
+                            android:text="how-to-create-a-preview-for-a-link-in-android-6906d0aa9e12"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/web_url_webside_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/web_url_image">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/web_url_webside_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                         fullappfontstyleregular="@{0}"
+                            android:singleLine="true"
+                            android:text="https://proandroiddev.com/"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/web_url_dis">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/click"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/traslatebtn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:src="@drawable/message_traslate_icon"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/itemclick"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toEndOf="@+id/itemclick"
+                app:layout_constraintTop_toBottomOf="@+id/datetxt_con">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/messagetraslateoneminuteshowbtn"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/messagetraslateoneminuteshow"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/itemclick"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toEndOf="@+id/itemclick"
+                app:layout_constraintTop_toTopOf="@+id/itemclick"
+                tools:visibility="visible">
+
+
+            </ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timecontenar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="@drawable/datetxt_con_secound"
+                android:layout_marginTop="@dimen/_3ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/itemclick"
+                app:layout_constraintTop_toBottomOf="@+id/itemclick">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/messagedate"
+                    setNewTime="@{list.time}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#D3D8DC"
+
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2:00 AM"
+                    tools:visibility="visible">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/send_message_traslate_out"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/itemclick"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toStartOf="@+id/message_traslate_btn_out"
+                app:layout_constraintTop_toTopOf="@+id/itemclick"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/messagetraslate">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

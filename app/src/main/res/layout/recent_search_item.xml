@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+        <variable
+            name="listdata"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Recentsearch" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/recent_search_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:fontFamily="@font/rubikregular"
+            android:paddingTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintHorizontal_bias="0"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@{listdata.recentsearch}"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            setTextSizeFullApp="@{textsizechagefor13}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recent_search_delete_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="UPDATE:Bal in HDFC Bank A/c XX7040 has gone below minimum limit of INR 5,000.00.Yesterday's bal:INR 419.44.Chat on WhatsApp Banking:hdfcbk.io/k/DUvfE8hRogl">
+
+         </com.google.android.material.textview.MaterialTextView>
+
+
+        <ImageView
+            android:layout_width="@dimen/_13sdp"
+            android:id="@+id/recent_search_delete_btn"
+            android:layout_height="@dimen/_13sdp"
+            android:src="@drawable/close_icon"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/recent_search_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recent_search_txt"
+            app:tint="?attr/colorOnSurfaceVariant">
+
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isdarktheme"
+            type="Boolean" />
+
+
+    </data>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/mainBg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+
+         android:background="@drawable/tutorial_bg"
+         android:padding="@dimen/_10sdp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/message_in"
+             android:layout_width="match_parent"
+             android:layout_marginTop="@dimen/_14ssp"
+             android:layout_height="wrap_content"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/changecorner">
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/resetBtn"
+                 android:layout_width="@dimen/_70sdp"
+                 android:layout_height="@dimen/_27sdp"
+                 android:layout_marginEnd="@dimen/_10ssp"
+                 android:foreground="?selectableItemBackground"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/doneBtn"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                  <com.google.android.material.textview.MaterialTextView
+                      android:id="@+id/tv_reset"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/Reset"
+                     android:includeFontPadding="false"
+                fullappfontstylesemibold="@{0}"
+                     android:textSize="@dimen/_12ssp"
+                      android:textColor="#8A8C8E"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                  </com.google.android.material.textview.MaterialTextView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/doneBtn"
+                 android:layout_width="@dimen/_70sdp"
+                 android:layout_height="@dimen/_27sdp"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 android:foreground="?selectableItemBackground"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                  <com.google.android.material.textview.MaterialTextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/Done"
+                      android:background="?android:selectableItemBackground"
+                      android:includeFontPadding="false"
+                fullappfontstylesemibold="@{0}"
+                     android:textSize="@dimen/_12ssp"
+                     android:textColor="@color/appcolor"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
+
+                  </com.google.android.material.textview.MaterialTextView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/changecorner"
+             app:layout_constraintBottom_toTopOf="@+id/message_in"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/_40sdp"
+             android:layout_marginTop="@dimen/_10ssp"
+             android:background="@drawable/dialog_bg_stock"
+             android:layout_marginStart="@dimen/_5sdp"
+             android:layout_marginEnd="@dimen/_5sdp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+
+             <com.google.android.material.slider.Slider
+                 android:id="@+id/message_corner"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_margin="@dimen/_10sdp"
+                 android:progress="50"
+                 android:valueFrom="0"
+                 android:valueTo="55"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:thumbHeight="@dimen/_20sdp"
+                 app:thumbWidth="@dimen/_2sdp"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintWidth_percent="0.88"
+                 app:thumbStrokeColor="@color/appcolor"
+                 app:thumbStrokeWidth="2dp"
+                 app:trackColorActive="@color/appcolor"
+                 app:trackColorInactive="#DEDFE0"
+                 app:trackHeight="@dimen/_3sdp">
+
+             </com.google.android.material.slider.Slider>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

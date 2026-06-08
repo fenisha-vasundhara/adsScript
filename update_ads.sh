@@ -1,0 +1,14 @@
+#!/bin/bash
+WEB_APP_URL="https://script.google.com/a/macros/prishaapps.com/s/AKfycbzuWagA8azLpojjcF3LpZxgpmuQ2UhPJIsCZwQtVsG600d1fNDbDzEYcO0_hFtZasCI/exec" # ← Change this
+cd /Volumes/Extra/Fenisha/MessagerApp/2.4.1/MaterialMessages
+echo "📤 Git operations..."
+git add app/src/main/assets/ads_config.json
+git commit -m "Update ads config to version $(grep -o '"version": "[^"]*"' app/src/main/assets/ads_config.json | cut -d'"' -f4)" || echo "Nothing to commit"
+echo "🚀 Pushing..."
+git push origin main
+echo "📡 Updating Google Sheet..."
+curl -X POST 
+  -H "Content-Type: application/json" 
+  -d '{"function": "updateFromJson", "parameters": [false]}' 
+  "$WEB_APP_URL"
+echo "✅ Done! Check your Google Sheet."

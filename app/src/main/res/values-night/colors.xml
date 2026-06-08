@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="white">#FFFFFFFF</color>-->
+    <!-- Fallback for API < 31 (values-night-v31 overrides with dynamic system colors) -->
+    <color name="you_primary_color">@color/grey</color>
+
+</resources>

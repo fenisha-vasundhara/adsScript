@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Material foundation colors mapped to the existing app palette. -->
+    <color name="mf_color_primary">#4AA6FB</color>
+    <color name="mf_color_on_primary">#FFFFFFFF</color>
+    <color name="mf_color_secondary">#147FE3</color>
+    <color name="mf_color_on_secondary">#FFFFFFFF</color>
+    <color name="mf_color_surface">#FFFFFFFF</color>
+    <color name="mf_color_on_surface">#000000</color>
+    <color name="mf_color_background">#FFFFFFFF</color>
+    <color name="mf_color_on_background">#000000</color>
+    <color name="mf_color_error">#E10505</color>
+    <color name="mf_color_on_error">#FFFFFFFF</color>
+
+    <!-- Day/night system bar icon mode tokens used by the base app theme. -->
+    <bool name="mf_light_system_bars">true</bool>
+
+    <!-- Reusable typography tokens for incremental screen migration. -->
+    <style name="TextAppearance.MessagerApp.Body" parent="TextAppearance.Material3.BodyMedium" />
+    <style name="TextAppearance.MessagerApp.Title" parent="TextAppearance.Material3.TitleMedium" />
+    <style name="TextAppearance.MessagerApp.Headline" parent="TextAppearance.Material3.HeadlineSmall" />
+
+    <!-- Shared corner tokens (small/medium/large). -->
+    <style name="ShapeAppearance.MessagerApp.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MessagerApp.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.MessagerApp.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Component styles for gradual opt-in migration. -->
+    <style name="Widget.MessagerApp.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MessagerApp.Medium</item>
+        <item name="backgroundTint">@color/mf_color_primary</item>
+        <item name="android:textColor">@color/mf_color_on_primary</item>
+        <item name="iconTint">@color/mf_color_on_primary</item>
+    </style>
+
+    <style name="Widget.MessagerApp.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MessagerApp.Medium</item>
+        <item name="strokeColor">@color/mf_color_primary</item>
+        <item name="android:textColor">@color/mf_color_primary</item>
+        <item name="iconTint">@color/mf_color_primary</item>
+    </style>
+
+    <style name="Widget.MessagerApp.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/ShapeAppearance.MessagerApp.Medium</item>
+        <item name="boxStrokeColor">@color/mf_color_primary</item>
+        <item name="boxBackgroundColor">@color/mf_color_surface</item>
+        <item name="hintTextColor">@color/mf_color_on_surface</item>
+    </style>
+
+    <style name="Widget.MessagerApp.TextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/mf_color_on_surface</item>
+        <item name="android:textColorHint">@color/mf_color_on_surface</item>
+        <item name="android:textAppearance">@style/TextAppearance.MessagerApp.Body</item>
+    </style>
+
+    <style name="Widget.MessagerApp.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/mf_color_surface</item>
+        <item name="titleTextColor">@color/mf_color_on_surface</item>
+        <item name="subtitleTextColor">@color/mf_color_on_surface</item>
+    </style>
+
+    <style name="ThemeOverlay.MessagerApp.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MessagerApp.Large</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TextAppearance.MessagerApp.Title</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/TextAppearance.MessagerApp.Body</item>
+        <item name="colorPrimary">@color/mf_color_primary</item>
+    </style>
+
+    <style name="Widget.MessagerApp.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@color/mf_color_surface</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MessagerApp.Large</item>
+    </style>
+
+    <style name="ThemeOverlay.MessagerApp.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.MessagerApp.BottomSheet</item>
+    </style>
+
+    <style name="ThemeOverlay.MessagerApp.MaterialFoundation" parent="ThemeOverlay.MaterialComponents">
+        <item name="materialButtonStyle">@style/Widget.MessagerApp.Button</item>
+        <item name="textInputStyle">@style/Widget.MessagerApp.TextInputLayout</item>
+        <item name="toolbarStyle">@style/Widget.MessagerApp.Toolbar</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MessagerApp.MaterialAlertDialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.MessagerApp.BottomSheetDialog</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MessagerApp.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.MessagerApp.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.MessagerApp.Large</item>
+    </style>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/manage_blocked_keyword_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/manage_blocked_keyword_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            fullappfontstyleregular="@{0}"
+            setTextSizeFullApp="@{textsizechagefor15}"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:textColor="?attr/colorOnSurface"
+            android:text="jigar"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_toStartOf="@+id/overflow_menu_icon" />
+
+        <ImageView
+            android:id="@+id/overflow_menu_icon"
+            android:layout_width="@dimen/mf_appbar_action_size"
+            android:layout_height="@dimen/mf_appbar_action_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/mf_appbar_action_margin"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/home_material_ic_more_vert_rounded_dark"
+            app:tint="?attr/colorOnSurfaceVariant" />
+
+        <View
+            android:id="@+id/overflow_menu_anchor"
+            style="@style/OverflowMenuAnchorStyle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+</layout>

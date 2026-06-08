@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="list"
+            type="com.messenger.phone.number.text.sms.service.apps.modelClass.Conversation" />
+
+        <variable
+            name="nullchack"
+            type="String" />
+
+        <variable
+            name="isLetterorNot"
+            type="Boolean" />
+
+        <variable
+            name="textsizechage"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_item_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/datetxt_con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_marginBottom="@dimen/_3ssp"
+                android:background="@drawable/datetxt_con"
+                android:padding="@dimen/_3ssp"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newmessagecountandbottomscrollin">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/datetxt"
+                    setNewDateYear="@{list.time}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Date"
+                    android:textColor="#232121"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/dateline2"-->
+                <!--                    setchatthemecolorDateSrcImRight="@{0}"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="@dimen/_5sdp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+                <!--                    app:layout_constraintStart_toEndOf="@+id/datetxt"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+                <!--                </ImageView>-->
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/dateline1"-->
+                <!--                    setchatthemecolorDateLineSrcImLeft="@{0}"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginEnd="@dimen/_5sdp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/datetxt"-->
+                <!--                    app:layout_constraintEnd_toStartOf="@+id/datetxt"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/datetxt">-->
+
+                <!--                </ImageView>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/newmessagecountandbottomscrollin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:backgroundTint="#EEEEEE"
+                android:text="Unread Message 11"
+                android:textColor="#8E8D8D"
+                app:layout_constraintBottom_toTopOf="@+id/datetxt_con"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </Button>
+
+
+            <ImageView
+                android:id="@+id/message_traslate_btn_in"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/new_message_traslate_icon_two"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/itemclick"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/itemclick"
+                app:layout_constraintTop_toTopOf="@+id/itemclick">
+
+            </ImageView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/itemclick"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/message_faild"
+                app:layout_constraintEnd_toStartOf="@+id/maincanternar"
+                app:layout_constraintTop_toBottomOf="@+id/datetxt_con"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.8">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sectionbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="#4AA6FB">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/scheduled_message_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message_schedule_holder_bg_sendmessage"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_goneMarginBottom="@dimen/medium_margin"
+                        tools:visibility="visible">
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/Schedule_Message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/ripple_background"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingStart="@dimen/small_margin"
+                            android:paddingEnd="@dimen/activity_margin"
+                            android:paddingBottom="@dimen/_2sdp"
+                            android:text="@string/schedule_message"
+                            android:textColor="#1C1E20"
+                            android:textSize="@dimen/_13sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/scheduled_message_button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:id="@+id/scheduled_message_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/scheduled_message_button"
+                            android:layout_alignBottom="@+id/scheduled_message_button"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:src="@drawable/ic_schedule_message_btn_new_clock"
+                            app:layout_constraintBottom_toBottomOf="@+id/scheduled_message_button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/scheduled_message_button"
+                            app:tint="@color/black2" />
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/scheduled_message_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/ripple_background"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center_vertical"
+                            android:minHeight="@dimen/normal_icon_size"
+                            android:paddingStart="@dimen/small_margin"
+                            android:paddingEnd="@dimen/activity_margin"
+                            android:singleLine="true"
+                            android:textColor="#252729"
+                            android:textSize="@dimen/middle_text_size"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/scheduled_message_icon"
+                            app:layout_constraintTop_toBottomOf="@+id/Schedule_Message"
+                            tools:ignore="HardcodedText"
+                            tools:text="Tomorrow at 6PM GMT +05:30" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/appnametxt"
+                        fullappfontstyleregular="@{0}"
+                        setTextSize="@{textsizechage}"
+                        app:layout_constraintTop_toBottomOf="@+id/scheduled_message_holder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:descendantFocusability="blocksDescendants"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:paddingRight="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_max="wrap"
+                        app:layout_constraintWidth_percent="0.9"
+                        tools:text="message ">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/messagetime"
+                        setNewTime="@{list.time}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appnametxt"
+                        tools:text="2:00 AM">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <ImageView
+                        android:id="@+id/messagestatus"
+                        setTxtColor="@{list.messageStatus == null ? nullchack : list.messageStatus}"
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:src="@drawable/message_delivered_done_icon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="Error">
+
+                    </ImageView>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/messagewebprecontenar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/map_bg_linr"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appnametxt"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/web_url_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginStart="@dimen/_1ssp"
+                            android:layout_marginEnd="@dimen/_1ssp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/message_icon"
+                            app:layout_constraintBottom_toTopOf="@+id/web_url_dis"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/web_url_dis"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="how-to-create-a-preview-for-a-link-in-android-6906d0aa9e12"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintBottom_toTopOf="@+id/web_url_webside_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/web_url_image">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+                         <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/web_url_webside_name"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="https://proandroiddev.com/"
+                            android:textColor="@color/black2"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/web_url_dis">
+
+                         </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/click"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/traslatebtn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/message_traslate_icon"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/itemclick"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintStart_toStartOf="@+id/itemclick"
+                app:layout_constraintTop_toBottomOf="@+id/datetxt_con">
+
+
+            </ImageView>
+
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:text="Not sent,tap to try again."
+                android:fontFamily="@font/opensansregular"
+                android:textColor="@color/red"
+                android:id="@+id/message_faild"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                app:layout_constraintBottom_toTopOf="@+id/timecontenar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemclick"
+                android:layout_height="wrap_content">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/timecontenar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3ssp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:background="@drawable/datetxt_con_secound"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/message_faild"
+                tools:visibility="visible">
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/messagedate"
+                    setNewTime="@{list.time}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:textColor="#D3D8DC"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="2:00 AM"
+                    tools:visibility="visible">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/maincanternar"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/itemclick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/contacticon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/contacticon"
+                    android:visibility="@{isLetterorNot ? View.GONE : View.VISIBLE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.7"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    ColorChangeImgeTint="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_round_shap"
+                    android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.7"
+                    app:layout_constraintHorizontal_bias="0.16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/fistcat"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="J"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold"
+                    android:visibility="@{isLetterorNot ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mess_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@{list.title}"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/maincanternar"
+                app:layout_constraintEnd_toStartOf="@+id/maincanternar"
+                app:layout_constraintTop_toTopOf="@+id/maincanternar"
+                tools:layout_editor_absoluteX="405dp"
+                tools:text="Jigar">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/send_message_traslate_in"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="0dp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/itemclick"
+                app:layout_constraintEnd_toStartOf="@+id/itemclick"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintTop_toTopOf="@+id/itemclick"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/messagetraslate">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

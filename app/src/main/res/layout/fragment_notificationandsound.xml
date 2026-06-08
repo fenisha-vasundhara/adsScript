@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorSurface"
+        tools:context=".fragment.NotificationandsoundFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="?attr/colorSurface"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/mf_appbar_back_icon"     app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                fullappfontstylesemibold="@{0}"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mf_appbar_title_spacing"
+                android:text="@string/Notifications_and_Sound_new"
+                android:textColor="?attr/colorOnSurface"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_contenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/preandsec_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/preandsec_btn"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="shared_element_transition_name">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView8"
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:includeFontPadding="false"
+                        android:text="@string/Allow_Notifications"
+                        app:layout_constraintBottom_toTopOf="@+id/info9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/info9"
+                        setTextSizeFullApp="@{textsizechagefor10}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubikregular"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="@string/info9"
+                        android:textColor="#8D8E8E"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/notification_get_or_not"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/notification_get_or_not"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:checked="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView8"
+                        app:thumbTint="@color/white"
+                        app:trackTint="@color/switch_track_color_selector" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4ACDCACA"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notification_user_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/preandsec_btn_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_user_btn"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9"
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Notifications_Lookup"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4ACDCACA"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/noti_wake_screen_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notification_user_btn_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noti_wake_screen_btn"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="shared_element_transition_name">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/noti_wake_screen_textView8"
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:includeFontPadding="false"
+                        android:text="@string/Wake_screen"
+                        app:layout_constraintBottom_toTopOf="@+id/info8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/info8"
+                        setTextSizeFullApp="@{textsizechagefor10}"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/rubikregular"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="@string/info8"
+                        android:textColor="#8D8E8E"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/noti_wake_screen_get_or_not"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="@+id/noti_wake_screen_textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/noti_wake_screen_textView8">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/noti_wake_screen_get_or_not"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:checked="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        app:layout_constraintBottom_toBottomOf="@+id/noti_wake_screen_textView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/noti_wake_screen_textView8"
+                        app:thumbTint="@color/white"
+                        app:trackTint="@color/switch_track_color_selector" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/notificationacction"
+                fullappfontstylesemibold="@{0}"
+                setTextSizeFullApp="@{textsizechagefor15}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="@string/Notification_Action"
+                android:textColor="@color/appcolor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/noti_wake_screen_btn_card">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notifican_btn_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:transitionName="shared_element_transition_name"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notificationacction">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Button_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:cardBackgroundColor="#E9EFF4"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/archive_user_count"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="@string/Two_Conversation"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView17"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/imageView17"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/archive_user_count"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.3"
+                                app:layout_constraintTop_toTopOf="@+id/archive_user_count"
+                                app:layout_constraintWidth_percent="0.1">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4ACDCACA"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notifican_btn_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notifican_btn_1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Button_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:cardBackgroundColor="#E9EFF4"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/btn_archive_user_count"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="@string/Two_Conversation"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/btn_imageView17"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/btn_imageView17"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/btn_archive_user_count"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.3"
+                                app:layout_constraintTop_toTopOf="@+id/btn_archive_user_count"
+                                app:layout_constraintWidth_percent="0.1">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4ACDCACA"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/notifican_btn_3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notifican_btn_2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:cardBackgroundColor="#E9EFF4"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/btn_3_archive_user_count"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="@string/Two_Conversation"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/btn_3_imageView17"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/btn_3_imageView17"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/btn_3_archive_user_count"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.3"
+                                app:layout_constraintTop_toTopOf="@+id/btn_3_archive_user_count"
+                                app:layout_constraintWidth_percent="0.1">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        fullappfontstyleregular="@{0}"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Button_3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </com.google.android.material.textview.MaterialTextView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_contenar_ab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/no_title_ab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/preandsec_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/preandsec_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView8_ab"
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Allow_Notifications"
+                            app:layout_constraintBottom_toTopOf="@+id/info9_ab"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/info9_ab"
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor8}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:alpha="0.5"
+                            android:text="@string/info9"
+                            android:textColor="#8D8E8E"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/notification_get_or_not_ab"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toStartOf="@+id/textView8_ab"
+                            app:layout_constraintTop_toBottomOf="@+id/textView8_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/notification_get_or_not_ab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:checked="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/notification_user_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:transitionName="shared_element_transition_name"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/preandsec_btn_card_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/blocked_user_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView9_ab"
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/Notifications_Lookup"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noti_wake_screen_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notification_user_btn_card_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/noti_wake_screen_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:transitionName="shared_element_transition_name">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/noti_wake_screen_textView8_ab"
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Wake_screen"
+                            app:layout_constraintBottom_toTopOf="@+id/info8_ab"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/info8_ab"
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor8}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:includeFontPadding="false"
+                            android:alpha="0.5"
+                            android:singleLine="true"
+                            android:text="@string/info8"
+                            android:textColor="#8D8E8E"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/noti_wake_screen_get_or_not_ab"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toStartOf="@+id/noti_wake_screen_textView8_ab"
+                            app:layout_constraintTop_toBottomOf="@+id/noti_wake_screen_textView8_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/noti_wake_screen_get_or_not_ab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:checked="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tital_contenar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_title_ab">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notificationacction_ab"
+                    setTextSizeFullApp="@{textsizechagefor18}"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_43sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/opensansregular"
+                    android:text="@string/Notification_Action"
+                    android:textColor="@color/fragment_setting_ab_color_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/notifican_btn_1_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:transitionName="shared_element_transition_name"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notificationacction_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/Button_1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/notificationActionButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:elevation="0dp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/archive_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/imageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/imageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/archive_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/archive_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/notifican_btn_2_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:transitionName="shared_element_transition_name"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notifican_btn_1_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/Button_2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/notificationActionButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:elevation="0dp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/btn_archive_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/btn_imageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/btn_imageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/btn_archive_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/btn_archive_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/notifican_btn_3_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:transitionName="shared_element_transition_name"
+                    app:cardBackgroundColor="#FCFDFE"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/notifican_btn_2_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/notificationActionButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:elevation="0dp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:cardElevation="0dp"
+                            app:cardMaxElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/btn_3_archive_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/btn_3_imageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/btn_3_imageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/btn_3_archive_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/btn_3_archive_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor15}"
+                            settingABtextcolorset="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:text="@string/Button_3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

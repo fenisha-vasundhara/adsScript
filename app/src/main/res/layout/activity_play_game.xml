@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:background="#D1A36B"
+        tools:context=".Waitinggame.ui.PlayGameActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B3772D"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/scoreLabel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="10"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="Score : 0"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/playoption"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:onClick="pausePushed"
+                android:src="@drawable/play" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/startLabel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:text="Tap to start"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/box"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/down" />
+
+            <ImageView
+                android:id="@+id/orange"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/orange" />
+
+            <ImageView
+                android:id="@+id/black"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/black" />
+
+            <ImageView
+                android:id="@+id/pink"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/pink" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

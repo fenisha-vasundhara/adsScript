@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        tools:context=".fragment.Fragment_privacy_policy">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/appcolor"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                app:iconSize="@dimen/mf_appbar_back_icon"      android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+
+                app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+           fullappfontstylesemibold="@{0}"
+                android:text="@string/PrivacyPolicy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:padding="@dimen/_10sdp"
+               android:layout_height="match_parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                fullappfontstyleregular="@{0}"
+                   android:text="@string/txt_pri_1"
+                   android:textColor="@color/grey"
+                   android:textSize="@dimen/_13sdp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/information_collection_and_use"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_2"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:id="@+id/txt1"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/md_blue"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/google_play_services"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/txt2"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/md_blue"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/admob"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/txt3"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/md_blue"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/google_analytics_for_firebase"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/txt4"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/md_blue"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/firebase_crashlytics"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:id="@+id/txt5"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/md_blue"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/facebook"/>
+
+               </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/log_data"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_3"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/cookies"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_4"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/service_providers"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_5"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/grey"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/to_facilitate_our_service"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/grey"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/to_provide_the_service_on_our_behalf"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/grey"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/to_perform_service_related_services_or"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <View
+                       android:layout_width="@dimen/_5sdp"
+                       android:layout_height="@dimen/_5sdp"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:background="@drawable/ic_round_black"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginLeft="@dimen/_16sdp"
+                       android:textColor="@color/grey"
+                       android:textSize="@dimen/_13ssp"
+                    fullappfontstyleregular="@{0}"
+                       android:text="@string/to_assist_us_in_analyzing_how_our_service_is_used"/>
+
+               </LinearLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_6"
+                   android:textColor="@color/grey"
+                   android:layout_marginTop="@dimen/_5sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/security"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_7"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_8"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_12sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_9"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_10"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_11"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_12"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_13"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_marginLeft="@dimen/_16sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/links_to_other_sites"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_14"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/children_s_privacy"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_16"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/contact_us"
+                   android:textColor="@color/black2"
+                   android:layout_marginTop="@dimen/_10sdp"
+                fullappfontstyleregular="@{0}"
+                   android:textStyle="bold"
+                   android:textSize="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:layout_width="match_parent"
+                   android:text="@string/txt_pri_17"
+                   android:textColor="@color/grey"
+                fullappfontstyleregular="@{0}"
+                   android:textSize="@dimen/_13sdp"
+                   android:layout_height="wrap_content">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+           </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

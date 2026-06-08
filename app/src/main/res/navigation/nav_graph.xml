@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/settingFragment">
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting">
+
+        <action
+            android:id="@+id/action_SettingFragment_to_PrivacyandsecurityFragment"
+            app:destination="@id/privacyandsecurityFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_SettingFragment_to_InviteaFriendFragment"
+            app:destination="@id/inviteaFriendFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_SettingFragment_to_NotificationandsoundFragment"
+            app:destination="@id/notificationandsoundFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_Conversation_Setting_Fragment"
+            app:destination="@id/conversation_Setting_Fragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_Driving_Mode_Fragment"
+            app:destination="@id/Driving_Mode_Setting_Fragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_Language_Fragment"
+            app:destination="@id/Language_Setting_Fragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_About_Fragment"
+            app:destination="@id/About_Setting_Fragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_Conversation_Swip_Motion_Fragment"
+            app:destination="@id/conversation_swip_motion_fragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/action_SettingFragment_to_Color_Theme_Fragment"
+            app:destination="@id/colorthemefragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/privacyandsecurityFragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.PrivacyandsecurityFragment"
+        android:label="PrivacyandsecurityFragment"
+        tools:layout="@layout/fragment_privacyandsecurity">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/inviteaFriendFragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.InviteaFriendFragment"
+        android:label="InviteaFriendFragment"
+        tools:layout="@layout/fragment_notificationandsound">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationandsoundFragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.NotificationandsoundFragment"
+        android:label="InviteaFriendFragment"
+        tools:layout="@layout/fragment_invitea_friend">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversation_Setting_Fragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.Conversation_Setting_Fragment"
+        android:label="Conversation_Setting_Fragment"
+        tools:layout="@layout/fragment_conversation__setting_">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversation_swip_motion_fragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.Conversation_swipe_motion_Fragment"
+        android:label="conversation_swip_motion_fragment"
+        tools:layout="@layout/fragment_conversation_swipe_motion">
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Driving_Mode_Setting_Fragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.DrivingModeFragment"
+        android:label="Driving_Mode_Setting_Fragment"
+        tools:layout="@layout/fragment_driving_mode">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Language_Setting_Fragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.LanguageFragment"
+        android:label="Language_Setting_Fragment"
+        tools:layout="@layout/fragment_language">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/Whatnewfragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.WhatNewFragment"
+        android:label="What_Setting_Fragment"
+        tools:layout="@layout/fragment_what_new">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/colorthemefragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.ColorThemeFragment"
+        android:label="Color_Theme_Fragment"
+        tools:layout="@layout/fragment_color_theme">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacypolicyfragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.Fragment_privacy_policy"
+        android:label="Fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_po">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/About_Setting_Fragment"
+        android:name="com.messenger.phone.number.text.sms.service.apps.fragment.AboutFragment"
+        android:label="Language_Setting_Fragment"
+        tools:layout="@layout/fragment_about">
+
+        <action
+            android:id="@+id/About_Fragment_to_Whatnewfragment"
+            app:destination="@id/Whatnewfragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+        <action
+            android:id="@+id/About_Fragment_to_Privacypolicyfragment"
+            app:destination="@id/privacypolicyfragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right">
+
+        </action>
+
+    </fragment>
+
+</navigation>

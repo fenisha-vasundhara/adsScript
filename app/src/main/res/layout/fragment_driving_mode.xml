@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        setchatthemecolorBg="@{0}"
+
+
+        tools:context=".fragment.DrivingModeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/defaulttoolshow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#4AA6FB"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"
+                android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="@dimen/mf_appbar_action_size1"
+                android:layout_height="@dimen/mf_appbar_action_size1"
+                android:layout_marginStart="0dp"
+                app:icon="@drawable/recycle_bin_material_ic_arrow_back_rounded"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/mf_appbar_back_icon"     app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+           fullappfontstylesemibold="@{0}"
+                android:text="@string/Driving_Mode"
+                android:textColor="@color/white"
+                setTextSizeFullApp="@{textsizechagefor18}"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="@+id/back_btn"
+                tools:visibility="visible">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fist_contenar"
+            android:layout_width="match_parent"
+            tools:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/preandsec_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/preandsec_btn"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="shared_element_transition_name">
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/auto_reply_driving_mode_btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView8"
+                        fullappfontstyleregular="@{0}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Driving_Mode_Auto_new"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/driving_mode_auto_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:checked="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView8"
+                        app:thumbTint="@color/white"
+                        app:trackTint="@color/switch_track_color_selector" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </View>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/div_mode_user_btn_card"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:transitionName="shared_element_transition_name"
+                app:cardBackgroundColor="#FCFDFE"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/preandsec_btn_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_user_btn"
+                    setchatthemecolorforbutton="@{0}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_user_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/auto_reply_driv_mode_user_btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.46"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9"
+                        fullappfontstyleregular="@{0}"
+                        setchatthemecolorTintTxtFullapp="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Edit_Auto_new"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_user_btn"
+                        app:layout_constraintEnd_toStartOf="@+id/messagecard"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toEndOf="@+id/block_user_btn"
+                        app:layout_constraintTop_toTopOf="@+id/block_user_btn">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/messagecard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardBackgroundColor="#E9EFF4"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.5"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/block_user_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:maxEms="7"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="hii"
+                                android:textColor="@color/black2"
+                                setTextSizeFullApp="@{textsizechagefor10}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/edit_btn"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/edit_btn"
+                                android:layout_width="@dimen/_6sdp"
+                                android:layout_height="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/block_user_count"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/block_user_count"
+                                app:layout_constraintTop_toTopOf="@+id/block_user_count">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fist_contenarab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/setting_button_background"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defaulttoolshow"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/preandsec_btn_card_ab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/preandsec_btn_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="shared_element_transition_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView16_ab"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        settingABicontintset="@{0}"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/auto_reply_driving_mode_btn_ab"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.45"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView8_ab"
+                        settingABtextcolorset="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Driving_Mode_Auto_new"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16_ab"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16_ab"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16_ab">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/driving_mode_auto_reply_ab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:checked="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView8_ab"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView8_ab"
+                        app:thumbTint="@color/white"
+                        app:trackTint="@color/switch_track_color_selector" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/div_mode_user_btn_card_ab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/preandsec_btn_card_ab">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/blocked_user_btn_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/block_user_btn_ab"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        settingABicontintset="@{0}"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:src="@drawable/auto_reply_driv_mode_user_btn_ab"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintHeight_percent="0.46"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    </ImageView>
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView9_ab"
+                        settingABtextcolorset="@{0}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:text="@string/Edit_Auto_new"
+                        setTextSizeFullApp="@{textsizechagefor15}"
+                        app:layout_constraintBottom_toBottomOf="@+id/block_user_btn_ab"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toEndOf="@+id/block_user_btn_ab"
+                        app:layout_constraintTop_toTopOf="@+id/block_user_btn_ab">
+
+                     </com.google.android.material.textview.MaterialTextView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/messagecard_ab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:cardBackgroundColor="#E9EFF4"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.5"
+                        app:layout_constraintHorizontal_bias="0.925"
+                        app:layout_constraintStart_toEndOf="@+id/textView9_ab"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                             <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/block_user_count_ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:maxEms="7"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="hii"
+                                android:textColor="@color/black2"
+                                setTextSizeFullApp="@{textsizechagefor10}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/edit_btn_ab"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                             </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/edit_btn_ab"
+                                android:layout_width="@dimen/_6sdp"
+                                android:layout_height="@dimen/_6sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@drawable/block_btn_fl"
+                                app:layout_constraintBottom_toBottomOf="@+id/block_user_count_ab"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/block_user_count_ab"
+                                app:layout_constraintTop_toTopOf="@+id/block_user_count_ab">
+
+                            </ImageView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

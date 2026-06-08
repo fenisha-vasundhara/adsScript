@@ -1,0 +1,1070 @@
+package com.demo.adsmanage.viewmodel
+
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Paint
+import android.graphics.drawable.Drawable
+import android.net.Uri
+import android.os.Build
+import android.util.Log
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.demo.adsmanage.Activity.SubActivityTwoplanActivity.Companion.plans
+import com.demo.adsmanage.Activity.TermsActivity
+import com.demo.adsmanage.Commen.Constants
+import com.demo.adsmanage.Commen.Constants.BASIC_SKU
+import com.demo.adsmanage.Commen.Constants.PREMIUM_LIFTIME
+import com.demo.adsmanage.Commen.Constants.PREMIUM_SIX_SKU
+import com.demo.adsmanage.Commen.Constants.PREMIUM_SKU
+import com.demo.adsmanage.Commen.Constants.SUBButtonTextColor
+import com.demo.adsmanage.Commen.Constants.isbilingopen
+
+import com.demo.adsmanage.Commen.Constants.mIsRevenuCat
+
+import com.demo.adsmanage.Commen.Constants.packagerenlist
+import com.demo.adsmanage.Commen.Constants.testpackagerenlist
+
+import com.demo.adsmanage.SubscriptionBaseClass.manager.PreferencesKeys
+import com.demo.adsmanage.SubscriptionBaseClass.manager.SubscriptionManager
+import com.demo.adsmanage.basemodule.BaseSharedPreferences
+import com.demo.adsmanage.billing.ProductPurchaseHelper.getProductInfo
+
+import com.demo.adsmanage.helper.IconPosition
+import com.demo.adsmanage.helper.click
+import com.demo.adsmanage.helper.getMonthBaseYearlyDiscount
+import com.demo.adsmanage.helper.getSubTrial
+import com.demo.adsmanage.helper.gone
+import com.demo.adsmanage.helper.isOnline
+import com.demo.adsmanage.helper.logD
+import com.demo.adsmanage.helper.setCloseIconPosition
+import com.demo.adsmanage.helper.showToast
+import com.inmobi.media.p
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.adjustAlpha
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.createOptionBackground
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.getPaywallProperBackgroundColor
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.getPaywallUnselectedColor
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.getPaywallUnselectedColor1
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.getProperPrimaryColor
+import com.messenger.phone.number.text.sms.service.apps.CommanClass.getProperTextColor
+import com.messenger.phone.number.text.sms.service.apps.R
+import com.messenger.phone.number.text.sms.service.apps.databinding.ActivityPaywallFourPlanBinding
+import com.revenuecat.purchases.CustomerInfo
+import com.revenuecat.purchases.Package
+import com.revenuecat.purchases.PackageType
+import com.revenuecat.purchases.Purchases
+import com.revenuecat.purchases.PurchasesError
+import com.revenuecat.purchases.interfaces.PurchaseCallback
+import com.revenuecat.purchases.models.StoreTransaction
+
+import java.text.NumberFormat
+import java.util.Locale
+import kotlin.math.roundToInt
+
+
+class SubscriptionFourPlanViewModel(
+    var binding: ActivityPaywallFourPlanBinding,
+    var mActivity: AppCompatActivity,
+    var liveDataPeriod: MutableLiveData<HashMap<String, String>>,
+    var liveDataPrice: MutableLiveData<HashMap<String, String>>,
+    var liveDataPriceMicro: MutableLiveData<HashMap<String, Long>>,
+    var subscriptionManager: SubscriptionManager,
+    var isSelecterdPlan: IsSelecterdPlan,
+
+    ) : ViewModel() {
+    @SuppressLint("AnnotateVersionCheck")
+    fun isPiePlus() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.P
+    val idname = arrayOf("_one", "_two", "_three", "_four", "_five", "_six", "_seven", "_eight")
+
+    init {
+        onMain()
+    }
+
+    interface IsSelecterdPlan {
+        fun monMonthPlan()
+        fun monYearPlan()
+        fun monWeekPlan()
+        fun monBackPress()
+    }
+    lateinit var selected: Drawable
+    lateinit var unSelected :Drawable
+    fun onMain() {
+
+//        val surfaceColor = binding.mCLLIFELayout.context.getProperPrimaryColor()
+        val surfaceColor = binding.mCLLIFELayout.context.getPaywallProperBackgroundColor()
+        val fillColor = binding.mCLLIFELayout.context.getPaywallUnselectedColor()
+        val fillColor1 = binding.mCLLIFELayout.context.getPaywallUnselectedColor1()
+        val textColor = binding.mCLLIFELayout.context.getProperTextColor()
+        val textColorlight = textColor.adjustAlpha(0.75f)
+        val primaycolor = ContextCompat.getColor(binding.mCLLIFELayout.context, R.color.paywall_primry_color)
+
+         selected=         createOptionBackground(
+            cornerSize = binding.mCLLIFELayout.context.resources.getDimension(com.intuit.sdp.R.dimen._12sdp),
+            fillColor = fillColor,
+            strokeColor = primaycolor,
+            strokeWidth = binding.mCLLIFELayout.context.resources.getDimension(com.intuit.sdp.R.dimen._1sdp),
+            showRipple = true,
+            rippleColor = fillColor.adjustAlpha(0.5f)
+        )
+         unSelected=         createOptionBackground(
+            cornerSize = binding.mCLLIFELayout.context.resources.getDimension(com.intuit.sdp.R.dimen._12sdp),
+            fillColor = fillColor,
+            strokeColor = fillColor1,
+            strokeWidth = binding.mCLLIFELayout.context.resources.getDimension(com.intuit.ssp.R.dimen._1ssp),
+            showRipple = true,
+            rippleColor = fillColor.adjustAlpha(0.5f)
+        )
+
+        setSubScriptionUI()
+        setUI()
+        setLineView()
+        initListener()
+    }
+
+    @SuppressLint("SetTextI18n")
+    fun setSubScriptionUI() {
+        with(binding) {
+            if (mIsRevenuCat!!) {
+                if (packagerenlist.isNotEmpty()) {
+
+                    if (packagerenlist!![0].freeTrialPeriod == null) {
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                    } else {
+                        val trialMessage = mActivity.getString(
+                            R.string.enjoy_month_trial,
+                            mActivity.getSubTrial(packagerenlist!![0].freeTrialPeriod!!.iso8601)
+                        )
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                    }
+
+                    packagerenlist?.get(1)?.price?.let { it1 ->
+                        getMonthBaseYearlyDiscount(
+                            packagerenlist?.get(0)?.price!!, it1
+                        ) { yearlyDiscountPercentage, yearlyMonthBaseDiscountPrice ->
+
+                        }
+                    }
+
+                    packagerenlist?.forEachIndexed { index, packagesRen ->
+                        val price = packagesRen.originalPrice
+                        val pricemic = packagesRen.price
+
+
+                        if (packagesRen.sku.contains("monthly")) {
+                            txtMonthlyPrice.text = price.replace(".00", "")
+                            try {
+
+                                    monthstaticprice.text = "${price.first()}${
+                                        pricemic.toDouble().div(4).roundToInt()
+                                    }/"
+
+                                    Log.d(
+                                        "txtweekPrice",
+                                        "setSubScriptionUI:txtweekPrice <--------> ${packagesRen}"
+                                    )
+                                } catch (e: Exception) {
+                                }
+                        }
+                        else if (packagesRen.sku.contains("yearly")) {
+                            txtYearlyPrice.text = price.replace(".00", "")
+                            try {
+//                                    yearstaticprice.text = "${price?.first()}${price?.substring(1)?.replace(",", "")?.toDouble()?.div(52)?.roundToInt()}${"/"}"
+                                yearstaticprice.text = "${price.first()}${
+                                    pricemic.toDouble().div(52).roundToInt()
+                                }/"
+                                Log.d(
+                                    "",
+                                    "setSubScriptionUI: txtYearlyPrice <--------> 1 ${price}"
+                                )
+                            } catch (e: Exception) {
+
+                            }
+                        }else if (packagesRen.sku.contains("lifetime")) {
+                            txtlifePrice.text = price.replace(".00", "")
+                        } else {
+                            txtweekPrice.text = price.replace(".00", "")
+                            weekstaticprice.text = price.replace(".00", "")
+                            try {
+//                                    textView10.text = "${price?.first()}${price?.substring(1)?.replace(",", "")?.toDouble()?.times(52)?.roundToInt()}"
+//                                    textView9.text = "${price?.first()}${price?.substring(1)?.replace(",", "")?.toDouble()?.times(4)?.roundToInt()}"
+
+
+
+                                Log.d(
+                                    "txtweekPrice",
+                                    "setSubScriptionUI:txtweekPrice <--------> ${packagesRen}"
+                                )
+                            } catch (e: Exception) {
+                            }
+                        }
+
+
+                    }
+
+//                    txtMonthDiscount.text = "${"48"}% ${"OFF"}"
+//
+//
+//                    txtYearDiscount.text = "${"80"}% ${"OFF"}"
+
+                    if (testpackagerenlist.isNotEmpty()) {
+                        val month =
+                            testpackagerenlist.find { it.packageType == PackageType.MONTHLY }
+                        val year =
+                            testpackagerenlist.find { it.packageType == PackageType.ANNUAL }
+                        val week =
+                            testpackagerenlist.find { it.packageType == PackageType.WEEKLY }
+
+                        val monthly =
+                            week?.let { weekPackage ->
+                                month?.let { monthPackage ->
+                                    getDiscount(
+                                        weekPackage,
+                                        monthPackage
+                                    )
+                                }
+                            }
+
+                        val yearly = year?.let { yearPackage ->
+                            week?.let { weekPackage ->
+                                getDiscount(
+                                    weekPackage,
+                                    yearPackage
+                                )
+                            }
+                        }
+
+                        txtYearDiscount.text = "${"Save"} ${yearly?.second}%"
+                    }
+
+                }
+            } else {
+                liveDataPeriod.observe(mActivity) { trial ->
+                    liveDataPrice.observe(mActivity) { price ->
+                        price[PREMIUM_SIX_SKU]?.let { month ->
+                            price[PREMIUM_SKU]?.let { year ->
+                                getMonthBaseYearlyDiscount(
+                                    month,
+                                    year
+                                ) { yearlyDiscountPercentage, yearlyMonthBaseDiscountPrice ->
+                                    if (yearlyMonthBaseDiscountPrice.equals("₹590.00")) {
+
+                                    } else {
+
+                                    }
+                                }
+                            }
+                        }
+                        PREMIUM_SKU.getProductInfo?.let { year ->
+                            PREMIUM_SIX_SKU.getProductInfo?.let { month ->
+                                if (year.freeTrialPeriod.equals("Not Found", true)) {
+                                    txtUnlockKriadl.text =
+                                        mActivity.resources.getText(R.string.Continue)
+                                } else {
+                                    txtUnlockKriadl.text =
+                                        mActivity.getString(R.string.continue_txt)
+                                }
+                                if (month.freeTrialPeriod.equals("Not Found", true)) {
+                                    Log.d("jigar", "setSubScriptionUI: <-----------> 3 ${month}")
+//                                    txtMonthBottom.gone
+                                } else {
+                                    Log.d("jigar", "setSubScriptionUI: <-----------> 4 ")
+//                                    txtMonthBottom.text = "" + mActivity.resources.getText(R.string.Enjoy) + "" + " ${
+//                                        getSubTrial(
+//                                            subscriptionManager.getString(PreferencesKeys.MONTH_TRIAL_PERIOD, "")
+//                                        )
+//                                    } " + mActivity.resources.getText(R.string.FREE_trial_new)
+                                }
+                            }
+                        }
+                        txtYearlyPrice.text = "${
+                            price[PREMIUM_SKU]?.let {
+                                it
+                            }
+                        }"
+                        Log.d("jigar", "setSubScriptionUI:<------- jigar ----------> 2 ${
+                            price[PREMIUM_SKU]?.let {
+                                it
+                            }
+                        }")
+                        txtMonthlyPrice.text = "${
+                            price[PREMIUM_SIX_SKU]?.let {
+                                it
+                            }
+                        }"
+
+
+
+
+
+                    }
+
+                }
+                liveDataPriceMicro.observe(mActivity) {
+                    val yearprice = ((it[PREMIUM_SKU]!! / 1000000)).toDouble()
+                    val monthprice = ((it[BASIC_SKU]!! / 1000000)).toDouble()
+                    val monthcount = (monthprice * 12)
+                    val cal = (yearprice as Double / monthcount as Double * 100).toInt()
+                    Log.d("TAG", "setSubScriptionUI: $cal--$yearprice--$monthprice--$monthcount")
+                    val perfind = 100 - cal
+//                    persenttxt.text = "Save\n$perfind%"
+
+                }
+            }
+
+
+        }
+    }
+
+    @SuppressLint("NewApi", "SetTextI18n")
+    fun setUI() {
+
+        with(binding) {
+
+            val textColor = txtMonthlyPrice.context.getProperTextColor()
+            val primaycolor = ContextCompat.getColor(txtMonthlyPrice.context, R.color.paywall_primry_color)
+
+
+
+            Log.d("", "initListener: mCLUnlockLayout <-------------> 3")
+
+
+            yearconstraintid.background =unSelected
+            weekconstraintid.background =unSelected
+            lifeconstraintid.background =unSelected
+            monthconstraintid.background =selected
+
+
+            yearstaticprice.setTextColor(textColor)
+            weekstaticprice.setTextColor(textColor)
+            txtlifePrice.setTextColor(textColor)
+            monthstaticprice.setTextColor(primaycolor)
+
+
+            if (mIsRevenuCat!!) {
+                if (packagerenlist.isNotEmpty()) {
+                    if (packagerenlist!![0].freeTrialPeriod == null) {
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                    } else {
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+
+
+                    }
+                }
+            } else {
+                BASIC_SKU.getProductInfo?.let { month ->
+                    if (month.freeTrialPeriod.equals("Not Found", true)) {
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                    } else {
+                        txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                    }
+                }
+            }
+            plans = BASIC_SKU
+
+            if (packagerenlist.isNotEmpty()) {
+                if (packagerenlist!![0].freeTrialPeriod == null) {
+
+                    if (packagerenlist?.get(0)?.price != null) {
+                        try {
+
+                            textsub.text = mActivity.getString(
+                                R.string.monthly_price,
+                                "${txtMonthlyPrice.text}"
+                            )
+                        }catch (e:Exception){
+
+                        }
+                    }
+                }
+                else {
+
+                    textsub.text =
+                        "${mActivity.getString(R.string._7_days)}" +
+                                "" + " " + "${mActivity.getString(R.string.FREE_trial_new_new)}" +
+                                "" + " ${mActivity.getString(R.string.than_price_ex)} " + "${
+                            packagerenlist?.get(
+                                0
+                            )?.price
+                        }" +
+                                "" + "${mActivity.getString(R.string.month_static)}"
+                }
+            }
+        }
+    }
+
+    @SuppressLint("DiscouragedApi")
+    private fun setLineView() {
+        with(binding) {
+
+        }
+    }
+
+    @SuppressLint("StringFormatInvalid", "StringFormatMatches")
+    private fun initListener() {
+        with(binding) {
+            val textColor = txtMonthlyPrice.context.getProperTextColor()
+
+            val primaycolor = ContextCompat.getColor(txtMonthlyPrice.context, R.color.paywall_primry_color)
+
+            mCLLIFELayout.setOnClickListener {
+                if (isbilingopen) {
+                    return@setOnClickListener
+                }
+                isbilingopen = true
+
+
+
+
+
+                yearconstraintid.background =unSelected
+                monthconstraintid.background =unSelected
+                weekconstraintid.background =unSelected
+                lifeconstraintid.background =selected
+
+                yearstaticprice.setTextColor(textColor)
+                weekstaticprice.setTextColor(textColor)
+                txtlifePrice.setTextColor(primaycolor)
+                monthstaticprice.setTextColor(textColor)
+
+
+                if (mIsRevenuCat!!) {
+                    if (packagerenlist.isNotEmpty()) {
+                        if (packagerenlist!![3].freeTrialPeriod == null) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                            val featureDescription = mActivity.getString(
+                                R.string.feature_description,
+                                packagerenlist?.get(2)?.price,
+                                mActivity.getSubTrial(packagerenlist!![3].freeTrialPeriod!!.iso8601)
+                            )
+                        }
+                    }
+                } else {
+                    PREMIUM_SIX_SKU.getProductInfo?.let { month ->
+                        if (month.freeTrialPeriod.equals("Not Found", true)) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        }
+                    }
+                }
+                Log.d("PREMIUM_SIX_SKU", "initListener: PREMIUM_SIX_SKU <----> 1 ${plans}")
+                plans = PREMIUM_LIFTIME
+                Log.d("PREMIUM_SIX_SKU", "initListener: PREMIUM_SIX_SKU <----> 2 ${plans}")
+
+                if (packagerenlist.isNotEmpty()) {
+                    if (packagerenlist!![3].freeTrialPeriod == null) {
+
+                        textsub.text = mActivity.getString(
+                            R.string.lifetime_price,
+                            "${packagerenlist?.get(3)?.price?.first()}${
+                                packagerenlist?.get(3)?.price?.substring(1)
+                                    ?.replace(",", "")?.toDouble()?.roundToInt()
+                            }"
+                        )
+                    } else {
+
+                        textsub.text =
+                            "${mActivity.getString(R.string._7_days)}" +
+                                    "" + " " + "${mActivity.getString(R.string.FREE_trial_new_new)}" +
+                                    "" + " ${mActivity.getString(R.string.than_price_ex)} " + "${
+                                packagerenlist?.get(
+                                    3
+                                )?.price
+                            }" +
+                                    "" + "${mActivity.getString(R.string.year_static)}"
+                    }
+
+                    mCLUnlockLayout.performClick()
+                } else {
+                    isbilingopen = false
+                }
+
+            }
+
+            mCLWeekLayout.setOnClickListener {
+                if (isbilingopen) {
+                    return@setOnClickListener
+                }
+                isbilingopen = true
+
+
+
+
+
+                yearconstraintid.background =unSelected
+                monthconstraintid.background =unSelected
+                lifeconstraintid.background =unSelected
+                weekconstraintid.background =selected
+
+                yearstaticprice.setTextColor(textColor)
+                weekstaticprice.setTextColor(primaycolor)
+                txtlifePrice.setTextColor(textColor)
+                monthstaticprice.setTextColor(textColor)
+
+                if (mIsRevenuCat!!) {
+                    if (packagerenlist.isNotEmpty()) {
+                        if (packagerenlist!![2].freeTrialPeriod == null) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                            val featureDescription = mActivity.getString(
+                                R.string.feature_description,
+                                packagerenlist?.get(2)?.price,
+                                mActivity.getSubTrial(packagerenlist!![2].freeTrialPeriod!!.iso8601)
+                            )
+                        }
+                    }
+                } else {
+                    PREMIUM_SIX_SKU.getProductInfo?.let { month ->
+                        if (month.freeTrialPeriod.equals("Not Found", true)) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        }
+                    }
+                }
+
+                if (packagerenlist.isNotEmpty()) {
+                    if (packagerenlist!![2].freeTrialPeriod == null) {
+
+
+                        if (packagerenlist.isNotEmpty()) {
+
+                            textsub.text = mActivity.getString(
+                                R.string.week_price,
+                                "${txtweekPrice.text}"
+                            )
+
+                        }
+
+                    } else {
+
+                        if (packagerenlist.isNotEmpty()) {
+                            textsub.text =
+                                "${mActivity.getString(R.string._7_days)}" +
+                                        "" + " " + "${mActivity.getString(R.string.FREE_trial_new_new)}" +
+                                        "" + " ${mActivity.getString(R.string.than_price_ex)} " + "${
+                                    packagerenlist?.get(
+                                        2
+                                    )?.price
+                                }" +
+                                        "" + "${mActivity.getString(R.string.week_static)}"
+                        }
+                    }
+
+                    Log.d("PREMIUM_SIX_SKU", "initListener: PREMIUM_SIX_SKU <----> 1 ${plans}")
+                    plans = PREMIUM_SIX_SKU
+                    Log.d("PREMIUM_SIX_SKU", "initListener: PREMIUM_SIX_SKU <----> 2 ${plans}")
+                    mCLUnlockLayout.performClick()
+                } else {
+                    isbilingopen = false
+                }
+            }
+
+
+            mCLMonthLayout.setOnClickListener {
+
+                if (isbilingopen) {
+                    return@setOnClickListener
+                }
+                isbilingopen = true
+
+
+
+                Log.d("", "initListener: mCLUnlockLayout <-------------> 3")
+
+
+
+                yearconstraintid.background =unSelected
+                weekconstraintid.background =unSelected
+                lifeconstraintid.background =unSelected
+                monthconstraintid.background =selected
+
+                yearstaticprice.setTextColor(textColor)
+                weekstaticprice.setTextColor(textColor)
+                txtlifePrice.setTextColor(textColor)
+                monthstaticprice.setTextColor(primaycolor)
+
+                if (mIsRevenuCat!!) {
+                    if (packagerenlist.isNotEmpty()) {
+                        if (packagerenlist!![0].freeTrialPeriod == null) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                            val featureDescription = mActivity.getString(
+                                R.string.feature_description,
+                                packagerenlist?.get(0)?.price,
+                                mActivity.getSubTrial(packagerenlist!![0].freeTrialPeriod!!.iso8601)
+                            )
+                        }
+                    }
+                } else {
+                    BASIC_SKU.getProductInfo?.let { month ->
+                        if (month.freeTrialPeriod.equals("Not Found", true)) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        }
+                    }
+                }
+                plans = BASIC_SKU
+
+                if (packagerenlist.isNotEmpty()) {
+                    if (packagerenlist!![0].freeTrialPeriod == null) {
+//                    textsub.text = mActivity.getString(
+//                        R.string.monthly_price,
+//                        packagerenlist?.get(0)?.price
+//                    )
+                        textsub.text = mActivity.getString(
+                            R.string.monthly_price,
+                            "${txtMonthlyPrice.text}"
+                        )
+                        /*  textsub.text = mActivity.getString(
+                            R.string.monthly_price,
+                             "${packagerenlist?.get(0)?.price?.first()}${
+                                 packagerenlist?.get(0)?.price?.substring(1)
+                                     ?.replace(",", "")?.toDouble()?.roundToInt()
+                             }"
+                         )*/
+                    } else {
+//                    textsub.text = mActivity.getString(
+//                        R.string.price_with_trial_monthly,
+//                        packagerenlist?.get(0)?.price,
+//                        mActivity.getSubTrial(
+//                            packagerenlist[0].freeTrialPeriod!!.iso8601
+//                        )
+//                    )
+                        textsub.text =
+                            "${mActivity.getString(R.string._7_days)}" +
+                                    "" + " " + "${mActivity.getString(R.string.FREE_trial_new_new)}" +
+                                    "" + " ${mActivity.getString(R.string.than_price_ex)} " + "${
+                                packagerenlist?.get(
+                                    0
+                                )?.price
+                            }" +
+                                    "" + "${mActivity.getString(R.string.month_static)}"
+                    }
+                    mCLUnlockLayout.performClick()
+                } else {
+                    isbilingopen = false
+                }
+            }
+
+            mCLYearLayout.setOnClickListener {
+                if (isbilingopen) {
+                    return@setOnClickListener
+                }
+                isbilingopen = true
+                Log.d("", "initListener: mCLUnlockLayout <-------------> 2")
+//                mIVYearSelection.background = mPremium_CardSelected_Icon
+//                mIVMonthSelection.background = mPremium_Cardunselected_Icon
+
+
+
+
+
+                yearconstraintid.background =selected
+                monthconstraintid.background =unSelected
+                weekconstraintid.background =unSelected
+                lifeconstraintid.background =unSelected
+
+                yearstaticprice.setTextColor(primaycolor)
+                weekstaticprice.setTextColor(textColor)
+                txtlifePrice.setTextColor(textColor)
+                monthstaticprice.setTextColor(textColor)
+
+                if (mIsRevenuCat!!) {
+                    if (packagerenlist.isNotEmpty()) {
+                        if (packagerenlist!![1].freeTrialPeriod == null) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                            val featureDescription = mActivity.getString(
+                                R.string.feature_description,
+                                packagerenlist?.get(1)?.price,
+                                mActivity.getSubTrial(packagerenlist!![1].freeTrialPeriod!!.iso8601)
+                            )
+//                        txtFeature.text = featureDescription
+                        }
+                    }
+                } else {
+                    PREMIUM_SKU.getProductInfo?.let { year ->
+                        if (year.freeTrialPeriod.equals("Not Found", true)) {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        } else {
+                            txtUnlockKriadl.text = mActivity.getString(R.string.continue_txt)
+                        }
+                    }
+                }
+                plans = PREMIUM_SKU
+
+                if (packagerenlist.isNotEmpty()) {
+                    if (packagerenlist!![1].freeTrialPeriod == null) {
+//                    textsub.text = mActivity.getString(
+//                        R.string.year_price,
+//                        packagerenlist?.get(1)?.price
+//                    )
+                        textsub.text = mActivity.getString(
+                            R.string.year_price,
+                            "${txtYearlyPrice.text}"
+                        )
+                      /*  textsub.text = mActivity.getString(
+                            R.string.year_price,
+                            "${packagerenlist?.get(1)?.price?.first()}${
+                                packagerenlist?.get(1)?.price?.substring(1)
+                                    ?.replace(",", "")?.toDouble()?.roundToInt()
+                            }"
+                        )*/
+                    } else {
+//
+                        textsub.text =
+                            "${mActivity.getString(R.string._7_days)}" +
+                                    "" + " " + "${mActivity.getString(R.string.FREE_trial_new_new)}" +
+                                    "" + " ${mActivity.getString(R.string.than_price_ex)} " + "${
+                                packagerenlist?.get(
+                                    1
+                                )?.price
+                            }" +
+                                    "" + "${mActivity.getString(R.string.year_static)}"
+                    }
+                    mCLUnlockLayout.performClick()
+                } else {
+                    isbilingopen = false
+                }
+            }
+
+            txtPrivacy.setOnClickListener {
+                val url = Constants.mPrivacyPolicyURL
+                val customIntent = CustomTabsIntent.Builder()
+                customIntent.setToolbarColor(ContextCompat.getColor(mActivity, R.color.white))
+                openCustomTab(mActivity, customIntent.build(), Uri.parse(url))
+            }
+//            txtTerms.setOnClickListener {
+//                Constants.isActivitychange = true
+//                mActivity.startActivity(Intent(mActivity, TermsActivity::class.java))
+//            }
+
+            mCLUnlockLayout.setOnClickListener {
+                Log.d("", "initListener: mCLUnlockLayout <-------------> 1")
+                if (mActivity.isOnline) {
+                    when (plans) {
+                        BASIC_SKU -> {
+
+                            if (mIsRevenuCat!!) {
+                                Log.d("jigar", "initListener: sku <--------> 1 ")
+                                if (testpackagerenlist.isNotEmpty()) {
+                                    Log.d("jigar", "initListener: sku <--------> 2 ")
+                                    val mlist =
+                                        testpackagerenlist.filter { p: Package -> p.product.period?.iso8601 == "P1M" }
+                                    Purchases.sharedInstance.purchasePackage(mActivity,
+                                        mlist[0], object : PurchaseCallback {
+                                            override fun onCompleted(
+                                                storeTransaction: StoreTransaction,
+                                                customerInfo: CustomerInfo,
+                                            ) {
+                                                BaseSharedPreferences(mActivity).mIS_SUBSCRIBED =
+                                                    true
+                                                isSelecterdPlan.monBackPress()
+                                            }
+
+                                            override fun onError(
+                                                error: PurchasesError,
+                                                userCancelled: Boolean,
+                                            ) {
+
+                                            }
+                                        })
+                                } else {
+                                    Log.d("jigar", "initListener: sku <--------> 6")
+                                    Toast.makeText(
+                                        mActivity,
+                                        mActivity.getString(R.string.some_time_after_try_again),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            } else {
+                                isSelecterdPlan.monMonthPlan()
+                            }
+
+
+//                        isSelecterdPlan.monMonthPlan()
+                        }
+
+
+                        PREMIUM_SIX_SKU -> {
+
+                            if (mIsRevenuCat!!) {
+                                Log.d("jigar", "initListener: sku <--------> 3 ")
+                                if (testpackagerenlist.isNotEmpty()) {
+                                    Log.d("jigar", "initListener: sku <--------> 4 ")
+                                    val mlist =
+                                        testpackagerenlist.filter { p: Package ->
+                                            p.product.period?.iso8601?.lowercase() == "p1w"
+                                        }
+
+                                    testpackagerenlist.forEachIndexed { index, p ->
+                                        Log.d(
+                                            "TAG",
+                                            "initListener345: ${mlist.size} - ${index} <--> ${p.product.period?.iso8601}"
+                                        )
+                                    }
+
+
+                                    Purchases.sharedInstance.purchasePackage(mActivity,
+                                        mlist[0], object : PurchaseCallback {
+                                            override fun onCompleted(
+                                                storeTransaction: StoreTransaction,
+                                                customerInfo: CustomerInfo,
+                                            ) {
+                                                BaseSharedPreferences(mActivity).mIS_SUBSCRIBED =
+                                                    true
+                                                mActivity.onBackPressed()
+//                                        isSelecterdPlan.monBackPress()
+                                            }
+
+                                            override fun onError(
+                                                error: PurchasesError,
+                                                userCancelled: Boolean,
+                                            ) {
+
+                                            }
+                                        })
+                                } else {
+                                    Log.d("jigar", "initListener: sku <--------> 5")
+                                    Toast.makeText(
+                                        mActivity,
+                                        mActivity.getString(R.string.some_time_after_try_again),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            } else {
+                                isSelecterdPlan.monWeekPlan()
+                            }
+
+
+//                        isSelecterdPlan.monYearPlan()
+                        }
+
+                        PREMIUM_SKU -> {
+
+                            if (mIsRevenuCat!!) {
+                                Log.d("jigar", "initListener: sku <--------> 3 ")
+                                if (testpackagerenlist.isNotEmpty()) {
+                                    Log.d("jigar", "initListener: sku <--------> 4 ")
+                                    val mlist =
+                                        testpackagerenlist.filter { p: Package ->
+                                            p.product.period?.iso8601?.lowercase() == "p1y"
+                                        }
+
+                                    testpackagerenlist.forEachIndexed { index, p ->
+                                        Log.d(
+                                            "TAG",
+                                            "initListener345: ${mlist.size} - ${index} <--> ${p.product.period?.iso8601}"
+                                        )
+                                    }
+
+
+                                    Purchases.sharedInstance.purchasePackage(mActivity,
+                                        mlist[0], object : PurchaseCallback {
+                                            override fun onCompleted(
+                                                storeTransaction: StoreTransaction,
+                                                customerInfo: CustomerInfo,
+                                            ) {
+                                                BaseSharedPreferences(mActivity).mIS_SUBSCRIBED =
+                                                    true
+                                                mActivity.onBackPressed()
+//                                        isSelecterdPlan.monBackPress()
+                                            }
+
+                                            override fun onError(
+                                                error: PurchasesError,
+                                                userCancelled: Boolean,
+                                            ) {
+
+                                            }
+                                        })
+                                } else {
+                                    Log.d("jigar", "initListener: sku <--------> 5")
+                                    Toast.makeText(
+                                        mActivity,
+                                        mActivity.getString(R.string.some_time_after_try_again),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            } else {
+                                isSelecterdPlan.monYearPlan()
+                            }
+
+
+//                        isSelecterdPlan.monYearPlan()
+                        }
+
+                        PREMIUM_LIFTIME -> {
+                            if (mIsRevenuCat!!) {
+                                Log.d("jigar", "initListener: sku <--------> 3 ")
+                                if (testpackagerenlist.isNotEmpty()) {
+                                    Log.d("jigar", "initListener: sku <--------> 4 ")
+                                    val mlist =
+                                        testpackagerenlist.filter { p: Package ->
+                                            p.packageType == PackageType.LIFETIME
+                                        }
+
+                                    testpackagerenlist.forEachIndexed { index, p ->
+                                        Log.d(
+                                            "TAG",
+                                            "initListener345: ${mlist.size} - ${index} <--> ${p.product.period?.iso8601}"
+                                        )
+                                    }
+
+
+                                    Purchases.sharedInstance.purchasePackage(mActivity,
+                                        mlist[0], object : PurchaseCallback {
+                                            override fun onCompleted(
+                                                storeTransaction: StoreTransaction,
+                                                customerInfo: CustomerInfo,
+                                            ) {
+                                                BaseSharedPreferences(mActivity).mIS_SUBSCRIBED =
+                                                    true
+                                                mActivity.onBackPressed()
+//                                        isSelecterdPlan.monBackPress()
+                                            }
+
+                                            override fun onError(
+                                                error: PurchasesError,
+                                                userCancelled: Boolean,
+                                            ) {
+
+                                            }
+                                        })
+                                } else {
+                                    Log.d("jigar", "initListener: sku <--------> 5")
+                                    Toast.makeText(
+                                        mActivity,
+                                        mActivity.getString(R.string.some_time_after_try_again),
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            }
+                        }
+
+                    }
+                } else {
+                    mActivity.showToast(
+                        mActivity.getString(R.string.please_check_connection),
+                        Toast.LENGTH_SHORT
+                    )
+                }
+            }
+
+//            mCLYearLayout.performClick()
+        }
+    }
+
+//    fun openCustomTab(activity: Activity, customTabsIntent: CustomTabsIntent, uri: Uri?) {
+//        val packageName = "com.android.chrome"
+//        customTabsIntent.intent.setPackage(packageName)
+//        customTabsIntent.launchUrl(activity, uri!!)
+//    }
+
+    fun openCustomTab(activity: Activity, customTabsIntent: CustomTabsIntent, uri: Uri?) {
+        val packageName = "com.android.chrome"
+        customTabsIntent.intent.setPackage(packageName)
+        if (isChromeCustomTabsSupported(activity, customTabsIntent.intent)) {
+            customTabsIntent.launchUrl(activity, uri!!)
+        } else {
+            activity.startActivity(Intent(Intent.ACTION_VIEW, uri))
+        }
+    }
+
+    private fun isChromeCustomTabsSupported(context: Context, intent: Intent): Boolean {
+        val activities =
+            context.packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
+        return activities.isNotEmpty()
+    }
+
+    fun calculateDiscountPercentage(originalPrice: Double, discountedPrice: Double): Int {
+        val discountAmount = originalPrice - discountedPrice
+        val discountPercentage = (discountAmount / originalPrice) * 100
+        return discountPercentage.roundToInt()
+    }
+
+
+    fun getDiscount(weekPlan: Package, product: Package): Triple<Int, Int, String> {
+        var price = weekPlan?.product?.price?.amountMicros?.div(1000000) ?: 120
+        var pair = Triple(0, 0, "")
+        product?.let {
+            when (it.packageType) {
+                PackageType.MONTHLY -> {
+                    pair = getPair(4.3f, price, product, "P1M")
+
+                }
+
+                PackageType.SIX_MONTH -> {
+                    pair = getPair(25.8f, price, product, "P6M")
+                }
+
+                PackageType.ANNUAL -> {
+                    pair = getPair(52f, price, product, "P1Y")
+                }
+
+                else -> {
+
+                }
+            }
+
+        }
+        return pair
+//    return pair
+    }
+
+    private fun getPair(
+        time: Float,
+        price: Long,
+        product: Package,
+        DUR: String,
+    ): Triple<Int, Int, String> {
+        var highPrice = (price.times(time.roundToInt()))// for round figure the duration
+        var productPrice: Int = (product?.product?.price?.amountMicros?.div(1000000) ?: 120).toInt()
+        var less = highPrice.minus(productPrice)
+        var discount = if (highPrice != 0L) {
+            (less?.times(100))?.div(highPrice) ?: 0
+        } else {
+            0
+        }
+        Log.d("TAG", "getPair235: $productPrice - $less   ")
+
+        if (highPrice < productPrice) {
+            // reValues if not give discount
+            highPrice = productPrice.toLong()
+            discount = 0
+        }
+        var perDur = ""
+        if (DUR == "P1M") {
+            perDur = "${(productPrice / time.roundToInt()).formatPrice()}/Week"
+        } else if (DUR == "P6M") {
+            perDur = "${(productPrice / time.roundToInt()).formatPrice()}/Week"
+        } else if (DUR == "P1Y") {
+            perDur = "${(productPrice / time.roundToInt()).formatPrice()}/Week"
+        }
+
+        return Triple(highPrice.toInt(), discount.toInt(), perDur)
+//    return Pair()
+    }
+
+    private fun Int.formatPrice(): String {
+        val formatter = NumberFormat.getNumberInstance(Locale("en", "IN"))
+        return "₹${formatter.format(this)}"
+    }
+
+}

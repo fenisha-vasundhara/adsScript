@@ -1,0 +1,2744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="ispro"
+            type="Boolean" />
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/setting_scroll_ab"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/native_ads_1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/setting_ab_first_contenar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/General_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_43sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                setTextSizeFullApp="@{textsizechagefor18}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtGeneral"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/opensansregular"
+                                android:text="@string/General"
+                                android:textColor="@color/fragment_setting_ab_color_title"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/notification_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10sdp"
+
+                            app:layout_constraintTop_toBottomOf="@+id/General_ab">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/notification_archive_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_fl_notification_btn_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/ic_fl_notification_btn_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Notifications_and_Sound_new"
+                                    app:layout_constraintBottom_toBottomOf="@+id/ic_fl_notification_btn_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_fl_notification_btn_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/ic_fl_notification_btn_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Language_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/notification_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Language_archive_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_fl_language_btn_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/ic_fl_language_btn_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Language_nre"
+                                    app:layout_constraintBottom_toBottomOf="@+id/ic_fl_language_btn_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_fl_language_btn_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/ic_fl_language_btn_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Color_Theme_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/Language_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Color_Theme_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_fl_Color_Theme_txt_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/color_theme_btn_new_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView43"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/theme_mode"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_fl_Color_Theme_txt_ab"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <com.google.android.material.materialswitch.MaterialSwitch
+                                    android:id="@+id/theme_change"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_18sdp"
+                                    android:checked="true"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:thumbTint="@color/white"
+                                    app:trackTint="@color/switch_track_color_selector" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/theme_mode_chip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:visibility="visible"
+                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:cardCornerRadius="@dimen/_5sdp"
+                                    app:strokeWidth="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.925"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingStart="@dimen/_10sdp"
+                                        android:paddingTop="@dimen/_4sdp"
+                                        android:paddingEnd="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_4sdp">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/Color_Theme_user_count_ab"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            setTextSizeFullApp="@{textsizechagefor13}"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:text="@string/light_mode"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/Color_ThemeimageView17"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                        <ImageView
+                                            android:id="@+id/Color_ThemeimageView17"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:layout_marginEnd="@dimen/_3sdp"
+                                            android:src="@drawable/block_btn_fl"
+                                            app:layout_constraintBottom_toBottomOf="@+id/Color_Theme_user_count_ab"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHeight_percent="0.3"
+                                            app:layout_constraintTop_toTopOf="@+id/Color_Theme_user_count_ab"
+                                            app:layout_constraintWidth_percent="0.1">
+
+                                        </ImageView>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Theme_color_card_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/Color_Theme_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Theme_Color_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_fl_Theme_Color_txt"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/color_theme_btn_new_ab_stock_color_two"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.50"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView434"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/theme"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_fl_Theme_Color_txt"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/selected_color"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginEnd="@dimen/_24sdp"
+                                app:cardBackgroundColor="@color/black2"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintEnd_toEndOf="@+id/Theme_Color_btn"
+                                app:layout_constraintHeight_percent="0.45"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/message_txt_size_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/Theme_color_card_btn">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/message_txt_size_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/message_txt_size_Theme_txt_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/setting_message_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/message_txt_size_textView43"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Message_Text_Size_new"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/message_txt_size_Theme_txt_ab"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/System_generated_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.055"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/message_txt_size_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/System_generated_icon_ab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/System_generated_icon_switch_ab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        android:scaleX="0.7"
+                                        android:scaleY="0.7"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:thumbTint="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_System_generated_icon_switch_ab"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/color_theme_btn_new_ab_stock_color"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.45"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/System_generated_icon_switch_text_view_switch_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="Use system generated icon"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_System_generated_icon_switch_ab"
+                                        app:layout_constraintEnd_toStartOf="@+id/System_generated_icon_switch_ab"
+                                        app:layout_constraintHorizontal_bias="0"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_System_generated_icon_switch_ab"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_System_generated_icon_switch_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/System_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.055"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/System_generated_icon">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/System_text_view_ab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/System_text_view_switch_ab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_System_text_view_switch_ab"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/signatior_btn_new_ab_stock"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.50"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/In_System_text_view_switch_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/use_system_font"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_System_text_view_switch_ab"
+                                        app:layout_constraintEnd_toStartOf="@+id/System_text_view_switch_ab"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_System_text_view_switch_ab"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_System_text_view_switch_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Caller_info_screen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            android:visibility="gone"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.055"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/System_text_view">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/System_text_view_ab_caller"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/System_text_view_switch_ab_caller"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:thumbTint="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_System_text_view_switch_ab_caller"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:padding="@dimen/_2sdp"
+                                        android:src="@drawable/caller_id"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.50"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/In_System_text_view_switch_ab_caller"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/caller_information"
+                                        app:layout_constraintBottom_toBottomOf="@+id/ic_fl_System_text_view_switch_ab_caller"
+                                        app:layout_constraintEnd_toStartOf="@+id/System_text_view_switch_ab_caller"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_System_text_view_switch_ab_caller"
+                                        app:layout_constraintTop_toTopOf="@+id/ic_fl_System_text_view_switch_ab_caller">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/step_varification_user_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            android:transitionName="shared_element_transition_name"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Caller_info_screen">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/step_varification_user_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/step_varification_user_btn_img_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/twostepicicon_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView99_btn_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:gravity="start"
+                                    android:maxLines="1"
+                                    android:text="@string/two_Step_Verification_new_ui"
+                                    app:layout_constraintBottom_toBottomOf="@+id/step_varification_user_btn_img_ab"
+                                    app:layout_constraintEnd_toStartOf="@+id/full_app_lock_premium_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/step_varification_user_btn_img_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/step_varification_user_btn_img_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/full_app_lock_premium_ab"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:src="@drawable/ic_message_premium_btn"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.07"
+                                    tools:visibility="visible">
+
+                                </ImageView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <!--                    <View-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="1dp"-->
+                            <!--                        android:background="#92CDCACA"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent">-->
+
+                            <!--                    </View>-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/recylerbin_user_btn_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+
+                            android:transitionName="shared_element_transition_name"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/step_varification_user_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/recylerbin_user_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/recylerbin_user_btn_img"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/recylerbin_button_new"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/recylerbin_btn"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:gravity="start"
+                                    android:maxLines="2"
+                                    android:text="@string/recycle_bin"
+                                    app:layout_constraintBottom_toBottomOf="@+id/recylerbin_user_btn_img"
+                                    app:layout_constraintStart_toEndOf="@+id/recylerbin_user_btn_img"
+                                    app:layout_constraintTop_toTopOf="@+id/recylerbin_user_btn_img">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            <!--                    <View-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="1dp"-->
+                            <!--                        android:background="#92CDCACA"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent">-->
+
+                            <!--                    </View>-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <!--                /// 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/secound_ab_contenar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/setting_ab_first_contenar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Conversation_Setting_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_43sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                setTextSizeFullApp="@{textsizechagefor18}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/opensansregular"
+                                android:id="@+id/txtConversation"
+                                android:text="@string/Conversation"
+                                android:textColor="@color/fragment_setting_ab_color_title"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Conversation_Swip_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/Conversation_Setting_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/Conversation_Swip_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_fl_Conversation_Swip_txt_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/conersation_swip_motion_btn_new_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/swipe_txt_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Coversation_swipe_motion"
+                                    app:layout_constraintBottom_toTopOf="@+id/info6_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/ic_fl_Conversation_Swip_txt_ab"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="packed">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/info6_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor10}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_1sdp"
+                                    android:gravity="end"
+                                    android:includeFontPadding="false"
+                                    android:singleLine="true"
+                                    android:text="@string/info6"
+                                    android:textColor="#8D8E8E"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0"
+                                    app:layout_constraintStart_toStartOf="@+id/swipe_txt_ab"
+                                    app:layout_constraintTop_toBottomOf="@+id/swipe_txt_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/swipe_con_premium_ab"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/ic_message_premium_btn"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="@+id/swipe_txt_ab"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintStart_toEndOf="@+id/swipe_txt_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/swipe_txt_ab"
+                                    app:layout_constraintWidth_percent="0.07"
+                                    tools:visibility="visible">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_15sdp"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="#E9EFF4"
+                                    app:cardCornerRadius="@dimen/_5sdp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.4"
+                                    app:layout_constraintHorizontal_bias="0.925"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.13">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <com.google.android.material.textview.MaterialTextView
+                                            android:id="@+id/Conversation_Swip_user_count_ab"
+                                            setTextSizeFullApp="@{textsizechagefor8}"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:text="@string/Two_Conversation"
+                                            android:textColor="@color/black2"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/Conversation_SwipmageView17_ab"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                        </com.google.android.material.textview.MaterialTextView>
+
+                                        <ImageView
+                                            android:id="@+id/Conversation_SwipmageView17_ab"
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:layout_marginEnd="@dimen/_3sdp"
+                                            android:src="@drawable/block_btn_fl"
+                                            app:layout_constraintBottom_toBottomOf="@+id/Conversation_Swip_user_count_ab"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHeight_percent="0.3"
+                                            app:layout_constraintTop_toTopOf="@+id/Conversation_Swip_user_count_ab"
+                                            app:layout_constraintWidth_percent="0.1">
+
+                                        </ImageView>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversation_Signature_btn_card_show_mesage_count_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.055"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Conversation_Swip_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/conversation_other_Signature_btn_show_mesage_count_ab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/In_App_Signature_show_mesage_count_ab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_Signature_Swip_txt_ab"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/signatior_btn_new_ab_stock"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.50"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/In_Signature_show_mesage_count_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Signature"
+                                        app:layout_constraintBottom_toTopOf="@+id/info1_ab"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_Signature_Swip_txt_ab"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/info1_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor10}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:gravity="start"
+                                        android:includeFontPadding="false"
+                                        android:layoutDirection="locale"
+                                        android:singleLine="true"
+                                        android:text="@string/info1"
+                                        android:textAlignment="viewStart"
+                                        android:textColor="#8D8E8E"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/In_App_Signature_show_mesage_count_ab"
+                                        app:layout_constraintHorizontal_bias="0"
+                                        app:layout_constraintStart_toStartOf="@+id/In_Signature_show_mesage_count_ab"
+                                        app:layout_constraintTop_toBottomOf="@+id/In_Signature_show_mesage_count_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <ImageView
+                                        android:id="@+id/signature_con_premium_ab"
+                                        android:layout_width="@dimen/_22sdp"
+                                        android:layout_height="@dimen/_22sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:src="@drawable/ic_message_premium_btn"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="@+id/In_Signature_show_mesage_count_ab"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintStart_toEndOf="@+id/In_Signature_show_mesage_count_ab"
+                                        app:layout_constraintTop_toTopOf="@+id/In_Signature_show_mesage_count_ab"
+                                        app:layout_constraintWidth_percent="0.07"
+                                        tools:visibility="visible">
+
+                                    </ImageView>
+
+                                    <ImageView
+                                        android:id="@+id/signature_not_show_ab"
+                                        android:layout_width="@dimen/_23ssp"
+                                        android:layout_height="@dimen/_23ssp"
+                                        android:layout_marginStart="@dimen/_5ssp"
+                                        android:src="@drawable/baseline_arrow_drop_down_24"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="@+id/In_Signature_show_mesage_count_ab"
+                                        app:layout_constraintStart_toEndOf="@+id/signature_con_premium_ab"
+                                        app:layout_constraintTop_toTopOf="@+id/In_Signature_show_mesage_count_ab">
+
+                                    </ImageView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/signature_not_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5ssp"
+                                    android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                                    android:textColor="@color/black2"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/conversation_other_Signature_btn_show_mesage_count_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversation_other_setting_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.065"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/conversation_Signature_btn_card_show_mesage_count_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/conversation_other_setting_archive_btn_ab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/In_App_Browser_change_ab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_App_Browser_txt_ab"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/in_app_browser_btn_new_ab_stock"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.43"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/In_App_Browser_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:singleLine="true"
+                                        android:text="@string/App_Browser"
+                                        app:layout_constraintBottom_toTopOf="@+id/Open_External_ab"
+                                        app:layout_constraintEnd_toStartOf="@+id/In_App_Browser_change_ab"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_App_Browser_txt_ab"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/Open_External_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor10}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Open_External_Links"
+                                        android:textColor="#8D8E8E"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/In_App_Browser_ab"
+                                        app:layout_constraintTop_toBottomOf="@+id/In_App_Browser_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/in_app_browser_not_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5ssp"
+                                    android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                                    android:textColor="@color/black2"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/conversation_other_setting_archive_btn_ab"
+                                    tools:visibility="gone">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversation_other_setting_btn_card_show_mesage_count_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.055"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/conversation_other_setting_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/conversation_other_setting_archive_btn_show_mesage_count_ab"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:transitionName="shared_element_transition_name"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/In_App_Browser_change_show_mesage_count_ab"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/_18sdp"
+                                        android:checked="true"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <ImageView
+                                        android:id="@+id/ic_fl_Show_character_count_ab"
+                                        settingABicontintset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:src="@drawable/character_count_btn_new_ab_stock"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintDimensionRatio="1:1"
+                                        app:layout_constraintHeight_percent="0.42"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </ImageView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/In_App_Browser_show_mesage_count_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor15}"
+                                        settingABtextcolorset="@{0}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:includeFontPadding="false"
+                                        android:singleLine="true"
+                                        android:text="@string/Show_character_count"
+                                        app:layout_constraintBottom_toTopOf="@+id/info2_ab"
+                                        app:layout_constraintEnd_toStartOf="@+id/In_App_Browser_change_show_mesage_count_ab"
+                                        app:layout_constraintStart_toEndOf="@+id/ic_fl_Show_character_count_ab"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_chainStyle="packed">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/info2_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor10}"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:includeFontPadding="false"
+                                        android:singleLine="true"
+                                        android:text="@string/info2"
+                                        android:textColor="#8D8E8E"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/In_App_Browser_change_show_mesage_count_ab"
+                                        app:layout_constraintHorizontal_bias="0"
+                                        app:layout_constraintStart_toStartOf="@+id/In_App_Browser_show_mesage_count_ab"
+                                        app:layout_constraintTop_toBottomOf="@+id/In_App_Browser_show_mesage_count_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/Show_a_cont_ab"
+                                        fullappfontstyleregular="@{0}"
+                                        setTextSizeFullApp="@{textsizechagefor8}"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/Open_External_Links"
+                                        android:textColor="#8D8E8E"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/In_App_Browser_show_mesage_count_ab"
+                                        app:layout_constraintTop_toBottomOf="@+id/In_App_Browser_show_mesage_count_ab">
+
+                                    </com.google.android.material.textview.MaterialTextView>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/show_character_not_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5ssp"
+                                    android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                                    android:textColor="@color/black2"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/conversation_other_setting_archive_btn_show_mesage_count_ab"
+                                    tools:visibility="gone">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <!--                    <View-->
+                            <!--                        android:layout_width="match_parent"-->
+                            <!--                        android:layout_height="1dp"-->
+                            <!--                        android:background="#92CDCACA"-->
+                            <!--                        app:layout_constraintBottom_toBottomOf="parent">-->
+
+                            <!--                    </View>-->
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <!--                /// 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/third_ab_contenar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintTop_toBottomOf="@+id/secound_ab_contenar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/Advanced_Setting_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_43sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                setTextSizeFullApp="@{textsizechagefor18}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/opensansregular"
+                                android:text="@string/Advanced_Setting_new"
+                                android:id="@+id/txtAdvance"
+                                android:textColor="@color/fragment_setting_ab_color_title"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/block_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/Advanced_Setting_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/preandsec_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView16_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/block_user_btn_ab"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Block"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView16_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView16_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView16_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/private_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/block_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/private_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView161_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/private_chat_btn_new_ab"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Private_Chat"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView161_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView161_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView161_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/backup_and_restore_btn_card_new_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/private_btn_card_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/backup_and_restore_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/backup_and_restore_imageView16_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/ic_fl_backup_btn_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView19_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Backup_Restore"
+                                    app:layout_constraintBottom_toBottomOf="@+id/backup_and_restore_imageView16_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/backup_and_restore_imageView16_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/backup_and_restore_imageView16_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/backup_premium_ab"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/ic_message_premium_btn"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintStart_toEndOf="@+id/textView19_ab"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.09"
+                                    tools:visibility="visible">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/schedule_message_btn_card_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/backup_and_restore_btn_card_new_ab">
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/schedule_message_btn_ab"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:transitionName="shared_element_transition_name"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/schedule_message_imageView16_ab"
+                                    settingABicontintset="@{0}"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/schedule_menu_btn_ab_stock"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintHeight_percent="0.45"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </ImageView>
+
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/textView20_ab"
+                                    fullappfontstyleregular="@{0}"
+                                    setTextSizeFullApp="@{textsizechagefor15}"
+                                    settingABtextcolorset="@{0}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/Scheduled_Message"
+                                    app:layout_constraintBottom_toBottomOf="@+id/schedule_message_imageView16_ab"
+                                    app:layout_constraintStart_toEndOf="@+id/schedule_message_imageView16_ab"
+                                    app:layout_constraintTop_toTopOf="@+id/schedule_message_imageView16_ab">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/schedule_premium_ab"
+                                    android:layout_width="@dimen/_22sdp"
+                                    android:layout_height="@dimen/_22sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/ic_message_premium_btn"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="1:1"
+                                    app:layout_constraintStart_toEndOf="@+id/textView20_ab"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintWidth_percent="0.07"
+                                    tools:visibility="visible">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Message_txt_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/secound_ab_contenar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Message_txt_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preandsec_btn">
+
+                        <ImageView
+                            android:id="@+id/ic_fl_Message_txt_ab"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:src="@drawable/message_text_size_btn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="@string/Message_Text_Size"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Message_txt_ab"
+                            app:layout_constraintEnd_toStartOf="@+id/contenar_ab"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintStart_toEndOf="@+id/ic_fl_Message_txt_ab"
+                            app:layout_constraintTop_toTopOf="@+id/ic_fl_Message_txt_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/contenar_ab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/Message_txt_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    android:textColor="@color/black2"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Message_txtimageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/Message_txtimageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/Message_txt_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/Message_txt_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Message_Corner_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/Message_txt_btn_card_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Message_Corner_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preandsec_btn">
+
+                        <ImageView
+                            android:id="@+id/ic_fl_Message_Corner_ab"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:src="@drawable/message_corner_btn_new"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Message_Corner"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Message_Corner_ab"
+                            app:layout_constraintStart_toEndOf="@+id/ic_fl_Message_Corner_ab"
+                            app:layout_constraintTop_toTopOf="@+id/ic_fl_Message_Corner_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Conversation_list_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/Message_Corner_btn_card_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Conversation_list_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preandsec_btn">
+
+                        <ImageView
+                            android:id="@+id/ic_fl_Conversation_list_txt_ab"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:src="@drawable/conersation_list_view_btn_new"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Coversation_list_view"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_fl_Conversation_list_txt_ab"
+                            app:layout_constraintStart_toEndOf="@+id/ic_fl_Conversation_list_txt_ab"
+                            app:layout_constraintTop_toTopOf="@+id/ic_fl_Conversation_list_txt_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/Conversation_list_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    android:textColor="@color/black2"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Conversation_listmageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/Conversation_listmageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/Conversation_list_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/Conversation_list_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/conversation_card_send_long_message_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.055"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversationsend_group_message_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/ic_send_group_message_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/group_mms_button"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.42"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/In_send_group_message_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor13}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="@string/group_message_mms_new"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toTopOf="@+id/info3_ab"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch_send_group_message_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toEndOf="@+id/ic_send_group_message_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/info3_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:includeFontPadding="false"
+                                android:text="@string/info3"
+                                android:textColor="#8D8E8E"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch_send_group_message_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="@+id/In_send_group_message_ab"
+                                app:layout_constraintTop_toBottomOf="@+id/In_send_group_message_ab">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/In_switch_send_group_message_ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:checked="true"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/In_send_group_message_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:thumbTint="@color/white"
+                                app:trackTint="@color/switch_track_color_selector" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/send_group_mesage_not_ab"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5ssp"
+                            android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                            android:textColor="@color/black2"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/conversationsend_group_message_ab"
+                            tools:visibility="gone">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/conversation_card_send_group_message_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.055"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/conversation_card_send_long_message_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversation_send_long_message_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/ic_send_long_message_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/long_mms_button"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.40"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/In_send_long_message_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor13}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="@string/send_long_message_mms_new"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toTopOf="@+id/info4_ab"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch_send_long_message_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toEndOf="@+id/ic_send_long_message_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/info4_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:includeFontPadding="false"
+                                android:text="@string/info4"
+                                android:textColor="#8D8E8E"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch_send_long_message_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="@+id/In_send_long_message_ab"
+                                app:layout_constraintTop_toBottomOf="@+id/In_send_long_message_ab">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/In_switch_send_long_message_ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:checked="true"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/In_send_long_message_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:thumbTint="@color/white"
+                                app:trackTint="@color/switch_track_color_selector" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/send_long_mesage_not_ab"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5ssp"
+                            android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                            android:textColor="@color/black2"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/conversation_send_long_message_ab"
+                            tools:visibility="gone">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/conversation_card_remove_accents_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.055"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/conversation_card_send_group_message_ab">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/conversation_remove_accents_ab"
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <ImageView
+                                android:id="@+id/ic_remove_accents_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_remove_accents_btn"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.48"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ImageView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/In_remove_accents_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor13}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:includeFontPadding="false"
+                                android:text="@string/send_In_remove_accents_new"
+                                android:textColor="@color/black2"
+                                app:layout_constraintBottom_toTopOf="@+id/info5_ab"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch__remove_accents_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toEndOf="@+id/ic_remove_accents_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/info5_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:includeFontPadding="false"
+                                android:text="@string/info5"
+                                android:textColor="#8D8E8E"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/In_switch__remove_accents_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="@+id/In_remove_accents_ab"
+                                app:layout_constraintTop_toBottomOf="@+id/In_remove_accents_ab">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/In_switch__remove_accents_ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:checked="true"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/In_remove_accents_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:thumbTint="@color/white"
+                                app:trackTint="@color/switch_track_color_selector" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/remove_accents_mesage_not_ab"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5ssp"
+                            android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                            android:textColor="@color/black2"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/conversation_remove_accents_ab"
+                            tools:visibility="gone">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/archive_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/archive_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preandsec_btn_ab">
+
+                        <ImageView
+                            android:id="@+id/ic_fl_archive_btn_ab"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:src="@drawable/ic_fl_archive_btn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Archive"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_fl_archive_btn_ab"
+                            app:layout_constraintStart_toEndOf="@+id/ic_fl_archive_btn_ab"
+                            app:layout_constraintTop_toTopOf="@+id/ic_fl_archive_btn_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            app:cardBackgroundColor="#E9EFF4"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHeight_percent="0.4"
+                            app:layout_constraintHorizontal_bias="0.925"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.13">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/archive_user_count_ab"
+                                    setTextSizeFullApp="@{textsizechagefor8}"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="@string/Two_Conversation"
+                                    android:textColor="@color/black2"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/imageView17_ab"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </com.google.android.material.textview.MaterialTextView>
+
+                                <ImageView
+                                    android:id="@+id/imageView17_ab"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginEnd="@dimen/_3sdp"
+                                    android:src="@drawable/block_btn_fl"
+                                    app:layout_constraintBottom_toBottomOf="@+id/archive_user_count_ab"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHeight_percent="0.3"
+                                    app:layout_constraintTop_toTopOf="@+id/archive_user_count_ab"
+                                    app:layout_constraintWidth_percent="0.1">
+
+                                </ImageView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/conversation_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    tools:layout_editor_absoluteX="6dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/conversation_archive_btn_ab"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:transitionName="shared_element_transition_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/preandsec_btn">
+
+                        <ImageView
+                            android:id="@+id/ic_fl_conversation_btn_ab"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:src="@drawable/ic_fl_conversation_btn"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintHeight_percent="0.45"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        </ImageView>
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            fullappfontstyleregular="@{0}"
+                            setTextSizeFullApp="@{textsizechagefor13}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/Conversation_Setting"
+                            android:textColor="@color/black2"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_fl_conversation_btn_ab"
+                            app:layout_constraintStart_toEndOf="@+id/ic_fl_conversation_btn_ab"
+                            app:layout_constraintTop_toTopOf="@+id/ic_fl_conversation_btn_ab">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/delivery_confirmation_btn_card_ab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#00000000"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/third_ab_contenar">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/delivery_confirmation_btn_ab"
+                            setchatthemecolorforbutton="@{0}"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:transitionName="shared_element_transition_name"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/delivery_confirmationimageView16_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/message_delivery_btn"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintHeight_percent="0.45"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                            </ImageView>
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textView8_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor15}"
+                                setchatthemecolorTintTxtFullapp="@{0}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:includeFontPadding="false"
+                                android:maxEms="10"
+                                android:singleLine="true"
+                                android:text="@string/Delivery_Confirmation"
+                                app:layout_constraintBottom_toTopOf="@+id/info7_ab"
+                                app:layout_constraintStart_toEndOf="@+id/delivery_confirmationimageView16_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/info7_ab"
+                                fullappfontstyleregular="@{0}"
+                                setTextSizeFullApp="@{textsizechagefor8}"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:text="@string/info7"
+                                android:textColor="#8D8E8E"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/delivery_confirmation_onoff_ab"
+                                app:layout_constraintHorizontal_bias="0"
+                                app:layout_constraintStart_toStartOf="@+id/textView8_ab"
+                                app:layout_constraintTop_toBottomOf="@+id/textView8_ab">
+
+                            </com.google.android.material.textview.MaterialTextView>
+
+                            <ImageView
+                                android:id="@+id/delivery_con_premium_ab"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:padding="@dimen/_3sdp"
+                                android:src="@drawable/ic_message_premium_btn"
+                                android:visibility="@{ispro ? View.GONE : View.VISIBLE}"
+                                app:layout_constraintBottom_toTopOf="@+id/info7_ab"
+                                app:layout_constraintDimensionRatio="1:1"
+                                app:layout_constraintStart_toEndOf="@+id/textView8_ab"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.11"
+                                tools:visibility="visible">
+
+                            </ImageView>
+
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/delivery_confirmation_onoff_ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:checked="true"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:thumbTint="@color/white"
+                                app:trackTint="@color/switch_track_color_selector" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/message_delivery_not_ab"
+                            fullappfontstyleregular="@{0}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5ssp"
+                            android:text="Android 7.0(API level 24) provides support for multilingual users, allowing the users to select multiple locales in the setting. A Locale object represents a specific geographical, political, or cultural region. Operations that required these Locale to perform a task are called locale-sensitive and uses the Locale to tailor information for the user. For example, displaying a number is a locale-sensitive operation so, the number should be formatted according to the conventions of the user’s native region, culture, or country."
+                            android:textColor="@color/black2"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/delivery_confirmation_btn_ab"
+                            tools:visibility="gone">
+
+                        </com.google.android.material.textview.MaterialTextView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="1dp"-->
+                    <!--                        android:background="#92CDCACA"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent">-->
+
+                    <!--                    </View>-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/native_ads_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:id="@+id/native_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/native_ads_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_min="@dimen/_100sdp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

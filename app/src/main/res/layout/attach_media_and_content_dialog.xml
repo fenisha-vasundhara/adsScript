@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <data>
+
+        <variable
+            name="isblacktheme"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/attachmentSheetRoot"
+        android:layout_width="match_parent"
+        android:padding="@dimen/activity_margin"
+        android:layout_height="wrap_content"
+    >
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/imageView18"
+            style="@style/Widget.App.IconCloseButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/home_material_ic_close_rounded"
+            app:icon="@drawable/home_material_ic_close_rounded"
+            app:iconGravity="textStart"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:iconPadding="0dp"
+            app:iconTint="@{isblacktheme ? @color/white : @color/black2}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.06">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:includeFontPadding="false"
+            android:text="@string/content_and_tools"
+            android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView18">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@{isblacktheme ? @color/attachmnet_dialog_theme_dark : @color/attachmnet_dialog_theme_light}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/content">
+
+
+        </View>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contact_card"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view22">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_contact"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    app:iconPadding="0dp"
+                    app:icon="@drawable/contact_page_24px"
+                app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    app:iconGravity="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41contact"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/Contacts"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_contact"
+                    app:layout_constraintStart_toEndOf="@+id/ic_contact"
+                    app:layout_constraintTop_toTopOf="@+id/ic_contact">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="Share contacts"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41contact"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41contact">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/schedule_message_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/schedule_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_schedule"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:icon="@drawable/send_message_material_ic_schedule_rounded"
+                    app:iconPadding="0dp"
+                    app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    app:iconGravity="textStart"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41schedule"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/Schedulemessage"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_schedule"
+                    app:layout_constraintStart_toEndOf="@+id/ic_schedule"
+                    app:layout_constraintTop_toTopOf="@+id/ic_schedule"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <ImageView
+                    android:id="@+id/swipe_con_premium"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/ic_message_premium_btn"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView41schedule"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/textView41schedule"
+                    app:layout_constraintTop_toTopOf="@+id/textView41schedule"
+                    app:layout_constraintWidth_percent="0.08"
+                    tools:visibility="gone">
+
+                </ImageView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="Arrange a schedule message"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41schedule"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41schedule">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/location_message_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schedule_message_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/last_progres_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_last_progres"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:icon="@drawable/location_on_24px"
+                    app:iconPadding="0dp"
+                    app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    style="@style/Widget.Material3.Button.IconButton"
+
+                    app:iconGravity="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41last"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/Locaiton"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_last_progres"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_progres"
+                    app:layout_constraintTop_toTopOf="@+id/ic_last_progres"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="Share location"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41last"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41last">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/image_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_message_card">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/image_attachment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_last_image_attachment"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:icon="@drawable/photo_library_24px"
+                    app:iconPadding="0dp"
+                    app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    app:iconGravity="textStart"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41lastimage_attachment"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/Gallery"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_last_image_attachment"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_image_attachment"
+                    app:layout_constraintTop_toTopOf="@+id/ic_last_image_attachment"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42lastimage_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/share_image"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41lastimage_attachment"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41lastimage_attachment">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/record_audio_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_attachment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/record_audio_attachment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_last_record_audio_attachment"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:icon="@drawable/mic_24px"
+                    app:iconPadding="0dp"
+                    app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    app:iconGravity="textStart"
+
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41lastrecord_audio_attachment"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/audio"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_last_record_audio_attachment"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_record_audio_attachment"
+                    app:layout_constraintTop_toTopOf="@+id/ic_last_record_audio_attachment"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42lastrecord_audio_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/record_audio_share"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41lastrecord_audio_attachment"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41lastrecord_audio_attachment">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/file_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/record_audio_attachment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/file_attachment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ic_last_file_attachment"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    app:icon="@drawable/file_copy_24px"
+                    app:iconPadding="0dp"
+                    app:iconTint="@{isblacktheme ? @color/attachmnet_dialog_theme_dark_icon : @color/attachmnet_dialog_theme_light_icon}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:iconGravity="textStart"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41lastfile_attachment"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/file"
+                    android:textColor="@{isblacktheme ? @color/white : @color/black2}"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ic_last_file_attachment"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_file_attachment"
+                    app:layout_constraintTop_toTopOf="@+id/ic_last_file_attachment"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42file_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/share_file"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41lastfile_attachment"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41lastfile_attachment">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contact_attachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/file_attachment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contact_attachment_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ic_last_contact_attachment"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:src="@drawable/selectlocasion"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42contact_attachment"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView41lastcontact_attachment">
+
+                </ImageView>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41lastcontact_attachment"
+                    fullappfontstyleregular="@{0}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/choose_contact_vcf"
+                    android:textSize="@dimen/_15sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView42contact_attachment"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_contact_attachment"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42contact_attachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/contact_vcf_share"
+                    android:textColor="#773C4B5D"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41lastcontact_attachment"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41lastcontact_attachment">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

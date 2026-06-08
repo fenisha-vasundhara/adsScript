@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/rubikmedium"
+                android:gravity="center"
+                android:text="Please give your feedback"
+                android:textColor="@color/appcolor"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="I don't like the design"
+                android:fontFamily="@font/rubikregular"
+                android:textColor="@color/black2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="It doesn't have the function as I need"
+                android:fontFamily="@font/rubikregular"
+                android:textColor="@color/black2"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox1"
+                app:layout_constraintStart_toStartOf="@+id/checkBox1"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="It's not easy to use"
+                android:fontFamily="@font/rubikregular"
+                android:textColor="@color/black2"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox2"
+                app:layout_constraintStart_toStartOf="@+id/checkBox2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="It's too complicated"
+                android:textColor="@color/black2"
+                android:fontFamily="@font/rubikregular"
+                app:layout_constraintEnd_toEndOf="@+id/checkBox3"
+                app:layout_constraintStart_toStartOf="@+id/checkBox3"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/border05"
+                android:fontFamily="@font/rubikregular"
+                android:gravity="top"
+                android:hint="Enter your feedback here"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black2"
+                android:textColorHint="#59424242"
+                android:textCursorDrawable="@drawable/cursur_color_draweble_black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="@+id/submit"
+                app:layout_constraintStart_toStartOf="@+id/cancel"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/submit_1"
+                android:fontFamily="@font/rubikmedium"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/cancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cancel"
+                app:layout_constraintTop_toTopOf="@+id/cancel" />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/cancel_1"
+                android:fontFamily="@font/rubikmedium"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

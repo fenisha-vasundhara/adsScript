@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_convwesation_dialog_bg"
+        android:padding="@dimen/_13sdp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/imageView31"
+            style="@style/Widget.App.IconCloseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_close_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/fist_contenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView31">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/delet_old_tital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="@string/Auto_message_delete"
+                setchatthemecolorTintTxtautodelete="@{0}"
+                android:textSize="@dimen/_14ssp">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/delet_old_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Messages_will_be_deleted"
+                android:textColor="#818181"
+                android:textSize="@dimen/_10ssp">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secound_contenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fist_contenar">
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup_old_message_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/Daily_old_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_10ssp"
+                    android:text="@string/Daily"
+                    android:textAlignment="center"
+                    setchatthemecolorTintTxtautodelete="@{0}"
+                    setchatthemecolorTintTxtautodeletesstockcolorchange="@{0}"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Monthly_old_message_delete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RadioButton
+                    android:id="@+id/Weekly_old_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_10ssp"
+                    android:text="@string/Weekly"
+                    android:textAlignment="center"
+                    setchatthemecolorTintTxtautodelete="@{0}"
+                    setchatthemecolorTintTxtautodeletesstockcolorchange="@{0}"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/Yearly_old_message_delete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RadioButton
+                    android:id="@+id/Monthly_old_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_10ssp"
+                    android:text="@string/Monthly"
+                    android:textAlignment="center"
+                    setchatthemecolorTintTxtautodelete="@{0}"
+                    setchatthemecolorTintTxtautodeletesstockcolorchange="@{0}"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Daily_old_message_delete" />
+
+
+                <RadioButton
+                    android:id="@+id/Yearly_old_message_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="@dimen/_10ssp"
+                    android:text="@string/Yearly"
+                    android:textAlignment="center"
+                    setchatthemecolorTintTxtautodelete="@{0}"
+                    setchatthemecolorTintTxtautodeletesstockcolorchange="@{0}"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Weekly_old_message_delete" />
+
+            </RadioGroup>
+            <!--adding a radio button -->
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:background="#EFEFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secound_contenar">
+
+        </View>
+
+        <LinearLayout
+            android:id="@+id/thrd_contenar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/delet_old_tital_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/Or"
+                setchatthemecolorTintTxtautodelete="@{0}"
+                android:textSize="@dimen/_15ssp">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/delet_old_tital_manuly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/Enter_days_manually"
+                setchatthemecolorTintTxtautodelete="@{0}"
+                android:textSize="@dimen/_15ssp">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/delet_old_manuly_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/delet_old_manuly_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_5ssp"
+                    android:paddingEnd="@dimen/_5ssp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/Number_of_manually"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="#101010"
+                    android:textSize="@dimen/_13sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenar_four"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thrd_contenar">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/never_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5ssp"
+                android:text="@string/Never"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_13ssp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                style="@style/Widget.Material3.Button.TextButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/save_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_btn"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/_5ssp"
+                android:text="@string/Save"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_13ssp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                style="@style/Widget.Material3.Button"
+                app:layout_constraintStart_toEndOf="@+id/never_btn"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/canel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/cancel"
+                android:visibility="gone"
+                android:textColor="@color/appcolor"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+             </com.google.android.material.textview.MaterialTextView>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

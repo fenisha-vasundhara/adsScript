@@ -1,0 +1,101 @@
+{
+  "version": "2.2.0",
+  "app_id": "ca-app-pub-7441144866662686~7221264456",
+
+  "funnel_events": {
+    "baseline": [
+      "1First_111111",
+      "First_home_mnmnmn",
+      "First_setasdefaulted_mnnmnmnmnmnm",
+      "First_paywall",
+      "First_language",
+      "First_home_again"
+    ],
+    "variant_a": [
+      "First_splash",
+      "First_paywall",
+      "First_language",
+      "First_home",
+      "First_setasdefaulted"
+    ]
+  },
+  "paywall_events": [
+    {
+      "event": "Purchase_setDefault",
+      "description": "app as smsSetDefault dialog click open paywall screen"
+    },
+    {
+      "event": "Purchased_home",
+      "description": "home screen top icon click open paywall screen"
+    },
+    {
+      "event": "Purchased_SplashScreen",
+      "description": "in flow 2 after splash open paywall screen"
+    }
+  ],
+  "ads": [
+    {
+      "type": "App Open",
+      "name": "Low - App open",
+      "id": "ca-app-pub-2033413118114270/6786602609",
+      "variant": "Default",
+      "notes": "Shows when come from background (10s+), Not in 1st session, 5 min interval"
+    },
+    {
+      "type": "Large Anchored Banner",
+      "name": "Low - Banner_home 2",
+      "id": "ca-app-pub-2033413118114270/9686409630",
+      "variant": "Default",
+      "notes": "Shows at bottom of Home Screen, after 20s or scroll, 45s interval"
+    },
+    {
+      "type": "Small Native",
+      "name": "Low - Native_language 1",
+      "id": "ca-app-pub-2033413118114270/3312572970",
+      "variant": "Default",
+      "notes": "Shows at bottom of Language Screen"
+    },
+    {
+      "type": "Small Native",
+      "name": "Low - MS_Native_Aftercall_Low",
+      "id": "ca-app-pub-2033413118114270/8386429193",
+      "variant": "Default",
+      "notes": "Shows at bottom of Setting Screen"
+    },
+    {
+      "type": "Small Native",
+      "name": "Low - Native_ViewDetails",
+      "id": "ca-app-pub-2033413118114270/1755846089",
+      "variant": "Default",
+      "notes": "Shows at bottom of View Details Screen"
+    },
+    {
+      "type": "Interstitial",
+      "name": "Low - inter_chat_back",
+      "id": "ca-app-pub-2033413118114270/2952489636",
+      "variant": "Default",
+      "notes": "Shows at exit of Archived & Recycle Bin Screen"
+    },
+    {
+      "type": "Rewarded",
+      "name": "Low - New rewarded common",
+      "id": "ca-app-pub-2033413118114270/5289936802",
+      "variant": "Default",
+      "notes": "Backup, Restore, Schedule Message, Translation"
+    }
+  ],
+  "paywall": {
+    "default": {
+      "lifetime": "subscribe_lifetime_message",
+      "weekly": "subscribe_weekly_message",
+      "monthly": "subscribe_monthly_messages",
+      "yearly": "subscribe_yearly_messagess"
+    },
+    "experiment": {
+      "lifetime": "experiment_lifetime_message",
+      "weekly": "experiment_weekly_messages"
+    },
+    "revenue_cat_id": "goog_vwffVeAqEsqRtnAPZwaXudfQnHV",
+    "experiment_status": "Off"
+  }
+}

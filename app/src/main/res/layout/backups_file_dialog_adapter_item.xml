@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="textsizechagefor10"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor13"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor18"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor8"
+            type="Float" />
+
+        <variable
+            name="textsizechagefor15"
+            type="Float" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/last_progress_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/last_progres_btn"
+                setchatthemecolorforbutton="@{0}"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:transitionName="shared_element_transition_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ic_last_progres"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:src="@drawable/baseline_download_24"
+                    android:visibility="visible"
+                    settingABicontintset="@{0}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintHeight_percent="0.45"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ImageView>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView41last"
+                    fullappfontstyleregular="@{0}"
+                    setchatthemecolorTintTxtFullapp="@{0}"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:includeFontPadding="false"
+                    android:text="hjdiosgioghsidgidsghidghdggshdisoghdisg"
+                    setTextSizeFullApp="@{textsizechagefor15}"
+                    app:layout_constraintBottom_toTopOf="@+id/textView42last"
+                    app:layout_constraintEnd_toStartOf="@+id/textView42size"
+                    app:layout_constraintStart_toEndOf="@+id/ic_last_progres"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:includeFontPadding="false"
+                    android:text="Documents/MessageApp/backup"
+                    android:textColor="#8D8E8E"
+                    setTextSizeFullApp="@{textsizechagefor13}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView41last"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41last">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+
+                 <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView42size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="2.5 KB"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:textColor="#8D8E8E"
+                    setTextSizeFullApp="@{textsizechagefor10}"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView41last"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView41last">
+
+                 </com.google.android.material.textview.MaterialTextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

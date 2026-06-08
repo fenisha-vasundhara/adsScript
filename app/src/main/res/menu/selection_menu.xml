@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mark_as_read_selecdtion_btn"
+        android:title="@string/Mark_as_read" />
+
+    <item
+        android:id="@+id/mark_as_unread_selecdtion_btn"
+        android:title="@string/mark_as_unread"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/add_to_contact_selecdtion_btn"
+        android:title="@string/Add_to_contact" />
+
+    <item
+        android:id="@+id/move_to_privacy_selecdtion_btn"
+        android:title="@string/Move_to_Privacy_Chat" />
+
+    <item
+        android:id="@+id/remove_to_category_btn"
+        android:title="@string/Remove_From_Category" />
+
+</menu>
