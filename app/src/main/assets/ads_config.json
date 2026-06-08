@@ -1,10 +1,10 @@
 {
-  "version": "2.2.6",
+  "version": "2.2.7",
   "app_id": "ca-app-pub-7441144866662686~7221264456",
 
   "funnel_events": {
     "baseline": [
-      "First_splsash",
+      "First_7_spl_sh",
       "First_home",
       "First_setasdefaulted",
       "First_paywall",
