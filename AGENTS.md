@@ -686,18 +686,15 @@ echo "Done: Version $VERSION pushed and sheet updated."
 
 
 //==========================
-cd "/Volumes/Extra/Fenisha/MessagerApp/2.4.1/MaterialMessages" || exit
 
 VERSION="2.2.3" && \
 FILE="app/src/main/assets/ads_config.json" && \
 SCRIPT_URL="https://script.google.com/macros/s/AKfycbwTRjK3kTzRK13cnH80E2Dm1lnA2n9qijEbVkNrpWJ7Xf6PXR6fcDvNlHz0fkXSBOeJ/exec" && \
 perl -i -pe "s/\"version\"\s*:\s*\"[^\"]+\"/\"version\": \"$VERSION\"/" "$FILE" && \
-git add "$FILE" && \
+git add -A && \
 git commit -m "Update ads config $VERSION" && \
 git push origin main && \
 curl -X POST "$SCRIPT_URL" -H "Content-Type: application/json" -d "{\"version\":\"$VERSION\"}"
-
-
 
 ```
 ```kotlin
