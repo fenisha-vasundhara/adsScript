@@ -670,7 +670,7 @@ curl -X POST "https://script.google.com/macros/s/AKfycbwTRjK3kTzRK13cnH80E2Dm1ln
 
 //VERSION=$2.4.8
 
-VERSION="2.2.2"
+VERSION="2.2.6"
 
 cd "/Volumes/Extra/Fenisha/MessagerApp/2.4.1/MaterialMessages" || exit
 
@@ -685,7 +685,7 @@ git push origin main
 echo "Done: Version $VERSION pushed and sheet updated."
 
 
-//==========================
+//==========================    
 
 VERSION="2.2.6" && \
 FILE="app/src/main/assets/ads_config.json" && \
