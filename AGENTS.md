@@ -687,7 +687,7 @@ echo "Done: Version $VERSION pushed and sheet updated."
 
 //==========================
 
-VERSION="2.2.5" && \
+VERSION="2.2.6" && \
 FILE="app/src/main/assets/ads_config.json" && \
 SCRIPT_URL="https://script.google.com/macros/s/AKfycbwTRjK3kTzRK13cnH80E2Dm1lnA2n9qijEbVkNrpWJ7Xf6PXR6fcDvNlHz0fkXSBOeJ/exec" && \
 perl -i -pe "s/\"version\"\s*:\s*\"[^\"]+\"/\"version\": \"$VERSION\"/" "$FILE" && \
