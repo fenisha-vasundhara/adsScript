@@ -1,10 +1,10 @@
 {
-  "version": "2.2.1",
-  "app_id": "ca-app-pub-7441144866662686~7221264456_2.2.11",
+  "version": "2.2.2",
+  "app_id": "ca-app-pub-7441144866662686~7221264456_2.2.2",
 
   "funnel_events": {
     "baseline": [
-      "First_splsash_2.2.11",
+      "First_splsash_2",
       "First_home",
       "First_setasdefaulted",
       "First_paywall",
